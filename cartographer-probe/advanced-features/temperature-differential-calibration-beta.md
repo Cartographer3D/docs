@@ -2,6 +2,10 @@
 
 
 
+{% hint style="info" %}
+This requires Cartographer v1.0.0-17-g944c62e9 or later.&#x20;
+{% endhint %}
+
 {% hint style="danger" %}
 After doing any form of Temperature Calirbation, it is essential you re-complete the setup calibration on EVERY model.\
 \
@@ -29,7 +33,7 @@ M140 S95 = 95oC&#x20;
 [gcode_macro DATA_SAMPLE]
 gcode:
   M106 S255
-  TEMPERATURE_WAIT SENSOR='temperature_sensor Cartographer_coil' MAXIMUM=40
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
   M106 S0
 G28
   G0 Z1
@@ -37,13 +41,13 @@ G28
   M140 S110
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data1
-  TEMPERATURE_WAIT SENSOR='temperature_sensor Cartographer_coil' MINIMUM=70
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data1
   M104 S0
   M140 S0
   M106 S255
   G0 Z80
-  TEMPERATURE_WAIT SENSOR='temperature_sensor Cartographer_coil' MAXIMUM=40
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
   M106 S0
   G28 Z0
   G0 Z2
@@ -51,13 +55,13 @@ G28
   M140 S110
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data2
-  TEMPERATURE_WAIT SENSOR='temperature_sensor Cartographer_coil' MINIMUM=70
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data2
   M104 S0
   M140 S0
   M106 S255
   G0 Z80
-  TEMPERATURE_WAIT SENSOR='temperature_sensor Cartographer_coil' MAXIMUM=40
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
   M106 S0
   G28 Z0
   G0 Z3
@@ -65,13 +69,13 @@ G28
   M140 S110
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data3
-  TEMPERATURE_WAIT SENSOR='temperature_sensor Cartographer_coil' MINIMUM=70
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data3
   M104 S0
   M140 S0
   M106 S255
   G0 Z80
-  TEMPERATURE_WAIT SENSOR='temperature_sensor Cartographer_coil' MAXIMUM=40
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
   M106 S0
   G28 Z0
   G0 Z5
@@ -79,7 +83,7 @@ G28
   M140 S110
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data4
-  TEMPERATURE_WAIT SENSOR='temperature_sensor Cartographer_coil' MINIMUM=70
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data4
   M104 S0
   M140 S0
