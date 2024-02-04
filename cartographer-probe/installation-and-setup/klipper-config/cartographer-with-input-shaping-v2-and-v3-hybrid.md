@@ -111,6 +111,14 @@ endstop_pin: probe:z_virtual_endstop # use cartographer as virtual endstop
 homing_retract_dist: 0 # cartographer needs this to be set to 0
 ```
 
+If you are running Klipper Screen, add this Macro to your G-Code, this stops klipper screen doing a random bedmesh when you press Z Calibrate on it. &#x20;
+
+```gcode
+[gcode_macro PROBE_CALIBRATE]
+gcode:
+    CARTOGRAPHER_CALIBRATE
+```
+
 Finally, you need to ensure you have a suitable `bed_mesh` section. Information can be found [here](https://www.klipper3d.org/Bed\_Mesh.html)
 
 {% hint style="warning" %}
