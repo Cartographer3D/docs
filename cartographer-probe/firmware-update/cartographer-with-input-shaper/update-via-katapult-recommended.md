@@ -4,7 +4,7 @@ Your probe will come pre-flashed with Katapult (formally CanBoot), this is on bo
 
 ### Firmware
 
-The best place to get the probes firmware is from our  [GitHub](https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware). These have been tested thoroughly, and are known to work perfectly.&#x20;
+The best place to get the probes firmware is from our [GitHub](https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware). These have been tested thoroughly, and are known to work perfectly.&#x20;
 
 You can also build your own firmware, our GitHub organisation has both a custom build of [Klipper](../../../) and [Katapult](https://github.com/Cartographer3D/katapult) that you can build yourself.&#x20;
 
@@ -46,14 +46,14 @@ ls -l /dev/serial/by-id/
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-You now need to load the probe into the Katapult bootloader, to do this you simply replace \<serialID> with your own serial ID and path  asfound in the above step
+You now need to load the probe into the Katapult bootloader, to do this you simply replace \<serialID> with your own serial ID and path  as found in the above step.
 
 ```
 cd ~/klipper/scripts
 ~/klippy-env/bin/python -c 'import flash_usb as u; u.enter_bootloader("<serialID>")'
 ```
 
-Example of full command
+Example of full command;
 
 ```
 cd ~/klipper/scripts
