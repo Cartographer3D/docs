@@ -2,8 +2,6 @@
 
 Your probe will come pre-flashed with Katapult (formally CanBoot), this is on both the USB, CAN and Hybrid USB/CAN Probes.&#x20;
 
-I advise only flashing via Katapult when using a probe in CAN mode, as DFU Mode or STLink are both easier and more reliable methods for flashing USB Probes. &#x20;
-
 ### Firmware
 
 The best place to get the probes firmware is from our  [GitHub](https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware). These have been tested thoroughly, and are known to work perfectly.&#x20;
