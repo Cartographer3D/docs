@@ -8,7 +8,7 @@ If you do think that something is missing, please let us know and I will add it 
 
 
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Unknown pin chip name 'cartographer'</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Unknown pin chip name 'cartographer'</p></figcaption></figure>
 
 The following two issues are usually why you recieve the above error.
 
@@ -17,7 +17,7 @@ The following two issues are usually why you recieve the above error.
 
 ### Unknown pin chip name 'probe'
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 This error usually  happens when you have your `[cartographer]` section below your `[stepper_z]` section, move the `[cartographer]` section near your MCU's.&#x20;
 
@@ -27,7 +27,7 @@ In `[stepper_z]` you have set  `endstop_pin: cartographer:z_virtual_endstop` thi
 
 ### Error importing numpy error
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>"Error importing numpy: you should not try to import numpy from" error</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>"Error importing numpy: you should not try to import numpy from" error</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption><p>The error in a slightly different view.</p></figcaption></figure>
 

@@ -39,5 +39,5 @@ upon completion, press SAVE & RESTART and it should now display in the update se
 
 If you get "Repo is dirty. Detected the following modified files: \['install.sh']", a soft Recovery should fix it.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
