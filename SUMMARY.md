@@ -24,7 +24,7 @@
   * [Cartographer (rp2040)](cartographer-probe/firmware-update/cartographer-rp2040/README.md)
     * [DFU / U2F Bootloader Mode](cartographer-probe/firmware-update/cartographer-rp2040/dfu-u2f-bootloader-mode.md)
   * [Cartographer with Input Shaper](cartographer-probe/firmware-update/cartographer-with-input-shaper/README.md)
-    * [Update via Katapult](cartographer-probe/firmware-update/cartographer-with-input-shaper/update-via-katapult.md)
+    * [Update via Katapult (recommended)](cartographer-probe/firmware-update/cartographer-with-input-shaper/update-via-katapult-recommended.md)
     * [Update via DFU Mode](cartographer-probe/firmware-update/cartographer-with-input-shaper/update-via-dfu-mode.md)
     * [Update via STLink](cartographer-probe/firmware-update/cartographer-with-input-shaper/update-via-stlink.md)
 
