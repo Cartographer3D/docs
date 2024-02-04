@@ -12,7 +12,9 @@ chmod +x cartographer-klipper/install.sh
 
 This step will automatically create a link to the script and place it in the klipper/klippy/extra directory.
 
-
+{% hint style="warning" %}
+Legacy Klipper environements running on Python2 will need updating to Python 3. The easiest way to do that is a complete fresh install.&#x20;
+{% endhint %}
 
 ## Managing Updates via Moonraker
 

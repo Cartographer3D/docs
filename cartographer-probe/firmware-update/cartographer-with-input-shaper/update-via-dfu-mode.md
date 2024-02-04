@@ -72,10 +72,6 @@ Once you have connected, Click Open File - you will need to select both the Kata
 
 <figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Firmwares Loaded</p></figcaption></figure>
 
-{% content-ref url="../cartographer-rp2040/" %}
-[cartographer-rp2040](../cartographer-rp2040/)
-{% endcontent-ref %}
-
 For your Cartographer Firmware, you need to set the address to `0x08002000` This provides the 8KiB offset for the firmware. Katapult firmware can be flashed at the default `0x08000000.`
 
 <figure><img src="../../../.gitbook/assets/STLink (1).png" alt=""><figcaption><p>How to change the address in STM32CubeProgrammer</p></figcaption></figure>
