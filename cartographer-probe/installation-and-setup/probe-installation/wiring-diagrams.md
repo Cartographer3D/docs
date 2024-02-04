@@ -4,6 +4,10 @@ Below are some wiring diagrams for some common CAN boards used with Klipper. Cur
 
 We will expand out the wiring diagrams as time goes on and more boards are released.
 
+{% hint style="warning" %}
+You may not be able to flash your EBB36 or EBB42 over CanBus while Cartographer is connected, simply unplug the CAN H and CAN L pin, flash it and then re-connect after.&#x20;
+{% endhint %}
+
 ## BigTreeTech EBB36
 
 ### Standard & Low Profile

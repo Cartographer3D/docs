@@ -16,6 +16,10 @@ Selecting the correct firwmare is essential for the operation of the probe, plea
 
 With Cartographer v2, the device will only work in the mode that it was purchased. This is a hardware limitation. The CAN Probe can be forced to work in USB Mode, but is unreliable and requires hardware modifications, this is not something we recommend right now.&#x20;
 
+{% hint style="info" %}
+You need to use both a bootloader, and firmware. When updating, it is currently only neccessary to flash the Firmware.
+{% endhint %}
+
 #### USB Version (for Klipper pre-version v0.12.0-85)&#x20;
 
 [Link to folder with Firmware](https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware/v2/for%20Klipper%20older%20than%20v0-12-0-85)
@@ -47,6 +51,10 @@ With Cartographer v2, the device will only work in the mode that it was purchase
 ### Cartographer v3 w/ Input Shaper (USB/CAN)
 
 Cartographer v3 by default will come pre-flashed for CAN. You can switch between both USB and CAN modes via firmware with no hardware modification required.&#x20;
+
+{% hint style="info" %}
+You need to use both a bootloader, and firmware. When updating, it is currently only neccessary to flash the Firmware.
+{% endhint %}
 
 #### USB / CAN Version  (for Klipper pre-version v0.12.0-85)
 
