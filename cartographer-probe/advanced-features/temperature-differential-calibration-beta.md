@@ -35,7 +35,7 @@ gcode:
   M106 S255
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
   M106 S0
-G28
+  G28
   G0 Z1
   M104 S250
   M140 S110
