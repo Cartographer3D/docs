@@ -20,7 +20,7 @@ The following method is compatible with MOST Cartographer probes, please check t
 
 Prior to flashing, you will need to following tools
 
-* 2 x Ferace Tweezers (or any ferace tool to bridge the two pads)
+* 2 x Ferrous Tweezers (or any conductive tool to bridge the two pads)
 * 1 x Compatible Cartographer Probe (see above)
 * 1 x USB Cable terminated to work w/ Catographer
 
@@ -40,7 +40,7 @@ To enter DFU Mode, it can be a bit fiddly, but once you get the knack of it, it'
 
 Plug your USB cable into the device you will be flashing from and your Cartographer probe, this can be either a seprate Windows PC, Mac, or a Linux machine, or the device you run your 3D Printer off. &#x20;
 
-Using your ferace tweezers, or similar use one to bridge pads 1 (boot0), once you have a solid contact on those tap pad 2 (reset) with your other ferace tool.&#x20;
+Using your ferrous tweezers, or similar use one to bridge pads 1 (boot0), once you have a solid contact on those tap pad 2 (reset) with your other ferrous tool.&#x20;
 
 <figure><img src="../../../.gitbook/assets/DFUModePointsv3.png" alt=""><figcaption></figcaption></figure>
 
