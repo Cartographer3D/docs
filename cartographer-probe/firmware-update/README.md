@@ -119,56 +119,56 @@ Cartographer v3 by default will come pre-flashed for CAN. You can switch between
    </thead>
    <tbody>
       <tr>
-         <td>Full_Cartographer_USB_v3.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware/v3%20-%20Carto%20with%20Input%20Shaper%20Hybrid">Link</a>)</td>
+         <td>Full_Cartographer_USB_v3.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Full_Cartographer_USB_v3.bin">Link</a>)</td>
          <td>Bootloader &#x26; Firmware Combined</td>
          <td>0x08000000</td>
          <td>n/a</td>
          <td>This is the only firmware you need, you don't need to flash the bootloader or firmware seperately. </td>
       </tr>
       <tr>
-         <td>Full_Cartographer_CAN_1M_v3.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware/v3%20-%20Carto%20with%20Input%20Shaper%20Hybrid">Link</a>)</td>
+         <td>Full_Cartographer_CAN_1M_v3.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Full_Cartographer_CAN_1M_v3.bin">Link</a>)</td>
          <td>Bootloader &#x26; Firmware Combined</td>
          <td>0x08000000</td>
          <td>1M</td>
          <td>This is the only firmware you need, you don't need to flash the bootloader or firmware seperately. </td>
       </tr>
       <tr>
-         <td>Katapult_250k_withSwitch.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware/v3%20-%20Carto%20with%20Input%20Shaper%20Hybrid">Link</a>)</td>
+         <td>Katapult_250k_withSwitch.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Katapult_250k_withSwitch.bin">Link</a>)</td>
          <td>Bootloader (Katapult)</td>
          <td>0x08000000</td>
          <td>250K</td>
          <td>8KiB Offset required, so needs ot 0x08002000</td>
       </tr>
       <tr>
-         <td>Katapult_500k_withSwitch.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware/v3%20-%20Carto%20with%20Input%20Shaper%20Hybrid">Link</a>)</td>
+         <td>Katapult_500k_withSwitch.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Katapult_500k_withSwitch.bin">Link</a>)</td>
          <td>Bootloader (Katapult)</td>
          <td>0x08000000</td>
          <td>500K</td>
          <td>8KiB Offset required, so needs ot 0x08002000</td>
       </tr>
       <tr>
-         <td>Cartographer_CAN_250000_8kib_offset.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware/v3%20-%20Carto%20with%20Input%20Shaper%20Hybrid">Link</a>)</td>
+         <td>Cartographer_CAN_250000_8kib_offset.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Cartographer_CAN_250000_8kib_offset.bin">Link</a>)</td>
          <td>Firmware (Klipper)</td>
          <td>0x08002000</td>
          <td>250K</td>
          <td>8KiB Offset required, so needs ot 0x08002000</td>
       </tr>
       <tr>
-         <td>Cartographer_CAN_500000_8kib_offset.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware/v3%20-%20Carto%20with%20Input%20Shaper%20Hybrid">Link</a>)</td>
+         <td>Cartographer_CAN_500000_8kib_offset.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Cartographer_CAN_500000_8kib_offset.bin">Link</a>)</td>
          <td>Firmware (Klipper)</td>
          <td>0x08002000</td>
          <td>500K</td>
          <td>8KiB Offset required, so needs ot 0x08002000</td>
       </tr>
       <tr>
-         <td>Cartographer_CAN_1000000_8kib_offset.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware/v3%20-%20Carto%20with%20Input%20Shaper%20Hybrid">Link</a>)</td>
+         <td>Cartographer_CAN_1000000_8kib_offset.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Cartographer_CAN_1000000_8kib_offset.bin">Link</a>)</td>
          <td>Firmware (Klipper)</td>
          <td>0x08002000</td>
          <td>1M</td>
          <td>8KiB Offset required, so needs ot 0x08002000</td>
       </tr>
       <tr>
-         <td>Cartographer_USB_v3_8kib_offset.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware/v3%20-%20Carto%20with%20Input%20Shaper%20Hybrid">Link</a>)</td>
+         <td>Cartographer_USB_v3_8kib_offset.bin (<a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Cartographer_USB_v3_8kib_offset.bin">Link</a>)</td>
          <td>Firmware (Klipper)</td>
          <td>0x08002000</td>
          <td>n/a</td>
