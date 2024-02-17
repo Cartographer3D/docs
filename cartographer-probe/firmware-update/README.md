@@ -23,9 +23,11 @@ Selecting the correcet firwmare is essential for the operation of the probe, ple
       </tr>
    </tbody>
 </table>
+
 ### Cartographer v2 w/ Input Shaper (USB or CAN)
 With Cartographer v2, the device will only work in the mode that it was purchased. This is a hardware limitation. The CAN Probe can be forced to work in USB Mode, but is unreliable and requires hardware modifications, this is not something we recommend right now.&#x20;
 #### USB Version
+
 <table>
    <thead>
       <tr>
@@ -54,7 +56,9 @@ With Cartographer v2, the device will only work in the mode that it was purchase
       </tr>
    </tbody>
 </table>
+
 #### CAN Version
+
 <table>
    <thead>
       <tr>
@@ -96,9 +100,13 @@ With Cartographer v2, the device will only work in the mode that it was purchase
       </tr>
    </tbody>
 </table>
+
 ### Cartographer v3 w/ Input Shaper (USB/CAN)
+
 Cartographer v3 by default will come pre-flashed for CAN. You can switch between both USB and CAN modes via firmware with no hardware modification required.&#x20;
+
 #### USB / CAN Version
+
 <table>
    <thead>
       <tr>
