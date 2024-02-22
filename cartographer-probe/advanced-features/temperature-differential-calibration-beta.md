@@ -32,8 +32,11 @@ M140 S95 = 95oC&#x20;
 ```gcode
 [gcode_macro DATA_SAMPLE]
 gcode:
+  G90
   M106 S255
+  M117 "Waiting for Coil to cool to 40"
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
+  M117 "Starting Phase 1 of 4"
   M106 S0
   G28
   G0 Z1
@@ -41,13 +44,16 @@ gcode:
   M140 S110
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data1
+  M117 "Waiting for Coil to heat to 70"
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data1
   M104 S0
   M140 S0
   M106 S255
   G0 Z80
+  M117 "Waiting for Coil to cool to 40"
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
+  M117 "Starting Phase 2 of 4"
   M106 S0
   G28 Z0
   G0 Z2
@@ -55,13 +61,16 @@ gcode:
   M140 S110
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data2
+  M117 "Waiting for Coil to heat to 70"
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data2
   M104 S0
   M140 S0
   M106 S255
   G0 Z80
+  M117 "Waiting for Coil to cool to 40"
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
+  M117 "Starting Phase 3 of 4"
   M106 S0
   G28 Z0
   G0 Z3
@@ -69,13 +78,16 @@ gcode:
   M140 S110
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data3
+  M117 "Waiting for Coil to heat to 70"
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data3
   M104 S0
   M140 S0
   M106 S255
   G0 Z80
+  M117 "Waiting for Coil to cool to 40"
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
+  M117 "Starting Phase 4 of 4"
   M106 S0
   G28 Z0
   G0 Z5
@@ -83,10 +95,13 @@ gcode:
   M140 S110
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data4
+  M117 "Waiting for Coil to heat to 70"
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data4
   M104 S0
   M140 S0
+  M117 "Testing complete, please move files using: mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/klipper/data4 ~/cartographer-klipper/"
+  M117 "Follow the remaining instructions here: https://docs.cartographer3d.com/cartographer-probe/advanced-features/temperature-differential-calibration-beta"
 ```
 
 The macro is then executed, and then the data1, data2, data3, and data4 files are generated in the Klipper folder, note, this can take a very long time.
