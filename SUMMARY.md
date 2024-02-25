@@ -2,7 +2,7 @@
 
 * [Welcome](README.md)
 
-## 🗺 Cartographer Probe
+## 🗺️ Cartographer Probe
 
 * [Installation and Setup](cartographer-probe/installation-and-setup/README.md)
   * [Probe Installation](cartographer-probe/installation-and-setup/probe-installation/README.md)
@@ -30,6 +30,6 @@
     * [Update via STLink](cartographer-probe/firmware-update/cartographer-with-input-shaper/update-via-stlink.md)
   * [Switching between CAN and USB Operation (v3 only)](cartographer-probe/firmware-update/switching-between-can-and-usb-operation-v3-only.md)
 
-## 🌪 Linear Motor
+## 🌪️ Linear Motor
 
 * [Coming Soon](linear-motor/coming-soon.md)

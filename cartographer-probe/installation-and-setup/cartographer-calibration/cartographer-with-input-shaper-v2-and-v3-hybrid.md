@@ -70,6 +70,12 @@ BED_MESH_CALIBRATE
 
 #### Setting Z Offset
 
+Before modifying your Z Offset, make sure that you have set your Z position to 0, to do this you can run the following command.&#x20;
+
+```
+G1 Z0 F1500
+```
+
 Once you have done all of the above, it is worth re-calibrating the Z-Offset. This can be done in Mainsail or Fluidd using the graphical interface. \
 \
 OR you can use G-Code in the window to console to do so
