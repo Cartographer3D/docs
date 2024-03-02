@@ -20,6 +20,12 @@ Updating via Katapult and CAN is super easy, all you need is to know your probes
 
 SSH into your printer, and navigate to the folder where the firmware you want to flash is located and run the following command replacing `<firmware.bin>` with the fimware  file name and `<uuid>` with your probes UUID.&#x20;
 
+{% hint style="danger" %}
+CHECK THE FIRMWARE YOU ARE FLASHING IS THE CORRECT FIRMWARE.\
+\
+<mark style="color:red;">Any firmware labelled Katapult, or Full CANNOT be flashed using this method.</mark>&#x20;
+{% endhint %}
+
 ```
 python3 ~/katapult/scripts/flash_can.py -i can0 -f <firmware.bin> -u <myuuid>
 ```

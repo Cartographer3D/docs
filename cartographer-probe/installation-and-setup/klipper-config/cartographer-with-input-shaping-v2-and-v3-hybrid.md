@@ -2,6 +2,12 @@
 
 ## Finding the Serial or UUID
 
+{% hint style="warning" %}
+A small number of probes which shipped directly from Cartographer3D between mid and late February may have been pre-flashed with the incorrect firmware. If you cannot find a serial number or UUID, please follow [this guide on how to re-flash](../../firmware-update/switching-between-can-and-usb-operation-v3-only.md) with the correct firmware. \
+\
+We are sorry for any inconvenience caused.&#x20;
+{% endhint %}
+
 Note, you need to replace the serial path  or UUID with your probes serial path or UUID, this can be found by running the following commands&#x20;
 
 For USB based probes&#x20;
