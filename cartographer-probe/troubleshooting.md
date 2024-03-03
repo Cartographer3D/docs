@@ -99,7 +99,12 @@ sudo reboot
 
 ### Klipper environement running on Python 2
 
-You will need to update your Klipper env from Python 2 to Python 3.  the following guide is taken from [https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/3](https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/3)&#x20;
+You will need to update your Klipper env from Python 2 to Python 3.  the following guide is taken from [https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/3](https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/3) \
+
+
+{% hint style="info" %}
+Note - a minimum version of Pyhon 3.9 is required. &#x20;
+{% endhint %}
 
 ```bash
 sudo service klipper stop
