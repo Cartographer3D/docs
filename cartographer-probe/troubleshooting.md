@@ -97,3 +97,23 @@ sudo reboot
    For more information on how to do that, [click here ](firmware-update/)
 3. Check your USB Cable - If you have bought a flat pack, and your probe is a assembled for RIGHT ANGLE operation, you might have to re-assemble re-pin your USB cable in reverse.&#x20;
 
+### Klipper environement running on Python 2
+
+You will need to update your Klipper env from Python 2 to Python 3.  the following guide is taken from [https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/3](https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/3)&#x20;
+
+```bash
+sudo service klipper stop
+
+# remove current klippy-env environment
+cd ~
+rm -rf klippy-env
+
+# create new venv
+virtualenv -p python3 klippy-env
+
+#install new Klipper venv
+cd ~/klippy-env
+bin/pip install -r ../klipper/scripts/klippy-requirements.txt
+```
+
+Restart your pritner, and you should now have a wonderful Klipper environement running in Python3.&#x20;
