@@ -5,7 +5,7 @@
 Clone the Klipper module from GitHub using the following commands, you then need to run our installation script.
 
 ```
-~
+cd ~
 git clone https://github.com/Cartographer3D/cartographer-klipper.git
 chmod +x cartographer-klipper/install.sh
 ./cartographer-klipper/install.sh
