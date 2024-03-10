@@ -208,4 +208,4 @@ Example:
 dfu-util -R -a 0 -s 0x08000000:leave -D Full_Cartographer_USB_v3.bin
 ```
 
-Once compelte, it shoudl exit out of DFU mode, and you should be able to find your probe using either CAN or USB.&#x20;
+Once compelete, it should exit out of DFU mode, and you should be able to find your probe using either CAN or USB.&#x20;
