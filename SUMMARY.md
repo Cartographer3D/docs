@@ -22,6 +22,7 @@
 * [Troubleshooting](cartographer-probe/troubleshooting.md)
 * [Firmware Update](cartographer-probe/firmware-update/README.md)
   * [Which Firmware?](cartographer-probe/firmware-update/which-firmware.md)
+  * [Re-Flashing Firmware](cartographer-probe/firmware-update/re-flashing-firmware.md)
   * [Cartographer (rp2040)](cartographer-probe/firmware-update/cartographer-rp2040/README.md)
     * [DFU / U2F Bootloader Mode](cartographer-probe/firmware-update/cartographer-rp2040/dfu-u2f-bootloader-mode.md)
   * [Cartographer with Input Shaper](cartographer-probe/firmware-update/cartographer-with-input-shaper/README.md)

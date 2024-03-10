@@ -34,9 +34,9 @@ M140 S95 = 95oC&#x20;
 gcode:
   G90
   M106 S255
-  M117 "Waiting for Coil to cool to 40"
+  M117 Waiting for Coil to cool to 40
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
-  M117 "Starting Phase 1 of 4"
+  M117 Starting Phase 1 of 4
   M106 S0
   G28
   G0 Z1
@@ -44,16 +44,16 @@ gcode:
   M140 S110
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data1
-  M117 "Waiting for Coil to heat to 70"
+  M117 Waiting for Coil to heat to 70
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data1
   M104 S0
   M140 S0
   M106 S255
   G0 Z80
-  M117 "Waiting for Coil to cool to 40"
+  M117 Waiting for Coil to cool to 40
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
-  M117 "Starting Phase 2 of 4"
+  M117 Starting Phase 2 of 4
   M106 S0
   G28 Z0
   G0 Z2
@@ -61,14 +61,14 @@ gcode:
   M140 S110
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data2
-  M117 "Waiting for Coil to heat to 70"
+  M117 Waiting for Coil to heat to 70
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data2
   M104 S0
   M140 S0
   M106 S255
   G0 Z80
-  M117 "Waiting for Coil to cool to 40"
+  M117 Waiting for Coil to cool to 40
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
   M117 "Starting Phase 3 of 4"
   M106 S0
@@ -78,14 +78,14 @@ gcode:
   M140 S110
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data3
-  M117 "Waiting for Coil to heat to 70"
+  M117 Waiting for Coil to heat to 70
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data3
   M104 S0
   M140 S0
   M106 S255
   G0 Z80
-  M117 "Waiting for Coil to cool to 40"
+  M117 Waiting for Coil to cool to 40
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
   M117 "Starting Phase 4 of 4"
   M106 S0
@@ -95,7 +95,7 @@ gcode:
   M140 S110
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data4
-  M117 "Waiting for Coil to heat to 70"
+  M117 Waiting for Coil to heat to 70
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data4
   M104 S0
