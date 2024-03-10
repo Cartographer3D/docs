@@ -8,7 +8,7 @@ For this, you will need the following items / tools, though it does vary dependi
 
 If you recieved a USB Cable with your order, OR have a USB Cable terminated with a JST-PH connector then continue from **here**
 
-If you have a ST-Link Flasher ([like this](https://www.amazon.com/Sumklin-ST-Link-Emulator-Downloader-Connect/dp/B0CHWKJQYB/ref=sr\_1\_6?crid=S6B8HWUSRC0Z\&dib=eyJ2IjoiMSJ9.qqFD5Om07FWVxJ7mURnZvPq709MTcuqoA3fE0gXiF\_SWEFG9f1NUd634THxfckI76D\_hZ3arbsDiW-Db1xTIEOza\_to4Idw50g0wqw8NlTEQcTI\_alwxI6Vlp09baxGXlMWWQvW8BoursvDtdmAKY7ExUxOwyWdp-R7b-9ekncnwAIKpE0SS1KY7FmNICg4GXiJzwnURM0ze\_dw8vLbUXr2P1rsvtNRHpObpiPAhdS4.usA91wnACoc6mryl4h5GOt6De85Z-hRVX8W9dbaCDLc\&dib\_tag=se\&keywords=ST+Link\&qid=1710043006\&sprefix=st+l%2Caps%2C874\&sr=8-6)) click [here](cartographer-with-input-shaper/update-via-stlink.md)
+If you happen to have a ST-Link Flasher ([like this](https://www.amazon.com/Sumklin-ST-Link-Emulator-Downloader-Connect/dp/B0CHWKJQYB/ref=sr\_1\_6?crid=S6B8HWUSRC0Z\&dib=eyJ2IjoiMSJ9.qqFD5Om07FWVxJ7mURnZvPq709MTcuqoA3fE0gXiF\_SWEFG9f1NUd634THxfckI76D\_hZ3arbsDiW-Db1xTIEOza\_to4Idw50g0wqw8NlTEQcTI\_alwxI6Vlp09baxGXlMWWQvW8BoursvDtdmAKY7ExUxOwyWdp-R7b-9ekncnwAIKpE0SS1KY7FmNICg4GXiJzwnURM0ze\_dw8vLbUXr2P1rsvtNRHpObpiPAhdS4.usA91wnACoc6mryl4h5GOt6De85Z-hRVX8W9dbaCDLc\&dib\_tag=se\&keywords=ST+Link\&qid=1710043006\&sprefix=st+l%2Caps%2C874\&sr=8-6)), the process is a bit simpler, to find out more information click [here](cartographer-with-input-shaper/update-via-stlink.md)
 
 There are two solutions;
 
@@ -33,7 +33,7 @@ Method 2 Equipment
 
 ### Method 1
 
-Step 1 - Cut the end off your doner USB cable
+Step 1 - Cut the end off your donor USB cable
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Remove the end of the USB Cable</p></figcaption></figure>
 
@@ -76,11 +76,9 @@ It should appear as a serial device there. Any issues, please join our Discord a
 
 Crimping your own JST-PH - USB cable, this is a useful cable to have, and can be done with the crimps and connector incldued with the probe.&#x20;
 
-
-
 #### Step 1
 
-Cut the end off your doner USB cable. This needs to be a cable which works for data, there seem to be a lot of USB cables which are power only, these will not work.&#x20;
+Cut the end off your donor USB cable. This needs to be a cable which works for data, there seem to be a lot of USB cables which are power only, these will not work.&#x20;
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
