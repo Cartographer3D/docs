@@ -49,7 +49,13 @@ Use your snippers / strippers to expose about 6 - 8 mm at the end of your wires
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-Step 3 - Feed the exposed wires into the DuPont connectors, and use the right angle dupont mail connectors to plug the cable in and force contact
+Step 3 - Feed the exposed wires into the DuPont connectors, and use the right angle DuPont male connectors to plug the cable in and force contact
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Notice the DuPont 2.54mm RA connectors plugging the cable in.</p></figcaption></figure>
+
+
 
 Typically the following cables will be matched with each other&#x20;
 
@@ -59,10 +65,6 @@ Typically the following cables will be matched with each other&#x20;
 | Black - GND | Black - GND    |
 | Green (D+)  | Yellow (Can H) |
 | White (D-)  | White (Can L)  |
-
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Notice the DuPont 2.54mm RA connectors plugging the cable in.</p></figcaption></figure>
 
 You should be able to connect your USB Cable to your computer now, as the probe will have accidently been flashed with USB Firmware rather than CAN, so if you plug into a Windows PC, you should hear that new device connected chime.&#x20;
 
