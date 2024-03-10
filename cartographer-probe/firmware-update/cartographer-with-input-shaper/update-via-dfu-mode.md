@@ -86,6 +86,8 @@ If your BLUE LED is Flashing, you have not fully flashed your Firmware, and you 
 
 ### Flashing via DFU Util (Linux Terminal).&#x20;
 
+{% embed url="https://youtu.be/casMZXMRWNs" %}
+
 SSH into your linux host MCU, ensuring that your Cartographer is plugged in and in DFU Mode.&#x20;
 
 Navigate into the correct folder, so if you want to update your v3 run the following command.&#x20;
