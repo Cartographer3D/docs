@@ -6,7 +6,7 @@ description: How to setup the cartographer probe on the Creality K1/Max
 
 ## Hardware Setup
 
-* [Download the Model](https://www.printables.com/model/684338-k1-k1max-eddy-current-mount-cartographer/)
+* [Download the Model](https://makerworld.com/en/models/200689)
 * [Follow the Assembly Manual](../probe-installation/creality-k1-max-probe-configuration.md)
 
 ## Software Prerequisites
