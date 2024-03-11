@@ -6,7 +6,7 @@ Note - since launch there have been a few different variations of the CNC mount,
 
 <figure><img src="../.gitbook/assets/3dd242f8d176bbbf5d79431dde8a918.jpg" alt=""><figcaption></figcaption></figure>
 
-###
+<figure><img src="../.gitbook/assets/2a955708f5bec291e574867970cab91.jpg" alt=""><figcaption></figcaption></figure>
 
 ### Things to note
 
