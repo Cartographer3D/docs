@@ -4,7 +4,7 @@
 
 ## 🗺️ Cartographer Probe
 
-* [Installation and Setup](cartographer-probe/installation-and-setup/README.md)
+* [🏗️ Installation and Setup](cartographer-probe/installation-and-setup/README.md)
   * [Probe Installation](cartographer-probe/installation-and-setup/probe-installation/README.md)
     * [Wiring Diagrams](cartographer-probe/installation-and-setup/probe-installation/wiring-diagrams.md)
     * [Creality K1/Max Probe Configuration](cartographer-probe/installation-and-setup/probe-installation/creality-k1-max-probe-configuration.md)
@@ -16,11 +16,11 @@
   * [Cartographer Calibration](cartographer-probe/installation-and-setup/cartographer-calibration/README.md)
     * [Cartographer (rp2040)](cartographer-probe/installation-and-setup/cartographer-calibration/cartographer-rp2040.md)
     * [Cartographer with Input Shaper (v2 & v3 hybrid)](cartographer-probe/installation-and-setup/cartographer-calibration/cartographer-with-input-shaper-v2-and-v3-hybrid.md)
-* [Advanced Features](cartographer-probe/advanced-features/README.md)
+* [🤓 Advanced Features](cartographer-probe/advanced-features/README.md)
   * [Cartographer Models](cartographer-probe/advanced-features/cartographer-models.md)
   * [Temperature Differential Calibration (BETA)](cartographer-probe/advanced-features/temperature-differential-calibration-beta.md)
-* [Troubleshooting](cartographer-probe/troubleshooting.md)
-* [Firmware Update](cartographer-probe/firmware-update/README.md)
+* [😕 Troubleshooting](cartographer-probe/troubleshooting.md)
+* [⬆️ Firmware Update](cartographer-probe/firmware-update/README.md)
   * [Which Firmware?](cartographer-probe/firmware-update/which-firmware.md)
   * [Re-Flashing Firmware](cartographer-probe/firmware-update/re-flashing-firmware.md)
   * [Cartographer (rp2040)](cartographer-probe/firmware-update/cartographer-rp2040/README.md)
@@ -37,4 +37,4 @@
 
 ## 🌪️ Linear Motor
 
-* [Coming Soon](linear-motor/coming-soon.md)
+* [🗓️ Coming Soon](linear-motor/coming-soon.md)
