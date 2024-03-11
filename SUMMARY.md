@@ -31,6 +31,10 @@
     * [Update via STLink](cartographer-probe/firmware-update/cartographer-with-input-shaper/update-via-stlink.md)
   * [Switching between CAN and USB Operation (v3 only)](cartographer-probe/firmware-update/switching-between-can-and-usb-operation-v3-only.md)
 
+## 🚠 Cartographer CNC Mount
+
+* [🚧 Installation](cartographer-cnc-mount/installation.md)
+
 ## 🌪️ Linear Motor
 
 * [Coming Soon](linear-motor/coming-soon.md)
