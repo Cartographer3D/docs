@@ -6,6 +6,7 @@
 
 * [🏗️ Installation and Setup](cartographer-probe/installation-and-setup/README.md)
   * [Probe Installation](cartographer-probe/installation-and-setup/probe-installation/README.md)
+    * [Stealthburner CW2 Mount](cartographer-probe/installation-and-setup/probe-installation/stealthburner-cw2-mount.md)
     * [Wiring Diagrams](cartographer-probe/installation-and-setup/probe-installation/wiring-diagrams.md)
     * [Creality K1/Max Probe Configuration](cartographer-probe/installation-and-setup/probe-installation/creality-k1-max-probe-configuration.md)
   * [Klipper Setup](cartographer-probe/installation-and-setup/klipper-setup/README.md)
