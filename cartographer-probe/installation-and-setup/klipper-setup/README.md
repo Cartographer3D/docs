@@ -44,6 +44,23 @@ info_tags:
   desc=Cartographer Probe
 ```
 
+For Mainland China:
+
+```yaml
+[update_manager cartographer]
+type: git_repo
+path: ~/cartographer-klipper
+channel: dev
+origin: https://github.com/Cartographer3D/cartographer-klipper.git
+env: ~/klippy-env/bin/python
+requirements: requirements.txt
+install_script: install.sh
+is_system_service: False
+managed_services: klipper
+info_tags:
+  desc=Cartographer Probe (Gitee)
+```
+
 upon completion, press SAVE & RESTART and it should now display in the update section of either Mainsail or Fluidd.&#x20;
 
 <figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Cartographer Software updates managed via Moonraker.</p></figcaption></figure>
