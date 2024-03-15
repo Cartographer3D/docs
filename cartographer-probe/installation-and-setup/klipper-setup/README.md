@@ -13,6 +13,14 @@ chmod +x cartographer-klipper/install.sh
 
 This step will automatically create a link to the script and place it in the klipper/klippy/extra directory.
 
+If you are in Mainland China, use the following command:
+
+<pre><code><strong>cd ~
+</strong><strong>git clone https://gitee.com/ruchi/cartographer-klipper.git
+</strong>chmod +x cartographer-klipper/install.sh
+./cartographer-klipper/install.sh
+</code></pre>
+
 {% hint style="warning" %}
 Legacy Klipper environements running on Python2 will need updating to Python 3.9 or later. The easiest way to do that is a complete fresh install, though we do have a guide that can help that is linked [here  ](https://docs.cartographer3d.com/cartographer-probe/troubleshooting#klipper-environement-running-on-python-2)
 {% endhint %}
