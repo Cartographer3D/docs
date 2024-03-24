@@ -1,4 +1,4 @@
-# Temperature Differential Calibration (BETA)
+# Temperature Differential Calibration
 
 
 
@@ -7,7 +7,7 @@ This requires Cartographer v1.0.0-17-g944c62e9 or later.&#x20;
 {% endhint %}
 
 {% hint style="danger" %}
-After doing any form of Temperature Calirbation, it is essential you re-complete the setup calibration on EVERY model.\
+After doing any form of Temperature Calirbation, it is essential you re-complete the `CARTOGRAPHER_CALIBRATION` on EVERY model.\
 \
 IF YOU DO NOT DO THIS, YOU MIGHT DO DAMAGE TO YOUR PRINT SURFACE.
 {% endhint %}
@@ -29,13 +29,14 @@ M140 S110 = 110oC\
 M140 S95 = 95oC&#x20;
 {% endhint %}
 
-```gcode
-[gcode_macro DATA_SAMPLE]
+<pre class="language-gcode"><code class="lang-gcode">[gcode_macro DATA_SAMPLE]
 gcode:
   G90
   M106 S255
-  M117 Waiting for Coil to cool to 40
+<strong>  RESPOND TYPE=command MSG='Waiting for Coil to cool to 40'
+</strong>  M117 Waiting for Coil to cool to 40
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
+  RESPOND TYPE=command MSG='Starting Phase 1 of 4'
   M117 Starting Phase 1 of 4
   M106 S0
   G28
@@ -45,15 +46,18 @@ gcode:
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data1
   M117 Waiting for Coil to heat to 70
+  RESPOND TYPE=command MSG='Waiting for Coil to heat to 70'
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data1
   M104 S0
   M140 S0
   M106 S255
   G0 Z80
+  RESPOND TYPE=command MSG='Waiting for Coil to cool to 40'
   M117 Waiting for Coil to cool to 40
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
   M117 Starting Phase 2 of 4
+  RESPOND TYPE=command MSG='Starting Phase 2 of 4'
   M106 S0
   G28 Z0
   G0 Z2
@@ -62,15 +66,18 @@ gcode:
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data2
   M117 Waiting for Coil to heat to 70
+  RESPOND TYPE=command MSG='Waiting for Coil to heat to 70'
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data2
   M104 S0
   M140 S0
   M106 S255
   G0 Z80
+  RESPOND TYPE=command MSG='Waiting for Coil to cool to 40'
   M117 Waiting for Coil to cool to 40
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
   M117 "Starting Phase 3 of 4"
+  RESPOND TYPE=command MSG='Starting Phase 3 of 4'
   M106 S0
   G28 Z0
   G0 Z3
@@ -79,6 +86,7 @@ gcode:
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data3
   M117 Waiting for Coil to heat to 70
+  RESPOND TYPE=command MSG='Waiting for Coil to heat to 70'
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data3
   M104 S0
@@ -86,8 +94,10 @@ gcode:
   M106 S255
   G0 Z80
   M117 Waiting for Coil to cool to 40
+  RESPOND TYPE=command MSG='Waiting for Coil to cool to 40'
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
   M117 "Starting Phase 4 of 4"
+  RESPOND TYPE=command MSG='Starting Phase 4 of 4'
   M106 S0
   G28 Z0
   G0 Z5
@@ -96,13 +106,16 @@ gcode:
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data4
   M117 Waiting for Coil to heat to 70
+  RESPOND TYPE=command MSG='Waiting for Coil to heat to 70'
   TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
   CARTOGRAPHER_STREAM FILENAME=data4
   M104 S0
   M140 S0
+  RESPOND TYPE=command MSG='Testing complete, please move files using: mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/klipper/data4 ~/cartographer-klipper/'
   M117 "Testing complete, please move files using: mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/klipper/data4 ~/cartographer-klipper/"
+  RESPOND TYPE=command MSG='Follow the remaining instructions here: https://docs.cartographer3d.com/cartographer-probe/advanced-features/temperature-differential-calibration-beta'
   M117 "Follow the remaining instructions here: https://docs.cartographer3d.com/cartographer-probe/advanced-features/temperature-differential-calibration-beta"
-```
+</code></pre>
 
 The macro is then executed, and then the data1, data2, data3, and data4 files are generated in the Klipper folder, note, this can take a very long time.
 
@@ -125,16 +138,12 @@ sudo apt-get install libopenblas-dev
 Once installed, run the following script, this will analyse the data from the files that you have moved. You need to ensure that you are on the latest version of our firmware, if you get an error about file not existing, go to our Klipper Setup page and re-run that initial script.&#x20;
 
 ```
-~/klippy-env/bin/python ~/cartographer-klipper/arg_fit.py
+~/klippy-env/bin/python ~/cartographer-klipper/tempcalib.py
 ```
-
-After running the script, you will be asked to enter a threshold value. \
-\
-The default recommendation is`1000`.  if you find there is a lot of deviation from the orange line _**example 1**_, increase the threshold by `500` each time until you get a chart that looks more like _**example 2.**_
 
 After running, four parameters will be generated and a picture will be generated in your bash window and a image in your `cartographer-klipper` folder.&#x20;
 
-(This process is very computationally intensive and takes a while) Please check the picture named fit.png and judge the fitting effect. The picture example is as follows:
+(This process is very computationally intensive and takes a while, if the files are too big it may fail) Please check the picture named fit\_output.png and judge the fitting effect. The picture example is as follows:
 
 <figure><img src="../../.gitbook/assets/fit.png" alt=""><figcaption><p>Example 1</p></figcaption></figure>
 
@@ -182,7 +191,7 @@ CARTOGRAPHER_CALIBRATE
 Once compelete, SAVE & RESTART your config.&#x20;
 
 {% hint style="danger" %}
-After doing any form of Temperature Calirbation, it is essential you re-complete the setup calibration on EVERY model.\
+After doing any form of Temperature Calirbation, it is essential you re-complete the `CARTOGRAPHER_CALIBRATION` on EVERY model.\
 \
 IF YOU DO NOT DO THIS, YOU MIGHT DO DAMAGE TO YOUR PRINT SURFACE.
 {% endhint %}

@@ -12,7 +12,7 @@ I have only personally tested this on a ST-LINK/V2 Mini with modern firmware on 
 
 Wiring is super simple (diagram will be added soon), connect the following to each other&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
 
 
@@ -29,7 +29,7 @@ Download and Install STM32CubeProgrammer from [here](https://www.st.com/en/devel
 
 Open the STMCubeProgrammer, and on the RIGHT side, select select STLink from the drop down menu and press **Connect**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once you have connected, Click Open File - you will need to select both the Katapult Bootloader for your board, and your Cartographer Firmware that you have downloaded.&#x20;
 

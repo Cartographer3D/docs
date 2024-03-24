@@ -28,8 +28,6 @@ For CAN based probes
 if you are using an existing printer config, make sure you remove any previous reference to `[cartographer]` or `[probe]` in the saved section at the bottom.&#x20;
 {% endhint %}
 
-
-
 ```yaml
 [cartographer]
 serial:
@@ -125,7 +123,13 @@ gcode:
     CARTOGRAPHER_CALIBRATE
 ```
 
+{% hint style="danger" %}
+You will now need to ensure that you update your Z-Tilt or QGL settings to ensure that Cartographer is over the bed when performing these actions.  We will be checking these during the calibration phase.&#x20;
+{% endhint %}
+
 Finally, you need to ensure you have a suitable `bed_mesh` section. Information can be found [here](https://www.klipper3d.org/Bed\_Mesh.html)
+
+
 
 {% hint style="warning" %}
 It is vital you complete the Calibration steps, without doing so the probe will not work properly and is likely to show TRIGGERED.&#x20;

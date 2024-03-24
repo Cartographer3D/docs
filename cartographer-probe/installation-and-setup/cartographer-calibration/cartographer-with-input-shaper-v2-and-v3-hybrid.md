@@ -62,6 +62,31 @@ You can also measure the backlash of your Z axis
 CARTOGRAPHER_ESTIMATE_BACKLASH
 ```
 
+If youa re using a printer which supports either `Z_TILT` or `QUAD_GANTRY_LEVEL` you will need to ensure that your probe is positioned above the bed when performing this, open up your `printer.cfg` and find the appropriate section, for example your Z\_TILT section may look like this:
+
+<pre class="language-yaml"><code class="lang-yaml">[quad_gantry_level]
+gantry_corners:
+   -60,-10
+   410,420
+#  Probe points
+points:
+   50,25   # Point 1
+   50,275  # Point 2
+   300,275 # Point 3
+   300,25  # Point 4
+#--------------------------------------------------------------------
+<strong>
+</strong>speed: 100
+horizontal_move_z: 10
+retries: 5
+retry_tolerance: 0.0075
+max_adjust: 10
+</code></pre>
+
+You should in your console navigate to each point to ensure that your probe is not hanging off the edge, you can do this using a `G0` command such as `G0 X50 Y25` for point 1, or `G0 X50 Y275` for point 2. &#x20;
+
+If at all points, Cartographer is safely over the bed, you should be good to go for running a `QUAD_GANTRY_LEVEL` or `Z_TILT` .
+
 You can now run a Bed Mesh Calibration (I would advise doing either a `Z_TILT` or `QUAD_GANTRY_LEVEL` before.
 
 ```
@@ -94,5 +119,5 @@ Z_OFFSET_APPLY_PROBE
 And now save your config.
 
 {% hint style="warning" %}
-If you are regularly changing your bed, please look at creating different models for your different beds, more information can be found [here ](../../advanced-features/cartographer-models.md)
+If you are regularly changing your bed, please look at creating different models for your different beds, more information can be found [here ](../../fine-tuning/cartographer-models.md)
 {% endhint %}
