@@ -4,11 +4,24 @@ This list is NOT exhaustive, if you need support don't be a stranger and please 
 \
 If you do think that something is missing, please let us know and I will add it as soon as I can.&#x20;
 
+### Option 'pin' in section 'probe' must be specified
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+This can occur either after a Klipper update when the sym link occasionally gets broken, or if you have not installed the Klipper component during the install, either way the fix is the same, just re-run the installer below.
+
+```
+cd ~
+git clone https://github.com/Cartographer3D/cartographer-klipper.git
+chmod +x cartographer-klipper/install.sh
+./cartographer-klipper/install.sh
+```
+
 ### Unknown pin chip name 'cartographer'
 
 
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Unknown pin chip name 'cartographer'</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Unknown pin chip name 'cartographer'</p></figcaption></figure>
 
 The following two issues are usually why you recieve the above error.
 
@@ -17,7 +30,7 @@ The following two issues are usually why you recieve the above error.
 
 ### Unknown pin chip name 'probe'
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 This error usually  happens when you have your `[cartographer]` section below your `[stepper_z]` section, move the `[cartographer]` section near your MCU's.&#x20;
 
@@ -27,7 +40,7 @@ In `[stepper_z]` you have set  `endstop_pin: cartographer:z_virtual_endstop` thi
 
 ### Error importing numpy error
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>"Error importing numpy: you should not try to import numpy from" error</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption><p>"Error importing numpy: you should not try to import numpy from" error</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption><p>The error in a slightly different view.</p></figcaption></figure>
 
@@ -100,6 +113,9 @@ sudo reboot
 ### Klipper environement running on Python 2
 
 You will need to update your Klipper env from Python 2 to Python 3.  the following guide is taken from [https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/3](https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/3) \
+\
+There is another outstanding guide by EricZimmerman that I would highly recommend checking out \
+[ https://github.com/EricZimmerman/VoronTools/blob/main/OSUpgrade.md](https://github.com/EricZimmerman/VoronTools/blob/main/OSUpgrade.md)\
 
 
 {% hint style="info" %}
@@ -121,4 +137,15 @@ cd ~/klippy-env
 bin/pip install -r ../klipper/scripts/klippy-requirements.txt
 ```
 
-Restart your pritner, and you should now have a wonderful Klipper environement running in Python3.&#x20;
+Restart your pritner, and you should now have a wonderful Klipper environement running in Python3.
+
+### Klipper is showing my install as dirty?
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+Klipper will show any build as klipper as "dirty" if there are any untracked Python files within the folders, this is the same with all other python based plugins such as ShakenTune, LEDEffects and so on. \
+\
+Unfortuantly, there is no way around this at the moment. \
+\
+[https://github.com/Klipper3d/klipper/actions/runs/4840565448](https://github.com/Klipper3d/klipper/actions/runs/4840565448)
+
