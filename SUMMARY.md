@@ -32,7 +32,7 @@
     * [Update via DFU Mode](cartographer-probe/firmware-update/cartographer-with-input-shaper/update-via-dfu-mode.md)
     * [Update via STLink](cartographer-probe/firmware-update/cartographer-with-input-shaper/update-via-stlink.md)
   * [Switching between CAN and USB Operation (v3 only)](cartographer-probe/firmware-update/switching-between-can-and-usb-operation-v3-only.md)
-* [Troubleshooting](cartographer-probe/troubleshooting.md)
+* [😭 Troubleshooting](cartographer-probe/troubleshooting.md)
 * [⁉️ FAQ](cartographer-probe/faq.md)
 
 ## 🚠 Cartographer CNC Mount

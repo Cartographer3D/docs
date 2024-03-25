@@ -1,4 +1,4 @@
-# Troubleshooting
+# 😭 Troubleshooting
 
 This list is NOT exhaustive, if you need support don't be a stranger and please come and talk to us on Discord, we are more than happy to help.\
 \

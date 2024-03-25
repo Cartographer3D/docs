@@ -53,7 +53,7 @@ CARTOGRAPHER_MODEL_SAVE NAME=fysetc-pei-cold
 // update the printer config file and restart the printer
 ```
 
-* **Deleting Models** - `CARTOGRAPHER_MODEL_REMOTE NAME=model` command will delete the cartographer model with `model` as the name from your config file. \
+* **Deleting Models** - `CARTOGRAPHER_MODEL_REMOVE NAME=model` command will delete the cartographer model with `model` as the name from your config file. \
   \
   You must perform a `SAVE_CONFIG` in order to commit the changes to the config file. \
   \
