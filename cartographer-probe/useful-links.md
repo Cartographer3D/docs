@@ -16,6 +16,12 @@ As he puts it, Numpy got you down? Do you hate Python 3? Crowsnest blues? Then E
 
 Click [here ](https://github.com/EricZimmerman/VoronTools/tree/main)to check it out&#x20;
 
+### Ellis' Print Tuning Guide
+
+An outstanding guide to help you tune and calibrate your printer.  It truely is a true A to Z guide and works with most common printers.
+
+{% embed url="https://ellis3dp.com/Print-Tuning-Guide/" %}
+
 ### A Better Print\_Start Macro by jontek2
 
 A better Print\_Start macro is a great resource to imporve your `print_start` macro, it is detailed, verl well documented.\
