@@ -8,7 +8,7 @@ Cartographer v3 by default will come pre-flashed for CAN. You can switch between
 You need to use both a bootloader, and firmware. When updating, it is currently only neccessary to flash the Firmware.
 {% endhint %}
 
-Firmware Build 4.0.0 is compatible with both lis2dw and ADXL345 based probes. and is avialble from the GitHub repository. If you have cloned the firmware down to your Pi, it is already available.
+Firmware Build 4.0.0 is compatible with both lis2dw and ADXL345 based probes. and is available from the GitHub repository. If you have cloned the firmware down to your Pi, it is already available.
 
 ### Bootloaders
 
@@ -20,12 +20,12 @@ To navigate to these on your Pi, they are located in the following directory - \
 \
 &#x20;`/cartographer-klipper/firmware/v3/`
 
-| Firmware                                                                                                                                                        | Type                  | Address    | Baudrate | Note                                                              |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ---------- | :------: | ----------------------------------------------------------------- |
-| <h4><a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Katapult_250k_withSwitch.bin">Katapult_250k_withSwitch.bin</a></h4> | Bootloader (Katapult) | 0x08000000 |   250K   | This is the Katapult bootloader, do not flash this via Katapult.  |
-| <h4><a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Katapult_500k_withSwitch.bin">Katapult_500k_withSwitch.bin</a></h4> | Bootloader (Katapult) | 0x08000000 |   500K   | This is the Katapult bootloader, do not flash this via Katapult.7 |
-| <h4><a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Katapult_1m_withSwitch.bin">Katapult_1m_withSwitch.bin</a></h4>     | Bootloader (Katapult) | 0x08000000 |    1M    | This is the Katapult bootloader, do not flash this via Katapult.  |
-| <h4><a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Katapult_USB.bin">Katapult_USB.bin</a></h4>                         | Bootloader (Katapult) | 0x08000000 |    USB   | This is the Katapult bootloader, do not flash this via Katapult.  |
+| Firmware                                                                                                                                                        | Type                  | Address    | Baudrate | Note                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ---------- | :------: | ---------------------------------------------------------------- |
+| <h4><a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Katapult_250k_withSwitch.bin">Katapult_250k_withSwitch.bin</a></h4> | Bootloader (Katapult) | 0x08000000 |   250K   | This is the Katapult bootloader, do not flash this via Katapult. |
+| <h4><a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Katapult_500k_withSwitch.bin">Katapult_500k_withSwitch.bin</a></h4> | Bootloader (Katapult) | 0x08000000 |   500K   | This is the Katapult bootloader, do not flash this via Katapult. |
+| <h4><a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Katapult_1m_withSwitch.bin">Katapult_1m_withSwitch.bin</a></h4>     | Bootloader (Katapult) | 0x08000000 |    1M    | This is the Katapult bootloader, do not flash this via Katapult. |
+| <h4><a href="https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v3/Katapult_USB.bin">Katapult_USB.bin</a></h4>                         | Bootloader (Katapult) | 0x08000000 |    USB   | This is the Katapult bootloader, do not flash this via Katapult. |
 
 ### Cartographer Firmware
 
