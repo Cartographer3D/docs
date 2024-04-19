@@ -1,4 +1,4 @@
-# Cartographer with Input Shaping (v2 & v3 hybrid)
+# Klipper Configuration
 
 ## Finding the Serial or UUID
 
@@ -80,11 +80,13 @@ mesh_runs: 2
 ```
 
 {% hint style="warning" %}
-NOTE - The \[cartographer] section needs to be above any other reference to either cartographer or probe within your Klipper config, for this reason I advise adding it near where you declare your MCU's.&#x20;
+NOTE - The \[cartographer] section needs to be above any other reference to either cartographer or probe within your Klipper config, for this reason I advise adding it near&#x20;
 {% endhint %}
 
-If you want to use the probe for Input Shaper, please add the following to your config.&#x20;
+If you want to use the probe for Input Shaper, please add the following to your config.
 
+{% tabs %}
+{% tab title="lis2dw based probes" %}
 ```yaml
 [lis2dw]
 cs_pin: cartographer:PA3
@@ -95,6 +97,21 @@ accel_chip: lis2dw
 probe_points:
     125, 125, 20
 ```
+{% endtab %}
+
+{% tab title="adxl345 based probes" %}
+```yaml
+[adxl345]
+cs_pin: cartographer:PA3
+spi_bus: spi1
+
+[resonance_tester]
+accel_chip: adxl345
+probe_points:
+    125, 125, 20
+```
+{% endtab %}
+{% endtabs %}
 
 You then need to remove, or comment out your `[probe]` section.
 
@@ -107,7 +124,7 @@ home_xy_position: [your x-axis center coordinate], [your y-axis center coordinat
 z_hop: 10
 ```
 
-You will also need to update your Z configuration settings.
+You will also need to update your Z configuration settings, this will involve removing or commenting out your `position_endstop:` configuration.&#x20;
 
 ```yaml
 [stepper_z]
