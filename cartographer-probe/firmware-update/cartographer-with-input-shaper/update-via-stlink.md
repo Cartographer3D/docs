@@ -27,6 +27,10 @@ Wiring is super simple (diagram will be added soon), connect the following to ea
 
 Download and Install STM32CubeProgrammer from [here](https://www.st.com/en/development-tools/stm32cubeprog.html), I warn you it requires you to sign up for an account.
 
+{% hint style="warning" %}
+Version 2.14.0 is recommended due to a known bug in 2.16.0 which causes issues when flashing via STMCubeProgammer - this can be selected from the version 'drop down' on the site.&#x20;
+{% endhint %}
+
 Open the STMCubeProgrammer, and on the RIGHT side, select select STLink from the drop down menu and press **Connect**.&#x20;
 
 <figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
