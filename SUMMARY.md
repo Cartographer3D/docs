@@ -43,6 +43,7 @@
 * [🔧 Assembly](cartographer-probe/assembly/README.md)
   * [Standard](cartographer-probe/assembly/standard.md)
   * [Low Profile](cartographer-probe/assembly/low-profile.md)
+  * [Right Angle](cartographer-probe/assembly/right-angle.md)
 
 ## 🚠 Cartographer CNC Mount
 
