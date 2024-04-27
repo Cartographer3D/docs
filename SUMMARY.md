@@ -40,6 +40,9 @@
 * [😭 Troubleshooting](cartographer-probe/troubleshooting.md)
 * [🔗 Useful Links](cartographer-probe/useful-links.md)
 * [⁉️ FAQ](cartographer-probe/faq.md)
+* [🔧 Assembly](cartographer-probe/assembly/README.md)
+  * [Standard](cartographer-probe/assembly/standard.md)
+  * [Low Profile](cartographer-probe/assembly/low-profile.md)
 
 ## 🚠 Cartographer CNC Mount
 
