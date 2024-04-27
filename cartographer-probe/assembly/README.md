@@ -19,3 +19,5 @@ If you are assembling in any other way, please take note of the following:
 
     <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p><strong>Top Picture</strong> - Note the White Boxes for reference<br><strong>Bottom Left</strong> - Correct Orentation of MCU board and coil board<br><strong>Bottom Right</strong> - Flipped Correct view of MCU board and coil board </p></figcaption></figure>
 
+
+* If your installation moves away from any of the standard mathods, please check the USB or CAN cable polarity they might need re-pinning, don't worry if you do plug it in reversed, we have reversed polarity protection, so your board should be fine.&#x20;
