@@ -10,6 +10,8 @@ Cartographer is designed to use the existing mounts available for similar produc
 
 There should be no metal directly above the Cartographer Coil, this is refered too as the keep out zone. There are three STEP files available on our GitHub ([here](https://github.com/Cartographer3D/cartographer-probe/tree/main/STEP)) that highlight this area.&#x20;
 
+The probe can be installed in any orentation, you just need to ensure you set the X and Y offset in the config relative to the probes location to the nozzle.&#x20;
+
 Ensure when you are mounting Cartographer that you recess the probe approximatly 3 mm from the Nozzles Z height.
 
 ### Cable Routing
