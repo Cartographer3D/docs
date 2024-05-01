@@ -14,6 +14,10 @@ The probe can be installed in any orentation, you just need to ensure you set th
 
 Ensure when you are mounting Cartographer that you recess the probe approximatly 3 mm from the Nozzles Z height.
 
+{% hint style="danger" %}
+If you use a nozzle brush, ensure that the routing to use that doesnt have your Cartographer travelling over it. I would HIGHLY advise switching to a silicon brush.&#x20;
+{% endhint %}
+
 ### Cable Routing
 
 #### USB (both RP2040 and STM32 based probes)
