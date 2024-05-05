@@ -29,25 +29,33 @@ M140 S110 = 110oC\
 M140 S95 = 95oC&#x20;
 {% endhint %}
 
-<pre class="language-gcode"><code class="lang-gcode">[gcode_macro DATA_SAMPLE]
+```gcode
+[gcode_macro DATA_SAMPLE]
 gcode:
+  {% raw %}
+{% set bed_temp = params.BED_TEMP|default(90)|int %}
+  {% set nozzle_temp = params.NOZZLE_TEMP|default(250)|int %}
+  {% set min_temp = params.MIN_TEMP|default(40)|int %}
+  {% set max_temp = params.MAX_TEMP|default(70)|int %}
+{% endraw %}
   G90
   M106 S255
-<strong>  RESPOND TYPE=command MSG='Waiting for Coil to cool to 40'
-</strong>  M117 Waiting for Coil to cool to 40
-  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
+  RESPOND TYPE=command MSG='Waiting for Coil to cool to 40'
+  M117 Waiting for Coil to cool to 40
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM={min_temp}
   RESPOND TYPE=command MSG='Starting Phase 1 of 4'
   M117 Starting Phase 1 of 4
   M106 S0
   G28
   G0 Z1
-  M104 S250
-  M140 S110
+  M104 S{nozzle_temp}
+  M140 S{bed_temp}
   G4 P1000
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM={min_temp}
   CARTOGRAPHER_STREAM FILENAME=data1
   M117 Waiting for Coil to heat to 70
   RESPOND TYPE=command MSG='Waiting for Coil to heat to 70'
-  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM={max_temp}
   CARTOGRAPHER_STREAM FILENAME=data1
   M104 S0
   M140 S0
@@ -55,19 +63,19 @@ gcode:
   G0 Z80
   RESPOND TYPE=command MSG='Waiting for Coil to cool to 40'
   M117 Waiting for Coil to cool to 40
-  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM={min_temp}
   M117 Starting Phase 2 of 4
   RESPOND TYPE=command MSG='Starting Phase 2 of 4'
   M106 S0
   G28 Z0
   G0 Z2
-  M104 S250
-  M140 S110
+  M104 S{nozzle_temp}
+  M140 S{bed_temp}
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data2
   M117 Waiting for Coil to heat to 70
   RESPOND TYPE=command MSG='Waiting for Coil to heat to 70'
-  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM={max_temp}
   CARTOGRAPHER_STREAM FILENAME=data2
   M104 S0
   M140 S0
@@ -75,19 +83,19 @@ gcode:
   G0 Z80
   RESPOND TYPE=command MSG='Waiting for Coil to cool to 40'
   M117 Waiting for Coil to cool to 40
-  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM={min_temp}
   M117 "Starting Phase 3 of 4"
   RESPOND TYPE=command MSG='Starting Phase 3 of 4'
   M106 S0
   G28 Z0
   G0 Z3
-  M104 S250
-  M140 S110
+  M104 S{nozzle_temp}
+  M140 S{bed_temp}
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data3
   M117 Waiting for Coil to heat to 70
   RESPOND TYPE=command MSG='Waiting for Coil to heat to 70'
-  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM={max_temp}
   CARTOGRAPHER_STREAM FILENAME=data3
   M104 S0
   M140 S0
@@ -95,19 +103,19 @@ gcode:
   G0 Z80
   M117 Waiting for Coil to cool to 40
   RESPOND TYPE=command MSG='Waiting for Coil to cool to 40'
-  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM=40
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM={min_temp}
   M117 "Starting Phase 4 of 4"
   RESPOND TYPE=command MSG='Starting Phase 4 of 4'
   M106 S0
   G28 Z0
   G0 Z5
-  M104 S250
-  M140 S110
+  M104 S{nozzle_temp}
+  M140 S{bed_temp}
   G4 P1000
   CARTOGRAPHER_STREAM FILENAME=data4
   M117 Waiting for Coil to heat to 70
   RESPOND TYPE=command MSG='Waiting for Coil to heat to 70'
-  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM=70
+  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM={max_temp}
   CARTOGRAPHER_STREAM FILENAME=data4
   M104 S0
   M140 S0
@@ -115,7 +123,7 @@ gcode:
   M117 "Testing complete, please move files using: mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/klipper/data4 ~/cartographer-klipper/"
   RESPOND TYPE=command MSG='Follow the remaining instructions here: https://docs.cartographer3d.com/cartographer-probe/advanced-features/temperature-differential-calibration-beta'
   M117 "Follow the remaining instructions here: https://docs.cartographer3d.com/cartographer-probe/advanced-features/temperature-differential-calibration-beta"
-</code></pre>
+```
 
 The macro is then executed, and then the data1, data2, data3, and data4 files are generated in the Klipper folder, note, this can take a very long time.
 
@@ -127,7 +135,7 @@ mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/klipper/data4 ~/cartographe
 
 You will need to ensure your host OS has the libraries and dependancies in it.
 
-```
+```bash
 ~/klippy-env/bin/pip install pandas
 ~/klippy-env/bin/pip install matplotlib
 sudo apt-get install libopenblas-dev
@@ -137,8 +145,9 @@ sudo apt-get install libopenblas-dev
 
 Once installed, run the following script, this will analyse the data from the files that you have moved. You need to ensure that you are on the latest version of our firmware, if you get an error about file not existing, go to our Klipper Setup page and re-run that initial script.&#x20;
 
-```
-~/klippy-env/bin/python ~/cartographer-klipper/tempcalib.py
+```bash
+cd ~/cartographer-klipper
+~/klippy-env/bin/python tempcalib.py
 ```
 
 After running, four parameters will be generated and a picture will be generated in your bash window and a image in your `cartographer-klipper` folder.&#x20;
