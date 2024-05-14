@@ -22,7 +22,7 @@ You should apply a twist to your CAN H and CAN L cables every 24mm
 
 ### Right Angle
 
-<figure><img src="../../../.gitbook/assets/Cartographer3D_CAN_Wiring_EBB36_Reversed.webp" alt=""><figcaption><p>EBB36 &#x26; Cartographer CAN Probe (Right Angle)</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/EBB36.png" alt=""><figcaption><p>EBB36 &#x26; Cartographer CAN Probe (Right Angle)</p></figcaption></figure>
 
 {% hint style="info" %}
 You should apply a twist to your CAN H and CAN L cables every 24mm
@@ -58,7 +58,7 @@ You should apply a twist to your CAN H and CAN L cables every 24mm
 
 ### Right Angle
 
-<figure><img src="../../../.gitbook/assets/Cartographer3D_CAN_Wiring_SB0000_Reversed.webp" alt=""><figcaption><p>SB0000 &#x26; Cartographer CAN Probe (Right Angle)</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/SB.png" alt=""><figcaption><p>SB0000 &#x26; Cartographer CAN Probe (Right Angle)</p></figcaption></figure>
 
 {% hint style="info" %}
 You should apply a twist to your CAN H and CAN L cables every 24mm
