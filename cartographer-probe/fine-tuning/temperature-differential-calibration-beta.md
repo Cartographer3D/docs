@@ -99,15 +99,15 @@ gcode:
   CARTOGRAPHER_STREAM FILENAME=data3
   M104 S0
   M140 S0
-  RESPOND TYPE=command MSG='Testing complete, please move files using: mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/klipper/data4 ~/cartographer-klipper/'
+  RESPOND TYPE=command MSG='Testing complete, please move files using: mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/cartographer-klipper/'
   M117 "Testing complete, please move files using: mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/cartographer-klipper/"
   RESPOND TYPE=command MSG='Follow the remaining instructions here: https://docs.cartographer3d.com/cartographer-probe/advanced-features/temperature-differential-calibration-beta'
   M117 "Follow the remaining instructions here: https://docs.cartographer3d.com/cartographer-probe/advanced-features/temperature-differential-calibration-beta"
 ```
 
-The macro is then executed, and then the data1, data2, data3, and data4 files are generated in the Klipper folder, note, this can take a very long time.
+The macro is then executed, and then the data1, data2, and data3 files are generated in the Klipper folder, note, this can take a very long time.
 
-Once complete, move the files (data1, data2, data3 and data4) to your cartographer-klipper folder.&#x20;
+Once complete, move the files (data1, data2, data3) to your cartographer-klipper folder.&#x20;
 
 ```bash
 mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/cartographer-klipper/
