@@ -99,28 +99,8 @@ gcode:
   CARTOGRAPHER_STREAM FILENAME=data3
   M104 S0
   M140 S0
-  M106 S255
-  G0 Z80
-  M117 Waiting for Coil to cool to 40
-  RESPOND TYPE=command MSG='Waiting for Coil to cool to 40'
-  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MAXIMUM={min_temp}
-  M117 "Starting Phase 4 of 4"
-  RESPOND TYPE=command MSG='Starting Phase 4 of 4'
-  M106 S0
-  G28 Z0
-  G0 Z5
-  M104 S{nozzle_temp}
-  M140 S{bed_temp}
-  G4 P1000
-  CARTOGRAPHER_STREAM FILENAME=data4
-  M117 Waiting for Coil to heat to 70
-  RESPOND TYPE=command MSG='Waiting for Coil to heat to 70'
-  TEMPERATURE_WAIT SENSOR='temperature_sensor cartographer_coil' MINIMUM={max_temp}
-  CARTOGRAPHER_STREAM FILENAME=data4
-  M104 S0
-  M140 S0
   RESPOND TYPE=command MSG='Testing complete, please move files using: mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/klipper/data4 ~/cartographer-klipper/'
-  M117 "Testing complete, please move files using: mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/klipper/data4 ~/cartographer-klipper/"
+  M117 "Testing complete, please move files using: mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/cartographer-klipper/"
   RESPOND TYPE=command MSG='Follow the remaining instructions here: https://docs.cartographer3d.com/cartographer-probe/advanced-features/temperature-differential-calibration-beta'
   M117 "Follow the remaining instructions here: https://docs.cartographer3d.com/cartographer-probe/advanced-features/temperature-differential-calibration-beta"
 ```
@@ -130,7 +110,7 @@ The macro is then executed, and then the data1, data2, data3, and data4 files ar
 Once complete, move the files (data1, data2, data3 and data4) to your cartographer-klipper folder.&#x20;
 
 ```bash
-mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/klipper/data4 ~/cartographer-klipper/
+mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/cartographer-klipper/
 ```
 
 You will need to ensure your host OS has the libraries and dependancies in it.
