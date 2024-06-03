@@ -1,4 +1,4 @@
-# Cartographer with Input Shaper (v2 & v3 hybrid)
+# Calibration
 
 Home the machine in X and Y:
 
@@ -62,7 +62,23 @@ You can also measure the backlash of your Z axis
 CARTOGRAPHER_ESTIMATE_BACKLASH
 ```
 
+To make use of the backlash estimation that is given. You will get results spit out starting with &#x20;
+
+```
+Median distance moving up
+```
+
+In this line will be a measurement called "delta" Take note of the value. Locate the configuration section marked:
+
+```
+backlash_comp: 2.01
+```
+
+Update this section with your new estimated backlash compensation. It is a good idea to do this compensation test at all 4x corners of your build plate and then again at middle of build plate. If you are on a printer with belted Z and the values in each corner deviate heavily. This would indicate a loose belt on that corner.&#x20;
+
 If youa re using a printer which supports either `Z_TILT` or `QUAD_GANTRY_LEVEL` you will need to ensure that your probe is positioned above the bed when performing this, open up your `printer.cfg` and find the appropriate section, for example your Z\_TILT section may look like this:
+
+
 
 <pre class="language-yaml"><code class="lang-yaml">[quad_gantry_level]
 gantry_corners:
