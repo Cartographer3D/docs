@@ -16,7 +16,7 @@ This step will automatically create a link to the script and place it in the kli
 If you are in Mainland China, use the following command:
 
 <pre><code><strong>cd ~
-</strong><strong>git clone https://gitee.com/ruchi/cartographer-klipper.git
+</strong><strong>git clone https://gitee.com/NBTP/cartographer-klipper
 </strong>chmod +x cartographer-klipper/install.sh
 ./cartographer-klipper/install.sh
 </code></pre>
