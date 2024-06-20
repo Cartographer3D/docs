@@ -16,7 +16,7 @@ This step will automatically create a link to the script and place it in the kli
 If you are in Mainland China, use the following command:
 
 <pre><code><strong>cd ~
-</strong><strong>git clone https://gitee.com/NBTP/cartographer-klipper
+</strong><strong>git clone https://gitee.com/NBTP/cartographer-klipper.git
 </strong>chmod +x cartographer-klipper/install.sh
 ./cartographer-klipper/install.sh
 </code></pre>
@@ -51,7 +51,7 @@ For Mainland China:
 type: git_repo
 path: ~/cartographer-klipper
 channel: dev
-origin: https://github.com/Cartographer3D/cartographer-klipper.git
+origin: https://gitee.com/NBTP/cartographer-klipper.git
 env: ~/klippy-env/bin/python
 requirements: requirements.txt
 install_script: install.sh
