@@ -42,21 +42,11 @@ When install up your CAN probe, please ensure that you add a twist to your white
 
 ### **CAN Termination**
 
-#### Cartographer w/ Input Shaper (v2)
+####
 
-There are many differing opinions on where and how to terminate your CANBUS setup, if you want to fully meet with spec, you are supposed to terminate on the last device in the chain. \
-\
-When setting up your probe, this is fairly difficult to do, in this case it can purely be treated like a spur, and you can terminate on your toolhead. With this method, we have not seen any detremental performance or issues.&#x20;
+####
 
-IF you want to terminate on your Cartographer, this requires two solder points to be bridged together (see below)&#x20;
-
-<figure><img src="../../../.gitbook/assets/v2-can-120termination.png" alt=""><figcaption><p>Cartographer v2 Pads to enable 120 Ohm Resistor</p></figcaption></figure>
-
-#### **Cartographer w/ Input Shaper (USB/CAN Hybrid)**
-
-This version of the probe is terminated with a 120ohm resistor by default. if you want to remove the 120 Ohm resistor, use a soldering iron to remove the resistor that can be seen below.&#x20;
-
-<figure><img src="../../../.gitbook/assets/V3-120Ohm-Resistor.png" alt=""><figcaption><p>Position of 120Ohm Resistor</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/V3-120Ohm-Resistor.png" alt=""><figcaption><p>Position of 120 Ohm Resistor</p></figcaption></figure>
 
 
 
