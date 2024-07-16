@@ -171,3 +171,10 @@ Klipper will show any build as klipper as "dirty" if there are any untracked Pyt
 Unfortuantly, there is no way around this at the moment.\
 \
 [https://github.com/Klipper3d/klipper/actions/runs/4840565448](https://github.com/Klipper3d/klipper/actions/runs/4840565448)
+
+Missing Clusters or Sharp Drop in your Bed Mesh
+
+If you get a sharp drop in your bed mesh, or missing clusters error after a scan, ensure that your probe is covering the entire bed. You may need to adjust your bed mesh accordingly.&#x20;
+
+
+
