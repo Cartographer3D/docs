@@ -30,7 +30,7 @@ Terminating on the probe is not essential, and we have hundreds of users who ter
 If you enable the 120 Ohm resistor, you will not be able to use the probe in USB mode, this also means to reflash the probe you will be limited to Katapult mode or using a STLink.
 {% endhint %}
 
-If you want to terminate on your Cartographer V3 ADXL, this requires two solder points to be bridged together (see below)&#x20;
+If you want to terminate on your Cartographer V3 ADXL, this requires the three solder points to be bridged together (see anotated below).
 
 
 
