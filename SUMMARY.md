@@ -10,12 +10,8 @@
     * [Stealthburner CW2 Mount](cartographer-probe/installation-and-setup/probe-installation/stealthburner-cw2-mount.md)
     * [Wiring Diagrams](cartographer-probe/installation-and-setup/probe-installation/wiring-diagrams.md)
   * [Klipper Setup](cartographer-probe/installation-and-setup/klipper-setup.md)
-  * [v2 & v3 (Probes w/ Input Shaping)](cartographer-probe/installation-and-setup/v2-and-v3-probes-w-input-shaping/README.md)
-    * [Klipper Configuration](cartographer-probe/installation-and-setup/v2-and-v3-probes-w-input-shaping/cartographer-with-input-shaping-v2-and-v3-hybrid.md)
-    * [Calibration](cartographer-probe/installation-and-setup/v2-and-v3-probes-w-input-shaping/cartographer-with-input-shaper-v2-and-v3-hybrid.md)
-  * [v1  (RP2040 Based Probes)](cartographer-probe/installation-and-setup/v1-rp2040-based-probes/README.md)
-    * [Klipper Configuration](cartographer-probe/installation-and-setup/v1-rp2040-based-probes/cartographer-rp2040.md)
-    * [Calibration](cartographer-probe/installation-and-setup/v1-rp2040-based-probes/cartographer-rp2040-1.md)
+  * [Klipper Configuration](cartographer-probe/installation-and-setup/cartographer-with-input-shaping-v2-and-v3-hybrid.md)
+  * [Calibration](cartographer-probe/installation-and-setup/cartographer-with-input-shaper-v2-and-v3-hybrid.md)
   * [Creality K1 & K1 Max Specific](cartographer-probe/installation-and-setup/creality-k1-and-k1-max-specific/README.md)
     * [Creality K1/Max Probe Installation](cartographer-probe/installation-and-setup/creality-k1-and-k1-max-specific/creality-k1-max-probe-configuration.md)
     * [Creality K1/Max Klipper Setup](cartographer-probe/installation-and-setup/creality-k1-and-k1-max-specific/creality-k1-max-klipper-setup.md)
@@ -46,6 +42,10 @@
   * [Standard](cartographer-probe/assembly/standard.md)
   * [Low Profile](cartographer-probe/assembly/low-profile.md)
   * [Right Angle](cartographer-probe/assembly/right-angle.md)
+* [Archive](cartographer-probe/archive/README.md)
+  * [v1  (RP2040 Based Probes)](cartographer-probe/archive/v1-rp2040-based-probes/README.md)
+    * [Klipper Configuration](cartographer-probe/archive/v1-rp2040-based-probes/cartographer-rp2040.md)
+    * [Calibration](cartographer-probe/archive/v1-rp2040-based-probes/cartographer-rp2040-1.md)
 
 ## 🚠 Cartographer CNC Mount
 

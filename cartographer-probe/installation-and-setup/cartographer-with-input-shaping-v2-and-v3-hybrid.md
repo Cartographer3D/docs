@@ -3,7 +3,7 @@
 ## Finding the Serial or UUID
 
 {% hint style="warning" %}
-A small number of probes which shipped directly from Cartographer3D between mid and late February may have been pre-flashed with the incorrect firmware. If you cannot find a serial number or UUID, please follow this [guide on how to re-flash](../../firmware-update/re-flashing-firmware.md) with the correct firmware. \
+A small number of probes which shipped directly from Cartographer3D between mid and late February may have been pre-flashed with the incorrect firmware. If you cannot find a serial number or UUID, please follow this [guide on how to re-flash](../firmware-update/re-flashing-firmware.md) with the correct firmware. \
 \
 We are sorry for any inconvenience caused.&#x20;
 {% endhint %}
