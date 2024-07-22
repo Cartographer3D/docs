@@ -60,7 +60,7 @@ cal_nozzle_z: 0.1
 #   Expected nozzle offset after completing manual Z offset calibration.
 cal_floor: 0.1
 #   Minimum z bound on sensor response measurement.
-cal_ceil:5.
+cal_ceil: 5.0
 #   Maximum z bound on sensor response measurement.
 cal_speed: 1.0
 #   Speed while measuring response curve.
@@ -80,25 +80,12 @@ mesh_runs: 2
 ```
 
 {% hint style="warning" %}
-NOTE - The \[cartographer] section needs to be above any other reference to either cartographer or probe within your Klipper config, for this reason I advise adding it near&#x20;
+NOTE - The \[cartographer] section needs to be above any other reference to either cartographer or probe within your Klipper config, for this reason I advise adding it near the top of your config file.&#x20;
 {% endhint %}
 
 If you want to use the probe for Input Shaper, please add the following to your config.
 
 {% tabs %}
-{% tab title="lis2dw based probes" %}
-```yaml
-[lis2dw]
-cs_pin: cartographer:PA3
-spi_bus: spi1
-
-[resonance_tester]
-accel_chip: lis2dw
-probe_points:
-    125, 125, 20
-```
-{% endtab %}
-
 {% tab title="adxl345 based probes" %}
 ```yaml
 [adxl345]
@@ -107,6 +94,19 @@ spi_bus: spi1
 
 [resonance_tester]
 accel_chip: adxl345
+probe_points:
+    125, 125, 20
+```
+{% endtab %}
+
+{% tab title="lis2dw based probes" %}
+```yaml
+[lis2dw]
+cs_pin: cartographer:PA3
+spi_bus: spi1
+
+[resonance_tester]
+accel_chip: lis2dw
 probe_points:
     125, 125, 20
 ```
