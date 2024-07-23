@@ -39,16 +39,20 @@ serial:
 #
 speed: 40.
 #   Z probing dive speed.
-lift_speed: 5.
+lift_speed: 5.0
 #   Z probing lift speed.
 backlash_comp: 0.5
 #   Backlash compensation distance for removing Z backlash before measuring
 #   the sensor response.
-x_offset: 0.
+# 
+#   Offsets are measured from the centre of your coil, to the tip of your nozzle 
+#   on a level axis. It is vital that this is accurate. 
+#
+x_offset: 0.0
 #   X offset of cartographer from the nozzle.
 y_offset: 21.1
 #   Y offset of cartographer from the nozzle.
-trigger_distance: 2.
+trigger_distance: 2.0
 #   cartographer trigger distance for homing.
 trigger_dive_threshold: 1.5
 #   Threshold for range vs dive mode probing. Beyond `trigger_distance +
@@ -64,7 +68,7 @@ cal_ceil: 5.0
 #   Maximum z bound on sensor response measurement.
 cal_speed: 1.0
 #   Speed while measuring response curve.
-cal_move_speed: 10.
+cal_move_speed: 10.0
 #   Speed while moving to position for response curve measurement.
 default_model_name: default
 #   Name of default cartographer model to load.
