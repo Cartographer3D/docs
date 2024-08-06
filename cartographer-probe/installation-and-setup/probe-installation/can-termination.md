@@ -2,7 +2,15 @@
 
 ### CAN Probe termination status
 
-<table><thead><tr><th width="494">Probe</th><th width="148">Default Status</th></tr></thead><tbody><tr><td>Cartographer V2 CAN (primarily sold pre-2024)</td><td>Disabled</td></tr><tr><td>Cartographer V3 USB/CAN with lis2dw</td><td>Enabled</td></tr><tr><td>Cartographer V3 USB/CAN with ADXL345</td><td>Disabled</td></tr></tbody></table>
+<table><thead><tr><th width="494">Probe</th><th width="148">Default Status</th></tr></thead><tbody><tr><td>Cartographer V2 CAN (primarily sold pre-2024)</td><td>Disabled</td></tr><tr><td>Cartographer V3 USB/CAN with lis2dw*</td><td>Enabled</td></tr><tr><td>Cartographer V3 USB/CAN with ADXL345</td><td>Disabled</td></tr></tbody></table>
+
+{% hint style="warning" %}
+Do **NOT** measure your resistance while the probe is powered on.\
+\
+On the Cartographer V3 USB/CAN with lis2dw probe, for the 120ohm resistor to be activated  it has to be powered on, and flashed with the CAN firmware.  That means that you will not be able to measure if your can lines are at 60 ohms. \
+\
+If you measure them (while the probe is powered off) and you get 60ohms, that means you have too many 120ohm terminations in your CAN network.
+{% endhint %}
 
 ### Cartographer w/ Input Shaper (v2)
 
