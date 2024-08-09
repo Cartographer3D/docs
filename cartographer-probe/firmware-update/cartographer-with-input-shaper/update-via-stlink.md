@@ -12,7 +12,7 @@ I have only personally tested this on a ST-LINK/V2 Mini with modern firmware on 
 
 Wiring is super simple (diagram will be added soon), connect the following to each other&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
 
 

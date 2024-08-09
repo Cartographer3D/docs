@@ -2,7 +2,11 @@
 
 ## Mount Cartographer
 
-Note there are two different versions of Cartographer, a USB and a CAN version. These will be clearly defined in the section titles when they differentiate. Please make sure you follow the correct guide for the instllation of yours. &#x20;
+Note there are two different versions of Cartographer, a USB and a CAN version. These will be clearly defined in the section titles when they differentiate. Please make sure you follow the correct guide for the installation of yours. &#x20;
+
+{% hint style="warning" %}
+Make sure carto is the range of 2.6 to 3mm to the nozzle
+{% endhint %}
 
 ### Location
 

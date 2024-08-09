@@ -6,6 +6,7 @@
 
 * [🏗️ Installation and Setup](cartographer-probe/installation-and-setup/README.md)
   * [Probe Installation](cartographer-probe/installation-and-setup/probe-installation/README.md)
+    * [Important Notes - Prior to Installation](cartographer-probe/installation-and-setup/probe-installation/important-notes-prior-to-installation.md)
     * [CAN Termination](cartographer-probe/installation-and-setup/probe-installation/can-termination.md)
     * [Stealthburner CW2 Mount](cartographer-probe/installation-and-setup/probe-installation/stealthburner-cw2-mount.md)
     * [Wiring Diagrams](cartographer-probe/installation-and-setup/probe-installation/wiring-diagrams.md)

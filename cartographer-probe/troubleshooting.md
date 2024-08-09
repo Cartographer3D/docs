@@ -174,7 +174,14 @@ Unfortuantly, there is no way around this at the moment.\
 
 Missing Clusters or Sharp Drop in your Bed Mesh
 
-If you get a sharp drop in your bed mesh, or missing clusters error after a scan, ensure that your probe is covering the entire bed. You may need to adjust your bed mesh accordingly.&#x20;
+If you get a sharp drop in your bed mesh, or missing clusters error after a scan, ensure that your probe is covering the entire bed. You may need to adjust your bed mesh accordingly.
 
+### Repeated No trigger on z after full movement
 
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
+If you are getting the error `No trigger on z after full movement`, and running a lower powered SBC such as a Raspberry Pi 2, or a BTT CB1, You are able to lock a single CPU core to your Klipper instance. \
+\
+Esoterical has an outstanding guide on how to do so below. \
+\
+[https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental](https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental)
