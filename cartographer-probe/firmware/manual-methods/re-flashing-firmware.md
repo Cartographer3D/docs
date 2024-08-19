@@ -35,25 +35,25 @@ Method 2 Equipment
 
 Step 1 - Cut the end off your donor USB cable
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Remove the end of the USB Cable</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Remove the end of the USB Cable</p></figcaption></figure>
 
 Step 2 - Remove the outer plastic, revealing the 4 pairs of cables
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Remove the outer plastic</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Remove the outer plastic</p></figcaption></figure>
 
 Remove any outer sheilding
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Use your snippers / strippers to expose about 6 - 8 mm at the end of your wires
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Step 3 - Feed the exposed wires into the DuPont connectors, and use the right angle DuPont male connectors to plug the cable in and force contact
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Notice the DuPont 2.54mm RA connectors plugging the cable in.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Notice the DuPont 2.54mm RA connectors plugging the cable in.</p></figcaption></figure>
 
 
 
@@ -82,13 +82,13 @@ Crimping your own JST-PH - USB cable, this is a useful cable to have, and can be
 
 Cut the end off your donor USB cable. This needs to be a cable which works for data, there seem to be a lot of USB cables which are power only, these will not work.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Step 2&#x20;
 
 Strip the cable back to reveal the internal cables.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 #### Step 3&#x20;
 
@@ -98,13 +98,13 @@ I found this video for how to crimp JST connectors, check it out its very well d
 
 {% embed url="https://youtube.com/watch?v=jHfYzrSF4pY" %}
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 Step 4 - Rehouse the connector
 
 Notice the order - of the cable and connector.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Notice the order of the cables.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Notice the order of the cables.</p></figcaption></figure>
 
 You should be able to connect your USB Cable to your computer now, as the probe will have accidently been flashed with USB Firmware rather than CAN, so if you plug into a Windows PC, you should hear that new device connected chime.&#x20;
 
@@ -122,7 +122,7 @@ The following method is compatible with MOST Cartographer probes, please check t
 
 The best place to get the probes firmware is from our  [GitHub](https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware). These have been tested thoroughly, and are known to work perfectly.  If you want to find a link to the latest firmware for each of your probes, please check [here](https://docs.cartographer3d.com/firmware-update/which-firmware).
 
-You can also build your own firmware, our GitHub organisation has both a custom build of [Klipper](../../) and [Katapult](https://github.com/Cartographer3D/katapult) that you can build yourself.&#x20;
+You can also build your own firmware, our GitHub organisation has both a custom build of [Klipper](../../../) and [Katapult](https://github.com/Cartographer3D/katapult) that you can build yourself.&#x20;
 
 {% hint style="danger" %}
 Untested Firmware could brick your probe - it is advisable if this is the case, you have a STLink handy in order to easily re-flash the probe.
@@ -136,7 +136,7 @@ Plug your USB cable into the device you will be flashing from and your Cartograp
 
 Using your ferrous tweezers, or similar use one to bridge pads 1 (boot0), once you have a solid contact on those tap pad 2 (reset) with your other ferrous tool.&#x20;
 
-<figure><img src="../../.gitbook/assets/DFUModePointsv3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/DFUModePointsv3.png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://www.youtube.com/watch?v=LFZAsPjAlmY" %}
 
@@ -153,7 +153,7 @@ To check,&#x20;
   * Search and open "Device Manager"
   * Scroll down to Universal Serial Bus Devices&#x20;
   * You should see STM32 BOOTLOADER as an option\
-    &#x20;<img src="../../.gitbook/assets/image (7) (1).png" alt="Device Manager view of Cartographer in Bootloader mode." data-size="original">
+    &#x20;<img src="../../../.gitbook/assets/image (7) (1).png" alt="Device Manager view of Cartographer in Bootloader mode." data-size="original">
 * Mac - TBC
 
 ### Flashing via STM32CubeProgrammer (Windows & MacOS)
@@ -168,15 +168,15 @@ Version 2.14.0 is recommended due to a known bug in 2.16.0 which causes issues w
 
 Open the application, and on the RIGHT side, select the following options and press **Connect**.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>STM32CubeProgrammer Settings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>STM32CubeProgrammer Settings</p></figcaption></figure>
 
 Once you have connected, Click Open File - you will need to select both the Katapult Bootloader for your board, and your Cartographer Firmware that you have downloaded.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Firmwares Loaded</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Firmwares Loaded</p></figcaption></figure>
 
 For your Cartographer Firmware, you need to set the address to `0x08002000` This provides the 8KiB offset for the firmware. Katapult firmware can be flashed at the default `0x08000000.`
 
-<figure><img src="../../.gitbook/assets/STLink (1).png" alt=""><figcaption><p>How to change the address in STM32CubeProgrammer</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/STLink (1).png" alt=""><figcaption><p>How to change the address in STM32CubeProgrammer</p></figcaption></figure>
 
 If in doubt about what address to use, please check the relevent tables [here](https://docs.cartographer3d.com/firmware-update)
 
