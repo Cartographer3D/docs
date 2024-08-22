@@ -25,13 +25,13 @@ chmod +x cartographer-klipper/install.sh
 
 <details>
 
-<summary>Unknown pin chip name 'cartographer'</summary>
+<summary>Unknown pin chip name 'cartographer' OR Unknown pin chip name 'scanner'</summary>
 
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(1\)%20\(1\)%20\(1\)%20\(1\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(1\)%20\(1\)%20\(1\)%20\(1\).png)
 
 The following two issues are usually why you recieve the above error.
 
-1. You are referencing cartographer before you have declared it in your config file. It is advisable to add the cartographer section just below where you declare your MCU's.
+1. You are referencing cartographer/scanner before you have declared it in your config file. It is advisable to add the cartographer/scanner section just below where you declare your MCU's.
 2. You have referenced cartographer with a capitilisation `[Cartographer]` vs `[cartographer]` or `cs_pin: Cartographer:PA3` vs `cs_pin: cartographer:PA3`
 
 </details>

@@ -40,10 +40,15 @@ Just set`calibration_method:scan` in <mark style="color:yellow;">printer.cfg</ma
 
 ## Configuration
 
+{% hint style="danger" %}
+Please remove all of your existing \[cartographer] or \[scanner] sections from your printer.cfg and other configurations before proceeding.
+{% endhint %}
+
 <details>
 
 <summary>Printer.cfg Configuration</summary>
 
+{% code overflow="wrap" %}
 ```yaml
 [scanner]
 canbus_uuid: 0ca8d67388c2            #adjust to suit your scanner 
@@ -56,8 +61,9 @@ sensor_alt: carto
 [bed_mesh]
 zero_reference_position: 125, 125    # set this to your touch_location or middle of your bed
 ```
+{% endcode %}
 
-
+These are <mark style="color:red;">REQUIREMENTS</mark>. Including the `zero_reference_position` in your `[bed_mesh]` section.&#x20;
 
 </details>
 
@@ -65,17 +71,18 @@ zero_reference_position: 125, 125    # set this to your touch_location or middle
 
 <summary>Print Start Macro Example</summary>
 
-Adding the `CARTOGRAPHER_TOUCH` command to your print start macro ensures that the printer performs a precise touch probe <mark style="color:red;">**BEFORE**</mark> executing the `BED_MESH_CALIBRATE` command and <mark style="color:red;">**AFTER**</mark> your nozzle reaches 150c. This sequence helps to achieve an accurate bed leveling by accounting for any variations or offsets before the mesh calibration.
+Adding the `CARTOGRAPHER_TOUCH` command to your print start macro ensures that the printer performs a precise touch probe <mark style="color:red;">**AFTER**</mark> executing the `BED_MESH_CALIBRATE` command and <mark style="color:red;">**AFTER**</mark> your nozzle reaches a steady 150c. This sequence helps to achieve an accurate bed leveling by accounting for any variations or offsets before the mesh calibration.
 
 ```gcode
-[gcode_macro PRINT_START]
+[gcode_macro PRINT_START_EXAMPLE]
 gcode:
     G28                               ; Home all axes
     M104 S{BED_TEMP}                  ; Set bed temperature
     M109 S150                         ; Wait for extuder to reach 150°C (intermediate step)
     M140 S{BED_TEMP}                  ; Set final bed temperature
     G28 Z                             ; Home Z axis again to account for thermal expansion
-    QGL/Z_TILT                        ; Perform quad gantry leveling or Z tilt adjustmen
+    QUAD_GANTRY_LEVEL / Z_TILT_ADJUST ; Perform quad gantry leveling or Z tilt adjustmen
+    G28 Z                             ; Home Z axis again to account for thermal expansion
     BED_MESH_CALIBRATE                ; Calibrate the bed mesh
     CARTOGRAPHER_TOUCH                ; Perform touch probe
     M109 S{EXTRUDER_TEMP}             ; Wait for extruder to reach target temperature
@@ -98,7 +105,8 @@ Touch is best calibrated for use with a clean install. We ask you remove your ex
 G28 X Y
 CARTOGRAPHER_TOUCH METHOD=manual   # initiates paper test we all know and love
 G28 Z
-QUAD_GANTRY_LEVEL / Z_TILT        
+QUAD_GANTRY_LEVEL / Z_TILT_ADJUST
+G28 Z        
 CARTOGRAPHER_TOUCH CALIBRATE=1     # starts touch test and calibration
 SAVE_CONFIG                        # saves new model
 ```
@@ -109,7 +117,8 @@ SAVE_CONFIG                        # saves new model
 G28 X Y
 CARTOGRAPHER_TOUCH METHOD=manual   # initiates paper test we all know and love
 G28 Z
-QUAD_GANTRY_LEVEL / Z_TILT
+QUAD_GANTRY_LEVEL / Z_TILT_ADJUST
+G28 Z
 CARTOGRAPHER_THRESHOLD_SCAN 
 CARTOGRAPHER_TOUCH CALIBRATE=1     # starts touch test and calibration 
 SAVE_CONFIG                        # saves model and threshold
@@ -549,3 +558,18 @@ It **CAN SOMETIMES** work depending on the thickness of your glass or garolite b
 #### Is it guaranteed that this will work on my printer?&#x20;
 
 As with a lot of things in life, we **can't guarantee 100% compatibility**, it should be compatible with most well built printers, there are obviously some exceptions, the biggest impacting factor is the quality of the Z axis motion. If there is any binding or lack of consistency, then you may find that you will not be able to use this feature. You can still use **regular cartographer scan mode** though!
+
+#### I was in the beta, how do I switch back to regular to continue using touch?
+
+```bash
+cd ~
+sudo rm -rv Carto_TAP
+cd ~/klipper/klippy/extras
+sudo rm -rv scanner.py
+cd ~/cartographer-klipper
+git fetch
+git pull
+chmod +x install.sh
+./install.sh
+sudo service klipper restart
+```
