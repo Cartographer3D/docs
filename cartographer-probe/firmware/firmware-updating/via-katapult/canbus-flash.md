@@ -30,15 +30,15 @@ Using the scripts below, you may need to use the **Install Prerequisites** optio
 
 ## CANBus Katapult Updating
 
-### Step 1) Plug Cartographer in via CANBUS
+### Step 1. Plug Cartographer in via CANBUS
 
-### Step 2) SSH into Device & Run Script
+### Step 2. SSH into Device & Run Script
 
 ```bash
 bash <(wget -qO - firmware.cartographer3d.com/firmware.sh)
 ```
 
-### Step 3) Get Your UUID
+### Step 3. Get Your UUID
 
 This method requires prior knowledge of your **CANBUS UUID**.
 
@@ -50,7 +50,7 @@ The script will detect your UUID if your UUID is inside your **printer.cfg** som
 
 ![Screen #1 - Canbus Detected](https://github.com/user-attachments/assets/612dec98-50ab-4ab6-9d61-bc465a7cf411)
 
-### Step 4) Choose Firmware to Flash
+### Step 4. Choose Firmware to Flash
 
 {% hint style="info" %}
 Your CANBUS bitrare (if configured on your host device) should be detected and displayed. You should flash your cartographer with MATCHING bitrate firmware.
@@ -60,6 +60,6 @@ You can pick any of these, however to remain detected you should match your bitr
 
 <figure><img src="https://github.com/user-attachments/assets/6ad85f9a-3aba-466b-b483-e2ff23550a71" alt=""><figcaption><p>Screen #2 - Select Firmware</p></figcaption></figure>
 
-## Step 5) Done
+## Step 5. Done
 
 ![Screen #3 - Flash Success](https://github.com/user-attachments/assets/0fb24c99-d36d-4ce2-9846-48c99d4eb952)

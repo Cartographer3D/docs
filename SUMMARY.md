@@ -23,6 +23,7 @@
   * [Temperature Differential Calibration](cartographer-probe/fine-tuning/temperature-differential-calibration-beta.md)
   * [Useful Macros](cartographer-probe/fine-tuning/useful-macros.md)
 * [Firmware](cartographer-probe/firmware/README.md)
+  * [Broken Katapult Bootloader](cartographer-probe/firmware/broken-katapult-bootloader.md)
   * [CANBUS Bitrate Switching](cartographer-probe/firmware/canbus-bitrate-switching.md)
   * [Firmware Switching](cartographer-probe/firmware/firmware-switching/README.md)
     * [CANBUS to USB](cartographer-probe/firmware/firmware-switching/canbus-to-usb.md)

@@ -41,7 +41,7 @@ Using the scripts below, you may need to use the **Install Prerequisites** optio
 
 ![image](https://github.com/user-attachments/assets/b9d2581f-9b64-4e61-bc7f-e3382b0155ad)
 
-### Step 1) Enter DFU Mode
+### Step 1. Enter DFU Mode
 
 * DFU mode is relatively simple to enter, but harder in practice. With cartographer plugged in via USB, touch the **boot0** (1) and **reset** (2) pads. This will put the device in DFU mode.
 * This can be quite fiddly and take some time, so listed below is 2 convenient ways to make this more simple.
@@ -67,7 +67,7 @@ via SSH use command `lsusb | grep "DFU"` to find if the device is in **DFU Mode*
 * Soldering a bridge on the **boot0** pads can make this process, much easier. All you need to then do is plug in the USB cable and the probe will enter DFU mode.
 * Once youve flashed via DFU mode, remember to de-solder the bridge.
 
-### Step 2) SSH into Host &  Run Script
+### Step 2. SSH into Host &  Run Script
 
 ```bash
 bash <(wget -qO - firmware.cartographer3d.com/firmware.sh)
@@ -78,20 +78,20 @@ bash <(wget -qO - firmware.cartographer3d.com/firmware.sh)
 ![Screen #2](https://github.com/user-attachments/assets/1a93eb97-8dff-446b-af7b-1fdf8dd7e38f)
 
 {% hint style="info" %}
-Choose #1 if faced with the image below to use cartographer via canbus at 1M bitrate.
+Choose FULL\_CARTOGRAPHER\_CANBUS for using Cartographer via  CANBUS.
 
-Choose #2 if you will be using cartographer via USB
+Choose FULL\_CARTOGRAPHER\_USB for using Cartographer via USB
 {% endhint %}
 
 ![Screen #3](https://github.com/user-attachments/assets/6c187585-f4c2-4de6-965b-f12d873a9f6c)
 
-### Step 3) Done
+### Step 3. Done
 
 Once flashed, you will see the image below. This is a successful flash and youre all finished.&#x20;
 
 <figure><img src="https://github.com/user-attachments/assets/3c2caf92-916d-4180-a885-cbb6964a3133" alt=""><figcaption><p>Screen #4</p></figcaption></figure>
 
-### Step 4) Now What?
+### Step 4. Now What?
 
 * If you flashed for canbus, unplug cartographer and plug in via canbus
 * If you flashed for usb, power cycle your device.
