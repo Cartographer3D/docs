@@ -1,7 +1,4 @@
 ---
-description: >-
-  THIS HASNT FULLY LAUNCHED YET, IT WILL BE LAUNCHED IN THE NEXT 48 hours
-  (hopefully)
 layout:
   title:
     visible: true
@@ -15,7 +12,7 @@ layout:
     visible: false
 ---
 
-# 👇 Survey Touch (WIP)
+# 👇 Survey Touch
 
 {% hint style="danger" %}
 We **DO NOT** 100% guarantee compatibility with ALL printers. It is your responsibility to read this entire guide prior to use and to research whether this is right for you. Please contact us on [DISCORD ](https://discord.gg/yzazQMEGS2)if you have questions.
@@ -533,7 +530,7 @@ These shouldn't be needed to changed, however they are available.
 
 #### What do I need to add or change in my print start macro?
 
-See [Print Start Macro](survey-touch-wip.md#print-start-macro-example). But bascially, you just need to make sure your nozzle is at **maximum 150c** and then do a `CARTOGRAPHER_TOUCH` after you do a `BED_MESH_CALIBRATE`
+See [Print Start Macro](survey-touch.md#print-start-macro-example). But bascially, you just need to make sure your nozzle is at **maximum 150c** and then do a `CARTOGRAPHER_TOUCH` after you do a `BED_MESH_CALIBRATE`
 
 #### I'm getting weird errors after updating my scanner.py, what do I do?
 
@@ -547,7 +544,7 @@ It **CAN SOMETIMES** work depending on the thickness of your glass or garolite b
 
 #### Option 'X' is not valid in section 'scanner'
 
-&#x20;You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your printer.cfg or check its written correctly. You can see [valid parameters here](survey-touch-wip.md#available-printer.cfg-settings)
+&#x20;You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your printer.cfg or check its written correctly. You can see [valid parameters here](survey-touch.md#available-printer.cfg-settings)
 
 #### Is it guaranteed that this will work on my printer?&#x20;
 
