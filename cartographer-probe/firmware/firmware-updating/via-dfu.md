@@ -14,9 +14,6 @@ layout:
 
 # via DFU
 
-* Last Updated 11/08/2026
-* Maintained by KrauTech
-
 ### Should You Be Using DFU?
 
 * No use KATAPULT! Yes, this is the first point of call when you do a cartographer firmware update. Only if you have issues with this method, should you attempt the others.

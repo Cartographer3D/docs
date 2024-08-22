@@ -46,10 +46,6 @@ When install up your CAN probe, please ensure that you add a twist to your white
 
 ### **CAN Termination**
 
-####
-
-####
-
 <figure><img src="../../../.gitbook/assets/V3-120Ohm-Resistor.png" alt=""><figcaption><p>Position of 120 Ohm Resistor</p></figcaption></figure>
 
 

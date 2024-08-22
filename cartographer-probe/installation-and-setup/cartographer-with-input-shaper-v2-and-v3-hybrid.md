@@ -42,7 +42,7 @@ Save the results to your config file.
 SAVE_CONFIG
 ```
 
-#### Initial Tests
+## Initial Tests
 
 Home your printer.&#x20;
 
@@ -109,7 +109,7 @@ You can now run a Bed Mesh Calibration (I would advise doing either a `Z_TILT` o
 BED_MESH_CALIBRATE
 ```
 
-#### Setting Z Offset
+## Setting Z Offset
 
 Before modifying your Z Offset, make sure that you have set your Z position to 0, to do this you can run the following command.&#x20;
 

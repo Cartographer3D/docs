@@ -1,14 +1,16 @@
 # 😭 Troubleshooting
 
-This list is NOT exhaustive, if you need support don't be a stranger and please come and talk to us on Discord, we are more than happy to help.\
+This list is NOT exhaustive, if you need support don't be a stranger and please come and talk to us on [Discord](https://discord.gg/yzazQMEGS2), we are more than happy to help.\
 \
 If you do think that something is missing, please let us know and I will add it as soon as I can.
 
-#### Option 'pin' in section 'probe' must be specified
+<details>
+
+<summary>Option 'pin' in section 'probe' must be specifie</summary>
+
+[<img src="https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image.png" alt="" data-size="original">](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image.png)
 
 
-
-[![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image.png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image.png)
 
 This can occur either after a Klipper update when the sym link occasionally gets broken, or if you have not installed the Klipper component during the install, either way the fix is the same, just re-run the installer below.
 
@@ -19,40 +21,50 @@ chmod +x cartographer-klipper/install.sh
 ./cartographer-klipper/install.sh
 ```
 
-#### Unknown pin chip name 'cartographer'
+</details>
 
+<details>
 
+<summary>Unknown pin chip name 'cartographer'</summary>
 
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(1\)%20\(1\)%20\(1\)%20\(1\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(1\)%20\(1\)%20\(1\)%20\(1\).png)
-
-Unknown pin chip name 'cartographer'
 
 The following two issues are usually why you recieve the above error.
 
 1. You are referencing cartographer before you have declared it in your config file. It is advisable to add the cartographer section just below where you declare your MCU's.
 2. You have referenced cartographer with a capitilisation `[Cartographer]` vs `[cartographer]` or `cs_pin: Cartographer:PA3` vs `cs_pin: cartographer:PA3`
 
-#### Unknown pin chip name 'probe'
+</details>
 
+<details>
 
+<summary>Unknown pin chip name 'probe'</summary>
 
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(2\)%20\(1\)%20\(1\)%20\(1\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(2\)%20\(1\)%20\(1\)%20\(1\).png)
 
 This error usually happens when you have your `[cartographer]` section below your `[stepper_z]` section, move the `[cartographer]` section near your MCU's.
 
-#### mcu 'cartographer': Unknown command: endstop\_home
+</details>
 
+<details>
 
+<summary>mcu 'cartographer': Unknown command: endstop_home</summary>
 
 In `[stepper_z]` you have set `endstop_pin: cartographer:z_virtual_endstop` this should be `endstop_pin: probe:z_virtual_endstop`
 
-#### Error importing numpy error
+</details>
 
+<details>
 
+<summary>Error importing numpy error</summary>
 
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(3\)%20\(1\)%20\(1\)%20\(1\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(3\)%20\(1\)%20\(1\)%20\(1\).png)
 
-"Error importing numpy: you should not try to import numpy from" error
+</details>
+
+<details>
+
+<summary>"Error importing numpy: you should not try to import numpy from" error</summary>
 
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(15\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(15\).png)
 
@@ -74,9 +86,11 @@ if the above doesn't work, please try the following
 sudo apt install libopenblas-dev
 ```
 
-#### Endstop showing Triggered
+</details>
 
+<details>
 
+<summary>Endstop showing Triggered</summary>
 
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(12\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(12\).png)
 
@@ -84,23 +98,31 @@ Endstop Z showing constantly triggered
 
 Please ensure that you have calibrated your probe
 
-#### Option mesh\_main\_direction is not a valid section in cartographer
+</details>
 
+<details>
 
+<summary>Option mesh_main_direction is not a valid section in cartographer</summary>
 
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(13\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(13\).png)
 
 You do not have a valid \[bed\_mesh] section in your printer.cfg, please check out [this site](https://www.klipper3d.org/Bed\_Mesh.html) for how to add one.
 
-#### Unable to parse option mesh\_runs in section cartographer
+</details>
 
+<details>
 
+<summary>Unable to parse option mesh_runs in section cartographer</summary>
 
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(14\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(14\).png)
 
 You do not have a valid \[bed\_mesh] section in your printer.cfg, please check out [this site](https://www.klipper3d.org/Bed\_Mesh.html) for how to add one.
 
-#### Unable to find your Cartographer USB probe via `ls /dev/serial/by-id/`
+</details>
+
+<details>
+
+<summary>Unable to find your Cartographer USB probe via <code>ls /dev/serial/by-id/</code></summary>
 
 
 
@@ -132,9 +154,11 @@ sudo reboot
    For more information on how to do that, [click here](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/cartographer-probe/firmware-update)
 3. Check your USB Cable - If you have bought a flat pack, and your probe is a assembled for RIGHT ANGLE operation, you might have to re-assemble re-pin your USB cable in reverse.
 
-#### Klipper environement running on Python 2
+</details>
 
+<details>
 
+<summary>Klipper environement running on Python 2</summary>
 
 You will need to update your Klipper env from Python 2 to Python 3. the following guide is taken from [https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/3](https://klipper.discourse.group/t/process-for-migrating-to-python3/5292/3)\
 \
@@ -160,9 +184,11 @@ bin/pip install -r ../klipper/scripts/klippy-requirements.txt
 
 Restart your pritner, and you should now have a wonderful Klipper environement running in Python3.
 
-#### Klipper is showing my install as dirty?
+</details>
 
+<details>
 
+<summary>Klipper is showing my install as dirty?</summary>
 
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(3\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(3\).png)
 
@@ -172,16 +198,26 @@ Unfortuantly, there is no way around this at the moment.\
 \
 [https://github.com/Klipper3d/klipper/actions/runs/4840565448](https://github.com/Klipper3d/klipper/actions/runs/4840565448)
 
-Missing Clusters or Sharp Drop in your Bed Mesh
+</details>
+
+<details>
+
+<summary>Missing Clusters or Sharp Drop in your Bed Mesh</summary>
 
 If you get a sharp drop in your bed mesh, or missing clusters error after a scan, ensure that your probe is covering the entire bed. You may need to adjust your bed mesh accordingly.
 
-### Repeated No trigger on z after full movement
+</details>
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<details>
+
+<summary>Repeated No trigger on z after full movement</summary>
+
+![](../.gitbook/assets/image.png)
 
 If you are getting the error `No trigger on z after full movement`, and running a lower powered SBC such as a Raspberry Pi 2, or a BTT CB1, You are able to lock a single CPU core to your Klipper instance. \
 \
 Esoterical has an outstanding guide on how to do so below. \
 \
 [https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental](https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental)
+
+</details>

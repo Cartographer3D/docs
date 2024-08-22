@@ -8,3 +8,9 @@ A: Currently Cartographer does not support Delta printers, support will be added
 
 **Q: Klipper is telling me it's dirty... should I re-install?** \
 A: Dirty means that your Klipper directory is not clean i.e. has had changes to it compared to what is on the Github, this isn't something to worry about, it is expected with how Klipper currently deals with plugins.&#x20;
+
+**Q: How do i know what model cartographer I have?**
+
+<figure><img src="../.gitbook/assets/Bottom.png" alt=""><figcaption><p>Bottom of Cartographer</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/Top-1.png" alt=""><figcaption><p>Top of Cartographer</p></figcaption></figure>

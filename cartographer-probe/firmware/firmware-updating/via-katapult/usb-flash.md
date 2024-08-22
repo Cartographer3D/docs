@@ -14,9 +14,6 @@ layout:
 
 # USB Flash
 
-* Last Updated 11/08/2026
-* Maintained by KrauTech
-
 ### CANBUS or USB
 
 * If you ordered a USB flashed cartographer, you use the [USB Katapult Method](usb-flash.md)

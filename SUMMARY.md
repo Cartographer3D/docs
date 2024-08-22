@@ -16,7 +16,7 @@
   * [Creality K1 & K1 Max Specific](cartographer-probe/installation-and-setup/creality-k1-and-k1-max-specific/README.md)
     * [Creality K1/Max Probe Installation](cartographer-probe/installation-and-setup/creality-k1-and-k1-max-specific/creality-k1-max-probe-configuration.md)
     * [Creality K1/Max Klipper Setup](cartographer-probe/installation-and-setup/creality-k1-and-k1-max-specific/creality-k1-max-klipper-setup.md)
-* [👇 Touch (WIP)](cartographer-probe/touch-wip.md)
+* [👇 Survey Touch (WIP)](cartographer-probe/survey-touch-wip.md)
 * [📐 Fine Tuning](cartographer-probe/fine-tuning/README.md)
   * [Tweaking the Z offset](cartographer-probe/fine-tuning/tweaking-the-z-offset.md)
   * [Cartographer Models](cartographer-probe/fine-tuning/cartographer-models.md)

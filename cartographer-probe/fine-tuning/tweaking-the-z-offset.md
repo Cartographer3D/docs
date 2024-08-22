@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # Tweaking the Z offset
 
 Tweaking the Z offset is done slightly differently with Cartographer compared to using a standard probe, for example, with Cartographer you can't use \`PROBE\_CALIBRATE\` to fine tune the offset, as that will reset the 0 point, so you need to tweak it manually.&#x20;
