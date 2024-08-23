@@ -70,7 +70,7 @@ Just set`calibration_method:scan` in <mark style="color:yellow;">**printer.cfg**
 
 If you are greeted with the following error, **DO NOT** worry. Its normal and just apart of the configuration process. If you dont see it, **GOOD!**
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ***
 
@@ -155,7 +155,9 @@ SAVE_CONFIG                        # saves model and threshold
 
 {% hint style="info" %}
 The "**PAPER TEST**" method [can be found here](https://www.klipper3d.org/Bed\_Level.html#the-paper-test). \
+\
 [Visit here](settings-and-commands.md#cartographer\_threshold\_scan) for an explanation of `CARTOGRAPHER_THRESHOLD_SCAN`\
+\
 [Visit here](./#cartographer\_touch)[ ](settings-and-commands.md#cartographer\_touch)for an explanation of `CARTOGRAPHER_TOUCH`
 {% endhint %}
 
