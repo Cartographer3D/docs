@@ -10,6 +10,6 @@ If you find any mistakes, please do not hesitate to contact us either at [info@c
 
 ## Cartographer Survey Touch
 
-The beta for Cartographer Survey (our contact probe solution) is now live and available to all.\
+Cartographer Survey (our contact probe solution) is now live and available to all.\
 \
 For more information check out [survey-touch](cartographer-probe/survey-touch/ "mention")

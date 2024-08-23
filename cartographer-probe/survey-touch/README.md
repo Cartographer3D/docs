@@ -109,7 +109,7 @@ spi_bus: spi1
 
 <summary>Print Start Macro Example <mark style="color:red;">IMPORTANT</mark></summary>
 
-Adding the `CARTOGRAPHER_TOUCH` command to your print start macro ensures that the printer performs a precise touch probe <mark style="color:red;">**AFTER**</mark> executing the `BED_MESH_CALIBRATE` command and <mark style="color:red;">**AFTER**</mark> your nozzle reaches a steady 150c. This sequence helps to achieve an accurate bed leveling by accounting for any variations or offsets after the mesh calibration.
+Adding the `CARTOGRAPHER_TOUCH` command to your print start macro ensures that the printer performs a precise touch probe <mark style="color:red;">**AFTER**</mark> executing the `BED_MESH_CALIBRATE` command. `CARTOGRAPHER_TOUCH` should also be performed with a nozzle <mark style="color:red;">no hotter than 150c</mark>. With this in mind, the command will fail if the nozzle is beyond this temperature. It **CAN** be performed cold. Please make allowances for this in your print start. This sequence helps to achieve an accurate bed leveling by accounting for any variations or offsets after the mesh calibration.
 
 ```gcode
 PLEASE DONT USE THIS - IT IS AN EXAMPLE ONLY
