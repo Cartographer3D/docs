@@ -12,4 +12,4 @@ If you find any mistakes, please do not hesitate to contact us either at [info@c
 
 The beta for Cartographer Survey (our contact probe solution) is now live and available to all.\
 \
-For more information check out [survey-touch.md](cartographer-probe/survey-touch.md "mention")
+For more information check out [survey-touch](cartographer-probe/survey-touch/ "mention")

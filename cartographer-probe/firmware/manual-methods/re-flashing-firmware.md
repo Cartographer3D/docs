@@ -39,11 +39,11 @@ Step 1 - Cut the end off your donor USB cable
 
 Step 2 - Remove the outer plastic, revealing the 4 pairs of cables
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Remove the outer plastic</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Remove the outer plastic</p></figcaption></figure>
 
 Remove any outer sheilding
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Use your snippers / strippers to expose about 6 - 8 mm at the end of your wires
 
