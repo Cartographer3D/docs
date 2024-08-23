@@ -48,6 +48,8 @@ Your toolhead & gantry/carriage **MUST** be <mark style="color:red;">**RIGID**</
 ```bash
 cd ~/cartographer-klipper
 git fetch
+git reset --hard HEAD
+git clean -xffd
 git pull
 chmod +x install.sh
 ./install.sh

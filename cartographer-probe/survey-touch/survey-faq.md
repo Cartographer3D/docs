@@ -22,7 +22,8 @@ sudo rm -rv Carto_TAP
 cd ~/klipper/klippy/extras
 sudo rm -rv scanner.py
 cd ~/cartographer-klipper
-git fetch
+git reset --hard HEAD
+git clean -xffd
 git pull
 chmod +x install.sh
 ./install.sh
