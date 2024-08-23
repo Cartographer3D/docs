@@ -18,7 +18,29 @@ layout:
 We **DO NOT** 100% guarantee compatibility with ALL printers. It is your responsibility to read this entire guide prior to use and to research whether this is right for you. Please contact us on [DISCORD ](https://discord.gg/yzazQMEGS2)if you have questions.
 {% endhint %}
 
+{% hint style="danger" %}
+Before proceeding, make a back-up of any existing `[cartographer]` or `[scanner]` sections in your printer.cfg especially`x_offset` **,** `y_offset` and `canbus_UUID` or `serial`\
+\
+Then, please **REMOVE** all of your existing `[cartographer]` or `[scanner]` sections from your <mark style="color:yellow;">**printer.cfg**</mark> and other configurations before proceeding.\
+\- Including `[cartographer model default]` or `[scanner model default`] and any other models from the bottom of <mark style="color:yellow;">**printer.cfg**</mark>
+{% endhint %}
+
 ***
+
+## Installation
+
+* [Follow the guide for probe installation first.](installation-and-setup/probe-installation/)
+* [Follow the Klipper Setup guide.](installation-and-setup/klipper-setup.md)
+* SSH into your machine and run the following code
+
+```bash
+cd ~/cartographer-klipper
+git fetch
+git pull
+chmod +x install.sh
+./install.sh
+sudo service klipper restart
+```
 
 ## Firmware Update
 
@@ -27,28 +49,31 @@ We **DO NOT** 100% guarantee compatibility with ALL printers. It is your respons
 {% hint style="info" %}
 **Did You Know?**\
 Even with Survey Touch firmware you can run in scan only mode if you dont want to use Touch.\
-Just set`calibration_method:scan` in <mark style="color:yellow;">printer.cfg</mark>
+Just set`calibration_method:scan` in <mark style="color:yellow;">**printer.cfg**</mark>
 {% endhint %}
 
 ***
 
-## Installation
+## Do not fear!!
 
-[Follow the guide for probe installation first.](installation-and-setup/probe-installation/)
+If you are greeted with the following error, **DO NOT** worry. Its normal and just apart of the configuration process. If you dont see it, **GOOD!**
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 ## Configuration
 
-{% hint style="danger" %}
-Please remove all of your existing \[cartographer] or \[scanner] sections from your printer.cfg and other configurations before proceeding.
-{% endhint %}
-
 <details>
 
 <summary>Printer.cfg Configuration <mark style="color:red;">IMPORTANT</mark></summary>
 
-{% code overflow="wrap" %}
+Before proceeding, make a back-up of any existing `[cartographer]` or `[scanner]` sections in your <mark style="color:yellow;">**printer.cfg**</mark> like `x_offset` **,** `y_offset` and `canbus_UUID` or `serial`\
+\
+Then, please **REMOVE** all of your existing `[cartographer]`  or `[scanner]` sections from your <mark style="color:yellow;">**printer.cfg**</mark> and other configurations before proceeding.\
+\
+These are <mark style="color:red;">REQUIREMENTS</mark>. Including the `zero_reference_position` in your `[bed_mesh]` section.&#x20;
+
 ```yaml
 [scanner]
 canbus_uuid: 0ca8d67388c2            #adjust to suit your scanner 
@@ -59,11 +84,12 @@ sensor: cartographer
 sensor_alt: carto
 
 [bed_mesh]
-zero_reference_position: 125, 125    # set this to your touch_location or middle of your bed
-```
-{% endcode %}
+zero_reference_position: 125, 125    # set this to themiddle of your bed
 
-These are <mark style="color:red;">REQUIREMENTS</mark>. Including the `zero_reference_position` in your `[bed_mesh]` section.&#x20;
+[adxl345]
+cs_pin: scanner:PA3
+spi_bus: spi1
+```
 
 </details>
 
@@ -74,12 +100,13 @@ These are <mark style="color:red;">REQUIREMENTS</mark>. Including the `zero_refe
 Adding the `CARTOGRAPHER_TOUCH` command to your print start macro ensures that the printer performs a precise touch probe <mark style="color:red;">**AFTER**</mark> executing the `BED_MESH_CALIBRATE` command and <mark style="color:red;">**AFTER**</mark> your nozzle reaches a steady 150c. This sequence helps to achieve an accurate bed leveling by accounting for any variations or offsets after the mesh calibration.
 
 ```gcode
+PLEASE DONT USE THIS - IT IS AN EXAMPLE ONLY
 [gcode_macro PRINT_START_EXAMPLE]
 gcode:
     G28                               ; Home all axes
-    M104 S{BED_TEMP}                  ; Set bed temperature
+    M140 S{BED_TEMP}                  ; Set bed temperature
     M109 S150                         ; Wait for extuder to reach 150°C (intermediate step)
-    M140 S{BED_TEMP}                  ; Set final bed temperature
+    M190 S{BED_TEMP}                  ; Set final bed temperature
     G28 Z                             ; Home Z axis again to account for thermal expansion
     QUAD_GANTRY_LEVEL / Z_TILT_ADJUST ; Perform quad gantry leveling or Z tilt adjustmen
     G28 Z                             ; Home Z axis again to account for thermal expansion
@@ -87,6 +114,7 @@ gcode:
     CARTOGRAPHER_TOUCH                ; Perform touch probe
     M109 S{EXTRUDER_TEMP}             ; Wait for extruder to reach target temperature
 
+PLEASE DONT USE THIS - IT IS AN EXAMPLE ONLY
 ```
 
 
@@ -535,31 +563,50 @@ These shouldn't be needed to changed, however they are available.
 
 ***
 
-## Frequently Asked Questions
+## Troubleshooting
 
-#### What do I need to add or change in my print start macro?
+### mcu 'scanner': command format mismatch: query\_lis2dw
 
-See [Print Start Macro](survey-touch.md#print-start-macro-example). But bascially, you just need to make sure your nozzle is at **maximum 150c** and then do a `CARTOGRAPHER_TOUCH` after you do a `BED_MESH_CALIBRATE`
+<figure><img src="../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
-#### I'm getting weird errors after updating my scanner.py, what do I do?
+This happens when youre using an older version of klipper. If you for whatever reason cannot update to the latest version of klipper, you need to **REMOVE** the following sections from <mark style="color:yellow;">**printer.cfg**</mark> completely.
+
+```yaml
+[lis2dw]
+cs_pin
+spi_bus:
+
+[resonance_tester]
+accel_chip: lis2dw
+```
+
+### I'm getting weird errors after updating my scanner.py, what do I do?
 
 Firstly make sure you have hit the **RESTART KLIPPER** button in your Fluid/Mainsail UI, this will force the refresh of scanner.py to the updated version.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-08-21 210954.png" alt="" width="356"><figcaption><p>Always RESTART KLIPPER after an update.</p></figcaption></figure>
 
-#### Does touch work with glass or garolite beds?
+### Option 'X' is not valid in section 'scanner'
+
+&#x20;You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your <mark style="color:yellow;">**printer.cfg**</mark> or check its written correctly. You can see [valid parameters here](survey-touch.md#available-printer.cfg-settings)
+
+***
+
+## Frequently Asked Questions
+
+### What do I need to add or change in my print start macro?
+
+See [Print Start Macro](survey-touch.md#print-start-macro-example). But bascially, you just need to make sure your nozzle is at **maximum 150c** and then do a `CARTOGRAPHER_TOUCH` after you do a `BED_MESH_CALIBRATE`
+
+### Does touch work with glass or garolite beds?
 
 It **CAN SOMETIMES** work depending on the thickness of your glass or garolite bed. However we can't say for certain. If its less than 2mm thick theres a good chance however we **accept no responsibility** if it **doesn't** work!&#x20;
 
-#### Option 'X' is not valid in section 'scanner'
-
-&#x20;You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your printer.cfg or check its written correctly. You can see [valid parameters here](survey-touch.md#available-printer.cfg-settings)
-
-#### Is it guaranteed that this will work on my printer?&#x20;
+### Is it guaranteed that this will work on my printer?&#x20;
 
 As with a lot of things in life, we **can't guarantee 100% compatibility**, it should be compatible with most well built printers, there are obviously some exceptions, the biggest impacting factor is the quality of the Z axis motion. If there is any binding or lack of consistency, then you may find that you will not be able to use this feature. You can still use **regular cartographer scan mode** though!
 
-#### I was in the beta, how do I switch back to regular to continue using touch?
+### I was in the beta, how do I switch back to regular to continue using touch?
 
 ```bash
 cd ~
@@ -573,3 +620,5 @@ chmod +x install.sh
 ./install.sh
 sudo service klipper restart
 ```
+
+also make sure to edit and remove the \[cartoTAP] or beta update manager sections of moonraker.conf

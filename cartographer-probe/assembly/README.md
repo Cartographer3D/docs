@@ -17,7 +17,7 @@ If you are assembling in any other way, please take note of the following:
 *   The MCU and coil board have a polarity, the white boxes on the silk screen should align up together, Note the image below and the orientation shown. \
 
 
-    <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p><strong>Top Picture</strong> - Note the White Boxes for reference<br><strong>Bottom Left</strong> - Correct Orentation of MCU board and coil board<br><strong>Bottom Right</strong> - Flipped Correct view of MCU board and coil board </p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p><strong>Top Picture</strong> - Note the White Boxes for reference<br><strong>Bottom Left</strong> - Correct Orentation of MCU board and coil board<br><strong>Bottom Right</strong> - Flipped Correct view of MCU board and coil board </p></figcaption></figure>
 
 
 * If your installation moves away from any of the standard methods, please check the USB or CAN cable polarity they might need re-pinning, don't worry if you do plug it in reversed, we have reversed polarity protection, so your board should be fine.&#x20;
