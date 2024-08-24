@@ -316,14 +316,25 @@ These shouldn't be needed to changed, however they are available.
   * Default: Value of `speed`
   * Constraint: above 0.0
 * **backlash\_comp**
-  * Default: 0.5
+  *   Backlash compensation distance for removing Z backlash before measuring the sensor response.
+
+      Offsets are measured from the centre of your coil, to the tip of your nozzle on a level axis. It is vital that this is accurate.
+  * **Default:** 0.5
 
 <!---->
 
+* **mesh\_runs:**
+  * Number of passes to make during mesh scan.
+  * **Default:** 1
+  * **Constraint:** Must be above 0.
+* **mesh\_main\_direction**
+  * Primary direction of travel while running a bed mesh
+  * **Default:** x
+  * **Constraint:** X or Y
 * **probe\_speed**
   * Default: 5.0
 * **touch\_location**
-  * Default:  defaults to the center of the bed if not specified
+  * Default:  defaults to the zero\_reference\_point in bed\_mesh
   * Example: 125, 125
 * **samples**
   * Default: 5
@@ -341,9 +352,11 @@ These shouldn't be needed to changed, however they are available.
   * Default: "median"
   * Available Options: median or average
 * **x\_offset**
-  * Default: 0.0
+  * X offset of cartographer from the nozzle.
+  * **Default:** 0.0
 * **y\_offset**
-  * Default: 0.0
+  * Y offset of cartographer from the nozzle.
+  * **Default:** 0.0
 
 <!---->
 
@@ -360,14 +373,19 @@ These shouldn't be needed to changed, however they are available.
   * Default: "scan"
   * Available options: touch or scan
 * **trigger\_distance**
-  * Default: 2.0
+  * Cartographer trigger distance for homing.
+  * **Default:** 2.0
 * **trigger\_dive\_threshold**
-  * Default: 1.5
+  * Threshold for range vs dive mode probing. Beyond \`trigger\_distance + trigger\_dive\_threshold\` a dive will be used.
+  * **Default:** 1.5
 * **trigger\_hysteresis**
-  * Default: 0.006
+  *   Hysteresis on trigger threshold for untriggering, as a percentage of the
+
+      trigger threshold.
+  * **Default:** 0.006
 * **z\_settling\_time**
-  * Default: 5 seconds
-  * Constraint: min 0
+  * **Default:** 5 seconds
+  * **Constraint:** min 0
 * **scanner\_touch\_accel**
   * Default: 100
   * Constraint: above 0, min 100
@@ -375,8 +393,8 @@ These shouldn't be needed to changed, however they are available.
   * Default: 10
   * Constraint: above 0, max 30
 * **scanner\_touch\_speed**
-  * Default: 3
-  * Constraint: max scanner\_touch\_max\_speed
+  * **Default:** 3
+  * **Constraint:** max scanner\_touch\_max\_speed
 * **scanner\_touch\_retract\_dist**
   * Default: 2
   * Constraint: min 1

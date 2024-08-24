@@ -2,9 +2,17 @@
 
 ## Frequently Asked Questions
 
+### Do I need to run the calibration while hot or cold?
+
+It doesnt matter! Thats the point of touch! Do what works best for you.
+
+### My bed mesh is scanning in Y direction and not X, how do i fix it?
+
+This will be updated in a new patch, in the mean time add `mesh_main_direction: x` to your <mark style="color:yellow;">**printer.cfg**</mark>
+
 ### What do I need to add or change in my print start macro?
 
-See [Print Start Macro](survey-faq.md#print-start-macro-example). But bascially, you just need to make sure your nozzle is at **maximum 150c** and then do a `CARTOGRAPHER_TOUCH` after you do a `BED_MESH_CALIBRATE`
+See [Print Start Macro](survey-faq.md#print-start-macro-example). But bascially, you just need to make sure your nozzle is at <mark style="color:red;">**maximum 150c**</mark> and then do a `CARTOGRAPHER_TOUCH` after you do a `BED_MESH_CALIBRATE`
 
 ### Does touch work with glass or garolite beds?
 
