@@ -14,7 +14,7 @@ layout:
 
 # Temperature Differential Calibration
 
-
+[**Note - This is not needed if you are using Cartographer Survey Touch!** ](#user-content-fn-1)[^1]
 
 {% hint style="info" %}
 This requires Cartographer v1.0.0-17-g944c62e9 or later.&#x20;
@@ -198,3 +198,5 @@ After doing any form of Temperature Calirbation, it is essential you re-complete
 \
 IF YOU DO NOT DO THIS, YOU MIGHT DO DAMAGE TO YOUR PRINT SURFACE.
 {% endhint %}
+
+[^1]: 
