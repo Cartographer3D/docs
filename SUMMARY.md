@@ -21,6 +21,7 @@
   * [Settings & Commands](cartographer-probe/survey-touch/settings-and-commands.md)
   * [Survey FAQ](cartographer-probe/survey-touch/survey-faq.md)
   * [Survey Troubleshooting](cartographer-probe/survey-touch/survey-troubleshooting.md)
+  * [Extras](cartographer-probe/survey-touch/extras.md)
 * [📐 Fine Tuning](cartographer-probe/fine-tuning/README.md)
   * [Tweaking the Z offset](cartographer-probe/fine-tuning/tweaking-the-z-offset.md)
   * [Cartographer Models](cartographer-probe/fine-tuning/cartographer-models.md)

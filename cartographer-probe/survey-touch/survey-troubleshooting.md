@@ -2,16 +2,30 @@
 
 ## Troubleshooting
 
+### SAVE\_CONFIG section 'scanner' option 'scanner\_touch\_z\_offset' conflicts with included value
+
+<figure><img src="../../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+
+A common cause for this is having you `[scanner]` section in an included config file and not in <mark style="color:yellow;">**printer.cfg**</mark>. \
+\
+To work around this klipper limitation, remove `scanner_touch_z_offset` from your included config and add it to <mark style="color:yellow;">**printer.cfg**</mark>. \
+\
+Below is an example of what to have in <mark style="color:yellow;">**printer.cfg**</mark>. \
+\
+This will allow klipper to save new offsets using the UI.
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
 ### Unknown pin chip name "cartographer"
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 This occurs when there is old references to cartographer in your <mark style="color:yellow;">**printer.cfg**</mark>\
 Please check your <mark style="color:yellow;">**printer.cfg**</mark> and make sure "cartographer" only appears next to `sensor:` and `[adxl] cs_pin:`&#x20;
 
 ### Unknown pin chip name "scanner"
 
-<figure><img src="../../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt="" width="375"><figcaption></figcaption></figure>
 
 This can happen when the symlink between klipper and scanner is broken. You can check your symlinks with the following command.
 
@@ -31,7 +45,7 @@ And then check your symlinks again. You should see scanner.py pointed to the car
 
 ### Mcu 'scanner': command format mismatch: query\_lis2dw
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 This happens when youre using an older version of klipper. If you for whatever reason cannot update to the latest version of klipper, you need to **REMOVE** the following sections from <mark style="color:yellow;">**printer.cfg**</mark> completely.
 

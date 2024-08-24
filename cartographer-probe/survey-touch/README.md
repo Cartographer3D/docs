@@ -78,7 +78,7 @@ Just set`calibration_method:scan` in <mark style="color:yellow;">**printer.cfg**
 
 If you are greeted with the following error, **DO NOT** worry. Its normal and just apart of the configuration process. If you dont see it, **GOOD!**
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ***
 

@@ -8,7 +8,7 @@ It doesnt matter! Thats the point of touch! Do what works best for you.
 
 ### My bed mesh is scanning in Y direction and not X, how do i fix it?
 
-This will be updated in a new patch, in the mean time add `mesh_main_direction: x` to your <mark style="color:yellow;">**printer.cfg**</mark>
+This will be updated in a new patch, in the mean time to your `[scanner]` section add `mesh_main_direction: x` to your <mark style="color:yellow;">**printer.cfg**</mark>
 
 ### What do I need to add or change in my print start macro?
 

@@ -28,15 +28,15 @@ If you are using more than just the `default` cartographer model, you will have 
 
 You can adjust your Z Offset in Mainsail using the Z-Offset section of the Toolhead pane.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 after making the neccessary adjustments press the `SAVE` button
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 And then press `SAVE CONFIG`
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once complete, your Z offset change should be evident under model\_offset: under the specific model which was loaded. \
 \
