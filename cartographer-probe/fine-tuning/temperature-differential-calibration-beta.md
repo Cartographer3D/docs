@@ -14,7 +14,11 @@ layout:
 
 # Temperature Differential Calibration
 
-[**Note - This is not needed if you are using Cartographer Survey Touch!** ](#user-content-fn-1)[^1]
+
+
+{% hint style="info" %}
+[Note - This is not needed if you are using Cartographer Survey Touch! ](#user-content-fn-1)[^1]
+{% endhint %}
 
 {% hint style="info" %}
 This requires Cartographer v1.0.0-17-g944c62e9 or later.&#x20;
@@ -28,15 +32,11 @@ IF YOU DO NOT DO THIS, YOU MIGHT DO DAMAGE TO YOUR PRINT SURFACE.
 
 This tutorial aims to optimize the temperature compensation parameters and reduce the temperature drift, which takes a long time (sometimes more than 3 hours) to carry out this optimization.
 
-{% hint style="warning" %}
-If you are happy with the current performance, and it meets your requirements, this does not need to be run.
-{% endhint %}
-
 ### Update your printer config file in Klipper.
 
 Modify your printer.cfg, adding the following macro. This should be added to the bottom of your printer.cfg file.&#x20;
 
-{% hint style="danger" %}
+{% hint style="info" %}
 This Macro will take your bed up to 110oC, if your printers bed is not capable of that temperature, please lower the M140 commands to a safe temperature for you. \
 \
 M140 S110 = 110oC\

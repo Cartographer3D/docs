@@ -1,5 +1,9 @@
 # Klipper Configuration
 
+{% hint style="info" %}
+If you want to use Survey Touch, our contact probing solution skip this section and go [here](../survey-touch/)
+{% endhint %}
+
 ## Finding the Serial or UUID
 
 {% hint style="warning" %}

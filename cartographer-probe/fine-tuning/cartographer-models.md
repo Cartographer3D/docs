@@ -14,6 +14,10 @@ layout:
 
 # Cartographer Models
 
+{% hint style="info" %}
+Models are not required if you are using Cartographer Survey Touch.&#x20;
+{% endhint %}
+
 ### Why use models??
 
 There are many different reasons to why you would want to use different models with your probe, these vary from person to person, but they could be as follows:
