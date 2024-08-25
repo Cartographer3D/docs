@@ -66,4 +66,4 @@ Firstly make sure you have hit the **RESTART KLIPPER** button in your Fluid/Main
 
 ### Option 'X' is not valid in section 'scanner'
 
-&#x20;You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your <mark style="color:yellow;">**printer.cfg**</mark> or check its written correctly. You can see [valid parameters here](survey-troubleshooting.md#available-printer.cfg-settings)
+&#x20;You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your <mark style="color:yellow;">**printer.cfg**</mark> or check its written correctly. You can see [valid parameters here](settings-and-commands.md#available-parameters)
