@@ -42,7 +42,7 @@ You do NOT need to solder in the connector, pressure fit is fine.&#x20;
 
 <figure><img src="../../../.gitbook/assets/image (63).png" alt=""><figcaption><p>Connected to a ST-Link v2 Mini (with a Genuine STM Chip)</p></figcaption></figure>
 
-### If using Windows follow the next steps, if you are using Linux (Pi) click here
+### If using Windows follow the next steps, if you are using Linux (Pi) [click here](update-or-re-flash-via-st-link.md#flashing-via-linux-pi)
 
 Open STM32CubeProg
 
