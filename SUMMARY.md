@@ -39,6 +39,7 @@
       * [CANBUS Flash](cartographer-probe/firmware/firmware-updating/via-katapult/canbus-flash.md)
     * [via DFU](cartographer-probe/firmware/firmware-updating/via-dfu.md)
   * [Manual Methods](cartographer-probe/firmware/manual-methods/README.md)
+    * [Update or Re-Flash via ST-Link](cartographer-probe/firmware/manual-methods/update-or-re-flash-via-st-link.md)
     * [Which Firmware?](cartographer-probe/firmware/manual-methods/which-firmware/README.md)
       * [Cartographer v1 (RP2040 based probe)](cartographer-probe/firmware/manual-methods/which-firmware/cartographer-v1-rp2040-based-probe.md)
       * [Cargtographer V2 w/ Input Shaping](cartographer-probe/firmware/manual-methods/which-firmware/cargtographer-v2-w-input-shaping.md)
