@@ -58,8 +58,6 @@ Ensure that you are writing to the correct memory location&#x20;
 
 If your firmware is from the **`combined-firmware`** folder or starts with the words `Katapult`**,**  ensure that the address is set to `0x08000000`
 
-If the firmware is named `Cartographer` write at the address `0x08002000`
-
 <figure><img src="../../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
 
 Ensure that you have ST-LINK slelected on the right (this can default to DFU mode if you havnt used this before)&#x20;
