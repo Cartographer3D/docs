@@ -53,7 +53,6 @@ git fetch
 git reset --hard HEAD
 git clean -xffd
 git pull
-chmod +x install.sh
 ./install.sh
 sudo service klipper restart
 ```

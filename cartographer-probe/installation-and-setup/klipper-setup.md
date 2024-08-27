@@ -7,7 +7,6 @@ Clone the Klipper module from GitHub using the following commands, you then need
 ```bash
 cd ~
 git clone https://github.com/Cartographer3D/cartographer-klipper.git
-chmod +x cartographer-klipper/install.sh
 ./cartographer-klipper/install.sh
 ```
 
@@ -17,8 +16,7 @@ If you are in Mainland China, use the following command:
 
 <pre class="language-bash"><code class="lang-bash"><strong>cd ~
 </strong><strong>git clone https://gitee.com/NBTP/cartographer-klipper.git
-</strong>chmod +x cartographer-klipper/install.sh
-./cartographer-klipper/install.sh
+</strong>./cartographer-klipper/install.sh
 </code></pre>
 
 {% hint style="warning" %}
