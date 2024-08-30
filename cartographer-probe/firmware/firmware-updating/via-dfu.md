@@ -23,7 +23,7 @@ layout:
 ### Whats Required?
 
 * Cartographer Probe
-* Conductive (Metal) Tweezers
+* Two pairs of conductive (Metal) Tweezers
 *   USB-A to JST-PH Cable
 
     <figure><img src="https://github.com/user-attachments/assets/1c082c5d-44ff-43e1-b1bf-f70b4249a490" alt=""><figcaption></figcaption></figure>
@@ -37,35 +37,36 @@ Using the scripts below, you may need to use the **Install Prerequisites** optio
 ### What is DFU
 
 * This should be seen as a last resort and should only be neccasary when Katapult flashing is unavailable for whatever reason.
-* DFU Mode (Device Firmware Upgrade Mode) is STM's bootloader thats apart of the STM32 chip included on cartographer probes. Its next to impossible to make this mode fail. However getting the chip into DFU mode can be a challenge as it requires touching the **boot0** and **reset** pads on the cartographer PCB in the correct manner.
+* DFU Mode (Device Firmware Upgrade Mode) is STM's bootloader thats apart of the STM32 chip included on cartographer probes. Its next to impossible to make this mode fail. However getting the chip into DFU mode can be a challenge as it requires touching the **BOOT0** and **RESET** pads on the cartographer PCB in the correct manner.
 
 ![image](https://github.com/user-attachments/assets/b9d2581f-9b64-4e61-bc7f-e3382b0155ad)
 
 ### Step 1. Enter DFU Mode
 
-* DFU mode is relatively simple to enter, but harder in practice. With cartographer plugged in via USB, touch the **boot0** (1) and **reset** (2) pads. This will put the device in DFU mode.
-* This can be quite fiddly and take some time, so listed below is 2 convenient ways to make this more simple.
+* Entering DFU mode is simple in theory but a bit more fiddly in practice. With the cartographer plugged in via USB, first short the two pads of the **BOOT0** set (marked 1 on the photo). With **BOOT0** still shorted, briefly short the RESET pads (marked 2). This will put the device in DFU mode.
+* This process can be tricky and take some time, so listed below are two ways to make it simpler.
 
 {% hint style="danger" %}
-No LEDs will be on when in DFU mode. If the blue LED is lit, the device is in runtime mode and this isnt what we want. Continue touching those pads till it works!
+No LEDs will be on when in DFU mode. If the blue LED is lit, even intermittently, the device is in runtime mode and this isnt what we want. Continue touching those pads till it works!
 {% endhint %}
 
 {% hint style="info" %}
-via SSH use command `lsusb | grep "DFU"` to find if the device is in **DFU Mode**&#x20;
+Via SSH, use the command `lsusb | grep "DFU"` to determine whether the device is in **DFU Mode**&#x20;
 {% endhint %}
 
 <figure><img src="https://github.com/user-attachments/assets/5996588d-1049-458f-8aa4-82894c26168f" alt=""><figcaption></figcaption></figure>
 
-#### PCB Cover
+#### Make-it-easier option #1: printed tweezer guide
 
-* Use the new PCB cover made by [MakerMylo](https://www.youtube.com/@makermylo) to clip onto the PCB, it will help align tweezers for touching the pads.
+* You can use the PCB cover designed by [MakerMylo](https://www.youtube.com/@makermylo) to help with the fine-motor work of shorting pads. It clips onto the PCB and helps you to align tweezers accurately for shorting pads.
 
 {% file src="../../../.gitbook/assets/PadPusher3000.stl" %}
 
-#### Solder Boot0 Method
+#### Make-it-easier option #2: solder-bridging the **BOOT0** pads
 
-* Soldering a bridge on the **boot0** pads can make this process, much easier. All you need to then do is plug in the USB cable and the probe will enter DFU mode.
-* Once youve flashed via DFU mode, remember to de-solder the bridge.
+* Soldering a bridge on the **BOOT0** pads can make this process much easier. You will still need to briefly short the **RESET** pads, but you won't have to coordinate two sets of tweezers.
+
+* Once you've flashed by using DFU mode, remember to de-solder the bridge.
 
 ### Step 2. SSH into Host &  Run Script
 
