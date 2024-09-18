@@ -4,29 +4,9 @@
 If you want to use Survey Touch, our contact probing solution skip this section and go [here](../survey-touch/)
 {% endhint %}
 
-## Finding the Serial or UUID
+##
 
-{% hint style="warning" %}
-A small number of probes which shipped directly from Cartographer3D between mid and late February may have been pre-flashed with the incorrect firmware. If you cannot find a serial number or UUID, please follow this [guide on how to re-flash](../firmware/manual-methods/re-flashing-firmware.md) with the correct firmware. \
-\
-We are sorry for any inconvenience caused.&#x20;
-{% endhint %}
-
-Note, you need to replace the serial path  or UUID with your probes serial path or UUID, this can be found by running the following commands&#x20;
-
-For USB based probes&#x20;
-
-```bash
-ls /dev/serial/by-id/
-```
-
-For CAN based probes
-
-```bash
-~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
-```
-
-## Config File&#x20;
+## Config File (Firmwares 4.0.1 or earlier)
 
 {% hint style="danger" %}
 if you are using an existing printer config, make sure you remove any previous reference to `[cartographer]` or `[probe]` in the saved section at the bottom.&#x20;

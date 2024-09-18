@@ -10,6 +10,8 @@ If you find any mistakes, please do not hesitate to contact us either at [info@c
 
 ## Cartographer Survey Touch
 
-Cartographer Survey Touch (our contact probe solution) is now live and available to all. Probes will ship out with non Survey firmware on them (unless stated on the box). \
+Cartographer Survey Touch (our contact probe solution) is now live and available to all.&#x20;
+
+Probes will be shipping out with Survey Firmware pre-flashed on them. \
 \
 For more information check out [survey-touch](cartographer-probe/survey-touch/ "mention")
