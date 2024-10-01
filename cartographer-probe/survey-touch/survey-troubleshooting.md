@@ -18,7 +18,7 @@ This will allow klipper to save new offsets using the UI.
 
 ### Unknown pin chip name "cartographer"
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt="" width="375"><figcaption></figcaption></figure>
 
 This occurs when there is old references to cartographer in your <mark style="color:yellow;">**printer.cfg**</mark>\
 Please check your <mark style="color:yellow;">**printer.cfg**</mark> and make sure "cartographer" only appears next to `sensor:` and `[adxl] cs_pin:`&#x20;
@@ -45,7 +45,7 @@ And then check your symlinks again. You should see scanner.py pointed to the car
 
 ### Mcu 'scanner': command format mismatch: query\_lis2dw
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt="" width="375"><figcaption></figcaption></figure>
 
 This happens when youre using an older version of klipper. If you for whatever reason cannot update to the latest version of klipper, you need to **REMOVE** the following sections from <mark style="color:yellow;">**printer.cfg**</mark> completely.
 

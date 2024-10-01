@@ -14,13 +14,13 @@ Print of our Standard Assembly Jig - it is avilable [here ](https://github.com/C
 
 There are no special printing instructions, though I would advise printing on a 0.4mm nozzle.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Standard Assembly Jig</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption><p>Standard Assembly Jig</p></figcaption></figure>
 
 ### Step 2 - Coilboard and Pins
 
 Install the Coilboard with the bumps facing down into the indents made for them, and place the pins into the PCB
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 3 - MCU Placement&#x20;
 
@@ -31,7 +31,7 @@ Place the MCU on the bridge, making sure it is flat fits tightly. The main compo
 At this point check your orientations match the photo below, the MCU and the Coilboard MUST have the correct polarity
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 4 - Solder Pins
 
@@ -39,7 +39,7 @@ Heat your soldering iron to a sufficient temperature for your solder and apply f
 
 Solder the pins from 1 to 4.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 5 - Remove and Replace in Jig
 
@@ -53,7 +53,7 @@ Again, ensure that the boards are tightly in place and are flat.
 
 Now solder in any order, ensuring that you do not bridge any of the pins.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 7 - Check your work
 

@@ -43,6 +43,7 @@ M140 S110 = 110oC\
 M140 S95 = 95oC&#x20;
 {% endhint %}
 
+{% code fullWidth="true" %}
 ```gcode
 [gcode_macro DATA_SAMPLE]
 gcode:
@@ -118,17 +119,26 @@ gcode:
   RESPOND TYPE=command MSG='Follow the remaining instructions here: https://docs.cartographer3d.com/cartographer-probe/advanced-features/temperature-differential-calibration-beta'
   M117 "Follow the remaining instructions here: https://docs.cartographer3d.com/cartographer-probe/advanced-features/temperature-differential-calibration-beta"
 ```
+{% endcode %}
 
 The macro is then executed, and then the data1, data2, and data3 files are generated in the Klipper folder, note, this can take a very long time.
 
 Once complete, move the files (data1, data2, data3) to your cartographer-klipper folder.&#x20;
 
-```bash
-mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/cartographer-klipper/
+<pre class="language-bash" data-full-width="true"><code class="lang-bash"><strong>mv ~/klipper/data1 ~/klipper/data2 ~/klipper/data3 ~/cartographer-klipper/
+</strong></code></pre>
+
+If you are using Cartographer Survey, the default location the macro saves to has change, use this command
+
+{% code fullWidth="true" %}
 ```
+mv /tmp/data1 /tmp/data2 /tmp/data3 ~/cartographer-klipper/
+```
+{% endcode %}
 
 You will need to ensure your host OS has the libraries and dependancies in it.
 
+{% code fullWidth="true" %}
 ```bash
 ~/klippy-env/bin/pip install pandas
 ~/klippy-env/bin/pip install matplotlib
@@ -136,13 +146,16 @@ sudo apt-get install libopenblas-dev
 ~/klippy-env/bin/pip install -v numpy
 ~/klippy-env/bin/pip install scipy
 ```
+{% endcode %}
 
 Once installed, run the following script, this will analyse the data from the files that you have moved. You need to ensure that you are on the latest version of our firmware, if you get an error about file not existing, go to our Klipper Setup page and re-run that initial script.&#x20;
 
+{% code fullWidth="true" %}
 ```bash
 cd ~/cartographer-klipper
 ~/klippy-env/bin/python tempcalib.py
 ```
+{% endcode %}
 
 After running, four parameters will be generated and a picture will be generated in your bash window and a image in your `cartographer-klipper` folder.&#x20;
 
@@ -150,21 +163,24 @@ After running, four parameters will be generated and a picture will be generated
 
 <figure><img src="../../.gitbook/assets/fit.png" alt=""><figcaption><p>Example 1</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Example 2</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (60).png" alt=""><figcaption><p>Example 2</p></figcaption></figure>
 
 Once complete, it will generate an image called fit.png as well as show some values in your terminal window.
 
+{% code fullWidth="true" %}
 ```
 tc_a_a:5.367848131964879e-06
 tc_a_b:1.7559290784042338
 tc_b_a:0.0007546669217813525
 tc_b_b:-343.290029518937
 ```
+{% endcode %}
 
 Copy the results at the end of the `[cartographer]` section of your config,
 
 **Example below**
 
+{% code fullWidth="true" %}
 ```yaml
 [cartographer]
 serial:
@@ -182,14 +198,17 @@ tc_a_b:1.7559290784042338
 tc_b_a:0.0007546669217813525
 tc_b_b:-343.290029518937
 ```
+{% endcode %}
 
 Once added, save and restart your config.&#x20;
 
 You will now have to re-calibrate your probe, to do this
 
+{% code fullWidth="true" %}
 ```
 CARTOGRAPHER_CALIBRATE    
 ```
+{% endcode %}
 
 Once compelete, SAVE & RESTART your config.&#x20;
 

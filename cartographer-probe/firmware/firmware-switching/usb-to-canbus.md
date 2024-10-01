@@ -28,11 +28,11 @@ Looking at using Cartographer via CANBUS instead of USB? Follow the steps below 
 bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -t katapult -s canbus
 ```
 
-<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
 
 ## Step 3. Select Which Firmware/Bitrate You Want
 
-<figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
 
 ## Step 4. Flash Katapult Firmware
 
@@ -46,7 +46,7 @@ bash <(wget -qO - firmware.cartographer3d.com/firmware.sh)
 
 ## Step 7. Choose If You Want Survey/Touch
 
-<figure><img src="../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
 
 ## Step 8. Select Firmware & Flash
 
