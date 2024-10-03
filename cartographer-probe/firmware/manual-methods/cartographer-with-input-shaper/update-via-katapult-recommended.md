@@ -38,7 +38,7 @@ python3 ~/katapult/scripts/flash_can.py -i can0 -f Cartographer_CAN_1000000_8kib
 
 Klipper will then require a Firmware restart, and if you did it correctly it will all work.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (61).png" alt=""><figcaption><p>Example of full process of Firmware Update</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Example of full process of Firmware Update</p></figcaption></figure>
 
 ### Updating a USB Probe via Katapult
 
@@ -50,7 +50,7 @@ The initial step is noting down the probes Serial ID, you do this by typing the 
 ls -l /dev/serial/by-id/
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 You now need to load the probe into the Katapult bootloader, to do this you simply replace \<serialID> with your own serial ID and path  as found in the above step.
 
@@ -66,7 +66,7 @@ cd ~/klipper/scripts
 ~/klippy-env/bin/python -c 'import flash_usb as u; u.enter_bootloader("/dev/serial/by-id/usb-Cartographer_614e_060004001443303856303820-if00")'
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After the command runs, repeat step 1, and run a `ls -l /dev/serial/by-id/` and note down the new ID, this should have changed to usb-katapult, rather than usb-cartographer.
 
@@ -86,6 +86,6 @@ Again, an example of a full command
 
 If successful, you should have the following output.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Restart your printer firmware, and everything should work as normal.&#x20;

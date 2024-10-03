@@ -163,7 +163,7 @@ After running, four parameters will be generated and a picture will be generated
 
 <figure><img src="../../.gitbook/assets/fit.png" alt=""><figcaption><p>Example 1</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (60).png" alt=""><figcaption><p>Example 2</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Example 2</p></figcaption></figure>
 
 Once complete, it will generate an image called fit.png as well as show some values in your terminal window.
 

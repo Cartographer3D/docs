@@ -4,6 +4,8 @@ This list is NOT exhaustive, if you need support don't be a stranger and please 
 \
 If you do think that something is missing, please let us know and I will add it as soon as I can.
 
+## General Troubleshooting
+
 <details>
 
 <summary>Option 'pin' in section 'probe' must be specifie</summary>
@@ -212,7 +214,7 @@ If you get a sharp drop in your bed mesh, or missing clusters error after a scan
 
 <summary>Repeated No trigger on z after full movement</summary>
 
-![](<../.gitbook/assets/image (14).png>)
+![](<../.gitbook/assets/image (2) (1) (1) (1).png>)
 
 If you are getting the error `No trigger on z after full movement`, and running a lower powered SBC such as a Raspberry Pi 2, or a BTT CB1, You are able to lock a single CPU core to your Klipper instance. \
 \
@@ -221,3 +223,85 @@ Esoterical has an outstanding guide on how to do so below. \
 [https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental](https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental)
 
 </details>
+
+## Touch Specific Troubleshooting
+
+<details>
+
+<summary>SAVE_CONFIG section 'scanner' option 'scanner_touch_z_offset' conflicts with included value</summary>
+
+<img src="../.gitbook/assets/image (6).png" alt="" data-size="original">
+
+A common cause for this is having you `[scanner]` section in an included config file and not in <mark style="color:yellow;">**printer.cfg**</mark>. \
+\
+To work around this klipper limitation, remove `scanner_touch_z_offset` from your included config and add it to <mark style="color:yellow;">**printer.cfg**</mark>. \
+\
+Below is an example of what to have in <mark style="color:yellow;">**printer.cfg**</mark>. \
+\
+This will allow klipper to save new offsets using the UI.
+
+<img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="original">
+
+</details>
+
+<details>
+
+<summary>Unknown pin chip name "scanner"</summary>
+
+<img src="../.gitbook/assets/image (10).png" alt="" data-size="original">
+
+This can happen when the symlink between klipper and scanner is broken. You can check your symlinks with the following command.
+
+```bash
+find  ~/klipper/klippy/extras/  -maxdepth 1 -type l -ls
+```
+
+If they dont look right or youre just not sure, run the following again.
+
+```bash
+cd ~/cartographer-klipper
+chmod +x install.sh
+./install.sh
+```
+
+And then check your symlinks again. You should see scanner.py pointed to the cartographer-klipper folder.
+
+</details>
+
+<details>
+
+<summary>Mcu 'scanner': command format mismatch: query_lis2dw</summary>
+
+<img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="original">
+
+This happens when youre using an older version of klipper. If you for whatever reason cannot update to the latest version of klipper, you need to **REMOVE** the following sections from <mark style="color:yellow;">**printer.cfg**</mark> completely.
+
+```yaml
+[lis2dw]
+cs_pin
+spi_bus:
+
+[resonance_tester]
+accel_chip: lis2dw
+```
+
+</details>
+
+<details>
+
+<summary>I'm getting weird errors after updating my scanner.py, what do I do?</summary>
+
+Firstly make sure you have hit the **RESTART KLIPPER** button in your Fluid/Mainsail UI, this will force the refresh of scanner.py to the updated version.
+
+<img src="../.gitbook/assets/Screenshot 2024-08-21 210954.png" alt="Always RESTART KLIPPER after an update." data-size="original">
+
+</details>
+
+<details>
+
+<summary>Option 'X' is not valid in section 'scanner'</summary>
+
+&#x20;You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your <mark style="color:yellow;">**printer.cfg**</mark> or check its written correctly. You can see [valid parameters here](survey-touch/settings-and-commands.md#available-parameters)
+
+</details>
+

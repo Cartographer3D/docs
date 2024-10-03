@@ -57,7 +57,7 @@ To check,&#x20;
   * Search and open "Device Manager"
   * Scroll down to Universal Serial Bus Devices&#x20;
   * You should see STM32 BOOTLOADER as an option\
-    &#x20;<img src="../../../../.gitbook/assets/image (51).png" alt="Device Manager view of Cartographer in Bootloader mode." data-size="original">
+    &#x20;<img src="../../../../.gitbook/assets/image (7) (1) (1).png" alt="Device Manager view of Cartographer in Bootloader mode." data-size="original">
 * Mac - TBC
 
 ### Flashing via STM32CubeProgrammer (Windows & MacOS)
@@ -70,11 +70,11 @@ Version 2.14.0 is recommended due to a known bug in 2.16.0 which causes issues w
 
 Open the application, and on the RIGHT side, select the following options and press **Connect**.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (52).png" alt=""><figcaption><p>STM32CubeProgrammer Settings</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption><p>STM32CubeProgrammer Settings</p></figcaption></figure>
 
 Once you have connected, Click Open File - you will need to select both the Katapult Bootloader for your board, and your Cartographer Firmware that you have downloaded.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (54).png" alt=""><figcaption><p>Firmwares Loaded</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption><p>Firmwares Loaded</p></figcaption></figure>
 
 For your Cartographer Firmware, you need to set the address to `0x08002000` This provides the 8KiB offset for the firmware. Katapult firmware can be flashed at the default `0x08000000.`
 
