@@ -6,7 +6,7 @@
 
 <img src="../../.gitbook/assets/bed-types.gif" alt="" data-size="original">
 
-<img src="../../.gitbook/assets/image (9).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/image (9) (1).png" alt="" data-size="original">
 
 In your Machine start G-Code modify your PRINT\_START macro to be similar to this based on your personal needs. The main one to worry about <mark style="color:green;">ADDING</mark> is `BED_TYPE="[curr_bed_type]"`
 
@@ -51,16 +51,16 @@ You could also set up duplicate filament settings and use them for different bed
 
 ### SuperSlicer - Per Filament
 
-<img src="../../.gitbook/assets/image (5) (1).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/image (5) (1) (1).png" alt="" data-size="original">
 
 ### OrcaSlicer - Per Filament
 
-<img src="../../.gitbook/assets/image (6) (1).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/image (6) (1) (1).png" alt="" data-size="original">
 
 ### What does it do?
 
 It will add an modify the z-offset based on your filaments custom z-offset gcode, giving you either MORE or LESS squish based on filament settings.
 
-<img src="../../.gitbook/assets/image (7).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/image (7) (1).png" alt="" data-size="original">
 
 </details>

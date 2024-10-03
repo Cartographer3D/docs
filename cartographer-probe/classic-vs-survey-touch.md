@@ -30,4 +30,4 @@ Finally, to tie all this together. We do a SCAN Z homing, which triggers at a ce
 
 Now, because we work in the real world and each printer is different it is common that there is still an additional fixed offset applied even after the nozzle probing action figures out the bed location. This is due to many factors including thermal expansion between nozzle probing temp and printing temp, flex in the toolhead, flex in the bed, inherent noise, etc. The good news is this offset should be a representation of the "system" as a whole and therefore you can change nozzles/sheets and this offset won't change.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>

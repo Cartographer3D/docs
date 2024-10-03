@@ -38,7 +38,7 @@ The box cartographer arrives in will also say "Touch Ready" if it has the latest
 Otherwise, you should follow this guide to [classic installation](classic-installation/). If you'd like to use touch, follow [this guide](../firmware/) to update the firmware before following the [Touch Installation Guide](touch-installation/).\
 
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td><img src="../../.gitbook/assets/image (3).png" alt="" data-size="original"></td><td></td></tr><tr><td></td><td><img src="../../.gitbook/assets/image (5).png" alt="" data-size="original"></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td><img src="../../.gitbook/assets/image (3) (1).png" alt="" data-size="original"></td><td></td></tr><tr><td></td><td><img src="../../.gitbook/assets/image (5) (1).png" alt="" data-size="original"></td><td></td></tr></tbody></table>
 
 ## Standard vs Right Angle vs Low Profile
 

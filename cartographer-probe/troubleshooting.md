@@ -214,7 +214,7 @@ If you get a sharp drop in your bed mesh, or missing clusters error after a scan
 
 <summary>Repeated No trigger on z after full movement</summary>
 
-![](<../.gitbook/assets/image (2) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (2) (1) (1) (1) (1).png>)
 
 If you are getting the error `No trigger on z after full movement`, and running a lower powered SBC such as a Raspberry Pi 2, or a BTT CB1, You are able to lock a single CPU core to your Klipper instance. \
 \
@@ -230,7 +230,7 @@ Esoterical has an outstanding guide on how to do so below. \
 
 <summary>SAVE_CONFIG section 'scanner' option 'scanner_touch_z_offset' conflicts with included value</summary>
 
-<img src="../.gitbook/assets/image (6).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (6) (1).png" alt="" data-size="original">
 
 A common cause for this is having you `[scanner]` section in an included config file and not in <mark style="color:yellow;">**printer.cfg**</mark>. \
 \
@@ -240,7 +240,7 @@ Below is an example of what to have in <mark style="color:yellow;">**printer.cfg
 \
 This will allow klipper to save new offsets using the UI.
 
-<img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (2) (1) (1).png" alt="" data-size="original">
 
 </details>
 
@@ -272,7 +272,7 @@ And then check your symlinks again. You should see scanner.py pointed to the car
 
 <summary>Mcu 'scanner': command format mismatch: query_lis2dw</summary>
 
-<img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" data-size="original">
 
 This happens when youre using an older version of klipper. If you for whatever reason cannot update to the latest version of klipper, you need to **REMOVE** the following sections from <mark style="color:yellow;">**printer.cfg**</mark> completely.
 
@@ -302,6 +302,23 @@ Firstly make sure you have hit the **RESTART KLIPPER** button in your Fluid/Main
 <summary>Option 'X' is not valid in section 'scanner'</summary>
 
 &#x20;You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your <mark style="color:yellow;">**printer.cfg**</mark> or check its written correctly. You can see [valid parameters here](survey-touch/settings-and-commands.md#available-parameters)
+
+</details>
+
+<details>
+
+<summary>gcode command PROBE_CALIBRATE already registered</summary>
+
+![](<../.gitbook/assets/image (8).png>)
+
+\
+If you used the original "Klipper Screen Fix" when running Classic Cartographer, you will need to remove the added Macro (seen below)
+
+```
+[gcode_macro PROBE_CALIBRATE]
+gcode:
+    [gcode_macro PROBE_CALIBRATE]
+```
 
 </details>
 
