@@ -51,6 +51,7 @@ mesh_min: 35, 6
 mesh_max: 240, 198
 #    end point of bed mesh [X, Y]
 probe_count: 30, 30
+algorithm: bicubic
 
 ```
 
@@ -90,6 +91,15 @@ probe_points:
 
 You then need to remove, or comment out your `[probe]` section.
 
+Now add a safe\_z\_home section with the following inforamation.
+
+```yaml
+[safe_z_home]
+home_xy_position: [your x-axis center coordinate], [your y-axis center coordinate]
+# Example home_xy_position: 175,175 - This would be for a 350 * 350mm bed. 
+z_hop: 10
+```
+
 You will also need to update your Z configuration settings, this will involve removing or commenting out your `position_endstop:` configuration. `Homing_retract_dist`  must also be set to 0
 
 {% hint style="info" %}
@@ -111,3 +121,4 @@ Finally, you need to ensure you have a suitable `bed_mesh` section. Information 
 {% hint style="warning" %}
 It is vital you complete the Calibration steps, without doing so the probe will not work properly and is likely to show TRIGGERED.&#x20;
 {% endhint %}
+

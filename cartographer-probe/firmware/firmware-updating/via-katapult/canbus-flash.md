@@ -44,7 +44,7 @@ This method requires prior knowledge of your **CANBUS UUID**.
 
 This should have been supplied to you in your hardware box if purchased (insert date).
 
-If you do not have your UUID. Visit [HERE](broken-reference) to get it.
+If you do not have your UUID. Visit [HERE](../../../installation-and-setup/classic-installation/klipper-setup.md#finding-the-serial-or-uuid) to get it.
 
 The script will detect your UUID if your UUID is inside your **printer.cfg** somewhere under `[scanner]` if it doesnt detect, you can manually enter it.
 

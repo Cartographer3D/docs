@@ -82,6 +82,7 @@ mesh_min: 35, 6
 mesh_max: 240, 198
 #    end point of bed mesh [X, Y]
 probe_count: 30, 30
+algorithm: bicubic
 ```
 
 {% hint style="warning" %}

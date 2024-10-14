@@ -14,4 +14,4 @@ Cartographer Survey Touch (our contact probe solution) is now live and available
 
 Probes will be shipping out with Survey Firmware pre-flashed on them. \
 \
-For more information check out [survey-touch](cartographer-probe/survey-touch/ "mention")
+For more information check out [Survey Touch](cartographer-probe/classic-vs-survey-touch.md)
