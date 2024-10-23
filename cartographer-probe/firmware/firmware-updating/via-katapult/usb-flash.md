@@ -37,7 +37,7 @@ Using the scripts below, you may need to use the **Install Prerequisites** optio
 ### Step 2. SSH into Device & Run Script
 
 ```bash
-bash <(wget -qO - firmware.cartographer3d.com/firmware.sh)
+bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -f usb
 ```
 
 <figure><img src="https://github.com/user-attachments/assets/b06e734b-d335-4073-9407-be60ec8bd17b" alt=""><figcaption><p>Screen #1 - USB Device Found</p></figcaption></figure>

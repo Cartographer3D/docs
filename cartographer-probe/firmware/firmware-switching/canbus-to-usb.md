@@ -41,7 +41,7 @@ bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -t katapult -s usb
 ## Step 6. Re-run Script
 
 ```
-bash <(wget -qO - firmware.cartographer3d.com/firmware.sh)
+bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -f usb
 ```
 
 ## Step 7. Choose If You Want Survey/Touch

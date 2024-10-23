@@ -39,7 +39,7 @@ bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -t katapult -s canbus
 ## Step 5. Re-Run Script
 
 ```bash
-bash <(wget -qO - firmware.cartographer3d.com/firmware.sh)
+bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -f can
 ```
 
 ## Step 6. Choose If You Want Survey/Touch

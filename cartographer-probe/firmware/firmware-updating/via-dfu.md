@@ -51,7 +51,9 @@ No LEDs will be on when in DFU mode. If the blue LED is lit, even intermittently
 {% endhint %}
 
 {% hint style="info" %}
-Via SSH, use the command `lsusb | grep "DFU"` to determine whether the device is in **DFU Mode**&#x20;
+Via SSH, use the command `lsusb | grep "DFU"` to determine whether the device is in **DFU Mode**\
+\
+**This can now be entered and automated using the** [**script below**](https://docs.cartographer3d.com/cartographer-probe/firmware/firmware-updating/via-dfu#step-2.-ssh-into-host-and-run-script) **and using lsusb.**
 {% endhint %}
 
 <figure><img src="https://github.com/user-attachments/assets/5996588d-1049-458f-8aa4-82894c26168f" alt=""><figcaption></figcaption></figure>
@@ -65,13 +67,12 @@ Via SSH, use the command `lsusb | grep "DFU"` to determine whether the device is
 #### Make-it-easier option #2: solder-bridging the **BOOT0** pads
 
 * Soldering a bridge on the **BOOT0** pads can make this process much easier. You will still need to briefly short the **RESET** pads, but you won't have to coordinate two sets of tweezers.
-
 * Once you've flashed by using DFU mode, remember to de-solder the bridge.
 
-### Step 2. SSH into Host &  Run Script
+### Step 2. SSH into Host & Run Script
 
 ```bash
-bash <(wget -qO - firmware.cartographer3d.com/firmware.sh)
+bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -f dfu
 ```
 
 ![Screen #1](https://github.com/user-attachments/assets/b49c213b-cd06-44aa-8fb4-9989e4994957)
@@ -79,7 +80,7 @@ bash <(wget -qO - firmware.cartographer3d.com/firmware.sh)
 ![Screen #2](https://github.com/user-attachments/assets/1a93eb97-8dff-446b-af7b-1fdf8dd7e38f)
 
 {% hint style="info" %}
-Choose FULL\_CARTOGRAPHER\_CANBUS for using Cartographer via  CANBUS.
+Choose FULL\_CARTOGRAPHER\_CANBUS for using Cartographer via CANBUS.
 
 Choose FULL\_CARTOGRAPHER\_USB for using Cartographer via USB
 {% endhint %}
@@ -88,7 +89,7 @@ Choose FULL\_CARTOGRAPHER\_USB for using Cartographer via USB
 
 ### Step 3. Done
 
-Once flashed, you will see the image below. This is a successful flash and youre all finished.&#x20;
+Once flashed, you will see the image below. This is a successful flash and youre all finished.
 
 <figure><img src="https://github.com/user-attachments/assets/3c2caf92-916d-4180-a885-cbb6964a3133" alt=""><figcaption><p>Screen #4</p></figcaption></figure>
 

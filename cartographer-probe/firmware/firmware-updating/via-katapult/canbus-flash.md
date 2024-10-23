@@ -35,7 +35,7 @@ Using the scripts below, you may need to use the **Install Prerequisites** optio
 ### Step 2. SSH into Device & Run Script
 
 ```bash
-bash <(wget -qO - firmware.cartographer3d.com/firmware.sh)
+bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -f can
 ```
 
 ### Step 3. Get Your UUID
