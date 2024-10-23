@@ -23,7 +23,6 @@
     * [First Print](cartographer-probe/installation-and-setup/touch-installation/first-print.md)
   * [Creality K1 & K1 Max Specific](cartographer-probe/installation-and-setup/creality-k1-and-k1-max-specific/README.md)
     * [Creality K1/Max Probe Installation](cartographer-probe/installation-and-setup/creality-k1-and-k1-max-specific/creality-k1-max-probe-configuration.md)
-    * [Creality K1/Max Klipper Setup](cartographer-probe/installation-and-setup/creality-k1-and-k1-max-specific/creality-k1-max-klipper-setup.md)
   * [Qidi Specific Installation Instructions](cartographer-probe/installation-and-setup/qidi-specific-installation-instructions.md)
 * [👇 Survey Touch](cartographer-probe/survey-touch/README.md)
   * [Settings & Commands](cartographer-probe/survey-touch/settings-and-commands.md)
