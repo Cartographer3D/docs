@@ -86,9 +86,9 @@ In this line will be a measurement called "delta" Take note of the value. Locate
 backlash_comp: 2.01
 ```
 
-Update this section with your new estimated backlash compensation. It is a good idea to do this compensation test at all 4x corners of your build plate and then again at middle of build plate. If you are on a printer with belted Z and the values in each corner deviate heavily. This would indicate a loose belt on that corner.&#x20;
+Update this section with your new estimated backlash compensation. It is a good idea to do this compensation test at all 4x corners of your build plate and then again at middle of build plate. If you are on a printer with belted Z and the values in each corner deviate heavily compared to other corners results,  this would indicate a loose belt on that corner.&#x20;
 
-If youa re using a printer which supports either `Z_TILT` or `QUAD_GANTRY_LEVEL` you will need to ensure that your probe is positioned above the bed when performing this, open up your `printer.cfg` and find the appropriate section, for example your QUAD\_GANTRY\_LEVEL section may look like this:
+If you are using a printer which supports either `Z_TILT` or `QUAD_GANTRY_LEVEL` you will need to ensure that your probe is positioned above the bed when performing this, open up your `printer.cfg` and find the appropriate section, for example your QUAD\_GANTRY\_LEVEL section may look like this:
 
 <pre class="language-yaml"><code class="lang-yaml">[quad_gantry_level]
 gantry_corners:
@@ -158,6 +158,15 @@ CARTOGRAPHER_THRESHOLD_SCAN
 ```
 
 This should start a touch process that will move the toolhead into a starting position and then lower until it touches the bed, repeating itself. Its okay if at first it doesnt touch the bed at all, this is completely normal. It will eventually start touching.&#x20;
+
+{% hint style="warning" %}
+Prior to doing the threshold scan,  please ensure that the following is true.&#x20;
+
+* Your nozzle is clean
+* Your bed is clean, there are no dents or bubbles in the location you're probing.&#x20;
+* Your probe is between 2.6 and 3mm above the nozzle.&#x20;
+* Your kinematics are rigid.&#x20;
+{% endhint %}
 
 If however you get a final IDEAL result and it didnt touch the bed, start the process again OR adjust the parameters as follows where MIN= the found threshold value of the false positive.
 
