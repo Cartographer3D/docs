@@ -18,13 +18,13 @@ Print of our Standard Assembly Jig - it is avilable [here](https://github.com/Ca
 
 There are no special printing instructions, though I would advise printing on a 0.4mm nozzle.&#x20;
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Assembly Jig created by <a data-mention href="https://app.gitbook.com/u/5a099398f9717400307e6b92">MakerMylo</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Assembly Jig created by <a data-mention href="https://app.gitbook.com/u/5a099398f9717400307e6b92">MakerMylo</a></p></figcaption></figure>
 
 ### Step 2 - Place the JST right angle connector&#x20;
 
 Place the JST right angle connector pointing up.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 3 - Place the MCU Board
 

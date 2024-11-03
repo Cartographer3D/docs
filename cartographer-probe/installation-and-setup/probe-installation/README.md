@@ -8,6 +8,14 @@ Note there are two different versions of Cartographer, a USB and a CAN version. 
 Make sure carto is the range of 2.6 to 3mm to the nozzle
 {% endhint %}
 
+To ensure accuracy, we recommend using the measurement jig developed by Esoterical.
+
+This jig also enables easy viewing of the Y offset; simply print it, mount as illustrated below, and you’ll be able to verify your probe’s Z height in relation to the nozzle.
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+{% file src="../../../.gitbook/assets/Carto_Nozzle_Offset_Tool.3mf" %}
+
 ### Location
 
 Cartographer is designed to use the existing mounts available for similar products on the market. The hole spacing is 31.6mm and it takes M3 bolts.

@@ -272,7 +272,7 @@ And then check your symlinks again. You should see scanner.py pointed to the car
 
 <summary>Mcu 'scanner': command format mismatch: query_lis2dw</summary>
 
-<img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="" data-size="original">
 
 This happens when youre using an older version of klipper. If you for whatever reason cannot update to the latest version of klipper, you need to **REMOVE** the following sections from <mark style="color:yellow;">**printer.cfg**</mark> completely.
 

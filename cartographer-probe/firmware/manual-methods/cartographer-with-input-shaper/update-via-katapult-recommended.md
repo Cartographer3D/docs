@@ -66,7 +66,7 @@ cd ~/klipper/scripts
 ~/klippy-env/bin/python -c 'import flash_usb as u; u.enter_bootloader("/dev/serial/by-id/usb-Cartographer_614e_060004001443303856303820-if00")'
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After the command runs, repeat step 1, and run a `ls -l /dev/serial/by-id/` and note down the new ID, this should have changed to usb-katapult, rather than usb-cartographer.
 
