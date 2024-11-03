@@ -14,7 +14,7 @@ This jig also enables easy viewing of the Y offset; simply print it, mount as il
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-{% file src="../../../.gitbook/assets/Carto_Nozzle_Offset_Tool.3mf" %}
+{% embed url="https://www.printables.com/model/1060868-cartographer-probe-nozzle-offset-tool" %}
 
 ### Location
 
