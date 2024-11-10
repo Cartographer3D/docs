@@ -4,6 +4,16 @@ This list is NOT exhaustive, if you need support don't be a stranger and please 
 \
 If you do think that something is missing, please let us know and I will add it as soon as I can.
 
+### Command Mismatch
+
+<figure><img src="../.gitbook/assets/image (64).png" alt="" width="375"><figcaption></figcaption></figure>
+
+Seeing the error above? This error shows yours cartographer is flashed with Survey 5.0 firmware however your printer.cfg/klipper is currently configured for classic mode which uses \[cartographer] and this is normal to see when youre changing from classic to touch. \
+\
+Remove or comment out your \[cartographer] sections, taking note of the offsets and then continue with [the guide here.](installation-and-setup/touch-installation/klipper-configuation.md)\
+\
+Alternatively, if you dont want to use touch. Flash the NON- survey firmware.
+
 ## General Troubleshooting
 
 <details>

@@ -22,6 +22,7 @@ layout:
 
 ### Whats Required?
 
+* Host device (RaspPi/Manta + CB1 etc)
 * Cartographer Probe
 * Two pairs of conductive (Metal) Tweezers
 *   USB-A to JST-PH Cable
