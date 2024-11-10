@@ -14,6 +14,8 @@ Remove or comment out your \[cartographer] sections, taking note of the offsets 
 \
 Alternatively, if you dont want to use touch. Flash the NON- survey firmware.
 
+###
+
 ## General Troubleshooting
 
 <details>

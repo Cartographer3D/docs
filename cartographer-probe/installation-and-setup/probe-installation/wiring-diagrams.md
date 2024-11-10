@@ -63,3 +63,14 @@ You should apply a twist to your CAN H and CAN L cables every 24mm
 {% hint style="info" %}
 You should apply a twist to your CAN H and CAN L cables every 24mm
 {% endhint %}
+
+## USB Wiring
+
+<figure><img src="https://github.com/user-attachments/assets/1c082c5d-44ff-43e1-b1bf-f70b4249a490" alt=""><figcaption></figcaption></figure>
+
+Wiring for the USB connector is in order
+
+* Ground
+* DATA +
+* DATA -
+* 5V

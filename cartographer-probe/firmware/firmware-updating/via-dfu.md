@@ -16,9 +16,7 @@ layout:
 
 ### Should You Be Using DFU?
 
-* No use KATAPULT! Yes, this is the first point of call when you do a cartographer firmware update. Only if you have issues with this method, should you attempt the others.
-* If you ordered a USB flashed cartographer, you use the [USB Katapult Method](via-katapult/usb-flash.md)
-* If you ordered a CAN flashed cartographer, you use the [CANBUS Katapult Me](via-katapult/canbus-flash.md)[thod](via-katapult/canbus-flash.md)
+* DFU mode should be used to flash if you dont have access to CAN in order to change from CAN to USB or if for some reason Katapult isnt available.
 
 ### Whats Required?
 
@@ -37,27 +35,19 @@ Using the scripts below, you may need to use the **Install Prerequisites** optio
 
 ### What is DFU
 
-* This should be seen as a last resort and should only be neccasary when Katapult flashing is unavailable for whatever reason.
-* DFU Mode (Device Firmware Upgrade Mode) is STM's bootloader thats apart of the STM32 chip included on cartographer probes. Its next to impossible to make this mode fail. However getting the chip into DFU mode can be a challenge as it requires touching the **BOOT0** and **RESET** pads on the cartographer PCB in the correct manner.
-
-![image](https://github.com/user-attachments/assets/b9d2581f-9b64-4e61-bc7f-e3382b0155ad)
+* DFU Mode (Device Firmware Upgrade Mode) is STM's bootloader thats apart of the STM32 chip included on cartographer probes. Its next to impossible to make this mode fail. For the STM chip to enter DFU mode all that needs to happen is to have the boot pin pulled high when the chip itself starts up.
 
 ### Step 1. Enter DFU Mode
 
-* Entering DFU mode is simple in theory but a bit more fiddly in practice. With the cartographer plugged in via USB, first short the two pads of the **BOOT0** set (marked 1 on the photo). With **BOOT0** still shorted, briefly short the RESET pads (marked 2). This will put the device in DFU mode.
-* This process can be tricky and take some time, so listed below are two ways to make it simpler.
+![image](https://github.com/user-attachments/assets/b9d2581f-9b64-4e61-bc7f-e3382b0155ad)
 
 {% hint style="danger" %}
 No LEDs will be on when in DFU mode. If the blue LED is lit, even intermittently, the device is in runtime mode and this isnt what we want. Continue touching those pads till it works!
 {% endhint %}
 
-{% hint style="info" %}
-Via SSH, use the command `lsusb | grep "DFU"` to determine whether the device is in **DFU Mode**\
-\
-**This can now be entered and automated using the** [**script below**](https://docs.cartographer3d.com/cartographer-probe/firmware/firmware-updating/via-dfu#step-2.-ssh-into-host-and-run-script) **and using lsusb.**
-{% endhint %}
-
-<figure><img src="https://github.com/user-attachments/assets/5996588d-1049-458f-8aa4-82894c26168f" alt=""><figcaption></figcaption></figure>
+* Entering DFU mode is simple in theory but a bit more fiddly in practice. With the cartographer plugged in via USB, first short the two pads of the **BOOT0** set (marked 1 on the photo). With **BOOT0** still shorted, briefly short the RESET pads (marked 2). This will put the device in DFU mode.
+* You can also just short the **BOOT0** pads and <mark style="color:red;">NOT the RESET pads</mark>, whilst plugging in the device via USB which should be easier to enter DFU.
+* This process can be tricky and take some time, so listed below are two ways to make it simpler.
 
 #### Make-it-easier option #1: printed tweezer guide
 
@@ -71,6 +61,16 @@ Via SSH, use the command `lsusb | grep "DFU"` to determine whether the device is
 * Once you've flashed by using DFU mode, remember to de-solder the bridge.
 
 ### Step 2. SSH into Host & Run Script
+
+{% hint style="info" %}
+Via SSH, use the command `lsusb` to determine whether the device is in **DFU Mode**\
+\
+**OR**\
+\
+**This can now be entered and automated using the** [**script below**](https://docs.cartographer3d.com/cartographer-probe/firmware/firmware-updating/via-dfu#step-2.-ssh-into-host-and-run-script) **and using lsusb from option #2 which loops the lsusb command while you attempt to tap the pins.**
+{% endhint %}
+
+<figure><img src="https://github.com/user-attachments/assets/5996588d-1049-458f-8aa4-82894c26168f" alt=""><figcaption><p>lsusb should look like this if DFU mode is found.</p></figcaption></figure>
 
 ```bash
 bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -f dfu
