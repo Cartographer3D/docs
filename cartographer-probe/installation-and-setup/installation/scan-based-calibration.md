@@ -2,9 +2,13 @@
 description: Cartographer Calibration for Classic Mode
 ---
 
-# Calibration
+# Scan Based Calibration
 
 Home the machine in X and Y:
+
+{% hint style="warning" %}
+Make sure `calibration_method:` is set to <mark style="color:green;">**scan**</mark> in your printer.cfg prior to following this page.
+{% endhint %}
 
 ```
 G28 X Y

@@ -6,7 +6,7 @@
 
 Yes, you sure can. All you need to do is head into printer.cfg and under \[scanner] change `calibration_method: touch` to `calibration_method: scan` and then remove the `CARTOGRAPHER_TOUCH` line from your print start macro.\
 \
-You will ofcourse need to create a new model by [following this guide.](../installation-and-setup/classic-installation/calibration.md)
+You will ofcourse need to create a new model by [following this guide.](../classic-installation/calibration.md)
 
 ### Do I need to run the calibration while hot or cold?
 
@@ -22,7 +22,7 @@ In your `[scanner]` section add `mesh_main_direction: x` to your <mark style="co
 
 ### What do I need to add or change in my print start macro?
 
-See [Print Start Macro](../installation-and-setup/touch-installation/print-start-macro.md). But bascially, you just need to make sure your nozzle is no hotter than <mark style="color:red;">**maximum 150c**</mark> and then do a `CARTOGRAPHER_TOUCH` after you do a `BED_MESH_CALIBRATE`
+See [Print Start Macro](../installation-and-setup/installation/print-start-macro.md). But bascially, you just need to make sure your nozzle is no hotter than <mark style="color:red;">**maximum 150c**</mark> and then do a `CARTOGRAPHER_TOUCH` after you do a `BED_MESH_CALIBRATE`
 
 ### Does touch work with glass or garolite beds?
 

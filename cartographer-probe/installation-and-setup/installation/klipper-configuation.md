@@ -5,7 +5,7 @@ description: Klipper Configuration for Touch Mode
 # Klipper Configuation
 
 {% hint style="warning" %}
-We **DO NOT** 100% guarantee compatibility with ALL printers. It is your responsibility to read this entire guide prior to use and to research whether this is right for you. Please contact us on [DISCORD ](https://discord.gg/yzazQMEGS2)if you have questions.
+We **DO NOT** 100% guarantee TOUCH compatibility with ALL printers. It is your responsibility to read this entire guide prior to use and to research whether this is right for you. Please contact us on [DISCORD ](https://discord.gg/yzazQMEGS2)if you have questions.
 {% endhint %}
 
 {% hint style="info" %}
@@ -19,8 +19,7 @@ For Cartographer to receive usable readings for touch to be accurate, you **MUST
 \
 Your toolhead & gantry/carriage **MUST** be <mark style="color:red;">**RIGID**</mark>. If there is movement and flex it can also create undesired results in the touch process.
 
-```yaml
-[scanner]
+<pre class="language-yaml"><code class="lang-yaml">[scanner]
 canbus_uuid: 0ca8d67388c2            
 #    adjust to suit your scanner, if using usb change to serial.
 #    serial: /dev/serial/by-id/usb-cartographer_cartographer_
@@ -35,13 +34,13 @@ backlash_comp: 0.5
 #   Offsets are measured from the centre of your coil, to the tip of your nozzle 
 #   on a level axis. It is vital that this is accurate. 
 calibration_method: touch
-#    leave this as touch unless you want to use scan only for everything. 
+#    if you want to use touch or 
+<strong>#calibration_method: scan
+</strong>#    if you want to use scan
 sensor: cartographer
 #    this must be set as cartographer unless using IDM etc.
 sensor_alt: carto
-#    alternate name to call commands. CARTO_TOUCH etc
-scanner_touch_z_offset: 0.05         
-#    This is the default and will be overwritten and added to the DO NOT SAVE area by using UI to save z offset
+#    alternate name to call commands. CARTO_TOUCH etc      
 mesh_runs: 2
 #    Number of passes to make during mesh scan.
 
@@ -59,7 +58,7 @@ mesh_max: 240, 198
 probe_count: 30, 30
 algorithm: bicubic
 
-```
+</code></pre>
 
 {% hint style="warning" %}
 NOTE - The \[scanner] section needs to be above any other reference to either cartographer/scanner or probe within your Klipper config, for this reason I advise adding it near the top of your config file.&#x20;

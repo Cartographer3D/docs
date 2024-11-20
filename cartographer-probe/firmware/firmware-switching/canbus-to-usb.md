@@ -25,7 +25,7 @@ Looking at using Cartographer via USB instead of CANBUS? Follow the steps below 
 ## Step 2. SSH Into Your Host Device & Run The Script
 
 ```bash
-bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -t katapult -s usb
+bash <(wget -qO - https://raw.githubusercontent.com/Cartographer3D/cartographer-klipper/refs/heads/master/firmware.sh) -t katapult -s usb
 ```
 
 <figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
@@ -40,14 +40,12 @@ bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -t katapult -s usb
 
 ## Step 6. Re-run Script
 
+```bash
+bash <(wget -qO - https://raw.githubusercontent.com/Cartographer3D/cartographer-klipper/refs/heads/master/firmware.sh) -f usb
 ```
-bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -f usb
-```
 
-## Step 7. Choose If You Want Survey/Touch
 
-<figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
-## Step 8.Select Firmware & Flash
+## Step 7.Select Firmware & Flash
 
-## Step 9. Done
+## Step 8. Done

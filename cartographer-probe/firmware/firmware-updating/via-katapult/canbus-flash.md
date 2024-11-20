@@ -35,7 +35,7 @@ Using the scripts below, you may need to use the **Install Prerequisites** optio
 ### Step 2. SSH into Device & Run Script
 
 ```bash
-bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -f can
+bash <(wget -qO - https://raw.githubusercontent.com/Cartographer3D/cartographer-klipper/refs/heads/master/firmware.sh) -f can
 ```
 
 ### Step 3. Get Your UUID
@@ -44,7 +44,7 @@ This method requires prior knowledge of your **CANBUS UUID**.
 
 This should have been supplied to you in your hardware box if purchased (insert date).
 
-If you do not have your UUID. Visit [HERE](../../../installation-and-setup/classic-installation/klipper-setup.md#finding-the-serial-or-uuid) to get it.
+If you do not have your UUID. Visit [HERE](../../../classic-installation/klipper-setup.md#finding-the-serial-or-uuid) to get it.
 
 The script will detect your UUID if your UUID is inside your **printer.cfg** somewhere under `[scanner]` if it doesnt detect, you can manually enter it.
 

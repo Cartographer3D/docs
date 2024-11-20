@@ -2,7 +2,7 @@
 description: Cartographer Calibration for Touch Mode
 ---
 
-# Calibration
+# Touch Based Calibration
 
 ## Initial Calibration
 
@@ -12,6 +12,10 @@ Touch is best calibrated for use with a clean install. We ask you remove your ex
 
 {% hint style="info" %}
 Calibration can be done <mark style="color:red;">HOT</mark> or <mark style="color:blue;">COLD.</mark>
+{% endhint %}
+
+{% hint style="warning" %}
+Make sure `calibration_method:` is set to <mark style="color:green;">touch</mark> in your printer.cfg prior to following this page.
 {% endhint %}
 
 Home the machine in X and Y:
@@ -33,10 +37,6 @@ At this point,  you might note that your Endstop Z is TRIGGERED, this is normal,
 {% endhint %}
 
 Start the calibration process:
-
-{% hint style="info" %}
-[Visit here for an explanation of `CARTOGRAPHER_TOUCH`](../../survey-touch/settings-and-commands.md#cartographer\_touch)
-{% endhint %}
 
 ```gcode
 CARTOGRAPHER_TOUCH METHOD=manual
@@ -62,7 +62,11 @@ Home your printer.&#x20;
 G28
 ```
 
-You can test the accuracy.
+You can test the accuracy of the scanner coil.
+
+{% hint style="warning" %}
+This will not TOUCH the bed. It will use the scanner to measure the accuracy of the probe coil.
+{% endhint %}
 
 ```gcode
 PROBE_ACCURACY
@@ -168,6 +172,10 @@ Prior to doing the threshold scan,  please ensure that the following is true.&#x
 * Your kinematics are rigid.&#x20;
 {% endhint %}
 
+{% hint style="info" %}
+`CARTOGRAPHER_THRESHOLD_SCAN SPEED=2` is also available if the initial scan fails.
+{% endhint %}
+
 If however you get a final IDEAL result and it didnt touch the bed, start the process again OR adjust the parameters as follows where MIN= the found threshold value of the false positive.
 
 ```gcode
@@ -180,7 +188,7 @@ Once it finds an excellent or ideal threshold and you've seen the nozzle touchin
 Now do a touch calibration with the new threshold.
 
 ```gcode
-CARTOGRAPHER_TOUCH CALIBRATE=1     
+CARTOGRAPHER_TOUCH CALIBRATE=1 
 # starts touch test and calibration 
 ```
 

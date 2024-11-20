@@ -5,7 +5,7 @@ description: Klipper Configuration for Classic Mode
 # Klipper Configuration
 
 {% hint style="info" %}
-[If you want to use Survey Touch, our contact probing solution go here](../touch-installation/klipper-configuation.md)
+[If you want to use Survey Touch, our contact probing solution go here](../installation-and-setup/installation/klipper-configuation.md)
 {% endhint %}
 
 ## Config File (Firmwares 4.0.1 or earlier)
@@ -40,33 +40,6 @@ x_offset: 0.0
 #   X offset of cartographer from the nozzle.
 y_offset: 21.1
 #   Y offset of cartographer from the nozzle.
-trigger_distance: 2.0
-#   cartographer trigger distance for homing.
-trigger_dive_threshold: 1.5
-#   Threshold for range vs dive mode probing. Beyond `trigger_distance +
-#   trigger_dive_threshold` a dive will be used.
-trigger_hysteresis: 0.006
-#   Hysteresis on trigger threshold for untriggering, as a percentage of the
-#   trigger threshold.
-cal_nozzle_z: 0.1
-#   Expected nozzle offset after completing manual Z offset calibration.
-cal_floor: 0.1
-#   Minimum z bound on sensor response measurement.
-cal_ceil: 5.0
-#   Maximum z bound on sensor response measurement.
-cal_speed: 1.0
-#   Speed while measuring response curve.
-cal_move_speed: 10.0
-#   Speed while moving to position for response curve measurement.
-default_model_name: default
-#   Name of default cartographer model to load.
-mesh_main_direction: x
-#   Primary travel direction during mesh measurement.
-#mesh_overscan: -1
-#   Distance to use for direction changes at mesh line ends. Omit this setting
-#   and a default will be calculated from line spacing and available travel.
-mesh_cluster_size: 1
-#   Radius of mesh grid point clusters.
 mesh_runs: 2
 #   Number of passes to make during mesh scan.
 

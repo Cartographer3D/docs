@@ -25,6 +25,8 @@ If you are in Mainland China, use the following commands instead:
 </code></pre>
 {% endhint %}
 
+### Remember to update cartographer via the mainsail/fluidd UI
+
 {% hint style="warning" %}
 Legacy Klipper environements running on Python2 will need updating to Python 3.9 or later. The easiest way to do that is a complete fresh install, though we do have a guide that can help that is linked [here  ](https://docs.cartographer3d.com/cartographer-probe/troubleshooting#klipper-environement-running-on-python-2)
 {% endhint %}
@@ -37,11 +39,8 @@ In order to keep up to date with our latest Klipper software, please add the fol
 [update_manager cartographer]
 type: git_repo
 path: ~/cartographer-klipper
-channel: dev
+channel: stable
 origin: https://github.com/Cartographer3D/cartographer-klipper.git
-env: ~/klippy-env/bin/python
-requirements: requirements.txt
-install_script: install.sh
 is_system_service: False
 managed_services: klipper
 info_tags:
@@ -57,11 +56,9 @@ Use this alternate moonraker.conf instead.
 [update_manager cartographer]
 type: git_repo
 path: ~/cartographer-klipper
-channel: dev
+channel: stable
 origin: https://gitee.com/NBTP/cartographer-klipper.git
-env: ~/klippy-env/bin/python
 requirements: requirements.txt
-install_script: install.sh
 is_system_service: False
 managed_services: klipper
 info_tags:
@@ -71,11 +68,11 @@ info_tags:
 
 upon completion, press SAVE & RESTART and it should now display in the update section of either Mainsail or Fluidd.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Cartographer Software updates managed via Moonraker.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Cartographer Software updates managed via Moonraker.</p></figcaption></figure>
 
 If you get "Repo is dirty. Detected the following modified files: \['install.sh']", a soft Recovery should fix it.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Finding the Serial or UUID
 
@@ -101,8 +98,8 @@ Since late August, most probes shipping from directly from Cartographer3D, and a
 
 If your box or antistatic bag states "Survey Touch Ready", please go here
 
-{% content-ref url="../touch-installation/klipper-configuation.md" %}
-[klipper-configuation.md](../touch-installation/klipper-configuation.md)
+{% content-ref url="../installation-and-setup/installation/klipper-configuation.md" %}
+[klipper-configuation.md](../installation-and-setup/installation/klipper-configuation.md)
 {% endcontent-ref %}
 
 If it doesnt, don't worry. You can update your probe using our flashing tool. If you want to configure it as is,  please go to the next page.

@@ -1,5 +1,9 @@
 # Print Start Macro
 
+{% hint style="danger" %}
+This is <mark style="color:red;">**ONLY**</mark> required if using Touch Based cartographer. Do not use this if you're using **SCAN** mode
+{% endhint %}
+
 Adding the `CARTOGRAPHER_TOUCH` command to your print start macro ensures that the printer performs a precise touch probe <mark style="color:red;">**AFTER**</mark> executing the `BED_MESH_CALIBRATE` command. `CARTOGRAPHER_TOUCH` should also be performed with a nozzle <mark style="color:red;">no hotter than 150c</mark>. With this in mind, the command will fail if the nozzle is beyond this temperature. It **CAN** be performed cold. Please make allowances for this in your print start. This sequence helps to achieve an accurate bed leveling by accounting for any variations or offsets after the mesh calibration.
 
 ```gcode

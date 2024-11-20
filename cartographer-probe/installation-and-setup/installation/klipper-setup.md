@@ -25,6 +25,8 @@ If you are in Mainland China, use the following commands instead:
 </code></pre>
 {% endhint %}
 
+### Remember to update cartographer via the mainsail/fluidd UI
+
 {% hint style="warning" %}
 Legacy Klipper environements running on Python2 will need updating to Python 3.9 or later. The easiest way to do that is a complete fresh install, though we do have a guide that can help that is linked [here  ](https://docs.cartographer3d.com/cartographer-probe/troubleshooting#klipper-environement-running-on-python-2)
 {% endhint %}
@@ -37,11 +39,8 @@ In order to keep up to date with our latest Klipper software, please add the fol
 [update_manager cartographer]
 type: git_repo
 path: ~/cartographer-klipper
-channel: dev
+channel: stable
 origin: https://github.com/Cartographer3D/cartographer-klipper.git
-env: ~/klippy-env/bin/python
-requirements: requirements.txt
-install_script: install.sh
 is_system_service: False
 managed_services: klipper
 info_tags:
@@ -57,11 +56,8 @@ Use this alternate moonraker.conf instead.
 [update_manager cartographer]
 type: git_repo
 path: ~/cartographer-klipper
-channel: dev
+channel: stable
 origin: https://gitee.com/NBTP/cartographer-klipper.git
-env: ~/klippy-env/bin/python
-requirements: requirements.txt
-install_script: install.sh
 is_system_service: False
 managed_services: klipper
 info_tags:

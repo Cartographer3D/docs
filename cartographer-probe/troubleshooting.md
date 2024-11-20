@@ -8,13 +8,9 @@ If you do think that something is missing, please let us know and I will add it 
 
 <figure><img src="../.gitbook/assets/image (64).png" alt="" width="375"><figcaption></figcaption></figure>
 
-Seeing the error above? This error shows yours cartographer is flashed with Survey 5.0 firmware however your printer.cfg/klipper is currently configured for classic mode which uses \[cartographer] and this is normal to see when youre changing from classic to touch. \
+Seeing the error above? This error shows yours cartographer is flashed with Survey 5.0 firmware however your printer.cfg/klipper is currently configured for firmware earlier than 5.0.\
 \
-Remove or comment out your \[cartographer] sections, taking note of the offsets and then continue with [the guide here.](installation-and-setup/touch-installation/klipper-configuation.md)\
-\
-Alternatively, if you dont want to use touch. Flash the NON- survey firmware.
-
-###
+Remove or comment out your \[cartographer] sections, taking note of the offsets and then continue with [the guide here.](installation-and-setup/installation/klipper-configuation.md)
 
 ## General Troubleshooting
 
@@ -56,15 +52,15 @@ The following two issues are usually why you recieve the above error.
 
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(2\)%20\(1\)%20\(1\)%20\(1\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(2\)%20\(1\)%20\(1\)%20\(1\).png)
 
-This error usually happens when you have your `[cartographer]` section below your `[stepper_z]` section, move the `[cartographer]` section near your MCU's.
+This error usually happens when you have your `[scanner]` section below your `[stepper_z]` section, move the `[scanner]` section near your MCU's.
 
 </details>
 
 <details>
 
-<summary>mcu 'cartographer': Unknown command: endstop_home</summary>
+<summary>mcu 'scanner': Unknown command: endstop_home</summary>
 
-In `[stepper_z]` you have set `endstop_pin: cartographer:z_virtual_endstop` this should be `endstop_pin: probe:z_virtual_endstop`
+In `[stepper_z]` you have set `endstop_pin: scanner:z_virtual_endstop` this should be `endstop_pin: probe:z_virtual_endstop`
 
 </details>
 
@@ -272,7 +268,6 @@ If they dont look right or youre just not sure, run the following again.
 
 ```bash
 cd ~/cartographer-klipper
-chmod +x install.sh
 ./install.sh
 ```
 

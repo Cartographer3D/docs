@@ -1,5 +1,9 @@
 # First Print
 
+{% hint style="danger" %}
+This is <mark style="color:red;">**ONLY**</mark> required if using Touch Based cartographer. Do not use this if you're using **SCAN** mode
+{% endhint %}
+
 You might notice your z-offset is a little wrong, this is hugely dependent on too many things, however its simple to fix. Just use the video below as an example.\
 \
 `scanner_touch_z_offset` is the distance between nozzle and bed after a `CARTOGRAPHER_TOUCH`
