@@ -41,7 +41,7 @@ bash <(wget -qO - https://raw.githubusercontent.com/Cartographer3D/cartographer-
 ## Step 6. Re-run Script
 
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/Cartographer3D/cartographer-klipper/refs/heads/master/firmware.sh)-f can
+bash <(wget -qO - https://raw.githubusercontent.com/Cartographer3D/cartographer-klipper/refs/heads/master/firmware.sh) -f can
 ```
 
 ## Step 7. Choose If You Want Survey/Touch

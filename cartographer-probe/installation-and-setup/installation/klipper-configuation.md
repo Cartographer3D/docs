@@ -58,6 +58,12 @@ mesh_max: 240, 198
 probe_count: 30, 30
 algorithm: bicubic
 
+[temperature_sensor Cartographer_MCU]
+sensor_type:   temperature_mcu
+sensor_mcu:            scanner
+min_temp:                    0
+max_temp:                  105
+
 </code></pre>
 
 {% hint style="warning" %}
@@ -121,7 +127,7 @@ homing_retract_dist: 0 # cartographer needs this to be set to 0
 You will now need to ensure that you update your Z-Tilt or QGL settings to ensure that Cartographer is over the bed when performing these actions.  We will be checking these during the calibration phase.&#x20;
 {% endhint %}
 
-Finally, you need to ensure you have a suitable `bed_mesh` section. Information can be found [here](https://www.klipper3d.org/Bed\_Mesh.html)
+Finally, you need to ensure you have a suitable `bed_mesh` section. Information can be found [here](https://www.klipper3d.org/Bed_Mesh.html)
 
 {% hint style="warning" %}
 It is vital you complete the Calibration steps, without doing so the probe will not work properly and is likely to show TRIGGERED.&#x20;
