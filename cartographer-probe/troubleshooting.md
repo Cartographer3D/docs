@@ -232,6 +232,17 @@ Esoterical has an outstanding guide on how to do so below. \
 
 </details>
 
+<details>
+
+<summary>Klipper freezes during scan/"timer too close" error</summary>
+
+The cartographer probe sends quite a bit of data to the MCU during a scan. If the MCU is too busy, it can cause Klipper to freeze or throw a `timer too close` error. Often, this is due to an underpowered SBC, such as Raspberry Pi 2/3, or the BTT CB1. You can try to reduce some of the load by (temporarily) disabling cameras or other intensive processes, or following the guide linked below to adjust your settings.  
+If all else fails, you could consider upgrading to a more powerful SBC.  
+
+[https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental](https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental)
+
+</details>
+
 ## Touch Specific Troubleshooting
 
 <details>
