@@ -73,12 +73,23 @@ Via SSH, use the command `lsusb` to determine whether the device is in **DFU Mod
 <figure><img src="https://github.com/user-attachments/assets/5996588d-1049-458f-8aa4-82894c26168f" alt=""><figcaption><p>lsusb should look like this if DFU mode is found.</p></figcaption></figure>
 
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/Cartographer3D/cartographer-klipper/refs/heads/master/firmware.sh) -f dfu
+cd ~/cartographer-klipper/scripts
+./firmware.py -f dfu
 ```
 
-![Screen #1](https://github.com/user-attachments/assets/b49c213b-cd06-44aa-8fb4-9989e4994957)
+![Screen #1](../../../.gitbook/assets/main-menu-basic.png)
 
-![Screen #2](https://github.com/user-attachments/assets/1a93eb97-8dff-446b-af7b-1fdf8dd7e38f)
+![Screen #2](../../../.gitbook/assets/dfu-menu.png)
+
+{% hint style="info" %}
+On the next screen it will attempt to find your DFU device. This will loop for 30 seconds while you put your device into DFU mode if it isn't already. \
+\
+You do this by either bridging the <mark style="color:yellow;">**boot0**</mark> pins and plugging in the USB or by plugging in via USB and then bridging both <mark style="color:yellow;">**boot0**</mark> and <mark style="color:yellow;">**reset**</mark> pins.
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/dfu-device-found-2.png" alt="" width="557"><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/dfu-firmware-select.png" alt="" width="557"><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Choose FULL\_CARTOGRAPHER\_CANBUS for using Cartographer via CANBUS.
@@ -86,13 +97,17 @@ Choose FULL\_CARTOGRAPHER\_CANBUS for using Cartographer via CANBUS.
 Choose FULL\_CARTOGRAPHER\_USB for using Cartographer via USB
 {% endhint %}
 
-![Screen #3](https://github.com/user-attachments/assets/6c187585-f4c2-4de6-965b-f12d873a9f6c)
+![Screen #3](../../../.gitbook/assets/dfu-both-selected.png)
+
+<figure><img src="../../../.gitbook/assets/dfu-confirm.png" alt="" width="551"><figcaption></figcaption></figure>
 
 ### Step 3. Done
 
 Once flashed, you will see the image below. This is a successful flash and youre all finished.
 
-<figure><img src="https://github.com/user-attachments/assets/3c2caf92-916d-4180-a885-cbb6964a3133" alt=""><figcaption><p>Screen #4</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/dfu-flashed-1.png" alt="" width="551"><figcaption><p>Screen #4</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/dfu-flashed-2.png" alt="" width="551"><figcaption></figcaption></figure>
 
 ### Step 4. Now What?
 

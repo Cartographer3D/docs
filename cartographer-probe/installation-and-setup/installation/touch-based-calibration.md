@@ -4,6 +4,8 @@ description: Cartographer Calibration for Touch Mode
 
 # Touch Based Calibration
 
+<mark style="color:purple;">Last Updated: December 7th 2024</mark>
+
 ## Initial Calibration
 
 {% hint style="danger" %}
@@ -15,8 +17,20 @@ Calibration can be done <mark style="color:red;">HOT</mark> or <mark style="colo
 {% endhint %}
 
 {% hint style="warning" %}
-Make sure `calibration_method:` is set to <mark style="color:green;">touch</mark> in your printer.cfg prior to following this page.
+Make sure `mode:` is set to <mark style="color:green;">touch</mark> in your printer.cfg prior to following this page OR use `PROBE_SWITCH MODE=touch` prior to following this guide.
 {% endhint %}
+
+Make sure youre in TOUCH mode
+
+```gcode
+PROBE_SWITCH MODE=touch
+```
+
+Then make sure you save
+
+```gcode
+SAVE_CONFIG
+```
 
 Home the machine in X and Y:
 
@@ -39,7 +53,7 @@ At this point,  you might note that your Endstop Z is TRIGGERED, this is normal,
 Start the calibration process:
 
 ```gcode
-CARTOGRAPHER_TOUCH METHOD=manual
+CARTOGRAPHER_CALIBRATE METHOD=manual
 ```
 
 You can either use the web interface to adjust the nozzle height from the bed, or `TESTZ Z=-0.01` to lower it. \
@@ -86,7 +100,7 @@ Median distance moving up
 
 In this line will be a measurement called "delta" Take note of the value. Locate the configuration section marked:
 
-```
+```gcode
 backlash_comp: 2.01
 ```
 
@@ -94,7 +108,7 @@ Update this section with your new estimated backlash compensation. It is a good 
 
 If you are using a printer which supports either `Z_TILT` or `QUAD_GANTRY_LEVEL` you will need to ensure that your probe is positioned above the bed when performing this, open up your `printer.cfg` and find the appropriate section, for example your QUAD\_GANTRY\_LEVEL section may look like this:
 
-<pre class="language-yaml"><code class="lang-yaml">[quad_gantry_level]
+<pre class="language-django"><code class="lang-django">[quad_gantry_level]
 gantry_corners:
    -60,-10
    410,420
@@ -154,7 +168,7 @@ Initiate a threshold scan. This will determine your threshold for cartographer. 
 Start by doing the generic scan
 
 {% hint style="info" %}
-[ Visit here for an explanation of `CARTOGRAPHER_THRESHOLD_SCAN`](../../survey-touch/settings-and-commands.md#cartographer\_threshold\_scan)
+[ Visit here for an explanation of `CARTOGRAPHER_THRESHOLD_SCAN`](../../settings-and-commands.md#cartographer_threshold_scan)
 {% endhint %}
 
 ```gcode
@@ -188,7 +202,7 @@ Once it finds an excellent or ideal threshold and you've seen the nozzle touchin
 Now do a touch calibration with the new threshold.
 
 ```gcode
-CARTOGRAPHER_TOUCH CALIBRATE=1 
+CARTOGRAPHER_CALIBRATE
 # starts touch test and calibration 
 ```
 

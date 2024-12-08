@@ -1,6 +1,101 @@
-# Settings & Commands
+# ⚙️ Settings & Commands
+
+<mark style="color:purple;">Last Updated: December 7th 2024</mark>
 
 ## Available Commands
+
+### `PROBE_SWITCH`
+
+Using this allows you to easily swap between SCAN and TOUCH modes. You will be prompted to `SAVE_CONFIG`upon completing this command.
+
+<details>
+
+<summary><strong>Available Parameters</strong></summary>
+
+#### MODE **`=`**
+
+* Sets  which mode you'd like to use.
+* **Default**: scan
+* **Constraints**: Can only use either \`scan\` or \`touch\`
+
+</details>
+
+### `CARTOGRAPHER_CALIBRATE`
+
+This commands for both TOUCH and SCAN modes.  Users dont need to explicitly set which mode as it will be defined by `mode`under your printer.cfg `[scanner]`OR if default, will be scan mode.
+
+#### SCAN MODE
+
+Will prompt users to do the paper method of lowering the nozzle to the bed, before calibration
+
+#### TOUCH MODE
+
+This will initiate touch mode calibration and should only be for re-calibrating not initial setup.
+
+<details>
+
+<summary>Available Parameters</summary>
+
+#### **`METHOD = MANUAL`**
+
+* Initiates the manual paper test for creating an initial scanner mode.
+
+#### **`SPEED =`**
+
+* Specifies the speed at which the probing move is executed.
+* **Default**: 3
+* **Constraints**: Cannot exceed 5.
+
+#### **`ACCEL =`**
+
+* Sets the acceleration used during the touch operation.
+* **Default**: 100
+* **Constraints**: Must be greater than or equal to 100.
+
+#### **`RETRACT =`**
+
+* Determines the distance the toolhead retracts after a probe.
+* **Default**: 2
+* **Constraints**: Must be at least 1.
+
+#### **`RETRACT_SPEED =`**
+
+* Sets the speed for the retraction move after probin&#x67;**.**
+* **Default:** 10
+* **Constraints:** Must be at least 1.
+
+#### **`SAMPLES =`**
+
+* Defines the number of samples to take during the touch operation.
+* **Default**: 3
+* **Constraints**: Must be at least 1.
+
+#### **`TOLERANCE =`**
+
+* Sets the tolerance level for the touch samples.
+* **Default**: 0.01
+* **Constraints**: Must be above 0.0
+
+#### **`RETRIES =`**
+
+* Specifies the maximum number of retries allowed if samples exceed the tolerance.
+* **Default**: 10
+* **Constraints**: Must be at least 0.
+
+#### **`THRESHOLD =`**
+
+* Defines the threshold value used for detecting a touch during probing.
+* **Default**: 2500 or scanner\_touch\_threshold in printer.cfg
+* **Constraints**: Must be at least 100; can be found via `CARTOGRAPHER_THRESHOLD_SCAN`
+
+#### **`DEBUG = 1`**
+
+* Enables or disables debug mode, which controls the verbosity of logging and information output during the touch operation.
+* **Default**: 0 (debugging off)
+* **Constraints**: 0 if off, 1 is on.
+* This will enabled debugging information. Its useful for showing information relevant to how touch height is calculated. If you encounter issues, this is what you should provide in discord alongside klippy.log
+
+</details>
 
 ### `CARTOGRAPHER_TOUCH`
 
@@ -16,36 +111,26 @@ The `CARTOGRAPHER_TOUCH` command is designed to initiate a probing process. This
   * The command starts by pulling various parameters either from the command itself, or falling back on default values defined in the printer's configuration (printer.cfg).
   * Parameters include speed, acceleration, retraction distances, number of samples, tolerance levels, and the specific location (X and Y coordinates) where the probing will occur.
 
-<!---->
-
-* **Mode Selection:**
+- **Mode Selection:**
   * The command operates in **Touch Mode**, which uses a physical touch sensor to detect contact with the surface.
-  * The mode is determined by the `calibration_method` configuration in **printer.cfg**, and the command ensures that touch mode is selected.
-
-<!---->
+  * The mode is determined by the `mode` configuration in **printer.cfg**, and the command ensures that touch mode is selected.
 
 * **Safety and Validation Checks:**
   * Before proceeding, the command ensures that the X and Y axes are homed (i.e., the machine knows their precise positions).
   * If the axes are not homed, the command raises an error, preventing the probing process from proceeding.
 
-<!---->
-
-* **Probing Process:**
+- **Probing Process:**
   * The toolhead is moved to the specified touch location (X, Y coordinates).
   * The probing process begins, collecting multiple samples to determine the exact position.
   * The process accounts for factors such as acceleration, speed, retraction distance, and retries if the tolerance levels are not met.
   * If the `manual` method is specified, a manual calibration process (paper test) is initiated instead of the automated touch process.
-
-<!---->
 
 * **Result Handling:**
   * Once the probing process is completed, the results (e.g., final position, standard deviation of the samples) are logged and displayed.
   * If the probing is successful, the results are used to calibrate the system, adjusting the Z-offset or other calibration parameters as needed.
   * If the probing fails, an error message is provided, and no calibration is applied.
 
-<!---->
-
-* **Logging and Debugging:**
+- **Logging and Debugging:**
   * The command supports a debug mode that logs detailed information about the probing process, including all the parameters used and the results obtained.
   * This is useful for troubleshooting and ensuring the probing process is functioning correctly.
 
@@ -53,11 +138,7 @@ The `CARTOGRAPHER_TOUCH` command is designed to initiate a probing process. This
 
 * **Bed Leveling:** Ensures that the print bed is perfectly level by detecting any variations in height across different points on the bed.
 
-<!---->
-
-* **Z-Offset Calibration:** Adjusts the Z-axis offset to ensure the nozzle is at the correct distance from the print bed for optimal printing.
-
-<!---->
+- **Z-Offset Calibration:** Adjusts the Z-axis offset to ensure the nozzle is at the correct distance from the print bed for optimal printing.
 
 * **Probing Accuracy:** Verifies the precision and repeatability of the probing process, ensuring consistent results.
 
@@ -68,14 +149,6 @@ The `CARTOGRAPHER_TOUCH` command is designed to initiate a probing process. This
 <details>
 
 <summary>Available Parameters</summary>
-
-#### `CALIBRATE = 1`
-
-* Starts the touch test BUT also creates a model upon success.
-
-#### `METHOD = MANUAL`
-
-* Initiates the manual paper test for creating an initial scanner mode.
 
 #### `SPEED =`
 
@@ -97,7 +170,7 @@ The `CARTOGRAPHER_TOUCH` command is designed to initiate a probing process. This
 
 #### `RETRACT_SPEED =`
 
-* Sets the speed for the retraction move after probing**.**
+* Sets the speed for the retraction move after probin&#x67;**.**
 * **Default:** 10
 * **Constraints:** Must be at least 1.
 
@@ -110,7 +183,7 @@ The `CARTOGRAPHER_TOUCH` command is designed to initiate a probing process. This
 #### `TOLERANCE =`&#x20;
 
 * Sets the tolerance level for the touch samples.
-* **Default**: 0.008
+* **Default**: 0.01
 * **Constraints**: Must be above 0.0.
 
 #### `RETRIES =`&#x20;
@@ -119,23 +192,13 @@ The `CARTOGRAPHER_TOUCH` command is designed to initiate a probing process. This
 * **Default**: 3
 * **Constraints**: Must be at least 0.
 
-#### `TOUCH_LOCATION_X =`&#x20;
+#### `FUZZY =`&#x20;
 
-* Specifies the X coordinate of the touch location where the probing will occur.
+* Specifies the value that will be used to create a bounding box for touch movements to move around in if attempting multiple touches. A value inside this box will be randomly selected so you don't keep touching the same location.
 
-<!---->
+- **Default Value**: 0
 
-* **Default Value**: Detects middle of your bed specified by your \[**STEPPER\_X] POSITION\_MAX**
-
-<!---->
-
-* **Constraints**: None explicitly stated, but should correspond to a valid X coordinate within the machine's range.
-
-#### `TOUCH_LOCATION_Y =`&#x20;
-
-* Specifies the Y coordinate of the touch location where the probing will occur.
-* **Default Value**: Detects middle of your bed specified by your \[**STEPPER\_Y] POSITION\_MAX**
-* **Constraints**: None explicitly stated, but should correspond to a valid Y coordinate within the machine's range.
+* **Constraints**: MAX is 10
 
 #### `THRESHOLD =`&#x20;
 
@@ -149,6 +212,8 @@ The `CARTOGRAPHER_TOUCH` command is designed to initiate a probing process. This
 * **Default**: 0 (debugging off)
 * **Constraints**: 0 if off, 1 is on.
 * This will enabled debugging information. Its useful for showing information relevant to how touch height is calculated. If you encounter issues, this is what you should provide in discord alongside <mark style="color:red;">klippy.log</mark>
+
+
 
 </details>
 
@@ -169,12 +234,12 @@ The `CARTOGRAPHER_THRESHOLD_SCAN` command is used to scan a range of threshold v
    * The function then enters a loop where it tests each threshold value, increasing by the step size (`STEP`) until the maximum threshold (`MAX`) is reached.
 2. **Threshold Qualification**
    * For each threshold value, a series of probe tests (`QUALIFY_SAMPLES`) are conducted.
-   * The results are evaluated to see if they meet the acceptable range value (`RANGE_VALUE`).
+   * The results are evaluated to see if they meet the acceptable range value.
 3. **Threshold Verification**
    * If a threshold value shows promising consistency during qualification, it is further verified with an additional set of probe tests (`VERIFY_SAMPLES`).
    * The threshold is evaluated for quality based on the consistency of the results.
 4. **Finalization**
-   * If a threshold value is found that meets or exceeds the target consistency (`TARGET`), it is considered the best threshold.
+   * If a threshold value is found that meets or exceeds the target consistency, it is considered the best threshold.
    * If this threshold is different from the original, it is saved for future use.
 5. **Logging Results**
    * Throughout the process, the function logs information about the testing of each threshold, including whether it passed qualification and verification.
@@ -222,74 +287,13 @@ The `CARTOGRAPHER_THRESHOLD_SCAN` command is used to scan a range of threshold v
 * **Default:** 5
 * **Constraints:** Must be a positive number.
 
-#### **`TARGET =`**
+#### **`TOLERANCE =`**
 
-* The desired maximum range value for a threshold to be considered acceptable.
-* **Default:** 0.08
-* **Constraints:** Must be a positive number.
-
-#### **`RANGE_VALUE =`**
-
-* Specifies the maximum acceptable range value for a threshold to be considered during scanning.
-* **Default:** 0.05
-* **Constraints:** Must be a positive number, with a minimum value of 0.0125.
-
-</details>
-
-***
-
-### `CARTOGRAPHER_THRESHOLD_TEST`
-
-The `CARTOGRAPHER_THRESHOLD_TEST` command is used to home using a touch sensor and check the consistency of the sensor's response. The function performs a series of probe tests at a specified threshold to determine the reliability of the sensor across multiple samples. The results are evaluated for maximum, minimum, range, average, median, and standard deviation of the probe results.
-
-<details>
-
-<summary>Detailed Explanation</summary>
-
-* **Threshold Testing**
-  * The test begins by setting the trigger method to 1 (touch method) and adjusting the threshold to the provided value.
-  * The function then executes a series of probe tests, collecting the specified number of samples (`SAMPLES`), while skipping the specified number of initial samples (`SKIP`).
-* **Probe Accuracy Check**
-  * This function adjusts the probe position, performs the probe test, and measures the consistency of the results.
-* **Result Evaluation**
-  * The results are evaluated for:
-    * Maximum value
-    * Minimum value
-    * Range (difference between max and min)
-    * Average value
-    * Median value
-    * Standard deviation (sigma)
-    * Number of samples within a 0.1 range
-    * Number of early and late probe events
-  * The quality of the threshold is then assessed based on the calculated range.
-* **Finalization**
-  * After the test, the threshold is restored to its original value.
-  * The results are logged, and information about the test's success and the quality of the threshold is provided.
-
-</details>
-
-<details>
-
-<summary>Available Parameters</summary>
+* Sets the tolerance level for the touch samples.
+* **Default**: 0.01
+* **Constraints**: Must be above 0.0.
 
 
-
-**`THRESHOLD =`**&#x20;
-
-* The threshold value to use for the test.
-* **Default**: The current `scanner_touch_threshold` value.
-
-**`SAMPLES =`**
-
-* The number of probe samples to take during the test.
-* **Default**: 5
-* **Constraint**: min 1
-
-**SKIP =**
-
-* The number of initial samples to skip before recording results.
-* **Default**: 1
-* **Constraint**: min 0
 
 </details>
 
@@ -321,21 +325,17 @@ These shouldn't be needed to changed, however they are available.
       Offsets are measured from the centre of your coil, to the tip of your nozzle on a level axis. It is vital that this is accurate.
   * **Default:** 0.5
 
-<!---->
-
-* **mesh\_runs:**
+- **mesh\_runs:**
   * Number of passes to make during mesh scan.
   * **Default:** 1
   * **Constraint:** Must be above 0.
-* **mesh\_main\_direction**
+- **mesh\_main\_direction**
   * Primary direction of travel while running a bed mesh
   * **Default:** x
   * **Constraint:** X or Y
-* **probe\_speed**
+- **probe\_speed**
   * Default: 5.0
-* **touch\_location**
-  * Default:  defaults to the zero\_reference\_point in bed\_mesh
-  * Example: 125, 125
+
 * **samples**
   * Default: 5
   * Constraint: above 0.0
@@ -358,18 +358,14 @@ These shouldn't be needed to changed, however they are available.
   * Y offset of cartographer from the nozzle.
   * **Default:** 0.0
 
-<!---->
-
-* **z\_hop\_dist**
+- **z\_hop\_dist**
   * Default: 5.0
   * Constraint: above 0.0
-* **z\_hop\_speed**
+- **z\_hop\_speed**
   * Default: 5.0
   * Constraint: above 0.0
 
-<!---->
-
-* **calibration\_method**
+* **mode**
   * Default: "scan"
   * Available options: touch or scan
 * **trigger\_distance**
@@ -408,19 +404,18 @@ These shouldn't be needed to changed, however they are available.
   * Default: 0.008
   * Constraint: above 0.0
 * **scanner\_touch\_max\_retries**
-  * Default: 3
+  * Default: 10
   * Constraint: min 0
 * **scanner\_touch\_move\_speed**
   * Default: 50
   * Constraint: min 1
-* **scanner\_touch\_calibrate**
-  * Default: 0
-* **scanner\_touch\_z\_offset**
+
+- **scanner\_touch\_z\_offset**
   * Default: 0.05
-* **scanner\_touch\_max\_temp**
+- **scanner\_touch\_max\_temp**
   * Default: 150
   * Nozzle touching temperature must be below this limit. In Celsius
-* **scanner\_touch\_threshold**
+- **scanner\_touch\_threshold**
   * Default: 2500
 
 </details>

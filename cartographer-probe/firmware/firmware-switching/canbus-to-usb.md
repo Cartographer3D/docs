@@ -25,27 +25,47 @@ Looking at using Cartographer via USB instead of CANBUS? Follow the steps below 
 ## Step 2. SSH Into Your Host Device & Run The Script
 
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/Cartographer3D/cartographer-klipper/refs/heads/master/firmware.sh) -t katapult -s usb
+cd ~/cartographer-klipper/scripts
+./firmware.py -f can -k
 ```
 
-<figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/can-menu.png" alt="" width="557"><figcaption></figcaption></figure>
 
-## Step 3. Select The USB Firmware
+## Step 3. Find Your Device
 
-<figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/can-find-device.png" alt="" width="551"><figcaption></figcaption></figure>
 
-## Step 4. Flash Katapult Firmware
+## Step 4. Select The USB Firmware
 
-## Step 5. Unplug CANBUS and plug into USB
+<figure><img src="../../../.gitbook/assets/can-katapult.png" alt="" width="551"><figcaption></figcaption></figure>
 
-## Step 6. Re-run Script
+<figure><img src="../../../.gitbook/assets/can2usb.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 5. Flash Katapult Firmware
+
+<figure><img src="../../../.gitbook/assets/can-flashed-1.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 6. Unplug CANBUS and plug into USB
+
+## Step 7. Re-run Script
 
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/Cartographer3D/cartographer-klipper/refs/heads/master/firmware.sh) -f usb
+cd ~/cartographer-klipper/scripts
+./firmware.py -f usb
 ```
 
+<figure><img src="../../../.gitbook/assets/usb-menu.png" alt="" width="557"><figcaption></figcaption></figure>
 
+## Step 8. Find Your Device
 
-## Step 7.Select Firmware & Flash
+<figure><img src="../../../.gitbook/assets/usb-devices.png" alt="" width="551"><figcaption></figcaption></figure>
 
-## Step 8. Done
+## Step 9.Select Firmware & Flash
+
+<figure><img src="../../../.gitbook/assets/usb-confirm.png" alt="" width="551"><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/usb-firmware-latest.png" alt="" width="551"><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/usb-flashed-1.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 10. Done

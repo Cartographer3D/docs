@@ -4,6 +4,8 @@ description: Klipper Setup for Touch Mode
 
 # Klipper Setup
 
+<mark style="color:purple;">Last Updated: December 7th 2024</mark>
+
 ## Installation of the Cartographer Klipper Module
 
 Clone the Klipper module from GitHub using the following commands, you then need to run our installation script.

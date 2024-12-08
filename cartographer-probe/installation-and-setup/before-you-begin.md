@@ -32,11 +32,9 @@ We're you asked to do something? This box will ask you to check if it was succes
 
 Whats the difference you might ask? Check out the[ detailed descriptions here!](../classic-vs-survey-touch.md)
 
-If you received a Cartographer probe that looks like below, you have received a probe pre-flashed with Survey Touch. You should [follow the guide here](installation/).
+If you received a Cartographer probe that looks like below, you have received a probe pre-flashed with Survey Touch.&#x20;
 
-The box cartographer arrives in will also say "Touch Ready" if it has the latest touch firmware pre-flashed.
-
-Otherwise, you should follow this guide to [classic installation](../classic-installation/). If you'd like to use touch, follow [this guide](../firmware/) to update the firmware before following the [Touch Installation Guide](installation/).\
+Both versions use the same initial setup steps, just the calibration steps change.\
 
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td><img src="../../.gitbook/assets/image (3) (1).png" alt="" data-size="original"></td><td></td></tr><tr><td></td><td><img src="../../.gitbook/assets/image (5) (1).png" alt="" data-size="original"></td><td></td></tr></tbody></table>

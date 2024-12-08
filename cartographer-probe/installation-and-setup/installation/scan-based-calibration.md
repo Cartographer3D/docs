@@ -4,19 +4,33 @@ description: Cartographer Calibration for Classic Mode
 
 # Scan Based Calibration
 
-Home the machine in X and Y:
+<mark style="color:purple;">Last Updated: December 7th 2024</mark>
 
 {% hint style="warning" %}
-Make sure `calibration_method:` is set to <mark style="color:green;">**scan**</mark> in your printer.cfg prior to following this page.
+Make sure `mode:` is set to <mark style="color:green;">**scan**</mark> in your printer.cfg prior to following this page OR use `PROBE_SWITCH MODE=scan` prior to following this guide.
 {% endhint %}
 
+Make sure you're in SCANmode
+
+```gcode
+PROBE_SWITCH MODE=scan
 ```
+
+Then make sure you save
+
+```gcode
+SAVE_CONFIG
+```
+
+Home the machine in X and Y:
+
+```gcode
 G28 X Y
 ```
 
 Position the nozzle in the center of the bed. You will need to adjust the coordinates for your machine.
 
-```
+```gcode
 G0 X125 Y125
 ```
 
@@ -32,7 +46,7 @@ Start the calibration process:
 If you regularly print with a hot chamber (60oC+) it is worth calibrating with a hot chamber.
 {% endhint %}
 
-```
+```gcode
 CARTOGRAPHER_CALIBRATE
 ```
 
@@ -40,13 +54,13 @@ You can either use the web interface to adjust the nozzle height from the bed, o
 \
 Use a piece of paper  or a feeler gauge to measure the offset. Once finished remove the paper/gauge and accept the position.
 
-```
+```gcode
 ACCEPT
 ```
 
 Save the results to your config file.
 
-```
+```gcode
 SAVE_CONFIG
 ```
 
@@ -54,31 +68,31 @@ SAVE_CONFIG
 
 Home your printer.&#x20;
 
-```
+```gcode
 G28
 ```
 
 You can test the accuracy.
 
-```
+```gcode
 PROBE_ACCURACY
 ```
 
 You can also measure the backlash of your Z axis
 
-```
+```gcode
 CARTOGRAPHER_ESTIMATE_BACKLASH
 ```
 
 To make use of the backlash estimation that is given. You will get results spit out starting with &#x20;
 
-```
+```gcode
 Median distance moving up
 ```
 
 In this line will be a measurement called "delta" Take note of the value. Locate the configuration section marked:
 
-```
+```gcode
 backlash_comp: 2.01
 ```
 
@@ -88,7 +102,7 @@ If youa re using a printer which supports either `Z_TILT` or `QUAD_GANTRY_LEVEL`
 
 
 
-<pre class="language-yaml"><code class="lang-yaml">[quad_gantry_level]
+<pre class="language-django"><code class="lang-django">[quad_gantry_level]
 gantry_corners:
    -60,-10
    410,420
@@ -121,7 +135,7 @@ BED_MESH_CALIBRATE
 
 Before modifying your Z Offset, make sure that you have set your Z position to 0, to do this you can run the following command.&#x20;
 
-```
+```gcode
 G1 Z0 F1500
 ```
 
@@ -136,7 +150,7 @@ SET_GCODE_OFFSET Z_ADJUST=-0.01 MOVE=1
 
 Once the offset has been perfectly calibrated apply that offset using the following command
 
-```
+```gcode
 Z_OFFSET_APPLY_PROBE
 ```
 

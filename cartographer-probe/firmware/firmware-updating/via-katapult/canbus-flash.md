@@ -30,15 +30,9 @@ Using the scripts below, you may need to use the **Install Prerequisites** optio
 
 ## CANBus Katapult Updating
 
-### Step 1. Plug Cartographer in via CANBUS
+## Step 1. Plug Cartographer in via CANBUS
 
-### Step 2. SSH into Device & Run Script
-
-```bash
-bash <(wget -qO - https://raw.githubusercontent.com/Cartographer3D/cartographer-klipper/refs/heads/master/firmware.sh) -f can
-```
-
-### Step 3. Get Your UUID
+## Step 2. Get Your UUID
 
 This method requires prior knowledge of your **CANBUS UUID**.
 
@@ -46,20 +40,39 @@ This should have been supplied to you in your hardware box if purchased (insert 
 
 If you do not have your UUID. Visit [HERE](../../../classic-installation/klipper-setup.md#finding-the-serial-or-uuid) to get it.
 
-The script will detect your UUID if your UUID is inside your **printer.cfg** somewhere under `[scanner]` if it doesnt detect, you can manually enter it.
+## Step 2. SSH into Device & Run Script
 
-![Screen #1 - Canbus Detected](https://github.com/user-attachments/assets/612dec98-50ab-4ab6-9d61-bc465a7cf411)
+```bash
+cd ~/cartographer-klipper/scripts
+./firmware.py -f can
+```
 
-### Step 4. Choose Firmware to Flash
+## Step 3. Select Katapult - Can Menu
+
+![Screen #1 - Canbus Detected](../../../../.gitbook/assets/main-menu-basic.png)
+
+## Step 3. Find Your Device
+
+<figure><img src="../../../../.gitbook/assets/can-menu.png" alt="" width="557"><figcaption></figcaption></figure>
+
+## Step 4. Find Your Device pt2
+
+<figure><img src="../../../../.gitbook/assets/can-find-device.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 5. Find Latest Firmware
 
 {% hint style="info" %}
 Your CANBUS bitrare (if configured on your host device) should be detected and displayed. You should flash your cartographer with MATCHING bitrate firmware.
 {% endhint %}
 
-You can pick any of these, however to remain detected you should match your bitrate. You can flash USB if youd like to use cartographer via USB however, as bitrate doesnt matter.&#x20;
+<figure><img src="../../../../.gitbook/assets/can-firmware-latest.png" alt="" width="551"><figcaption></figcaption></figure>
 
-<figure><img src="https://github.com/user-attachments/assets/6ad85f9a-3aba-466b-b483-e2ff23550a71" alt=""><figcaption><p>Screen #2 - Select Firmware</p></figcaption></figure>
+## Step 6. Flash Firmware
 
-## Step 5. Done
+<figure><img src="../../../../.gitbook/assets/can-confirm.png" alt="" width="551"><figcaption></figcaption></figure>
 
-![Screen #3 - Flash Success](https://github.com/user-attachments/assets/0fb24c99-d36d-4ce2-9846-48c99d4eb952)
+## Step 7. Device Flashing
+
+<figure><img src="../../../../.gitbook/assets/can-flashed-1.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 8. All Done

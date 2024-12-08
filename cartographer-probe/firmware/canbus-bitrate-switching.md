@@ -25,27 +25,43 @@ Are you running CANBUS at a different bitrate? If you arent using the default 1M
 ## Step 2. SSH Into Your Host Device & Run The Script
 
 ```bash
-bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -t katapult -s canbus
+cd ~/cartographer-klipper/scripts
+./firmware.py -f can -k
 ```
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/can-menu.png" alt="" width="557"><figcaption></figcaption></figure>
 
-## Step 3. Select Which Firmware/Bitrate You Want
+## Step 3. Find Your Device
 
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/can-find-device.png" alt="" width="551"><figcaption></figcaption></figure>
 
-## Step 4. Flash Firmware
+## Step 4. Select Which Firmware/Bitrate You Want
 
-## Step 5. Re-Run Script
+<figure><img src="../../.gitbook/assets/can-katapult.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 5. Flash Firmware
+
+<figure><img src="../../.gitbook/assets/can-flashed-1.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 6. Re-Run Script
 
 ```bash
-bash <(wget -qO - firmware.cartographer3d.com/firmware.sh) -f can
+cd ~/cartographer-klipper/scripts
+./firmware.py -f can
 ```
 
-## Step 6. Choose If You Want Survey/Touch
+<figure><img src="../../.gitbook/assets/can-menu.png" alt="" width="557"><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+## Step 7. Find Your Device
 
-## Step 7. Select Firmware & Flash
+<figure><img src="../../.gitbook/assets/can-find-device.png" alt="" width="551"><figcaption></figcaption></figure>
 
-## Step 8. Done
+## Step 8. Select Firmware & Flash
+
+<figure><img src="../../.gitbook/assets/can-firmware-latest.png" alt="" width="551"><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/can-confirm.png" alt="" width="551"><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/can-flashed-1.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 9. Done

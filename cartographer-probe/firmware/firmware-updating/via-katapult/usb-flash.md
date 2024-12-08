@@ -32,26 +32,37 @@ Using the scripts below, you may need to use the **Install Prerequisites** optio
 
 ## USB Katapult Updating
 
-### Step 1. Plug Cartographer in via USB
+## Step 1. Plug Cartographer in via USB
 
-### Step 2. SSH into Device & Run Script
+## Step 2. SSH into Device & Run Script
 
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/Cartographer3D/cartographer-klipper/refs/heads/master/firmware.sh) -f usb
+cd ~/cartographer-klipper/scripts
+./firmware.py -f usb
 ```
 
-<figure><img src="https://github.com/user-attachments/assets/b06e734b-d335-4073-9407-be60ec8bd17b" alt=""><figcaption><p>Screen #1 - USB Device Found</p></figcaption></figure>
+## Step 3. Select Katapult - USB Menu
 
-### Step 3. Choose Firmware to Flash
+<figure><img src="../../../../.gitbook/assets/main-menu-basic (1).png" alt="" width="543"><figcaption></figcaption></figure>
 
-{% hint style="info" %}
-If you plan on using CANBUS, Your CANBUS bitrate (if configured on your host device) should be detected and displayed. You should flash your cartographer with MATCHING bitrate firmware.
-{% endhint %}
+## Step 4. Find Your Device
 
-You can pick any of these, however to remain detected you should match your bitrare. You can flash USB if youd like to use cartographer via USB however, as bitrate doesnt matter.&#x20;
+<figure><img src="../../../../.gitbook/assets/usb-menu.png" alt="" width="557"><figcaption></figcaption></figure>
 
-<figure><img src="https://github.com/user-attachments/assets/dfb64682-28c7-4a4c-a9fe-67649d70bfff" alt=""><figcaption><p>Screen #2 - Choose Firmware</p></figcaption></figure>
+## Step 5. Select Your Device
 
-## Step 4. Done
+<figure><img src="../../../../.gitbook/assets/usb-devices.png" alt="" width="551"><figcaption></figcaption></figure>
 
-![Screen #3 - Flash Success](https://github.com/user-attachments/assets/6920bdbd-2ee7-4947-97f1-c5a623471898)
+## Step 6. Find Latest Firmware
+
+<figure><img src="../../../../.gitbook/assets/usb-firmware-latest.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 7. Flash Firmware
+
+<figure><img src="../../../../.gitbook/assets/usb-confirm.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 8. Device Flashing
+
+<figure><img src="../../../../.gitbook/assets/usb-flashed-1.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 9. All Done

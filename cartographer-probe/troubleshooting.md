@@ -20,8 +20,6 @@ Remove or comment out your \[cartographer] sections, taking note of the offsets 
 
 [<img src="https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image.png" alt="" data-size="original">](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image.png)
 
-
-
 This can occur either after a Klipper update when the sym link occasionally gets broken, or if you have not installed the Klipper component during the install, either way the fix is the same, just re-run the installer below.
 
 ```
@@ -116,7 +114,7 @@ Please ensure that you have calibrated your probe
 
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(13\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(13\).png)
 
-You do not have a valid \[bed\_mesh] section in your printer.cfg, please check out [this site](https://www.klipper3d.org/Bed\_Mesh.html) for how to add one.
+You do not have a valid \[bed\_mesh] section in your printer.cfg, please check out [this site](https://www.klipper3d.org/Bed_Mesh.html) for how to add one.
 
 </details>
 
@@ -126,15 +124,13 @@ You do not have a valid \[bed\_mesh] section in your printer.cfg, please check o
 
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(14\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(14\).png)
 
-You do not have a valid \[bed\_mesh] section in your printer.cfg, please check out [this site](https://www.klipper3d.org/Bed\_Mesh.html) for how to add one.
+You do not have a valid \[bed\_mesh] section in your printer.cfg, please check out [this site](https://www.klipper3d.org/Bed_Mesh.html) for how to add one.
 
 </details>
 
 <details>
 
 <summary>Unable to find your Cartographer USB probe via <code>ls /dev/serial/by-id/</code></summary>
-
-
 
 So there are a few reasons you might not be able to find your Cartographer probe.
 
@@ -222,13 +218,13 @@ If you get a sharp drop in your bed mesh, or missing clusters error after a scan
 
 <summary>Repeated No trigger on z after full movement</summary>
 
-![](<../.gitbook/assets/image (2) (1) (1) (1) (1).png>)
+<img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt="" data-size="original">
 
-If you are getting the error `No trigger on z after full movement`, and running a lower powered SBC such as a Raspberry Pi 2, or a BTT CB1, You are able to lock a single CPU core to your Klipper instance. \
+If you are getting the error `No trigger on z after full movement`, and running a lower powered SBC such as a Raspberry Pi 2, or a BTT CB1, You are able to lock a single CPU core to your Klipper instance.\
 \
-Esoterical has an outstanding guide on how to do so below. \
+Esoterical has an outstanding guide on how to do so below.\
 \
-[https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental](https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental)
+[https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental](https://canbus.esoterical.online/troubleshooting/timeout_during_homing_probing.html#experimental)
 
 </details>
 
@@ -236,10 +232,10 @@ Esoterical has an outstanding guide on how to do so below. \
 
 <summary>Klipper freezes during scan/"timer too close" error</summary>
 
-The cartographer probe sends quite a bit of data to the MCU during a scan. If the MCU is too busy, it can cause Klipper to freeze or throw a `timer too close` error. Often, this is due to an underpowered SBC, such as Raspberry Pi 2/3, or the BTT CB1. You can try to reduce some of the load by (temporarily) disabling cameras or other intensive processes, or following the guide linked below to adjust your settings.  
-If all else fails, you could consider upgrading to a more powerful SBC.  
+The cartographer probe sends quite a bit of data to the MCU during a scan. If the MCU is too busy, it can cause Klipper to freeze or throw a `timer too close` error. Often, this is due to an underpowered SBC, such as Raspberry Pi 2/3, or the BTT CB1. You can try to reduce some of the load by (temporarily) disabling cameras or other intensive processes, or following the guide linked below to adjust your settings.\
+If all else fails, you could consider upgrading to a more powerful SBC.
 
-[https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental](https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental)
+[https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental](https://canbus.esoterical.online/troubleshooting/timeout_during_homing_probing.html#experimental)
 
 </details>
 
@@ -251,11 +247,11 @@ If all else fails, you could consider upgrading to a more powerful SBC.
 
 <img src="../.gitbook/assets/image (6) (1).png" alt="" data-size="original">
 
-A common cause for this is having you `[scanner]` section in an included config file and not in <mark style="color:yellow;">**printer.cfg**</mark>. \
+A common cause for this is having you `[scanner]` section in an included config file and not in <mark style="color:yellow;">**printer.cfg**</mark>.\
 \
-To work around this klipper limitation, remove `scanner_touch_z_offset` from your included config and add it to <mark style="color:yellow;">**printer.cfg**</mark>. \
+To work around this klipper limitation, remove `scanner_touch_z_offset` from your included config and add it to <mark style="color:yellow;">**printer.cfg**</mark>.\
 \
-Below is an example of what to have in <mark style="color:yellow;">**printer.cfg**</mark>. \
+Below is an example of what to have in <mark style="color:yellow;">**printer.cfg**</mark>.\
 \
 This will allow klipper to save new offsets using the UI.
 
@@ -319,7 +315,7 @@ Firstly make sure you have hit the **RESTART KLIPPER** button in your Fluid/Main
 
 <summary>Option 'X' is not valid in section 'scanner'</summary>
 
-&#x20;You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your <mark style="color:yellow;">**printer.cfg**</mark> or check its written correctly. You can see [valid parameters here](survey-touch/settings-and-commands.md#available-parameters)
+You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your <mark style="color:yellow;">**printer.cfg**</mark> or check its written correctly. You can see [valid parameters here](settings-and-commands.md#available-parameters)
 
 </details>
 
@@ -327,7 +323,7 @@ Firstly make sure you have hit the **RESTART KLIPPER** button in your Fluid/Main
 
 <summary>gcode command PROBE_CALIBRATE already registered</summary>
 
-![](<../.gitbook/assets/image (8).png>)
+<img src="../.gitbook/assets/image (8).png" alt="" data-size="original">
 
 \
 If you used the original "Klipper Screen Fix" when running Classic Cartographer, you will need to remove the added Macro (seen below)
@@ -339,4 +335,3 @@ gcode:
 ```
 
 </details>
-

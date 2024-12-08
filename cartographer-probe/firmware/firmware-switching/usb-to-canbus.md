@@ -25,29 +25,47 @@ Looking at using Cartographer via CANBUS instead of USB? Follow the steps below 
 ## Step 2.  SSH Into Your Host Device & Run The Script
 
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/Cartographer3D/cartographer-klipper/refs/heads/master/firmware.sh) -t katapult -s canbus
+cd ~/cartographer-klipper/scripts
+./firmware.py -f usb -k
 ```
 
-<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/usb-menu.png" alt="" width="557"><figcaption></figcaption></figure>
 
-## Step 3. Select Which Firmware/Bitrate You Want
+## Step 3. Find Your Device
 
-<figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/usb-devices.png" alt="" width="551"><figcaption></figcaption></figure>
 
-## Step 4. Flash Katapult Firmware
+## Step 4. Select Which Firmware/Bitrate You Want
 
-## Step 5. Unplug USB and plug into CANBUS
+<figure><img src="../../../.gitbook/assets/usb-katapult.png" alt="" width="551"><figcaption></figcaption></figure>
 
-## Step 6. Re-run Script
+<figure><img src="../../../.gitbook/assets/usb2can.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 5. Flash Katapult Firmware
+
+<figure><img src="../../../.gitbook/assets/usb-flashed-1.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 6. Unplug USB and plug into CANBUS
+
+## Step 7. Re-run Script
 
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/Cartographer3D/cartographer-klipper/refs/heads/master/firmware.sh) -f can
+cd ~/cartographer-klipper/scripts
+./firmware.py -f can
 ```
 
-## Step 7. Choose If You Want Survey/Touch
+## Step 8. Find Your Device
 
-<figure><img src="../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/can-menu.png" alt="" width="557"><figcaption></figcaption></figure>
 
-## Step 8. Select Firmware & Flash
+<figure><img src="../../../.gitbook/assets/can-find-device.png" alt="" width="551"><figcaption></figcaption></figure>
 
-## Step 9. Done
+## Step 9. Select Firmware & Flash
+
+<figure><img src="../../../.gitbook/assets/can-firmware-latest.png" alt="" width="551"><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/can-confirm.png" alt="" width="551"><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/can-flashed-1.png" alt="" width="551"><figcaption></figcaption></figure>
+
+## Step 10. Done

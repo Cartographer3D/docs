@@ -30,9 +30,9 @@ If you chose FULL USB, unplug and re-plug into USB cable.
 
 ## Optional Step: Survey Touch
 
-If you want to use [**Survey Touch**](../survey-touch/) **you will need to do some extra steps.**
+If you want to use [**Survey Touch**](broken-reference) **you will need to do some extra steps.**
 
 * For USB, [Check out this guide on updating firmware to Survey Touch mode.](firmware-updating/via-katapult/usb-flash.md)
-* For CANBUS, , [Check out this guide on updating firmware to Survey Touch mode.](firmware-updating/via-katapult/canbus-flash.md)
+* For CANBUS, [Check out this guide on updating firmware to Survey Touch mode.](firmware-updating/via-katapult/canbus-flash.md)
 
 ### Katapult Bootloader will now be fixed for future flashing and DFU will not be required unless another issue arises with Katapult.
