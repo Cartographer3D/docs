@@ -4,7 +4,7 @@
 
 ## 🗺️ Cartographer Probe
 
-* [Classic vs Survey Touch](cartographer-probe/classic-vs-survey-touch.md)
+* [Scan vs Touch Modes](cartographer-probe/classic-vs-survey-touch.md)
 * [🏗️ Installation and Setup](cartographer-probe/installation-and-setup/README.md)
   * [Before You Begin](cartographer-probe/installation-and-setup/before-you-begin.md)
   * [Probe Installation](cartographer-probe/installation-and-setup/probe-installation/README.md)

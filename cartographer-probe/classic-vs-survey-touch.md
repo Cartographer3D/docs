@@ -1,12 +1,35 @@
-# Classic vs Survey Touch
+# Scan vs Touch Modes
 
-## Short Version?
+## Touch Mode
 
-Classic uses the regular scanning mode to use cartographer as a Z endstop. Survey Touch does exactly what it sounds like, it touches the nozzle to the bed at print run-time giving you a perfect first layer everytime.
+Touch mode enables the Z offset of your nozzle and scanner coil to be automatically calculated whenever the macro `CARTOGRAPHER_TOUCH`is used.\
+\
+This means when doing a bed mesh or bed leveling macro, it will still scan along those points.
 
-## Long Version?
+### When will the nozzle touch my bed?
 
-### Classic
+This will **ONLY** occur during the following commands:
+
+* `CARTOGRAPHER_CALIBRATE` (not METHOD=manual)
+* `CARTOGRAPHER_TOUCH`
+* `CARTOGRAPHER_THRESHOLD_SCAN`
+
+It will <mark style="color:red;">**NOT**</mark> touch the bed and will instead use **SCAN** mode for:
+
+* `QUAD_GANTRY_LEVEL`
+* `Z_TILT`
+* `BED_MESH_CALIBRATE`
+* `G28 / HOME`
+* `PROBE`
+* `PROBE_ACCURACY`
+
+## Scan Mode
+
+This is the same as Touch mode except that it will never touch your bed to automatically calibrate your nozzle to scanner coil offset.
+
+## Have a detailed explanation of Scan vs Touch?
+
+### Scan
 
 Cartographer is based around an LDC1612 Inductance converter chip. This chip creates an oscillating electric field which then induces a corresponding field in the metal of the steel sheet (or bed itself if close enough) and can read the resonance frequency of this field, and then converts this reading into a digital signal to be processed upstream by the MCU. The resonance frequency changes with a change in distance between the coil and the bed (or spring steel sheet, or whatever metal it is triggering off). As the coil gets closer, the frequency gets higher.
 
@@ -18,7 +41,7 @@ To fix this we use Temperature Compensation. Temp Comp reads the temperature of 
 
 Now, that's old cartographer. Boo. How does the new hotness work?
 
-### Survey Touch
+### Touch
 
 Cartographer Survey doesn't care about absolute frequency values and what Z height that corresponds to. Survey is all based around the change of signal, specifically it detects when the rate of change of the frequency... changes.
 

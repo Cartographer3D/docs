@@ -16,7 +16,17 @@ Remove or comment out your \[cartographer] sections, taking note of the offsets 
 
 <details>
 
-<summary>Option 'pin' in section 'probe' must be specifie</summary>
+<summary>Strange Bed Mesh or Touch issues</summary>
+
+You should try disable any extra custom macros that affect BED\_MESH\_CALIBRATE or anything that influences GCODE\_Z\_OFFSET like KAMP adaptive mesh etc.\
+\
+Also try turning off or disabling the <mark style="color:red;">**crowsnest**</mark> or <mark style="color:red;">**LED\_effects**</mark> plugins
+
+</details>
+
+<details>
+
+<summary>Option 'pin' in section 'probe' must be specified</summary>
 
 [<img src="https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image.png" alt="" data-size="original">](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image.png)
 

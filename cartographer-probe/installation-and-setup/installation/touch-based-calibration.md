@@ -4,7 +4,7 @@ description: Cartographer Calibration for Touch Mode
 
 # Touch Based Calibration
 
-<mark style="color:purple;">Last Updated: December 7th 2024</mark>
+<mark style="color:purple;">Last Updated: December 9th 2024</mark>
 
 ## Initial Calibration
 
@@ -194,7 +194,6 @@ If however you get a final IDEAL result and it didnt touch the bed, start the pr
 
 ```gcode
 CARTOGRAPHER_THRESHOLD_SCAN MIN=500 
-# If 400 was a false positive
 ```
 
 Once it finds an excellent or ideal threshold and you've seen the nozzle touching the bed. It will stop this process and move on.
@@ -203,12 +202,10 @@ Now do a touch calibration with the new threshold.
 
 ```gcode
 CARTOGRAPHER_CALIBRATE
-# starts touch test and calibration 
 ```
 
 If everything went correctly the touch test should pass and you can now finish by saving these variables to your config.
 
 ```gcode
 SAVE_CONFIG                        
-# saves model and threshold
 ```

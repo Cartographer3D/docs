@@ -6,6 +6,12 @@ This is <mark style="color:red;">**ONLY**</mark> required if using Touch Based c
 
 Adding the `CARTOGRAPHER_TOUCH` command to your print start macro ensures that the printer performs a precise touch probe <mark style="color:red;">**AFTER**</mark> executing the `BED_MESH_CALIBRATE` command. `CARTOGRAPHER_TOUCH` should also be performed with a nozzle <mark style="color:red;">no hotter than 150c</mark>. With this in mind, the command will fail if the nozzle is beyond this temperature. It **CAN** be performed cold. Please make allowances for this in your print start. This sequence helps to achieve an accurate bed leveling by accounting for any variations or offsets after the mesh calibration.
 
+
+
+{% hint style="warning" %}
+It is not recommended to use a custom BED\_MESH\_CALIBRATE or ADAPTIVE MESH macro/plugin
+{% endhint %}
+
 ```gcode
 PLEASE DONT USE THIS - IT IS AN EXAMPLE ONLY
 [gcode_macro PRINT_START_EXAMPLE]
@@ -27,7 +33,7 @@ PLEASE DONT USE THIS - IT IS AN EXAMPLE ONLY
 
 ## Need a Print Start macro?
 
-The following is a modified version of [Jontek2's Better Print Start Macro](https://github.com/jontek2/A-better-print\_start-macro) which incorporates Cartographer\_Touch commands for use with Voron printers and can be adapted for others.
+The following is a modified version of [Jontek2's Better Print Start Macro](https://github.com/jontek2/A-better-print_start-macro) which incorporates Cartographer\_Touch commands for use with Voron printers and can be adapted for others.
 
 ```gcode
 #####################################################################

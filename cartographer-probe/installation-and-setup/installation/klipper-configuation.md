@@ -4,7 +4,7 @@ description: Klipper Configuration for Touch Mode
 
 # Klipper Configuation
 
-<mark style="color:purple;">Last Updated: December 7th 2024</mark>
+<mark style="color:purple;">Last Updated: December 9th 2024</mark>
 
 {% hint style="warning" %}
 We **DO NOT** 100% guarantee TOUCH compatibility with ALL printers. It is your responsibility to read this entire guide prior to use and to research whether this is right for you. Please contact us on [DISCORD ](https://discord.gg/yzazQMEGS2)if you have questions.
@@ -29,6 +29,9 @@ canbus_uuid: 0ca8d67388c2
 mcu: scanner            
 #    adjust to suit your scanner, if using usb change to serial.
 #    serial: /dev/serial/by-id/usb-cartographer_cartographer_
+#
+#   Offsets are measured from the centre of your coil, to the tip of your nozzle 
+#   on a level axis. It is vital that this is accurate. 
 x_offset: 0                          
 #    adjust for your cartographers offset from nozzle to middle of coil
 y_offset: 15                         
@@ -36,9 +39,6 @@ y_offset: 15
 backlash_comp: 0.5
 #   Backlash compensation distance for removing Z backlash before measuring
 #   the sensor response.
-# 
-#   Offsets are measured from the centre of your coil, to the tip of your nozzle 
-#   on a level axis. It is vital that this is accurate. 
 sensor: cartographer
 #    this must be set as cartographer unless using IDM etc.
 sensor_alt: carto
@@ -61,10 +61,10 @@ probe_count: 30, 30
 algorithm: bicubic
 
 [temperature_sensor Cartographer_MCU]
-sensor_type:   temperature_mcu
-sensor_mcu:            scanner
-min_temp:                    0
-max_temp:                  105
+sensor_type: temperature_mcu
+sensor_mcu: scanner
+min_temp: 0
+max_temp: 105
 
 ```
 
@@ -74,37 +74,43 @@ NOTE - The \[scanner] section needs to be above any other reference to either ca
 
 If you want to use the probe for Input Shaper, please add the following to your config.
 
+{% hint style="info" %}
+By default the `[adxl345]` and `[lis2dw]` sections are commented out. This is so you don't encounter errors if you already have these sections in your config.\
+\
+You can add them and use them by switching them for existing sections however <mark style="color:red;">**DO NOT**</mark> combine them!
+{% endhint %}
+
 {% tabs %}
 {% tab title="adxl345 based probes" %}
 ```yaml
-[adxl345]
-cs_pin: scanner:PA3
-spi_bus: spi1
+#[adxl345]
+#cs_pin: scanner:PA3
+#spi_bus: spi1
 
-[resonance_tester]
-accel_chip: adxl345
-probe_points:
-    125, 125, 20
+#[resonance_tester]
+#accel_chip: adxl345
+#probe_points:
+#    125, 125, 20
 ```
 {% endtab %}
 
 {% tab title="lis2dw based probes" %}
 ```yaml
-[lis2dw]
-cs_pin: scanner:PA3
-spi_bus: spi1
+#[lis2dw]
+#cs_pin: scanner:PA3
+#spi_bus: spi1
 
-[resonance_tester]
-accel_chip: lis2dw
-probe_points:
-    125, 125, 20
+#[resonance_tester]
+#accel_chip: lis2dw
+#probe_points:
+#    125, 125, 20
 ```
 {% endtab %}
 {% endtabs %}
 
 You then need to remove, or comment out your `[probe]` section.
 
-Now add a safe\_z\_home section with the following inforamation.
+Now add a safe\_z\_home section with the following information.
 
 ```yaml
 [safe_z_home]
@@ -123,6 +129,7 @@ Don't get confused, "endstop\_pin" should contain probe and NOT cartographer/sca
 [stepper_z]
 endstop_pin: probe:z_virtual_endstop # uses cartographer as virtual endstop
 homing_retract_dist: 0 # cartographer needs this to be set to 0
+#position_endstop: 5 # cartographer needs this to be commented out
 ```
 
 {% hint style="danger" %}

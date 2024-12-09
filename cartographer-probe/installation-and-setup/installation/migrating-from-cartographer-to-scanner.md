@@ -74,7 +74,7 @@ MAKE SURE YOU LEAVE NO BLANK/EMPTY LINES
 Empty lines should contain nothing other than #\*#
 {% endhint %}
 
-```yaml
+```markup
 #*# [cartographer model default]
 #*# model_coef = 1.2756087614398297,
 #*# 	1.7032235919205718,
