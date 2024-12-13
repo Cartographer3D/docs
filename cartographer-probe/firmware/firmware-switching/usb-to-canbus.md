@@ -26,7 +26,7 @@ Looking at using Cartographer via CANBUS instead of USB? Follow the steps below 
 
 ```bash
 cd ~/cartographer-klipper/scripts
-./firmware.py -f usb -k
+./firmware.py -f usb -t
 ```
 
 <figure><img src="../../../.gitbook/assets/usb-menu.png" alt="" width="557"><figcaption></figcaption></figure>

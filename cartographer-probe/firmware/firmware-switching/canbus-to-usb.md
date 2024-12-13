@@ -26,7 +26,7 @@ Looking at using Cartographer via USB instead of CANBUS? Follow the steps below 
 
 ```bash
 cd ~/cartographer-klipper/scripts
-./firmware.py -f can -k
+./firmware.py -f can -t
 ```
 
 <figure><img src="../../../.gitbook/assets/can-menu.png" alt="" width="557"><figcaption></figcaption></figure>

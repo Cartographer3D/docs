@@ -21,21 +21,12 @@ info_tags:
 1. The **\[cartographer]** section needs to be renamed to **\[scanner]**
 2. The following lines need to be added under \[scanner]
 
-{% hint style="info" %}
-`calibration_method: scan` will be what youre used to coming from **\[cartographer]**
-
-`calibration_method: touch` is the new touch based version and requires a different calibration method, linked at the end of this document.
-{% endhint %}
-
-<pre class="language-yaml"><code class="lang-yaml">calibration_method: touch
-#    if you want to use touch or 
-<strong>#calibration_method: scan
-</strong>#    if you want to use scan
+```yaml
 sensor: cartographer
 #    this must be set as cartographer unless using IDM etc.
 sensor_alt: carto
 #    alternate name to call commands. CARTO_TOUCH etc  
-</code></pre>
+```
 
 3. Update your \[adxl345] or \[lis2dw] sections
 
