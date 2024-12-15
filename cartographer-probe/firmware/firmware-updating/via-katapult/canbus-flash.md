@@ -38,7 +38,7 @@ This method requires prior knowledge of your **CANBUS UUID**.
 
 This should have been supplied to you in your hardware box if purchased (insert date).
 
-If you do not have your UUID. Visit [HERE](../../../classic-installation/klipper-setup.md#finding-the-serial-or-uuid) to get it.
+If you do not have your UUID. Visit [HERE](../../../archive/classic-installation/klipper-setup.md#finding-the-serial-or-uuid) to get it.
 
 ## Step 2. SSH into Device & Run Script
 

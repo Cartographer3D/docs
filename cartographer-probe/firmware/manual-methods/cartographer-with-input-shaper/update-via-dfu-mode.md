@@ -8,13 +8,13 @@ description: Update or reflash your Cartographer Probe via DFU Mode.
 
 The following method is compatible with MOST Cartographer probes, please check the compatibility chart listed below.&#x20;
 
-| Probe                                                       | Interface | Compatible                                                      |
-| ----------------------------------------------------------- | --------- | --------------------------------------------------------------- |
-| Cartographer V1 (RP2040)                                    | USB       | [Click Here](../cartographer-rp2040/dfu-u2f-bootloader-mode.md) |
-| Cartographer with Input Shaper (v2)                         | USB       | Yes                                                             |
-|                                                             | CAN       | No                                                              |
-| Cartographer Probe v3 with Input Shaping (Hybrid USB & CAN) | USB       | Yes                                                             |
-|                                                             | CAN       | Yes                                                             |
+| Probe                                                       | Interface | Compatible                                                              |
+| ----------------------------------------------------------- | --------- | ----------------------------------------------------------------------- |
+| Cartographer V1 (RP2040)                                    | USB       | [Click Here](../archive/cartographer-rp2040/dfu-u2f-bootloader-mode.md) |
+| Cartographer with Input Shaper (v2)                         | USB       | Yes                                                                     |
+|                                                             | CAN       | No                                                                      |
+| Cartographer Probe v3 with Input Shaping (Hybrid USB & CAN) | USB       | Yes                                                                     |
+|                                                             | CAN       | Yes                                                                     |
 
 ### Pre-requirements
 
@@ -26,7 +26,7 @@ Prior to flashing, you will need to following tools
 
 ### Firmware
 
-The best place to get the probes firmware is from our  [GitHub](https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware). These have been tested thoroughly, and are known to work perfectly.  If you want to find a link to the latest firmware for each of your probes, please check [here](https://docs.cartographer3d.com/firmware-update/which-firmware).
+The best place to get the probes firmware is from our  [GitHub](https://github.com/Cartographer3D/cartographer-klipper/tree/master/firmware). These have been tested thoroughly, and are known to work perfectly.  If you want to find a link to the latest firmware for each of your probes, please check [here](../firmware-update.md).
 
 You can also build your own firmware, our GitHub organisation has both a custom build of [Klipper](../../../../) and [Katapult](https://github.com/Cartographer3D/katapult) that you can build yourself.&#x20;
 
@@ -94,10 +94,10 @@ If your BLUE LED is Flashing, you have not fully flashed your Firmware, and you 
 
 SSH into your linux host MCU, ensuring that your Cartographer is plugged in and in DFU Mode.&#x20;
 
-Navigate into the correct folder, so if you want to update your v3 run the following command.&#x20;
+Navigate into the correct folder, so if you want to update your v2 or v3 run the following command.&#x20;
 
 ```
-cd ~/cartographer-klipper/firmware/v3 - Carto with Input Shaper Hybrid
+cd ~/cartographer-klipper/firmware/v2-v3 - Carto with Input Shaper Hybrid
 ```
 
 Once in the folder, simply check that your probe is still in DFU Mode by running `lsusb`, and if you still get a result stating it is in DFU Mode, run the following command.&#x20;
@@ -106,12 +106,12 @@ Once in the folder, simply check that your probe is still in DFU Mode by running
 dfu-util -R -a 0 -s 0x08000000:leave -D firmware.bin
 ```
 
-NOTE - REPLACE the address (`0x08000000`) with what ever is listed in the table here for the specific firmware you are using, and rename `firmware.bin` to what ever the firmware file you are using is called.&#x20;
+NOTE - REPLACE the address (`0x08000000`) with what ever is listed in the [table here](../firmware-update.md) for the specific firmware you are using, and rename `firmware.bin` to what ever the firmware file you are using is called.&#x20;
 
 Example:
 
 ```
-dfu-util -R -a 0 -s 0x08000000:leave -D Full_Cartographer_USB_v3.bin
+dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_USB_v3.bin
 ```
 
 Once compelte, it shoudl exit out of DFU mode, and you should be able to find your probe using either CAN or USB.&#x20;

@@ -16,6 +16,16 @@ Remove or comment out your \[cartographer] sections, taking note of the offsets 
 
 <details>
 
+<summary>I'm getting weird errors after updating my scanner.py, what do I do?</summary>
+
+Firstly make sure you have hit the **RESTART KLIPPER** button in your Fluid/Mainsail UI, this will force the refresh of scanner.py to the updated version.
+
+<img src="../.gitbook/assets/Screenshot 2024-08-21 210954.png" alt="Always RESTART KLIPPER after an update." data-size="original">
+
+</details>
+
+<details>
+
 <summary>Strange Bed Mesh or Touch issues</summary>
 
 You should try disable any extra custom macros that affect BED\_MESH\_CALIBRATE or anything that influences GCODE\_Z\_OFFSET like KAMP adaptive mesh etc.\
@@ -35,7 +45,6 @@ This can occur either after a Klipper update when the sym link occasionally gets
 ```
 cd ~
 git clone https://github.com/Cartographer3D/cartographer-klipper.git
-chmod +x cartographer-klipper/install.sh
 ./cartographer-klipper/install.sh
 ```
 
@@ -43,14 +52,29 @@ chmod +x cartographer-klipper/install.sh
 
 <details>
 
-<summary>Unknown pin chip name 'cartographer' OR Unknown pin chip name 'scanner'</summary>
+<summary>Unknown pin chip name 'scanner'</summary>
 
-[![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(1\)%20\(1\)%20\(1\)%20\(1\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(1\)%20\(1\)%20\(1\)%20\(1\).png)
-
+![](../.gitbook/assets/image.png)\
+\
 The following two issues are usually why you recieve the above error.
 
 1. You are referencing cartographer/scanner before you have declared it in your config file. It is advisable to add the cartographer/scanner section just below where you declare your MCU's.
-2. You have referenced cartographer with a capitilisation `[Cartographer]` vs `[cartographer]` or `cs_pin: Cartographer:PA3` vs `cs_pin: cartographer:PA3`
+2. You have referenced cartographer with a capitilisation `[Scanner]` vs `[scanner]` or `cs_pin: Scanner:PA3` vs `cs_pin: scanner:PA3`
+
+This can happen when the symlink between klipper and scanner is broken. You can check your symlinks with the following command.
+
+```bash
+find  ~/klipper/klippy/extras/  -maxdepth 1 -type l -ls
+```
+
+If they dont look right, or youre unsure, run the following
+
+```bash
+cd ~/cartographer-klipper
+./install.sh
+```
+
+And then check your symlinks again. You should see scanner.py pointed to the cartographer-klipper folder.
 
 </details>
 
@@ -69,14 +93,6 @@ This error usually happens when you have your `[scanner]` section below your `[s
 <summary>mcu 'scanner': Unknown command: endstop_home</summary>
 
 In `[stepper_z]` you have set `endstop_pin: scanner:z_virtual_endstop` this should be `endstop_pin: probe:z_virtual_endstop`
-
-</details>
-
-<details>
-
-<summary>Error importing numpy error</summary>
-
-[![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(3\)%20\(1\)%20\(1\)%20\(1\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(3\)%20\(1\)%20\(1\)%20\(1\).png)
 
 </details>
 
@@ -125,6 +141,38 @@ Please ensure that you have calibrated your probe
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(13\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(13\).png)
 
 You do not have a valid \[bed\_mesh] section in your printer.cfg, please check out [this site](https://www.klipper3d.org/Bed_Mesh.html) for how to add one.
+
+</details>
+
+<details>
+
+<summary>'Scanner' object has no attribute 'touch_location'</summary>
+
+Make sure you have a \`zero\_reference\_position: 125, 125\`  set under \[bed\_mesh], adjusting values for centre of your bed with X Y
+
+</details>
+
+<details>
+
+<summary><code>CARTOGRAPHER_THRESHOLD_SCAN</code>does nothing</summary>
+
+You're in scan mode. Do a `PROBE_SWITCH MODE=touch` then SAVE\_CONFIG. You may need to create a touch model if you dont already have one.
+
+</details>
+
+<details>
+
+<summary><code>CARTOGRAPHER_TOUCH</code> does nothing</summary>
+
+You're in scan mode. Do a `PROBE_SWITCH MODE=touch` then SAVE\_CONFIG. You may need to create a touch model if you dont already have one.
+
+</details>
+
+<details>
+
+<summary>Scanner model 'default' was created for <code>x</code> error</summary>
+
+Your scanner model doesnt match your current mode. Please recalibrate so that youre new model will match.
 
 </details>
 
@@ -249,54 +297,11 @@ If all else fails, you could consider upgrading to a more powerful SBC.
 
 </details>
 
-## Touch Specific Troubleshooting
-
-<details>
-
-<summary>SAVE_CONFIG section 'scanner' option 'scanner_touch_z_offset' conflicts with included value</summary>
-
-<img src="../.gitbook/assets/image (6) (1).png" alt="" data-size="original">
-
-A common cause for this is having you `[scanner]` section in an included config file and not in <mark style="color:yellow;">**printer.cfg**</mark>.\
-\
-To work around this klipper limitation, remove `scanner_touch_z_offset` from your included config and add it to <mark style="color:yellow;">**printer.cfg**</mark>.\
-\
-Below is an example of what to have in <mark style="color:yellow;">**printer.cfg**</mark>.\
-\
-This will allow klipper to save new offsets using the UI.
-
-<img src="../.gitbook/assets/image (2) (1) (1).png" alt="" data-size="original">
-
-</details>
-
-<details>
-
-<summary>Unknown pin chip name "scanner"</summary>
-
-<img src="../.gitbook/assets/image (10).png" alt="" data-size="original">
-
-This can happen when the symlink between klipper and scanner is broken. You can check your symlinks with the following command.
-
-```bash
-find  ~/klipper/klippy/extras/  -maxdepth 1 -type l -ls
-```
-
-If they dont look right or youre just not sure, run the following again.
-
-```bash
-cd ~/cartographer-klipper
-./install.sh
-```
-
-And then check your symlinks again. You should see scanner.py pointed to the cartographer-klipper folder.
-
-</details>
-
 <details>
 
 <summary>Mcu 'scanner': command format mismatch: query_lis2dw</summary>
 
-<img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original">
 
 This happens when youre using an older version of klipper. If you for whatever reason cannot update to the latest version of klipper, you need to **REMOVE** the following sections from <mark style="color:yellow;">**printer.cfg**</mark> completely.
 
@@ -313,16 +318,6 @@ accel_chip: lis2dw
 
 <details>
 
-<summary>I'm getting weird errors after updating my scanner.py, what do I do?</summary>
-
-Firstly make sure you have hit the **RESTART KLIPPER** button in your Fluid/Mainsail UI, this will force the refresh of scanner.py to the updated version.
-
-<img src="../.gitbook/assets/Screenshot 2024-08-21 210954.png" alt="Always RESTART KLIPPER after an update." data-size="original">
-
-</details>
-
-<details>
-
 <summary>Option 'X' is not valid in section 'scanner'</summary>
 
 You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your <mark style="color:yellow;">**printer.cfg**</mark> or check its written correctly. You can see [valid parameters here](settings-and-commands.md#available-parameters)
@@ -331,17 +326,18 @@ You have a parameter within your `[scanner]` section in printer.cfg that isnt va
 
 <details>
 
-<summary>gcode command PROBE_CALIBRATE already registered</summary>
+<summary>SAVE_CONFIG section 'scanner' option 'scanner_touch_z_offset' conflicts with included value</summary>
 
-<img src="../.gitbook/assets/image (8).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (6) (1).png" alt="" data-size="original">
 
+A common cause for this is having you `[scanner]` section in an included config file and not in <mark style="color:yellow;">**printer.cfg**</mark>.\
 \
-If you used the original "Klipper Screen Fix" when running Classic Cartographer, you will need to remove the added Macro (seen below)
+To work around this klipper limitation, remove `scanner_touch_z_offset` from your included config and add it to <mark style="color:yellow;">**printer.cfg**</mark>.\
+\
+Below is an example of what to have in <mark style="color:yellow;">**printer.cfg**</mark>.\
+\
+This will allow klipper to save new offsets using the UI.
 
-```
-[gcode_macro PROBE_CALIBRATE]
-gcode:
-    [gcode_macro PROBE_CALIBRATE]
-```
+<img src="../.gitbook/assets/image (2) (1) (1).png" alt="" data-size="original">
 
 </details>

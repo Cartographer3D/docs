@@ -171,12 +171,6 @@ Start by doing the generic scan
 [ Visit here for an explanation of `CARTOGRAPHER_THRESHOLD_SCAN`](../../settings-and-commands.md#cartographer_threshold_scan)
 {% endhint %}
 
-```gcode
-CARTOGRAPHER_THRESHOLD_SCAN 
-```
-
-This should start a touch process that will move the toolhead into a starting position and then lower until it touches the bed, repeating itself. Its okay if at first it doesnt touch the bed at all, this is completely normal. It will eventually start touching.&#x20;
-
 {% hint style="warning" %}
 Prior to doing the threshold scan,  please ensure that the following is true.&#x20;
 
@@ -186,17 +180,27 @@ Prior to doing the threshold scan,  please ensure that the following is true.&#x
 * Your kinematics are rigid.&#x20;
 {% endhint %}
 
+```gcode
+CARTOGRAPHER_THRESHOLD_SCAN 
+```
+
+This should start a touch process that will move the toolhead into a starting position and then lower until it touches the bed, repeating itself. Its okay if at first it doesnt touch the bed at all, this is completely normal. It will eventually start touching.&#x20;
+
 {% hint style="info" %}
 `CARTOGRAPHER_THRESHOLD_SCAN SPEED=2` is also available if the initial scan fails.
 {% endhint %}
 
-If however you get a final IDEAL result and it didnt touch the bed, start the process again OR adjust the parameters as follows where MIN= the found threshold value of the false positive.
+If however you get a final Optimal result and it didnt touch the bed, start the process again OR adjust the parameters as follows where MIN= the found threshold value of the false positive.
 
 ```gcode
 CARTOGRAPHER_THRESHOLD_SCAN MIN=500 
 ```
 
-Once it finds an excellent or ideal threshold and you've seen the nozzle touching the bed. It will stop this process and move on.
+Once it finds an optimal threshold and you've seen the nozzle touching the bed. It will stop this process.&#x20;
+
+{% hint style="info" %}
+You can stop here but for most people, fine tuning can be beneficial. Re-run this command with the MIN value set slightly higher (+250) than the previous Optimal result and let it run again.
+{% endhint %}
 
 Now do a touch calibration with the new threshold.
 
