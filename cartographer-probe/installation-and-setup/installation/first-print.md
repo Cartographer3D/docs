@@ -3,7 +3,7 @@
 <mark style="color:purple;">Last Updated: December 7th 2024</mark>
 
 {% hint style="danger" %}
-For SCAN based instructions, see below.
+For SCAN based instructions, [see below.](first-print.md#scan-mode-first-print)
 {% endhint %}
 
 ## Touch Mode First Print
@@ -47,6 +47,31 @@ And then press `SAVE CONFIG`
 ![](https://docs.cartographer3d.com/~gitbook/image?url=https%3A%2F%2F3044346320-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FjpCp1KnR8izt0cnWQfZF%252Fuploads%252FN2OA0cBYSieQwR9NlHpU%252Fimage.png%3Falt%3Dmedia%26token%3Df093ff3c-53cb-43aa-8c50-ce51a91449f2\&width=768\&dpr=4\&quality=100\&sign=83a6205e\&sv=2)
 
 Once complete, your Z offset change should be evident under model\_offset: under the specific model which was loaded. NOTE - You will have to adjust the offset for each model you use.
+
+## Setting Z Offset
+
+Before modifying your Z Offset, make sure that you have set your Z position to 0, to do this you can run the following command.&#x20;
+
+```gcode
+G1 Z0 F1500
+```
+
+Once you have done all of the above, it is worth re-calibrating the Z-Offset. This can be done in Mainsail or Fluidd using the graphical interface. \
+\
+OR you can use G-Code in the window to console to do so
+
+```gcode
+SET_GCODE_OFFSET Z_ADJUST=+0.01 MOVE=1
+SET_GCODE_OFFSET Z_ADJUST=-0.01 MOVE=1
+```
+
+Once the offset has been perfectly calibrated apply that offset using the following command
+
+```gcode
+Z_OFFSET_APPLY_PROBE
+```
+
+And now save your config.
 
 {% hint style="success" %}
 This is the end of the setup and calibration process.&#x20;

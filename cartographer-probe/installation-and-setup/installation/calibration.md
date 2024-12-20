@@ -1,26 +1,25 @@
 ---
-description: Cartographer Calibration for Touch Mode
+description: Cartographer Calibration
 ---
 
-# Touch Based Calibration
+# Calibration
 
-<mark style="color:purple;">Last Updated: December 9th 2024</mark>
+<mark style="color:purple;">Last Updated: December 17th 2024</mark>
 
 ## Initial Calibration
-
-{% hint style="danger" %}
-Touch is best calibrated for use with a clean install. We ask you remove your existing `[scanner]` or `[cartographer]` model if you have one and any other `[scanner]` or `[cartographer]` settings from the bottom of <mark style="color:yellow;">**printer.cfg**</mark>
-{% endhint %}
 
 {% hint style="info" %}
 Calibration can be done <mark style="color:red;">HOT</mark> or <mark style="color:blue;">COLD.</mark>
 {% endhint %}
 
-{% hint style="warning" %}
-Make sure `mode:` is set to <mark style="color:green;">touch</mark> in your printer.cfg prior to following this page OR use `PROBE_SWITCH MODE=touch` prior to following this guide.
-{% endhint %}
+***
 
-Make sure youre in TOUCH mode
+{% hint style="danger" %}
+### Touch Specific
+
+If you want to use cartographer for auto z offset, you will need to follow any extra **TOUCH** specific instructions.
+
+First, make sure you're in TOUCH mode
 
 ```gcode
 PROBE_SWITCH MODE=touch
@@ -31,6 +30,9 @@ Then make sure you save
 ```gcode
 SAVE_CONFIG
 ```
+{% endhint %}
+
+***
 
 Home the machine in X and Y:
 
@@ -78,13 +80,13 @@ G28
 
 You can test the accuracy of the scanner coil.
 
-{% hint style="warning" %}
-This will not TOUCH the bed. It will use the scanner to measure the accuracy of the probe coil.
-{% endhint %}
-
 ```gcode
 PROBE_ACCURACY
 ```
+
+{% hint style="warning" %}
+This will not TOUCH the bed. It will use the scanner to measure the accuracy of the probe coil.
+{% endhint %}
 
 You can also measure the backlash of your Z axis
 
@@ -136,6 +138,12 @@ You can now run a Bed Mesh Calibration (I would advise doing either a `Z_TILT` o
 ```gcode
 BED_MESH_CALIBRATE
 ```
+
+***
+
+### If you are <mark style="color:red;">NOT</mark> using TOUCH you should now [continue with this guide](first-print.md#scan-mode-first-print).
+
+***
 
 ## Setting up Touch
 

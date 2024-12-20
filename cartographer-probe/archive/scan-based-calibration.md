@@ -37,7 +37,7 @@ G0 X125 Y125
 {% hint style="warning" %}
 At this point,  you might note that your Endstop Z is TRIGGERED, this is normal, and will be resolved once you run the next command.
 
-![](<../../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
 {% endhint %}
 
 Start the calibration process:
@@ -157,5 +157,5 @@ Z_OFFSET_APPLY_PROBE
 And now save your config.
 
 {% hint style="warning" %}
-If you are regularly changing your bed, please look at creating different models for your different beds, more information can be found [here ](../../fine-tuning/cartographer-models.md)
+If you are regularly changing your bed, please look at creating different models for your different beds, more information can be found [here ](../fine-tuning/cartographer-models.md)
 {% endhint %}

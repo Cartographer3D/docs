@@ -25,8 +25,7 @@ Looking at using Cartographer via USB instead of CANBUS? Follow the steps below 
 ## Step 2. SSH Into Your Host Device & Run The Script
 
 ```bash
-cd ~/cartographer-klipper/scripts
-./firmware.py -f can -t
+~/cartographer-klipper/scripts/firmware.py -f can -t
 ```
 
 <figure><img src="../../../.gitbook/assets/can-menu.png" alt="" width="557"><figcaption></figcaption></figure>
@@ -50,8 +49,7 @@ cd ~/cartographer-klipper/scripts
 ## Step 7. Re-run Script
 
 ```bash
-cd ~/cartographer-klipper/scripts
-./firmware.py -f usb
+~/cartographer-klipper/scripts/firmware.py -f usb
 ```
 
 <figure><img src="../../../.gitbook/assets/usb-menu.png" alt="" width="557"><figcaption></figcaption></figure>

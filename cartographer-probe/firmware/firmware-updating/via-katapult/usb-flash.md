@@ -37,8 +37,7 @@ Using the scripts below, you may need to use the **Install Prerequisites** optio
 ## Step 2. SSH into Device & Run Script
 
 ```bash
-cd ~/cartographer-klipper/scripts
-./firmware.py -f usb
+~/cartographer-klipper/scripts/firmware.py -f usb
 ```
 
 ## Step 3. Select Katapult - USB Menu

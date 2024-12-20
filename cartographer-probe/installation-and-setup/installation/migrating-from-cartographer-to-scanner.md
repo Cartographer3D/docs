@@ -103,5 +103,5 @@ sudo service klipper restart
 
 ## All done!
 
-## Now just follow either the [TOUCH](touch-based-calibration.md) or [SCAN ](scan-based-calibration.md)guides on re-calibrating.
+## Now just follow either the [TOUCH](calibration.md) or [SCAN ](../../archive/scan-based-calibration.md)guides on re-calibrating.
 

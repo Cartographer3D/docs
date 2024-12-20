@@ -1,12 +1,20 @@
 # ⁉️ FAQ
 
-<mark style="color:purple;">Last Updated: December 7th 2024</mark>
+<mark style="color:purple;">Last Updated: December 17th 2024</mark>
+
+### Why cant I use touch for bed mesh, homing etc
+
+It is in development, however as of December, we are currently re-organizing the cartographer code to allow us more freedom to properly implement these features.
+
+### Does Cartographer Touch use the ADXL sensor?
+
+No, Survey Touch currently uses the [LDC1612](https://www.ti.com/product/LDC1612) sensor to calculate when the nozzle has come into contact with the bed.
 
 ### Can I use cartographer without touch without changing firmware?
 
 Yes, you sure can. All you need to do is head into printer.cfg and under \[scanner] change `mode: touch` to mode`: scan`\
 \
-You will ofcourse need to create a new model by [following this guide.](installation-and-setup/installation/scan-based-calibration.md)
+You will ofcourse need to create a new model by [following this guide.](archive/scan-based-calibration.md)
 
 ### Do I need to run the calibration while hot or cold?
 

@@ -43,8 +43,7 @@ If you do not have your UUID. Visit [HERE](../../../archive/classic-installation
 ## Step 2. SSH into Device & Run Script
 
 ```bash
-cd ~/cartographer-klipper/scripts
-./firmware.py -f can
+~/cartographer-klipper/scripts/firmware.py -f can
 ```
 
 ## Step 3. Select Katapult - Can Menu
