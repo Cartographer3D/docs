@@ -46,8 +46,8 @@ RepRapFirmware (RRF) doesnt currently support multple MCUs, with the exception o
 
 ### What temperature is Cartographer safe to?
 
-The Coil is safe until 200c\
-The MCU is rated to 85c however we've seen successful use until 100c. We recommend trying to keep it around 85c
+The Coil is safe until 160c\
+The MCU is rated to 85c however we've seen successful use until 100c. We recommend trying to keep it around 85c or lower.
 
 ### What does it mean when my coil is showing negative temperatures?
 
