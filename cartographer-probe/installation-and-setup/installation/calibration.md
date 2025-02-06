@@ -10,7 +10,7 @@ description: Cartographer Calibration
 
 Currently there is an issue with the latest version of Klipper, which will require a Klipper downgrade for now. This will be resolved shortly. \
 \
-To downgrade (you need to be on \`v0.12.0-210\` or earlier.&#x20;
+To downgrade (you need to be on \`v0.12.0-410\` or earlier.&#x20;
 
 ```
 cd ~/klipper
