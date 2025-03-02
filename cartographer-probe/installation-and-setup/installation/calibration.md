@@ -4,22 +4,7 @@ description: Cartographer Calibration
 
 # Calibration
 
-<mark style="color:purple;">Last Updated: February 4, 2025</mark>
-
-## Issue with latest version of Klipper
-
-Currently there is an issue with the latest version of Klipper, which will require a Klipper downgrade for now. This will be resolved shortly. \
-\
-To downgrade (you need to be on \`v0.12.0-406\` or earlier).&#x20;
-
-```
-cd ~/klipper
-git fetch
-git checkout 9ca71d8
-sudo service klipper restart
-```
-
-ignore the message about detached head in update manager and dont press the update button
+<mark style="color:purple;">Last Updated: March 2, 2025</mark>
 
 ## Initial Calibration
 
