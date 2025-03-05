@@ -1,4 +1,10 @@
-# Probe Installation
+# Hardware Setup
+
+{% hint style="info" %}
+If you bought a Flat Pack and need to assemble your probe, please visit [assembly](../../assembly/ "mention") for instructions. The correct orientation of the MCU and Coilboard is vital.&#x20;
+{% endhint %}
+
+
 
 ## Mount Cartographer
 
