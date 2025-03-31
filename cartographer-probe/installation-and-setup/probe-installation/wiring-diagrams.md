@@ -3,6 +3,8 @@
 ***
 
 {% hint style="danger" %}
+## Cartographer Probes and AFC Lite MMU boards
+
 Currently Carto is not compatible with the current version of AFC-Lite, from our expereince it will fry Cartographers mux chips as from our testing, it seems to spike to 24v on boot, this goes way above our recommended voltage of 5v or maximum of 6.2v. &#x20;
 
 ![](../../../.gitbook/assets/image.png)
