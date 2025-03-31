@@ -1,5 +1,4 @@
 ---
-icon: recycle
 layout:
   title:
     visible: true
@@ -13,7 +12,7 @@ layout:
     visible: false
 ---
 
-# Firmware
+# ♻️ Firmware
 
 * [CANBUS Bitrate Switching](canbus-bitrate-switching.md)
 * Firmware Switching\

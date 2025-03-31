@@ -54,7 +54,7 @@ git clone https://github.com/Cartographer3D/cartographer-klipper.git
 
 <summary>Unknown pin chip name 'scanner'</summary>
 
-![](../.gitbook/assets/image.png)\
+![](<../.gitbook/assets/image (1).png>)\
 \
 The following two issues are usually why you recieve the above error.
 
@@ -301,7 +301,7 @@ If all else fails, you could consider upgrading to a more powerful SBC.
 
 <summary>Mcu 'scanner': command format mismatch: query_lis2dw</summary>
 
-<img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original">
 
 This happens when youre using an older version of klipper. If you for whatever reason cannot update to the latest version of klipper, you need to **REMOVE** the following sections from <mark style="color:yellow;">**printer.cfg**</mark> completely.
 

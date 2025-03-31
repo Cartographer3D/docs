@@ -1,5 +1,13 @@
 # Wiring Diagrams
 
+***
+
+{% hint style="danger" %}
+Currently Carto is not compatible with the current version of AFC-Lite, from our expereince it will fry Cartographers mux chips as from our testing, it seems to spike to 24v on boot, this goes way above our recommended voltage of 5v or maximum of 6.2v. &#x20;
+
+![](../../../.gitbook/assets/image.png)
+{% endhint %}
+
 Below are some wiring diagrams for some common CAN boards used with Klipper. Currently we only recommend BigTreeTech boards if you are a novice user.&#x20;
 
 We will expand out the wiring diagrams as time goes on and more boards are released.
