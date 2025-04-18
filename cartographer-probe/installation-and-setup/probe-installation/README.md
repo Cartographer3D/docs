@@ -7,7 +7,7 @@ If you bought a Flat Pack and need to assemble your probe, please visit [assembl
 {% hint style="danger" %}
 ## AFC Lite
 
-We observed that some AFC-Lite Boards (Box Turtle controller) can output 24 Volt on CAN L/H lines (Carto runs at  5 Volts) for unknown reason. Therefor we dont recommend running both on the same CAN network as there is a chance of frying your Cartographer. \
+We observed that some AFC-Lite Boards (Box Turtle controller) can for unknown reason damage your Cartographer. Therefor we dont recommend running both on the same CAN network as there is a chance of frying your Cartographer. \
 \
 **Running either over USB is fine.** \
 \

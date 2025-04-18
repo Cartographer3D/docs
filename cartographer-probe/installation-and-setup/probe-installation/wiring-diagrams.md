@@ -5,9 +5,11 @@
 {% hint style="danger" %}
 ## Cartographer Probes and AFC Lite MMU boards
 
-Currently Carto is not compatible with the current version of AFC-Lite, from our expereince it will fry Cartographers mux chips as from our testing, it seems to spike to 24v on boot, this goes way above our recommended voltage of 5v or maximum of 6.2v. &#x20;
-
-![](../../../.gitbook/assets/image.png)
+We observed that some AFC-Lite Boards (Box Turtle controller) can for unknown reason damage your Cartographer. Therefor we dont recommend running both on the same CAN network as there is a chance of frying your Cartographer. \
+\
+**Running either over USB is fine.** \
+\
+Its possible that your AFC-Lite is not affected and that there are other environmental variables at play.
 {% endhint %}
 
 Below are some wiring diagrams for some common CAN boards used with Klipper. Currently we only recommend BigTreeTech boards if you are a novice user.&#x20;
