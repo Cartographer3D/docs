@@ -108,7 +108,7 @@ cd ~/cartographer-klipper/firmware/v2-v3/combined-firmware
 4. run the following command replacing firmware.bin and the memory address with the correct address for the firmware that you are using.&#x20;
 
 ```
-st-flash write firmware.bin 0x080000000
+st-flash write firmware.bin 0x08000000
 ```
 
 For example to flash the Survey CAN firmware&#x20;
