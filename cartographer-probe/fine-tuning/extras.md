@@ -21,16 +21,16 @@ This will pass which bed type your using to use in the modified PRINT\_START mac
 ```gcode
 {% raw %}
 {% if params.BED_TYPE == "Cool Plate" %}
-  SET_GCODE_ADJUST Z_ADJUST=0.00
+  SET_GCODE_OFFSET Z_ADJUST=0.00
 {% endif %}
 {% if params.BED_TYPE == "Engineering Plate" %}
-  SET_GCODE_ADJUST Z_ADJUST=0.00
+  SET_GCODE_OFFSET Z_ADJUST=0.00
 {% endif %}
 {% if params.BED_TYPE == "High Temp Plate" %}
-  SET_GCODE_ADJUST Z_ADJUST=0.00
+  SET_GCODE_OFFSET Z_ADJUST=0.00
 {% endif %}
 {% if params.BED_TYPE == "Textured PEI Plate" %}
-  SET_GCODE_ADJUST Z_ADJUST=0.00
+  SET_GCODE_OFFSET Z_ADJUST=0.00
 {% endif %}
 {% endraw %}
 ```
