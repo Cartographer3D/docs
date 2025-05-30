@@ -87,7 +87,9 @@ ls /dev/serial/by-id/
 
 For CAN based probes
 
-Note - if you order a CAN Probe it will have it's baud rate set at 1,000,000. Make sure your system matches that.&#x20;
+{% hint style="info" %}
+If you order a CAN Probe it will have it's baud rate set at 1,000,000. Make sure your system matches that.&#x20;
+{% endhint %}
 
 ```bash
 ~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
