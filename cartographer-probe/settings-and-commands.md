@@ -401,7 +401,7 @@ These shouldn't be needed to changed, however they are available.
   * Default: 3
   * Constraint: min 1
 * **scanner\_touch\_tolerance**
-  * Default: 0.008
+  * Default: 0.01
   * Constraint: above 0.0
 * **scanner\_touch\_max\_retries**
   * Default: 10
