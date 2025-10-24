@@ -49,8 +49,7 @@ The following is a modified version of [Jontek2's Better Print Start Macro](http
 [gcode_macro PRINT_START]
 gcode:
   # This part fetches data from your slicer. Such as bed, extruder, and chamber temps and size of your printer.
-  {% raw %}
-{% set target_bed = params.BED|int %}
+  {% set target_bed = params.BED|int %}
   {% set target_extruder = params.EXTRUDER|int %}
   {% set target_chamber = params.CHAMBER|default("45")|int %}
   {% set x_wait = printer.toolhead.axis_maximum.x|float / 2 %}
@@ -89,7 +88,6 @@ gcode:
     SET_DISPLAY_TEXT MSG="Soak for 5 min"               # Display info on display
     G4 P300000                                          # Wait 5 min for the bedtemp to stabilize
   {% endif %}
-{% endraw %}
 
   # Heat hotend to 150c. This helps with getting a correct Z-home.
   SET_DISPLAY_TEXT MSG="Hotend: 150c"                   # Display info on display

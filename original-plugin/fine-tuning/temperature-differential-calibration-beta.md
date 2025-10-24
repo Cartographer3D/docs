@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Temperature Differential Calibration
 
 
@@ -47,12 +33,10 @@ M140 S95 = 95oC&#x20;
 ```gcode
 [gcode_macro DATA_SAMPLE]
 gcode:
-  {% raw %}
-{% set bed_temp = params.BED_TEMP|default(90)|int %}
+  {% set bed_temp = params.BED_TEMP|default(90)|int %}
   {% set nozzle_temp = params.NOZZLE_TEMP|default(250)|int %}
   {% set min_temp = params.MIN_TEMP|default(40)|int %}
   {% set max_temp = params.MAX_TEMP|default(70)|int %}
-{% endraw %}
   G90
   M106 S255
   RESPOND TYPE=command MSG='Waiting for Coil to cool to 40'

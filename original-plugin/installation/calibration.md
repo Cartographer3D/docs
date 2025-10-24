@@ -49,7 +49,7 @@ G0 X125 Y125
 {% hint style="warning" %}
 At this point,  you might note that your Endstop Z is TRIGGERED, this is normal, and will be resolved once you run the next command.
 
-![](<../../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
 {% endhint %}
 
 Start the calibration process:
@@ -176,7 +176,7 @@ Initiate a threshold scan. This will determine your threshold for cartographer. 
 Start by doing the generic scan
 
 {% hint style="info" %}
-[ Visit here for an explanation of `CARTOGRAPHER_THRESHOLD_SCAN`](../../settings-and-commands.md#cartographer_threshold_scan)
+[ Visit here for an explanation of `CARTOGRAPHER_THRESHOLD_SCAN`](../settings-and-commands.md#cartographer_threshold_scan)
 {% endhint %}
 
 {% hint style="warning" %}

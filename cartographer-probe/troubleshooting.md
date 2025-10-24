@@ -10,7 +10,7 @@ If you do think that something is missing, please let us know and I will add it 
 
 Seeing the error above? This error shows yours cartographer is flashed with Survey 5.0 firmware however your printer.cfg/klipper is currently configured for firmware earlier than 5.0.\
 \
-Remove or comment out your \[cartographer] sections, taking note of the offsets and then continue with [the guide here.](installation-and-setup/installation/klipper-configuation.md)
+Remove or comment out your \[cartographer] sections, taking note of the offsets and then continue with [the guide here.](../original-plugin/installation/klipper-configuation.md)
 
 ## General Troubleshooting
 
@@ -320,7 +320,7 @@ accel_chip: lis2dw
 
 <summary>Option 'X' is not valid in section 'scanner'</summary>
 
-You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your <mark style="color:yellow;">**printer.cfg**</mark> or check its written correctly. You can see [valid parameters here](settings-and-commands.md#available-parameters)
+You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your <mark style="color:yellow;">**printer.cfg**</mark> or check its written correctly. You can see [valid parameters here](../original-plugin/settings-and-commands.md#available-parameters)
 
 </details>
 

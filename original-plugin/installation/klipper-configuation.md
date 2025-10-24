@@ -13,7 +13,7 @@ We **DO NOT** 100% guarantee TOUCH compatibility with ALL printers. It is your r
 {% hint style="info" %}
 If you're changing from classic to touch, make sure you remove or comment out \[cartographer] sections from your existing klipper configuration files.\
 \
-[A note about this can be found here.](../../troubleshooting.md#command-mismatch)
+[A note about this can be found here.](../../cartographer-probe/troubleshooting.md#command-mismatch)
 {% endhint %}
 
 For Cartographer to receive usable readings for touch to be accurate, you **MUST** place cartographer between <mark style="color:red;">**2.6 and 3mm ABOVE**</mark> the nozzle. Print or put something 2.5-2.6mm but no more than 3mm in height under or next to the cartographer coil to measure where it needs to be.

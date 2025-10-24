@@ -94,7 +94,7 @@ cd ~/cartographer-klipper
 ./install.sh
 ```
 
-2. Update your firmware to 5.0.0 or higher, using one of the [firmware updating guides found here](../../firmware/firmware-updating/)
+2. Update your firmware to 5.0.0 or higher, using one of the [firmware updating guides found here](../../cartographer-probe/firmware/firmware-updating/)
 3. Restart klipper by entering the following code via SSH
 
 ```bash
@@ -103,5 +103,5 @@ sudo service klipper restart
 
 ## All done!
 
-## Now just follow either the [TOUCH](calibration.md) or [SCAN ](../../archive/scan-based-calibration.md)guides on re-calibrating.
+## Now just follow either the [TOUCH](calibration.md) or [SCAN ](../../cartographer-probe/archive/scan-based-calibration.md)guides on re-calibrating.
 

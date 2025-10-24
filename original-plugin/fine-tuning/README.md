@@ -1,18 +1,4 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
-# 📐 Fine Tuning
+# 📐 Fine Tuning (Old Plugin)
 
 This section covers three different methods for calibrating or fine tuning your printer with Cartographer - SCAN MODE.&#x20;
 

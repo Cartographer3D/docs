@@ -19,7 +19,6 @@ This will pass which bed type your using to use in the modified PRINT\_START mac
 <mark style="color:red;">THE FOLLOWING GOES LAST IN YOUR PRINT\_START MACRO</mark>
 
 ```gcode
-{% raw %}
 {% if params.BED_TYPE == "Cool Plate" %}
   SET_GCODE_OFFSET Z_ADJUST=0.00
 {% endif %}
@@ -32,7 +31,6 @@ This will pass which bed type your using to use in the modified PRINT\_START mac
 {% if params.BED_TYPE == "Textured PEI Plate" %}
   SET_GCODE_OFFSET Z_ADJUST=0.00
 {% endif %}
-{% endraw %}
 ```
 
 </details>

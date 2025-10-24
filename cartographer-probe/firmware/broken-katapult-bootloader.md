@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Broken Katapult Bootloader
 
 There are some Cartographer V3 ADXL probes that were shipped with a broken version of katapult. Unfortunately this means that when you go to update firmware via Katapult, the device wont be able to enter katapult mode for flashing.\

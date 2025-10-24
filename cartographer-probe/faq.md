@@ -30,7 +30,7 @@ In your `[scanner]` section add `mesh_main_direction: x` to your <mark style="co
 
 ### What do I need to add or change in my print start macro?
 
-See [Print Start Macro](installation-and-setup/installation/print-start-macro.md). But bascially, you just need to make sure your nozzle is no hotter than <mark style="color:red;">**maximum 150c**</mark> and then do a `CARTOGRAPHER_TOUCH` after you do a `BED_MESH_CALIBRATE`
+See [Print Start Macro](../original-plugin/installation/print-start-macro.md). But bascially, you just need to make sure your nozzle is no hotter than <mark style="color:red;">**maximum 150c**</mark> and then do a `CARTOGRAPHER_TOUCH` after you do a `BED_MESH_CALIBRATE`
 
 ### Does touch work with glass or garolite beds?
 
