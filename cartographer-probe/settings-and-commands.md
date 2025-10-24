@@ -1,4 +1,4 @@
-# ⚙️ Settings & Commands
+# ⚙️ Settings & Commands (Old Plugin)
 
 <mark style="color:purple;">Last Updated: December 7th 2024</mark>
 

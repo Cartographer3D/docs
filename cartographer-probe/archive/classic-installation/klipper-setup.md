@@ -98,8 +98,8 @@ Since late August, most probes shipping from directly from Cartographer3D, and a
 
 If your box or antistatic bag states "Survey Touch Ready", please go here
 
-{% content-ref url="../../../original-plugin/installation/klipper-configuation.md" %}
-[klipper-configuation.md](../../../original-plugin/installation/klipper-configuation.md)
+{% content-ref url="../../installation-and-setup/installation/klipper-configuation.md" %}
+[klipper-configuation.md](../../installation-and-setup/installation/klipper-configuation.md)
 {% endcontent-ref %}
 
 If it doesnt, don't worry. You can update your probe using our flashing tool. If you want to configure it as is,  please go to the next page.

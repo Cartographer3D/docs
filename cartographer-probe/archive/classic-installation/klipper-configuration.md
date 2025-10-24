@@ -5,7 +5,7 @@ description: Klipper Configuration for Classic Mode
 # Klipper Configuration
 
 {% hint style="info" %}
-[If you want to use Survey Touch, our contact probing solution go here](../../../original-plugin/installation/klipper-configuation.md)
+[If you want to use Survey Touch, our contact probing solution go here](../../installation-and-setup/installation/klipper-configuation.md)
 {% endhint %}
 
 ## Config File (Firmwares 4.0.1 or earlier)
