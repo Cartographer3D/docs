@@ -5,7 +5,7 @@ icon: temperature-low
 # Coil Temperature Offset Calibration
 
 {% hint style="info" %}
-This calibration is not necessary when using [Broken link](broken-reference "mention")
+This calibration is not necessary when using [touch.md](touch.md "mention")
 {% endhint %}
 
 This calibration aims to optimize the temperature compensation parameters and reduce the temperature drift of the coil.
