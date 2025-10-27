@@ -13,7 +13,22 @@ This requires Scan Calibration AND Touch Calibration&#x20;
 
 
 
-We can automate axis twist compensation calibration using touch to get the nozzle offset. Simply run `CARTOGRAPHER_AXIS_TWIST_COMPENSATION` and let Cartographer do the rest. Remember to run `SAVE_CONFIG` to persist the change.Change hint typeYou can pass an axis to compensate along both axes, using `AXIS=Y`.Change hint typeIf your axis twist is dependent on chamber temperature, you can run `CARTOGRAPHER_AXIS_TWIST_COMPENSATION` as part of your start print macro. Just remember to run it _after_ leveling your bed and _before_ bed mesh calibrate.
+We can automate axis twist compensation calibration using touch to get the nozzle offset. Simply run `CARTOGRAPHER_AXIS_TWIST_COMPENSATION` and let Cartographer do the rest. Remember to run `SAVE_CONFIG` to persist the change.
+
+You MUST ensure that your Twist Axis is within your probe boundaries.\
+
+
+{% hint style="success" %}
+You can pass an axis to compensate along both axes, using `AXIS=Y`.
+{% endhint %}
+
+{% hint style="success" %}
+If your axis twist is dependent on chamber temperature, you can run `CARTOGRAPHER_AXIS_TWIST_COMPENSATION` as part of your start print macro. \
+\
+Just remember to run it _after_ leveling your bed and _before_ bed mesh calibrate.
+{% endhint %}
+
+
 
 **Unknown command "CARTOGRAPHER\_AXIS\_TWIST\_COMPENSATION"**
 

@@ -51,7 +51,7 @@ homing_retract_dist: 0
 # Remove either the serial or canbus_uuid line dependant on your setup.
 serial: <blank>
 canbus_uuid: <blank>
-restart_method: command
+restart_method: command # Not needed for probes using CAN. 
 
 [cartographer]
 mcu: cartographer
