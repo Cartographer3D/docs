@@ -29,8 +29,8 @@ If you do not have your UUID. Visit [HERE](../../../archive/classic-installation
 ## Step 2. SSH into Device & Run Script
 
 ```bash
-git clone https://github.com/Cartographer3D/cartographer_firmware.git
-~/cartographer_firmware/scripts/firmware.py -f can
+git clone https://github.com/Cartographer3D/cartographer-klipper.git
+~/cartographer-klipper/scripts/firmware.py -f can
 ```
 
 ## Step 3. Select Katapult - Can Menu

@@ -59,8 +59,8 @@ Via SSH, use the command `lsusb` to determine whether the device is in **DFU Mod
 <figure><img src="https://github.com/user-attachments/assets/5996588d-1049-458f-8aa4-82894c26168f" alt=""><figcaption><p>lsusb should look like this if DFU mode is found.</p></figcaption></figure>
 
 ```bash
-git clone https://github.com/Cartographer3D/cartographer_firmware.git
-~/cartographer_firmware/scripts/firmware.py -f dfu
+git clone https://github.com/Cartographer3D/cartographer-klipper.git
+~/cartographer-klipper/scripts/firmware.py -f dfu
 ```
 
 ![Screen #1](../../../.gitbook/assets/main-menu-basic.png)

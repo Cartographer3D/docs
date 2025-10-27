@@ -12,9 +12,8 @@ Are you running CANBUS at a different bitrate? If you arent using the default 1M
 
 ```bash
 cd ~
-git clone https://github.com/Cartographer3D/cartographer_firmware.git
-cd ~/cartographer_firmware/scripts
-./firmware.py -f can -k
+git clone https://github.com/Cartographer3D/cartographer-klipper.git
+~/cartographer-klipper/scripts/firmware.py -f can -k
 ```
 
 <figure><img src="../../.gitbook/assets/can-menu.png" alt="" width="557"><figcaption></figcaption></figure>
