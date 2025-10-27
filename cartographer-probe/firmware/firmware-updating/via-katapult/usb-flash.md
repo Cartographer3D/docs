@@ -23,6 +23,7 @@ Using the scripts below, you may need to use the **Install Prerequisites** optio
 ## Step 2. SSH into Device & Run Script
 
 ```bash
+cd ~
 git clone https://github.com/Cartographer3D/cartographer-klipper.git
 ~/cartographer-klipper/scripts/firmware.py -f usb
 ```

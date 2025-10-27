@@ -29,6 +29,7 @@ If you do not have your UUID. Visit [HERE](../../../archive/classic-installation
 ## Step 2. SSH into Device & Run Script
 
 ```bash
+cd ~
 git clone https://github.com/Cartographer3D/cartographer-klipper.git
 ~/cartographer-klipper/scripts/firmware.py -f can
 ```
