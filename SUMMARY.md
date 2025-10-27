@@ -29,7 +29,6 @@
     * [Reference](cartographer-probe/features/reference/reference.md)
     * [Macros](cartographer-probe/features/reference/macros.md)
 * [♻️ Firmware](cartographer-probe/firmware/README.md)
-  * [Broken Katapult Bootloader](cartographer-probe/firmware/broken-katapult-bootloader.md)
   * [CANBUS Bitrate Switching](cartographer-probe/firmware/canbus-bitrate-switching.md)
   * [Firmware Switching](cartographer-probe/firmware/firmware-switching/README.md)
     * [CANBUS to USB](cartographer-probe/firmware/firmware-switching/canbus-to-usb.md)
@@ -73,6 +72,7 @@
     * [Klipper Configuration](cartographer-probe/archive/classic-installation/klipper-configuration.md)
     * [Calibration](cartographer-probe/archive/classic-installation/calibration.md)
   * [Scan Based Calibration](cartographer-probe/archive/scan-based-calibration.md)
+  * [Broken Katapult Bootloader](cartographer-probe/archive/broken-katapult-bootloader.md)
 
 ## 🚠 Cartographer CNC Mount
 

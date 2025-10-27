@@ -11,7 +11,8 @@ Looking at using Cartographer via USB instead of CANBUS? Follow the steps below 
 ## Step 2. SSH Into Your Host Device & Run The Script
 
 ```bash
-~/cartographer-klipper/scripts/firmware.py -f can -t
+git clone https://github.com/Cartographer3D/cartographer_firmware.git
+~/cartographer_firmware/scripts/firmware.py -f can -t
 ```
 
 <figure><img src="../../../.gitbook/assets/can-menu.png" alt="" width="557"><figcaption></figcaption></figure>

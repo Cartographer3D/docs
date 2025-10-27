@@ -11,7 +11,9 @@ Are you running CANBUS at a different bitrate? If you arent using the default 1M
 ## Step 2. SSH Into Your Host Device & Run The Script
 
 ```bash
-cd ~/cartographer-klipper/scripts
+cd ~
+git clone https://github.com/Cartographer3D/cartographer_firmware.git
+cd ~/cartographer_firmware/scripts
 ./firmware.py -f can -k
 ```
 
