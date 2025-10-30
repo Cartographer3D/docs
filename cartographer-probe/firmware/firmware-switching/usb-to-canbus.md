@@ -12,7 +12,11 @@ Looking at using Cartographer via CANBUS instead of USB? Follow the steps below 
 
 ```bash
 cd ~
-git clone https://github.com/Cartographer3D/cartographer-klipper.git
+if [ -d ~/cartographer-klipper/ ]; then
+    echo "Directory Exists - Starting Firmware Script"
+else
+    git clone https://github.com/Cartographer3D/cartographer-klipper.git
+fi
 ~/cartographer-klipper/scripts/firmware.py -f usb -t
 ```
 

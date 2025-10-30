@@ -24,7 +24,11 @@ Using the scripts below, you may need to use the **Install Prerequisites** optio
 
 ```bash
 cd ~
-git clone https://github.com/Cartographer3D/cartographer-klipper.git
+if [ -d ~/cartographer-klipper/ ]; then
+    echo "Directory Exists - Starting Firmware Script"
+else
+    git clone https://github.com/Cartographer3D/cartographer-klipper.git
+fi
 ~/cartographer-klipper/scripts/firmware.py -f usb
 ```
 
