@@ -1,6 +1,6 @@
 # Software Configuration
 
-The following plugin requires **Kalico or Klipper version 0.13 or later**.
+The following plugin requires **Klipper version 0.13 and later or Kalico** .
 
 It is recommended that you run this on a **Raspberry Pi** or a similar device with an **up-to-date operating system**.
 
