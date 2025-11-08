@@ -11,7 +11,7 @@ This means when doing a bed mesh or bed leveling macro, it will still scan along
 This will **ONLY** occur during the following commands:
 
 * `CARTOGRAPHER_CALIBRATE` (not METHOD=manual)
-* `CARTOGRAPHER_TOUCH`
+* `CARTOGRAPHER_TOUCH_HOME`
 * `CARTOGRAPHER_THRESHOLD_SCAN`
 
 It will <mark style="color:red;">**NOT**</mark> touch the bed and will instead use **SCAN** mode for:
