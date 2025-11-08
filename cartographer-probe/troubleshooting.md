@@ -20,9 +20,9 @@ Remove or comment out your \[cartographer] sections, taking note of the offsets 
 
 <details>
 
-<summary>I'm getting weird errors after updating my scanner.py, what do I do?</summary>
+<summary>I'm getting weird errors after updating my cartographer.py, what do I do?</summary>
 
-Firstly make sure you have hit the **RESTART KLIPPER** button in your Fluid/Mainsail UI, this will force the refresh of scanner.py to the updated version.
+Firstly make sure you have hit the **RESTART KLIPPER** button in your Fluid/Mainsail UI, this will force the refresh of cartographer.py to the updated version.
 
 <img src="../.gitbook/assets/Screenshot 2024-08-21 210954.png" alt="Always RESTART KLIPPER after an update." data-size="original">
 
@@ -47,16 +47,14 @@ Also try turning off or disabling the <mark style="color:red;">**crowsnest**</ma
 This can occur either after a Klipper update when the sym link occasionally gets broken, or if you have not installed the Klipper component during the install, either way the fix is the same, just re-run the installer below.
 
 ```
-cd ~
-git clone https://github.com/Cartographer3D/cartographer-klipper.git
-./cartographer-klipper/install.sh
+curl -s -L https://raw.githubusercontent.com/Cartographer3D/cartographer3d-plugin/refs/heads/main/scripts/install.sh | bash -s -- --klipper ~/klipper --klippy-env ~/klippy-env
 ```
 
 </details>
 
 <details>
 
-<summary>Unknown pin chip name 'scanner'</summary>
+<summary>Unknown pin chip name 'cartographer'</summary>
 
 ![](<../.gitbook/assets/image (1).png>)\
 \
@@ -65,7 +63,7 @@ The following two issues are usually why you recieve the above error.
 1. You are referencing cartographer/scanner before you have declared it in your config file. It is advisable to add the cartographer/scanner section just below where you declare your MCU's.
 2. You have referenced cartographer with a capitilisation `[Scanner]` vs `[scanner]` or `cs_pin: Scanner:PA3` vs `cs_pin: scanner:PA3`
 
-This can happen when the symlink between klipper and scanner is broken. You can check your symlinks with the following command.
+This can happen when the symlink between klipper and cartographer is broken. You can check your symlinks with the following command.
 
 ```bash
 find  ~/klipper/klippy/extras/  -maxdepth 1 -type l -ls
@@ -74,8 +72,7 @@ find  ~/klipper/klippy/extras/  -maxdepth 1 -type l -ls
 If they dont look right, or youre unsure, run the following
 
 ```bash
-cd ~/cartographer-klipper
-./install.sh
+curl -s -L https://raw.githubusercontent.com/Cartographer3D/cartographer3d-plugin/refs/heads/main/scripts/install.sh | bash -s -- --klipper ~/klipper --klippy-env ~/klippy-env
 ```
 
 And then check your symlinks again. You should see scanner.py pointed to the cartographer-klipper folder.
@@ -88,13 +85,13 @@ And then check your symlinks again. You should see scanner.py pointed to the car
 
 [![](https://github.com/Cartographer3D/docs/raw/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(2\)%20\(1\)%20\(1\)%20\(1\).png)](https://github.com/Cartographer3D/docs/blob/8279e4591b99ae0647cad467be2561b1ce6df0a5/.gitbook/assets/image%20\(2\)%20\(1\)%20\(1\)%20\(1\).png)
 
-This error usually happens when you have your `[scanner]` section below your `[stepper_z]` section, move the `[scanner]` section near your MCU's.
+This error usually happens when you have your `[cartographer]` section below your `[stepper_z]` section, move the `[cartographer]` section near your MCU's.
 
 </details>
 
 <details>
 
-<summary>mcu 'scanner': Unknown command: endstop_home</summary>
+<summary>mcu 'cartographer': Unknown command: endstop_home</summary>
 
 In `[stepper_z]` you have set `endstop_pin: scanner:z_virtual_endstop` this should be `endstop_pin: probe:z_virtual_endstop`
 
@@ -150,33 +147,9 @@ You do not have a valid \[bed\_mesh] section in your printer.cfg, please check o
 
 <details>
 
-<summary>'Scanner' object has no attribute 'touch_location'</summary>
-
-Make sure you have a \`zero\_reference\_position: 125, 125\`  set under \[bed\_mesh], adjusting values for centre of your bed with X Y
-
-</details>
-
-<details>
-
-<summary><code>CARTOGRAPHER_THRESHOLD_SCAN</code>does nothing</summary>
-
-You're in scan mode. Do a `PROBE_SWITCH MODE=touch` then SAVE\_CONFIG. You may need to create a touch model if you dont already have one.
-
-</details>
-
-<details>
-
-<summary><code>CARTOGRAPHER_TOUCH</code> does nothing</summary>
-
-You're in scan mode. Do a `PROBE_SWITCH MODE=touch` then SAVE\_CONFIG. You may need to create a touch model if you dont already have one.
-
-</details>
-
-<details>
-
 <summary>Scanner model 'default' was created for <code>x</code> error</summary>
 
-Your scanner model doesnt match your current mode. Please recalibrate so that youre new model will match.
+Your cartographer model doesnt match your current mode. Please recalibrate so that youre new model will match.
 
 </details>
 
@@ -298,50 +271,5 @@ The cartographer probe sends quite a bit of data to the MCU during a scan. If th
 If all else fails, you could consider upgrading to a more powerful SBC.
 
 [https://canbus.esoterical.online/troubleshooting/timeout\_during\_homing\_probing.html#experimental](https://canbus.esoterical.online/troubleshooting/timeout_during_homing_probing.html#experimental)
-
-</details>
-
-<details>
-
-<summary>Mcu 'scanner': command format mismatch: query_lis2dw</summary>
-
-<img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original">
-
-This happens when youre using an older version of klipper. If you for whatever reason cannot update to the latest version of klipper, you need to **REMOVE** the following sections from <mark style="color:yellow;">**printer.cfg**</mark> completely.
-
-```yaml
-[lis2dw]
-cs_pin
-spi_bus:
-
-[resonance_tester]
-accel_chip: lis2dw
-```
-
-</details>
-
-<details>
-
-<summary>Option 'X' is not valid in section 'scanner'</summary>
-
-You have a parameter within your `[scanner]` section in printer.cfg that isnt valid. Remove X from your <mark style="color:yellow;">**printer.cfg**</mark> or check its written correctly. You can see [valid parameters here](settings-and-commands.md#available-parameters)
-
-</details>
-
-<details>
-
-<summary>SAVE_CONFIG section 'scanner' option 'scanner_touch_z_offset' conflicts with included value</summary>
-
-<img src="../.gitbook/assets/image (6) (1).png" alt="" data-size="original">
-
-A common cause for this is having you `[scanner]` section in an included config file and not in <mark style="color:yellow;">**printer.cfg**</mark>.\
-\
-To work around this klipper limitation, remove `scanner_touch_z_offset` from your included config and add it to <mark style="color:yellow;">**printer.cfg**</mark>.\
-\
-Below is an example of what to have in <mark style="color:yellow;">**printer.cfg**</mark>.\
-\
-This will allow klipper to save new offsets using the UI.
-
-<img src="../.gitbook/assets/image (2) (1) (1).png" alt="" data-size="original">
 
 </details>
