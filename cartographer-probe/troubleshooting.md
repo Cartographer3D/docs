@@ -4,10 +4,6 @@ This list is NOT exhaustive, if you need support don't be a stranger and please 
 \
 If you do think that something is missing, please let us know and I will add it as soon as I can.
 
-{% hint style="danger" %}
-NOTE  - THIS PAGE IS CURRENTLY OUT OF DATE FOR THE NEW PLUGIN - THIS WILL BE UPDATED ASAP.&#x20;
-{% endhint %}
-
 ### Command Mismatch
 
 <figure><img src="../.gitbook/assets/image (64).png" alt="" width="375"><figcaption></figcaption></figure>

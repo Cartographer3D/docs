@@ -24,12 +24,14 @@ Using the scripts below, you may need to use the **Install Prerequisites** optio
 
 ```bash
 cd ~
-if [ -d ~/cartographer-klipper/ ]; then
+if [ -d ~/cartographer_firmware/ ]; then
     echo "Directory Exists - Starting Firmware Script"
+    cd ~/cartographer_firmware/
+    git pull
 else
-    git clone https://github.com/Cartographer3D/cartographer-klipper.git
+    git clone https://github.com/Cartographer3D/cartographer_firmware.git
 fi
-~/cartographer-klipper/scripts/firmware.py -f usb
+~/cartographer_firmware/scripts/firmware.py
 ```
 
 ## Step 3. Select Katapult - USB Menu
