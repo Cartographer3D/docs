@@ -4,11 +4,21 @@ description: Quick overview of the steps needed to setup the Cartographer3D Klip
 
 # Klipper Setup
 
+{% hint style="danger" %}
+If you are updating to the NEW Cartographer plugin, then it is necessary to remove parts of your old config to avoid Klipper errors.
+{% endhint %}
+
+It is necessary to remove all instances of \[scanner] from your printer.cfg, this INCLUDES any from the SAVE\_CONFIG section at the bottom of the printer.cfg. Once you have done this save the file and you will return to the file directory.
+
+Now open the moonraker.conf file, here you want to remove the old Cartographer Plugin update section, you added when you installed the old plugin.
+
+Once you save and restart you will get a Klipper error for Unkown Pin Probe, this is normal and you can proceed to installation of the Klipper plugin below.
+
 ## Installation Klipper plugin
 
 A script has been made to simplify the process of installing the plugin.
 
-The defaults assumes that klipper is in `~/klipper` and the klippy venv is in `~/klippy-env`.\
+The defaults assumes that klipper is in `~/klipper` and the klippy-env is in `~/klippy-env`.\
 This should be standard on [KIAUH](https://github.com/dw-0/kiauh) and [MainsailOS](https://docs-os.mainsail.xyz/).
 
 Run this command to install, customizing the paths if needed.
