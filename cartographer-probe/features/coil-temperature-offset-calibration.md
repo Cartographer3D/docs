@@ -34,6 +34,12 @@ Home your printer using `G28` then start the macro by executing the below, chang
 CARTOGRAPHER_TEMPERATURE_CALIBRATE MIN_TEMP=40 MAX_TEMP=<60|70> BED_TEMP=<90|110> Z_SPEED=5
 ```
 
+For example the above command with a max coil temp of 70°c & a bed temp of 110°C would be formatted like the below example and used to execute the calibration.
+
+```
+CARTOGRAPHER_TEMPERATURE_CALIBRATE MIN_TEMP=40 MAX_TEMP=70 BED_TEMP=110 Z_SPEED=5
+```
+
 Wait for the calibration to complete. It will inform you that calibration is complete and that you should `SAVE_CONFIG` to save the model to your config.
 
 {% hint style="info" %}
