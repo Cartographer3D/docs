@@ -26,7 +26,7 @@
   * [Axis Twist Compensation](cartographer-probe/features/axis-twist-compensation.md)
   * [Coil Temperature Offset Calibration](cartographer-probe/features/coil-temperature-offset-calibration.md)
   * Reference
-    * [Reference](cartographer-probe/features/reference/reference.md)
+    * [Configuration Reference](cartographer-probe/features/reference/configuration-reference.md)
     * [Macros](cartographer-probe/features/reference/macros.md)
 * [♻️ Firmware](cartographer-probe/firmware/README.md)
   * [CANBUS Bitrate Switching](cartographer-probe/firmware/canbus-bitrate-switching.md)

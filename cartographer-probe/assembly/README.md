@@ -8,14 +8,12 @@ There are a few different assembly options for the Cartographer probe, if you pu
 
 If you are assembling in any other way, please take note of the following:
 
-*   The bumps for the Thermistor and Capacitor on your coil board must face down towards your printers bed.  \
-
+*   The bumps for the Thermistor and Capacitor on your coil board must face down towards your printers bed.  <br>
 
     <figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>This shows the BOTTOM of the coil board, with the visable bumps that should be facing the bed during installation.</p></figcaption></figure>
 
 
-*   The MCU and coil board have a polarity, the white boxes on the silk screen should align up together, Note the image below and the orientation shown. \
-
+*   The MCU and coil board have a polarity, the white boxes on the silk screen should align up together, Note the image below and the orientation shown. <br>
 
     <figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>Top Picture</strong> - Note the White Boxes for reference<br><strong>Bottom Left</strong> - Correct Orentation of MCU board and coil board<br><strong>Bottom Right</strong> - Flipped Correct view of MCU board and coil board </p></figcaption></figure>
 

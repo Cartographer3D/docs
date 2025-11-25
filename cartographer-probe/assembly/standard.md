@@ -24,8 +24,7 @@ Install the Coilboard with the bumps facing down into the indents made for them,
 
 ### Step 3 - MCU Placement&#x20;
 
-Place the MCU on the bridge, making sure it is flat fits tightly. The main components such as t he MCU, resistors, capacitors and LDO are facing up. \
-
+Place the MCU on the bridge, making sure it is flat fits tightly. The main components such as t he MCU, resistors, capacitors and LDO are facing up. <br>
 
 {% hint style="danger" %}
 At this point check your orientations match the photo below, the MCU and the Coilboard MUST have the correct polarity

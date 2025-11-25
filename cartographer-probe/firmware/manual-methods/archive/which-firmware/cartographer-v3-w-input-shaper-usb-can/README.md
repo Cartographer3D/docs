@@ -29,8 +29,7 @@ To navigate to these on your Pi, they are located in the following directory - \
 
 ### Cartographer Firmware
 
-The following firmware files must be flashed at 0x08002000 if using DFU mode, or written directly via Katapult. These will not work without a Bootloader. \
-
+The following firmware files must be flashed at 0x08002000 if using DFU mode, or written directly via Katapult. These will not work without a Bootloader. <br>
 
 To navigate to these on your Pi, they are located in the following directory - \
 \
