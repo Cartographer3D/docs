@@ -45,8 +45,3 @@ Wait for the calibration to complete. It will inform you that calibration is com
 {% hint style="info" %}
 If you changed your `hotend_fan` configuration, remember to revert this _after_ saving the calibration!
 {% endhint %}
-
-{% hint style="info" %}
-It would be amazing if you can grab the raw data files that are written during the calibration sequence and upload them to the dedicated Discord channel [https://discord.com/channels/1165274913624572014/1421909399286448350](https://discord.com/channels/1165274913624572014/1421909399286448350)\
-This will help us gather data and improve further calibrations and features!
-{% endhint %}

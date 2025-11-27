@@ -19,13 +19,13 @@
     * [Z Offset](cartographer-probe/installation-and-setup/software-configuration/z-offset.md)
   * [Creality K1 & K1 Max Specific](cartographer-probe/installation-and-setup/creality-k1-and-k1-max-specific.md)
   * [Qidi Specific Installation Instructions](cartographer-probe/installation-and-setup/qidi-specific-installation-instructions.md)
-* Features
+* [Features](cartographer-probe/features/README.md)
   * [Scanning](cartographer-probe/features/scanning.md)
   * [Touch](cartographer-probe/features/touch.md)
   * [Z Backlash Estimation](cartographer-probe/features/z-backlash-estimation.md)
   * [Axis Twist Compensation](cartographer-probe/features/axis-twist-compensation.md)
   * [Coil Temperature Offset Calibration](cartographer-probe/features/coil-temperature-offset-calibration.md)
-  * Reference
+  * [Reference](cartographer-probe/features/reference/README.md)
     * [Configuration Reference](cartographer-probe/features/reference/configuration-reference.md)
     * [Configuration Macros](cartographer-probe/features/reference/configuration-macros.md)
 * [♻️ Firmware](cartographer-probe/firmware/README.md)
