@@ -4,13 +4,13 @@
 If you are using `CARTOGRAPHER_TOUCH_HOME`, you shouldn't have to care about your scan offset. Everything that scan is used for, is relative to itself and the Z-offset is a constant that is applied to every measurement. Thus it _only_ has an impact, if you start printing without using `CARTOGRAPHER_TOUCH_HOME`.
 {% endhint %}
 
-We implement Klipper's `Z_OFFSET_APPLY_PROBE` , this will apply the offset to the _last_ homed mode. This means if you the last you did was `G28`, it will apply the offset to your scan model. If the last you did was `CARTOGRAPHER_TOUCH_HOME` it will apply to your touch model.
+We implement Klipper's `Z_OFFSET_APPLY_PROBE` , this will apply the offset to the _last_ homed mode used. This means if the last mode you used was `G28`, it will apply the offset to your scan model. If the last mode you used was `CARTOGRAPHER_TOUCH_HOME` it will apply to your touch model.&#x20;
 
 ### Babystep adjusting Z offset
 
 We recommend you follow [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide/articles/first_layer_squish.html).
 
-This is easiest to do through Mainsail or Fluidd. These will show a button to adjust your z offset "live", during a print.
+This is easiest to do through Mainsail or Fluidd. These will show a button to adjust your z offset "live", during a print. You must use the save icon that appears next to the adjustment controls AS WELL as a SAVE\_CONFIG.
 
 Short version is to run the following macros to adjust gcode while printing a bunch of first layer squares, until you achieve the perfect first layer.
 
