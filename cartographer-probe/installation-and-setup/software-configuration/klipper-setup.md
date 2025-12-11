@@ -5,7 +5,7 @@ description: Quick overview of the steps needed to setup the Cartographer3D Klip
 # Klipper Setup
 
 {% hint style="danger" %}
-If you are updating to the NEW Cartographer plugin, then it is necessary to remove parts of your old config to avoid Klipper errors.
+If you are updating to the NEW Cartographer plugin, then it is necessary to remove parts of your old config to avoid Klipper errors. **Therefore it is recommend to back-up your config to reference later.**
 {% endhint %}
 
 It is necessary to remove all instances of \[scanner] from your printer.cfg, this INCLUDES any from the SAVE\_CONFIG section at the bottom of the printer.cfg. Once you have done this save the file and you will return to the file directory.
