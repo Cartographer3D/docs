@@ -1,4 +1,4 @@
-# Reference
+# Configuration Reference
 
 #### General config
 
@@ -46,12 +46,12 @@ y_offset:
 
 ```
 [cartographer touch]
-#samples: 5
+#samples: 3
 #   The number of samples to use when doing a touch.
-#   The default is 5.
+#   The default is 3.
 #max_samples: 10
 #   The maximum number of samples to do before giving up.
-#   The default is samples * 2.
+#   The default is samples * 2, but minimum 10.
 #UNSAFE_max_touch_temperature: 150
 #   The maximum allowed nozzle temperature to use when touching the plate.
 #   This is set to 150C to avoid damaging your plate.
