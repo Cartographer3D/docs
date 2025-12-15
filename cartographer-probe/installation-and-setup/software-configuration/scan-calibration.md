@@ -35,10 +35,6 @@ G28 X Y
 
 This will move your toolhead to the zero reference position and start calibration
 
-{% hint style="info" %}
-If you have already done [touch-calibration.md](touch-calibration.md "mention") you can run `CARTOGRAPHER_TOUCH_HOME` followed by `CARTOGRAPHER_SCAN_CALIBRATE METHOD=touch` instead and skip straight to the end.
-{% endhint %}
-
 <pre><code><strong>CARTOGRAPHER_SCAN_CALIBRATE
 </strong></code></pre>
 {% endstep %}
