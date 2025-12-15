@@ -18,19 +18,19 @@ Print of our Standard Assembly Jig - it is avilable [here](https://github.com/Ca
 
 There are no special printing instructions, though I would advise printing on a 0.4mm nozzle.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Assembly Jig created by <a data-mention href="https://app.gitbook.com/u/5a099398f9717400307e6b92">MakerMylo</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Assembly Jig created by <a data-mention href="https://app.gitbook.com/u/5a099398f9717400307e6b92">MakerMylo</a></p></figcaption></figure>
 
 ### Step 2 - Place the JST right angle connector&#x20;
 
 Place the JST right angle connector pointing up.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 3 - Place the MCU Board
 
 Place the MCU board into the JST connector.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 BEFORE APPLYING ANY SOLDER - Ensure the MCU board has the correct orientation. The STM chip should be facing up.
@@ -48,11 +48,11 @@ Remove the MCU board for now
 
 Rotate the Jig with the coilboard section facing up adding the JST Right Angle connectors in, with the plastic part resting at the bottom, and the longer ends protruding up towards the coil
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Add the coilboard in, you can secure in place using M3 screws if you wish, but it isn't neccessary.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 Rotate the Jig back towards yourself so the MCU board will be at the top.
 

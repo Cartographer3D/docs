@@ -49,7 +49,7 @@ You could also set up duplicate filament settings and use them for different bed
 
 ### SuperSlicer - Per Filament
 
-<img src="../../.gitbook/assets/image (5) (1) (1).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt="" data-size="original">
 
 ### OrcaSlicer - Per Filament
 

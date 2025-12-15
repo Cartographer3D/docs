@@ -36,7 +36,7 @@ If you received a Cartographer probe that looks like below, you have received a 
 
 Both versions use the same initial setup steps, just the calibration steps change.<br>
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td><img src="../../.gitbook/assets/image (3) (1).png" alt="" data-size="original"></td><td></td></tr><tr><td></td><td><img src="../../.gitbook/assets/image (5) (1).png" alt="" data-size="original"></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td><img src="../../.gitbook/assets/image (3) (1) (1).png" alt="" data-size="original"></td><td></td></tr><tr><td></td><td><img src="../../.gitbook/assets/image (5) (1) (1).png" alt="" data-size="original"></td><td></td></tr></tbody></table>
 
 ## Standard vs Right Angle vs Low Profile
 

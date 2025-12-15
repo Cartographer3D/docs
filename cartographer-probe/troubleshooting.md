@@ -52,7 +52,7 @@ curl -s -L https://raw.githubusercontent.com/Cartographer3D/cartographer3d-plugi
 
 <summary>Unknown pin chip name 'cartographer'</summary>
 
-![](<../.gitbook/assets/image (1).png>)\
+![](<../.gitbook/assets/image (1) (1).png>)\
 \
 The following two issues are usually why you recieve the above error.
 
@@ -249,7 +249,7 @@ If you get a sharp drop in your bed mesh, or missing clusters error after a scan
 
 <summary>Repeated No trigger on z after full movement</summary>
 
-<img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt="" data-size="original">
 
 If you are getting the error `No trigger on z after full movement`, and running a lower powered SBC such as a Raspberry Pi 2, or a BTT CB1, You are able to lock a single CPU core to your Klipper instance.\
 \

@@ -7,6 +7,7 @@
 * [Scan vs Touch Modes](cartographer-probe/classic-vs-survey-touch.md)
 * [🏗️ Installation and Setup](cartographer-probe/installation-and-setup/README.md)
   * [Before You Begin](cartographer-probe/installation-and-setup/before-you-begin.md)
+  * [V4 - Switching from USB to CAN](cartographer-probe/installation-and-setup/v4-switching-from-usb-to-can.md)
   * [Hardware Setup](cartographer-probe/installation-and-setup/probe-installation/README.md)
     * [CAN Termination](cartographer-probe/installation-and-setup/probe-installation/can-termination.md)
     * [Stealthburner CW2 Mount](cartographer-probe/installation-and-setup/probe-installation/stealthburner-cw2-mount.md)
