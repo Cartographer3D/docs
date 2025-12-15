@@ -82,4 +82,10 @@ Once done, you will be prompted to run `SAVE_CONFIG`. The Klipper firmware shoul
 SAVE_CONFIG
 ```
 {% endstep %}
+
+{% step %}
+### Next Steps (Touch Calibration)
+
+You have now created a model for all of the scan operations (`G28`, `BED_MESH_CALIBRATE`, `Z_TILT_ADJUST` / `QUAD_GANTRY_LEVEL` etc) to use the physical touch commands, you will now need to calibrate touch, please move to the next page.&#x20;
+{% endstep %}
 {% endstepper %}

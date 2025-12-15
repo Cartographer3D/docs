@@ -86,7 +86,10 @@ min_temp: 5
 max_temp: 105
 
 [adxl345]
-cs_pin: cartographer:PA3
+# Select 1 of the cs_pin below depending on the probe you have. 
+# Having the wrong one selected will cause an Endless Bootloop
+cs_pin: cartographer:PA3 # For Cartographer V3
+cs_pin: cartographer:PA0 # For Cartographer V4
 spi_bus: spi1
 
 [resonance_tester]
