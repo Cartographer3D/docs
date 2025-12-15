@@ -56,12 +56,10 @@ In general, we recommend running the Full firmware, so select the option you wan
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-This will now give you a command (in green) for you to run once you have plugged your Cartographer V4 in to your CAN network. Some people don't mind doing this while the printer is powered on, but we could never recommend that... because you know.. safety, so you do you...&#x20;
+This will now give you a command (in green) for you to run once you have plugged your Cartographer V4 in to your CAN network.&#x20;
 
-If you are powering off your printer, copy the command into a notepad document or similar, power off the machine and then connect the probe to the CAN port. \
+Copy the command into a notepad document or similar, power off the machine and then connect the probe to the CAN port. \
 \
 Once you power back on, reconnect via SSH and paste in the commands you copied over.&#x20;
-
-If you do live on the edge, and plugged in your probe to CAN without powering off, you can press Y now and the command should automatically run for you.&#x20;
 
 ### Step 5 - Finished :smile:
