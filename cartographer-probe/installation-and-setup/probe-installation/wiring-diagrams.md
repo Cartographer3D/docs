@@ -78,7 +78,9 @@ You should apply a twist to your CAN H and CAN L cables every 24mm
 
 ## USB Wiring
 
-<figure><img src="https://github.com/user-attachments/assets/1c082c5d-44ff-43e1-b1bf-f70b4249a490" alt=""><figcaption></figcaption></figure>
+#### Standard Format Cartographer USB Wiring
+
+<figure><img src="../../../.gitbook/assets/IMG_0054.JPEG" alt="" width="563"><figcaption></figcaption></figure>
 
 Wiring for the USB connector is in order
 
@@ -86,3 +88,14 @@ Wiring for the USB connector is in order
 * DATA +
 * DATA -
 * 5V
+
+#### Right Angle Format Cartographer USB Wiring
+
+<figure><img src="../../../.gitbook/assets/IMG_0055.JPEG" alt="" width="563"><figcaption></figcaption></figure>
+
+Wiring for the USB connector is in order
+
+* 5V
+* DATA -
+* DATA +
+* Ground
