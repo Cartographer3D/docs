@@ -12,7 +12,7 @@ This will set your probe up with a Baudrate of 1,000,000. If you wish to have a 
 
 Plug your probe in to your Pi via the USB Cable. You should see the USB Status LED light up on the probe.&#x20;
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>The USB Status LED. </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>The USB Status LED. </p></figcaption></figure>
 
 ### Step 2 - Install the Cartographer Firmware Repository
 
@@ -32,7 +32,7 @@ fi
 
 You should see the following screen come up.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 3 - Follow the On Screen Guide
 
@@ -40,11 +40,11 @@ Confirm you are running a Cartographer V4 (this is the single PCB probe) and pre
 
 it will then run through and flash the Katapult Deployer firmware, this will switch the probe from USB to CAN Bus.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once this screen comes up, you will notice the LED on your probe will have changed from the USB Status LED to the CAN Status LED.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 4 - Select the CAN Firmware you want.
 
@@ -54,7 +54,7 @@ Lite Firmware sends reduced instructions from the MCU to your Pi, reducing the l
 
 In general, we recommend running the Full firmware, so select the option you want to run.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 This will now give you a command (in green) for you to run once you have plugged your Cartographer V4 in to your CAN network.&#x20;
 

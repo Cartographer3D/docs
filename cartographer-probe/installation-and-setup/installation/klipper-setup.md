@@ -21,10 +21,11 @@ This step will automatically create a link to the script and place it in the kli
 {% hint style="info" %}
 If you are in Mainland China, use the following commands instead:
 
-<pre class="language-bash"><code class="lang-bash"><strong>cd ~
-</strong><strong>git clone https://gitee.com/NBTP/cartographer-klipper.git
-</strong>./cartographer-klipper/install.sh
-</code></pre>
+```bash
+cd ~
+git clone https://gitee.com/NBTP/cartographer-klipper.git
+./cartographer-klipper/install.sh
+```
 {% endhint %}
 
 ### Remember to update cartographer via the mainsail/fluidd UI
@@ -73,7 +74,7 @@ upon completion, press SAVE & RESTART and it should now display in the update se
 
 If you get "Repo is dirty. Detected the following modified files: \['install.sh']", a soft Recovery should fix it.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Finding the Serial or UUID
 

@@ -26,7 +26,7 @@ To ensure accuracy, we recommend using the measurement jig developed by Esoteric
 
 This jig also enables easy viewing of the Y offset; simply print it, mount as illustrated below, and you’ll be able to verify your probe’s Z height in relation to the nozzle.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://www.printables.com/model/1060868-cartographer-probe-nozzle-offset-tool" %}
 
