@@ -26,6 +26,7 @@ if [ -d ~/cartographer_firmware/ ]; then
     git pull
 else
     git clone https://github.com/Cartographer3D/cartographer_firmware.git
+    cd ~/cartographer_firmware/
 fi
 ./v4_switch.sh
 ```
