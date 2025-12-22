@@ -88,6 +88,7 @@ max_temp: 105
 [adxl345]
 # Select 1 of the cs_pin below depending on the probe you have. 
 # Having the wrong one selected will cause an Endless Bootloop
+# Cartographer V4 has int2 connected to the probes PA1 pin
 cs_pin: cartographer:PA3 # For Cartographer V3
 cs_pin: cartographer:PA0 # For Cartographer V4
 spi_bus: spi1
