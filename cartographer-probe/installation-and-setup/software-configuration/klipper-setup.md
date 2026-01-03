@@ -67,7 +67,7 @@ restart_method: command # Not needed for probes using CAN.
 mcu: cartographer
 x_offset: <blank> # This is the offset of your probe from the nozzle tip, to the centre of the coil.
 y_offset: <blank> # This is the offset of your probe from the nozzle tip, to the centre of the coil.
-verbose: yes # For extra output
+verbose: no # For extra output
 
 [bed_mesh]
 zero_reference_position: <blank>, <blank> # The centre of your bed. 
