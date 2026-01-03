@@ -31,6 +31,7 @@
   * [Macros Overview](cartographer-probe/reference/macros-overview.md)
 * [♻️ Firmware](cartographer-probe/firmware/README.md)
   * [Updating Firmware](cartographer-probe/firmware/updating-firmware.md)
+  * [Switching Protocols](cartographer-probe/firmware/switching-protocols.md)
   * [Re-Flashing](cartographer-probe/firmware/re-flashing.md)
   * [Switching V4 from USB to CAN](cartographer-probe/firmware/switching-v4-from-usb-to-can.md)
 * [😭 Troubleshooting](cartographer-probe/troubleshooting.md)
