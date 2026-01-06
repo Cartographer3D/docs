@@ -1,2 +1,6 @@
+---
+icon: lightbulb-gear
+---
+
 # Features
 
