@@ -208,9 +208,9 @@ To enter DFU Mode, it can be a bit fiddly but with V4 due to the use of holes ra
 
 <figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
 
-Plug your USB cable into the device you will be flashing from and your Cartographer probe, this can be either a seprate Windows PC, Mac, or a Linux machine, or the device you run your 3D Printer off.
+Plug your USB cable into the device you will be flashing from and your Cartographer probe, this can be either a separate Windows PC, Mac, or a Linux machine, or the device you run your 3D Printer off.
 
-Using your ferrous tweezers, or similar use one to bridge holes 1 (boot0), once you have a solid contact on those tap hole 2 (reset) with your other ferrous tool.
+Using your ferrous tweezers, or similar bridge the holes in box 1 (BT0 & 3V3).
 {% endtab %}
 {% endtabs %}
 
@@ -219,7 +219,7 @@ If you have done this correctly, your device should have entered DFU Mode.
 To check,
 
 * Linux - follow the following steps
-  * SSH in, or load a termanal shell.
+  * SSH in, or load a terminal shell.
   * type `lsusb` in your bash shell, it should list a device in DFU Mode
   * One of the options should be `Bus 001 Device 004: ID 0483:df11 STMicroelectronics STM Device in DFU Mode` - This (as long as you don't have any other devices in DFU Mode) should be your Cartographer Probe in DFU Mode.
 * Windows - follow the following steps
