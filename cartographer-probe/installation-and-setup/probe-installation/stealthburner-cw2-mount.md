@@ -1,5 +1,9 @@
 # Stealthburner CW2 Mount
 
+{% hint style="info" %}
+Please note this mount is NOT compatible with the Cartographer V4 in Standard format, it does however work with the Low Profile format V4.
+{% endhint %}
+
 We are a huge fan of [this Stealthburner CW2 mount,](https://www.teamfdm.com/files/file/686-beacon-cw2-stealthburner-alternative-mounts/) so thought we would make an installation guide.&#x20;
 
 <figure><img src="../../../.gitbook/assets/cae1068a75e06bce2403933abdc62e2.jpg" alt=""><figcaption><p>Step 1 - Heat Set Inserts &#x26; Endstop</p></figcaption></figure>
