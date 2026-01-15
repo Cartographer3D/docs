@@ -49,7 +49,16 @@ Below are the minimum, required, options listed. Except for the `temperature_sen
 You will need to adjust this config for your printer and your probe, this is done by modifying the sections labeled \`\<blank>\`
 
 {% hint style="warning" %}
-We recommend configuring [safe\_z\_home](https://www.klipper3d.org/Config_Reference.html#safe_z_home).
+You MUST configure your homing of G28 to home in the middle of your bed, for example if you're using endstops you should add&#x20;
+
+```
+[safe_z_home]
+home_xy_position: 150, 150 # This should be for the CENTRE OF YOUR BED.
+```
+
+Documentation for [safe\_z\_home](https://www.klipper3d.org/Config_Reference.html#safe_z_home) here. \
+\
+If you're using sensorless, you may need to setup a `[homing_override]` details available [here](https://www.klipper3d.org/Config_Reference.html#homing_override)&#x20;
 {% endhint %}
 
 ```yaml
