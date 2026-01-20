@@ -15,8 +15,12 @@ You might notice your z-offset is a little wrong, this is hugely dependent on to
 Default `scanner_touch_z_offset` is 0.05
 
 {% embed url="https://youtu.be/OoZ2fcD3zlA" %}
-video courtesy of Yell on Cartographer Discord
+video courtesy of Yell on Cartographer Discord, showing the mainsail z-offset controls being used and the save button being pressed.
 {% endembed %}
+
+{% hint style="info" %}
+Cartographer's setup changes the `SET_GCODE_OFFSET Z_ADJUST=` to save to `scanner_touch_z_offset`.  You can use your gui's z-offset controls (sometimes known as babystepping) and save to update the value, or set it manually in your `[scanner]` config section of your `printer.cfg`.  Remember: add to create more gap, subtract for less gap.
+{% endhint %}
 
 ***
 
