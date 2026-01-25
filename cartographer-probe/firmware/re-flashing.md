@@ -27,9 +27,11 @@ To enter DFU Mode, it can be a bit fiddly but with V4 due to the use of holes ra
 
 <figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
 
-Plug your USB cable into the device you will be flashing from this can be either a separate Windows PC, Mac, or a Linux machine, or the device you run your 3D Printer off such as a Raspberry Pi.
+Firstly using the supplied USB cable, plug this into the Cartographer (Molex Sherlock) connector.
 
-Then using your ferrous tweezers, or similar bridge the holes in box 1 (BT0 & 3V3) and then plug in your Cartographer V4, this should then show the V4 in DFU mode.
+Then using your ferrous tweezers or similar, bridge the holes in box 1 (BT0 & 3V3) and then while still bridging those holes plug in your Cartographer V4 via the USB connector of the cable into the device you will be flashing from this can be either a separate Windows PC, Mac, or a Linux machine, or the device you run your 3D Printer off such as a Raspberry Pi. \
+\
+This should then show the V4 in DFU mode.
 {% endtab %}
 {% endtabs %}
 
