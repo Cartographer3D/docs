@@ -91,7 +91,7 @@ cd ~/cartographer_firmware/firmware/v2-v3/combined-firmware/5.0.0
 Once in the folder, simply check that your probe is still in DFU Mode by running `lsusb`, and if you still get a result stating it is in DFU Mode, run the following command.
 
 ```
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D firmware.bin
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D firmware.bin -d 0483:df11
 ```
 
 NOTE - REPLACE the address (`0x08000000`) with what ever is listed in the [table here](https://docs.cartographer3d.com/cartographer-probe/firmware/manual-methods/firmware-update) for the specific firmware you are using, and rename `firmware.bin` to what ever the firmware file you are using is called.
@@ -100,7 +100,7 @@ NOTE - REPLACE the address (`0x08000000`) with what ever is listed in the [table
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_USB_5_0_0.bin
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_USB_5_0_0.bin -d 0483:df11
 ```
 {% endcode %}
 
@@ -108,7 +108,7 @@ sudo dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_USB_5_0_0.
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_CrealityK1_USB_5_0_0.bin
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_CrealityK1_USB_5_0_0.bin -d 0483:df11
 ```
 {% endcode %}
 
@@ -116,7 +116,7 @@ sudo dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_CrealityK1
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_CAN_1M_5_0_0.bin
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_CAN_1M_5_0_0.bin -d 0483:df11
 ```
 {% endcode %}
 {% endtab %}
@@ -140,7 +140,7 @@ NOTE - REPLACE the address (`0x08000000`) with what ever is listed in the [table
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0__USB.bin
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0__USB.bin -d 0483:df11
 ```
 {% endcode %}
 
@@ -148,7 +148,7 @@ sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0_
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0__USB_lite.bin
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0__USB_lite.bin -d 0483:df11
 ```
 {% endcode %}
 
@@ -156,7 +156,7 @@ sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0_
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0__CAN_1M.bin
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0__CAN_1M.bin -d 0483:df11
 ```
 {% endcode %}
 
@@ -164,7 +164,7 @@ sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0_
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0__CAN_1M_lite.bin
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0__CAN_1M_lite.bin -d 0483:df11
 ```
 {% endcode %}
 

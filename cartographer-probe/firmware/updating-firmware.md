@@ -270,16 +270,18 @@ cd ~/cartographer_firmware/firmware/v2-v3/survey/5.0.0
 Once in the folder, simply check that your probe is still in DFU Mode by running `lsusb`, and if you still get a result stating it is in DFU Mode, run the following command.
 
 ```
-sudo dfu-util -R -a 0 -s 0x08002000:leave -D firmware.bin
+sudo dfu-util -R -a 0 -s 0x08002000:leave -D firmware.bin -d 0483:df11
 ```
 
 NOTE - REPLACE the address (`0x08000000`) with what ever is listed in the [table here](https://docs.cartographer3d.com/cartographer-probe/firmware/manual-methods/firmware-update) for the specific firmware you are using, and rename `firmware.bin` to what ever the firmware file you are using is called.
 
 Example to install the latest stable V3 Firmware:
 
+{% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08002000:leave -D Survey_Cartographer_USB_8kib_offset.bin
+sudo dfu-util -R -a 0 -s 0x08002000:leave -D Survey_Cartographer_USB_8kib_offset.bin -d 0483:df11
 ```
+{% endcode %}
 
 Once compelte, it should exit out of DFU mode, and you should be able to find your probe on  USB.
 {% endtab %}
@@ -294,12 +296,12 @@ cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0
 Once in the folder, simply check that your probe is still in DFU Mode by running `lsusb`, and if you still get a result stating it is in DFU Mode, run the following command.
 
 ```bash
-sudo dfu-util -R -a 0 -s 0x08002000:leave -D firmware.bin
+sudo dfu-util -R -a 0 -s 0x08002000:leave -D firmware.bin -d 0483:df11
 ```
 
 NOTE - REPLACE the address (`0x08000000`) with what ever is listed in the [table here](https://docs.cartographer3d.com/cartographer-probe/firmware/manual-methods/firmware-update) for the specific firmware you are using, and rename `firmware.bin` to what ever the firmware file you are using is called.
 
-Example to install the latest stable V3 Firmware:
+Example to install the latest stable V4 Firmware:
 
 ```bash
 sudo dfu-util -R -a 0 -s 0x08002000:leave -D CartographerV4_6.0.0_USB_full_8kib_offset.bin
@@ -310,3 +312,66 @@ Once compelte, it should exit out of DFU mode, and you should be able to find yo
 {% endtabs %}
 
 {% embed url="https://youtu.be/casMZXMRWNs" %}
+
+## Update via CAN
+
+### Updating Cartographer via Katapult on CAN
+
+#### Step 1 - SSH into your printer
+
+#### Step 2 - Plug Cartographer in via CANBUS
+
+Your Cartographer will already need to have CAN firmware on the probe, to change from USB to CAN, please follow [re-flashing.md](re-flashing.md "mention").
+
+#### Step 3 - Get Your UUID
+
+You will need to get your probes UUID, this should be in your printer.cfg if you have already setup the probe, it will either be under `[mcu cartographer]`, `[cartographer]`, or `[scanner]`
+
+If you have not set it up already, search for the UUID either in the mainsail device finder menu, or by using the command `~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0` (note, if the device is in your printer.cfg or similar, it will not find it.
+
+#### Step 4 - Flash the Firmware
+
+You now need to flash your Cartographer, below will give you the command to flash the latest recommended firmware for each device, to build your own command you just need to navigate to the directory of the firmware you are flashing and modify the below command
+
+```
+python3 ~/katapult/scripts/flash_can.py -i can0 -f <firmware.bin> -u <myuuid>
+```
+
+{% hint style="danger" %}
+You will need to replace \<myuuid> with your UUID found in step3.&#x20;
+{% endhint %}
+
+{% tabs %}
+{% tab title="Cartographer V2 CAN & V3" %}
+#### Update Cartographer V3 to firmware 5.0.0
+
+{% code overflow="wrap" %}
+```bash
+cd ~/cartographer_firmware/firmware/v2-v3/survey/5.0.0/
+python3 ~/katapult/scripts/flash_can.py -i can0 -f Survey_Cartographer_CAN_1000000_8kib_offset.bin -u <myuuid>
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Cartographer V4" %}
+#### Update Cartographer V4 to firmware 6.0.0
+
+{% code overflow="wrap" %}
+```bash
+cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0/
+python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV4_6.0.0_CAN_1M_full_8kib_offset.bin -u <myuuid>
+```
+{% endcode %}
+
+#### Update Cartographer V4 to firmware 6.0.0 Lite
+
+See [here ](https://docs.cartographer3d.com/cartographer-probe/firmware#full-vs-lite-firmwares)for a description around the lite firmware&#x20;
+
+{% code overflow="wrap" %}
+```bash
+cd ~/cartographer_firmware/firmware/v2-v3/survey/5.0.0/
+python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV4_6.0.0_CAN_1M_lite_8kib_offset.bin -u <myuuid>
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
