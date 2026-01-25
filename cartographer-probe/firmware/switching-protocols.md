@@ -318,7 +318,7 @@ Now your Cartographer is in Katapult Mode, you now need to navigate to the corre
 **Automatic Full V3 USB Firmware**
 
 {% code overflow="wrap" %}
-```
+```bash
 KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
 cd ~/cartographer_firmware/firmware/v2-v3/survey/5.0.0/
 ~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f Survey_Cartographer_USB_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
@@ -339,9 +339,11 @@ Now, run the following command, replacing \<firmware> with the firmware you are 
 
 Again, an example of a full command
 
-```
+{% code overflow="wrap" %}
+```bash
 ~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f Cartographer_USB_8kib_offset.bin -d /dev/serial/by-id/usb-katapult_stm32f042x6_060012001643565537353020-if00
 ```
+{% endcode %}
 
 If successful, you should have the following output.
 
@@ -355,21 +357,25 @@ Now your Cartographer is in Katapult Mode, you now need to navigate to the corre
 
 **Automatic V4 Full USB Firmware**
 
-```
+{% code overflow="wrap" %}
+```bash
 KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
 cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0
 ~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f CartographerV4_6.0.0_USB_full_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
 ```
+{% endcode %}
 
 Your probe should now have the latest Cartographer Full Firmware installed on it. This page will be updated to include the command for the latest version available for this probe
 
 **Automatic V4 Lite USB Firmware**
 
-```
+{% code overflow="wrap" %}
+```bash
 KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
 cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0
 ~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f CartographerV4_6.0.0_USB_lite_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
 ```
+{% endcode %}
 
 Your probe should now have the latest Cartographer Lite Firmware installed on it. This page will be updated to include the command for the latest version available for this probe
 
@@ -385,9 +391,11 @@ Now, run the following command, replacing \<firmware> with the firmware you are 
 
 Again, an example of a full command
 
-```
+{% code overflow="wrap" %}
+```bash
 ~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f Cartographer_USB_8kib_offset.bin -d /dev/serial/by-id/usb-katapult_stm32f042x6_060012001643565537353020-if00
 ```
+{% endcode %}
 
 If successful, you should have the following output.
 
