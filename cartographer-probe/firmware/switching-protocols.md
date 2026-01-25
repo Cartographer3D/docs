@@ -256,3 +256,143 @@ python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV4_6.0.0_USB_full
 Once complete, your probe will reboot into the Cartographer Firmware, and you can continue to use your probe as normal.
 {% endtab %}
 {% endtabs %}
+
+### Switching to USB from CAN
+
+To switch from CAN to USB, you will need to flash the Katapult Deployer Firmware to overwrite the existing bootloader and firmware to load it in USB mode.&#x20;
+
+**Step 1 - Plug Cartographer in via CANBUS**
+
+Your Cartographer will already need to have CAN firmware on the probe, to change from USB to CAN, please follow [Re-Flashing](https://docs.cartographer3d.com/cartographer-probe/firmware/re-flashing).
+
+**Step 2 - SSH into your printer**
+
+**Step 3 - Get Your UUID**
+
+You will need to get your probes UUID, this should be in your printer.cfg if you have already setup the probe, it will either be under `[mcu cartographer]`, `[cartographer]`, or `[scanner]`
+
+If you have not set it up already, search for the UUID either in the mainsail device finder menu, or by using the command `~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0` (note, if the device is in your printer.cfg or similar, it will not find it.
+
+#### Step 4 - Flash the Katapult Deployer
+
+You now need to flash the Katapult Deployer USB Firmware
+
+{% hint style="danger" %}
+You will need to replace with your UUID found in step3.
+{% endhint %}
+
+{% tabs %}
+{% tab title="Cartographer V3" %}
+**Switch Cartographer V3 from CAN to USB**
+
+{% code overflow="wrap" %}
+```bash
+~/cartographer_firmware/firmware/v2-v3/katapult-deployer
+python3 ~/katapult/scripts/flash_can.py -i can0 -f katapult-deployer-usb.bin -u <myuuid>
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Cartographer V4" %}
+**Switch Cartographer V4 from CAN to USB**
+
+{% code overflow="wrap" %}
+```bash
+cd ~/cartographer_firmware/firmware/v4/katapult-deployer/
+python3 ~/katapult/scripts/flash_can.py -i can0 -f katapult_deployer_v4_USB.bin -u <myuuid>
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+#### Step 5 - Switch to USB
+
+Power down your printer, and re-connect your probe via USB.&#x20;
+
+#### Step 6 - Flash the Cartographer Firmware
+
+{% tabs %}
+{% tab title="Cartographer V3" %}
+Now your Cartographer is in Katapult Mode, you now need to navigate to the correct firmware to flash it.
+
+**Automatic Full V3 USB Firmware**
+
+{% code overflow="wrap" %}
+```
+KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
+cd ~/cartographer_firmware/firmware/v2-v3/survey/5.0.0/
+~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f Survey_Cartographer_USB_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
+```
+{% endcode %}
+
+Your probe should now have the latest Cartographer Firmware installed on it. This page will be updated to include the command for the latest version available for this probe
+
+**Manual - Full V3 USB Firmware**
+
+Navigate to the folder where your firmware is located, for the example I will be using, I will be updating a v2 probe.
+
+Now, run the following command, replacing \<firmware> with the firmware you are flashing, and \<serial> with the serial ID and path.
+
+```
+~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f <firmware> -d <serial>
+```
+
+Again, an example of a full command
+
+```
+~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f Cartographer_USB_8kib_offset.bin -d /dev/serial/by-id/usb-katapult_stm32f042x6_060012001643565537353020-if00
+```
+
+If successful, you should have the following output.
+
+![](https://docs.cartographer3d.com/~gitbook/image?url=https%3A%2F%2F3044346320-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FjpCp1KnR8izt0cnWQfZF%252Fuploads%252FsLbQEYhc75evn1hikPXb%252Fimage.png%3Falt%3Dmedia%26token%3Dae2854a2-1833-4aed-9907-9d32c152fb10\&width=768\&dpr=3\&quality=100\&sign=1c515908\&sv=2)
+
+If successful, you should have the following output.
+{% endtab %}
+
+{% tab title="Cartographer V4" %}
+Now your Cartographer is in Katapult Mode, you now need to navigate to the correct firmware to flash it.
+
+**Automatic V4 Full USB Firmware**
+
+```
+KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
+cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0
+~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f CartographerV4_6.0.0_USB_full_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
+```
+
+Your probe should now have the latest Cartographer Full Firmware installed on it. This page will be updated to include the command for the latest version available for this probe
+
+**Automatic V4 Lite USB Firmware**
+
+```
+KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
+cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0
+~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f CartographerV4_6.0.0_USB_lite_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
+```
+
+Your probe should now have the latest Cartographer Lite Firmware installed on it. This page will be updated to include the command for the latest version available for this probe
+
+**Manual - Full V4 USB Firmware**
+
+Navigate to the folder where your firmware is located, for the example I will be using, I will be updating a v2 probe.
+
+Now, run the following command, replacing \<firmware> with the firmware you are flashing, and \<serial> with the serial ID and path.
+
+```
+~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f <firmware> -d <serial>
+```
+
+Again, an example of a full command
+
+```
+~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f Cartographer_USB_8kib_offset.bin -d /dev/serial/by-id/usb-katapult_stm32f042x6_060012001643565537353020-if00
+```
+
+If successful, you should have the following output.
+
+![](https://docs.cartographer3d.com/~gitbook/image?url=https%3A%2F%2F3044346320-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FjpCp1KnR8izt0cnWQfZF%252Fuploads%252FsLbQEYhc75evn1hikPXb%252Fimage.png%3Falt%3Dmedia%26token%3Dae2854a2-1833-4aed-9907-9d32c152fb10\&width=768\&dpr=3\&quality=100\&sign=1c515908\&sv=2)
+
+If successful, you should have the following output.
+{% endtab %}
+{% endtabs %}
