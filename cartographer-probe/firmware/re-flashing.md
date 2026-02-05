@@ -1,5 +1,28 @@
 # Re-Flashing
 
+## Prerequisites
+
+You must have the Cartographer Firmware repository, for future updates you will also need Katapult on your Pi, if you do not have these please connect via SSH and run the following command.&#x20;
+
+```bash
+cd ~
+if [ -d ~/cartographer_firmware/ ]; then
+    echo "Cartographer Firmware Exists - Updating Repository"
+    cd ~/cartographer_firmware/
+    git pull
+else
+    git clone https://github.com/Cartographer3D/cartographer_firmware.git
+fi
+cd ~
+if [ -d ~/katapult/ ]; then
+    echo "Katapult Exists - Updating Repository"
+    cd ~/katapult/
+    git pull
+else
+    git clone https://github.com/Arksine/katapult.git
+fi
+```
+
 ### Updating Cartographer via DFU
 
 Prior to flashing, you will need to following tools
