@@ -52,11 +52,17 @@ y_offset:
 #max_samples: 10
 #   The maximum number of samples to do before giving up.
 #   The default is samples * 2, but minimum 10.
+#sample_range: 0.01
+#retract_distance: 5
+#    Retract distance between touch samples
+#    The default is 2.
 #UNSAFE_max_touch_temperature: 150
 #   The maximum allowed nozzle temperature to use when touching the plate.
 #   This is set to 150C to avoid damaging your plate.
 #   Change this AT YOUR OWN RISK.
 #   The default is 150C.
+#EXPERIMENTAL_home_random_radius: 0
+#    Radius around the Z home position to do touch.
 ```
 
 #### Coil sensor config
