@@ -108,9 +108,31 @@ probe_points:
     <blank>, <blank>, 20 # Fill out the blank with x and y coordinates where you want to run the resonance test.
 ```
 
+## Finding the Serial or UUID
+
+Note, you need to replace the serial path  or UUID with your probes serial path or UUID, this can be found by running the following commands&#x20;
+
+For USB based probes&#x20;
+
+```bash
+ls /dev/serial/by-id/
+```
+
+For CAN based probes
+
+{% hint style="info" %}
+If you order a CAN Probe it will have it's baud rate set at 1,000,000. Make sure your system matches that.&#x20;
+{% endhint %}
+
+```bash
+~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
+```
+
+Take note of either the Serial ID or the UUID.&#x20;
+
 ## Calibration
 
 Cartographer provides two methods of homing.\
-We recommend always using the default scan method for general homing and using `CARTOGRAPHER_TOUCH_HOME` after all leveling has been done, just before your print starts.
+We recommend always using the default scan method for general homing and using `CARTOGRAPHER_TOUCH_HOME` after all levelling has been done, just before your print starts.
 
 Continue with [scan-calibration.md](scan-calibration.md "mention") and [touch-calibration.md](touch-calibration.md "mention").
