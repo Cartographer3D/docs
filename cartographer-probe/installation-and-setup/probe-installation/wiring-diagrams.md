@@ -12,7 +12,7 @@ We observed that some AFC-Lite Boards (Box Turtle controller) can for unknown re
 Its possible that your AFC-Lite is not affected and that there are other environmental variables at play.
 {% endhint %}
 
-Below are some wiring diagrams for some common CAN boards used with Klipper. Currently we only recommend BigTreeTech boards if you are a novice user.&#x20;
+Below are some wiring diagrams for some common CAN boards used with Klipper.&#x20;
 
 We will expand out the wiring diagrams as time goes on and more boards are released.
 
