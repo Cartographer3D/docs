@@ -56,6 +56,7 @@
 ## 🚠 Cartographer CNC Mount
 
 * [🚧 Installation](cartographer-cnc-mount/installation.md)
+* [Config](cartographer-cnc-mount/config.md)
 
 ## 🌪️ Linear Motor
 
