@@ -46,11 +46,11 @@ y_offset:
 #   Minimum value is 1.
 #mesh_direction: x
 #   Axis of which to do the most moves along - either 'x' or 'y'.
-#   The default is x.
+#   The default is 'x'.
 #mesh_path: snake
 #   The path to use when calibrating a scan mesh - either 'snake',
 #   'alternating_snake', 'spiral' or 'random'.
-#   The default is snake.
+#   The default is 'snake'.
 ```
 
 ### [cartographer touch]
@@ -89,7 +89,7 @@ y_offset:
 [cartographer coil]
 #name: cartographer_coil
 #   The name of the coil temperature sensor.
-#   The default is cartographer_coil.
+#   The default is 'cartographer_coil'.
 #min_temp: 0
 #   The minimum temperature of the coil, below this will trigger a warning.
 #   The default is 0.
