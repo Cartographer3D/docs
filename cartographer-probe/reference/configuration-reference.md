@@ -45,12 +45,13 @@ y_offset:
 #   The default is 3.
 #   Minimum value is 1.
 #mesh_direction: x
-#   Axis of which to do the most moves along - either 'x' or 'y'.
+#   Axis of which to do the most moves along.
 #   The default is 'x'.
+#   Allowed values: 'x', 'y'.
 #mesh_path: snake
-#   The path to use when calibrating a scan mesh - either 'snake',
-#   'alternating_snake', 'spiral' or 'random'.
+#   The path to use when calibrating a scan mesh.
 #   The default is 'snake'.
+#   Allowed values: 'snake', 'alternating_snake', 'spiral', 'random'.
 ```
 
 ### [cartographer touch]
