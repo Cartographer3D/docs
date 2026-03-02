@@ -4,13 +4,13 @@ description: Auto-generated from plugin source.
 
 # Macro Reference
 
-## PROBE
+### PROBE
 
 Probe the bed to get the height offset at the current position.
 
-*This macro accepts no parameters.*
+_This macro accepts no parameters._
 
-## PROBE_ACCURACY
+### PROBE\_ACCURACY
 
 Probe the bed multiple times to measure the accuracy of the probe.
 
@@ -23,19 +23,25 @@ Probe the bed multiple times to measure the accuracy of the probe.
     Constraints: minimum: 3
 ```
 
-## QUERY_PROBE
+**Example:**
+
+```
+PROBE_ACCURACY LIFT_SPEED=<lift_speed> SAMPLE_RETRACT_DIST=1.0 SAMPLES=10
+```
+
+### QUERY\_PROBE
 
 Return the status of the z-probe
 
-*This macro accepts no parameters.*
+_This macro accepts no parameters._
 
-## Z_OFFSET_APPLY_PROBE
+### Z\_OFFSET\_APPLY\_PROBE
 
-Adjust the probe's z_offset
+Adjust the probe's z\_offset
 
-*This macro accepts no parameters.*
+_This macro accepts no parameters._
 
-## BED_MESH_CALIBRATE
+### BED\_MESH\_CALIBRATE
 
 Gather samples across the bed to calibrate the bed mesh.
 
@@ -60,7 +66,13 @@ Gather samples across the bed to calibrate the bed mesh.
     Constraints: minimum: 1
 ```
 
-## CARTOGRAPHER_QUERY
+**Example:**
+
+```
+BED_MESH_CALIBRATE METHOD=scan ADAPTIVE=0 ADAPTIVE_MARGIN=0.0 PROFILE=default DIRECTION=x PATH=snake SPEED=50.0 HEIGHT=5.0 RUNS=1
+```
+
+### CARTOGRAPHER\_QUERY
 
 Query current cartographer state
 
@@ -69,7 +81,13 @@ Query current cartographer state
     Allowed values: touch, scan, mcu, all
 ```
 
-## CARTOGRAPHER_STREAM
+**Example:**
+
+```
+CARTOGRAPHER_QUERY FIELD=all
+```
+
+### CARTOGRAPHER\_STREAM
 
 Controls a data stream of the cartographer readings to a file.
 
@@ -79,7 +97,13 @@ Controls a data stream of the cartographer readings to a file.
   FILE (str | None, default: None): Output file path
 ```
 
-## CARTOGRAPHER_TEMPERATURE_CALIBRATE
+**Example:**
+
+```
+CARTOGRAPHER_STREAM ACTION=status
+```
+
+### CARTOGRAPHER\_TEMPERATURE\_CALIBRATE
 
 Calibrate temperature compensation for frequency drift
 
@@ -94,7 +118,13 @@ Calibrate temperature compensation for frequency drift
     Constraints: minimum: 1
 ```
 
-## CARTOGRAPHER_SCAN_CALIBRATE
+**Example:**
+
+```
+CARTOGRAPHER_TEMPERATURE_CALIBRATE MIN_TEMP=40 MAX_TEMP=60 BED_TEMP=90 Z_SPEED=5
+```
+
+### CARTOGRAPHER\_SCAN\_CALIBRATE
 
 Run the scan calibration
 
@@ -104,7 +134,13 @@ Run the scan calibration
     Allowed values: touch, manual
 ```
 
-## CARTOGRAPHER_SCAN_ACCURACY
+**Example:**
+
+```
+CARTOGRAPHER_SCAN_CALIBRATE MODEL=default METHOD=manual
+```
+
+### CARTOGRAPHER\_SCAN\_ACCURACY
 
 Collect samples from the probe and calculate statistics on the results.
 
@@ -115,7 +151,13 @@ Collect samples from the probe and calculate statistics on the results.
     Constraints: minimum: 10
 ```
 
-## CARTOGRAPHER_SCAN_MODEL
+**Example:**
+
+```
+CARTOGRAPHER_SCAN_ACCURACY READINGS=20 SAMPLES=100
+```
+
+### CARTOGRAPHER\_SCAN\_MODEL
 
 Manage saved scan models
 
@@ -124,7 +166,13 @@ Manage saved scan models
   REMOVE (str | None, default: None): Model name to remove
 ```
 
-## CARTOGRAPHER_ESTIMATE_BACKLASH
+**Example:**
+
+```
+CARTOGRAPHER_SCAN_MODEL
+```
+
+### CARTOGRAPHER\_ESTIMATE\_BACKLASH
 
 Do a series of moves to estimate backlash on the Z axis.
 
@@ -136,7 +184,13 @@ Do a series of moves to estimate backlash on the Z axis.
     Constraints: minimum: 0.2, maximum: 1
 ```
 
-## CARTOGRAPHER_TOUCH_CALIBRATE
+**Example:**
+
+```
+CARTOGRAPHER_ESTIMATE_BACKLASH CALIBRATE=no ITERATIONS=10 DELTA=0.2
+```
+
+### CARTOGRAPHER\_TOUCH\_CALIBRATE
 
 Run the touch calibration
 
@@ -153,7 +207,13 @@ Run the touch calibration
     Constraints: minimum: 3, maximum: 20
 ```
 
-## CARTOGRAPHER_TOUCH_MODEL
+**Example:**
+
+```
+CARTOGRAPHER_TOUCH_CALIBRATE MAX_VERIFY_RANGE=<max_verify_range> MODEL=default SPEED=2 START=500 MAX=5000 VERIFICATION_SAMPLES=10
+```
+
+### CARTOGRAPHER\_TOUCH\_MODEL
 
 Manage saved touch models
 
@@ -162,13 +222,19 @@ Manage saved touch models
   REMOVE (str | None, default: None): Model name to remove
 ```
 
-## CARTOGRAPHER_TOUCH_PROBE
+**Example:**
+
+```
+CARTOGRAPHER_TOUCH_MODEL
+```
+
+### CARTOGRAPHER\_TOUCH\_PROBE
 
 Touch the bed to get the height offset at the current position.
 
-*This macro accepts no parameters.*
+_This macro accepts no parameters._
 
-## CARTOGRAPHER_TOUCH_ACCURACY
+### CARTOGRAPHER\_TOUCH\_ACCURACY
 
 Touch the bed multiple times to measure the accuracy of the probe.
 
@@ -181,7 +247,13 @@ Touch the bed multiple times to measure the accuracy of the probe.
     Constraints: minimum: 3
 ```
 
-## CARTOGRAPHER_TOUCH_HOME
+**Example:**
+
+```
+CARTOGRAPHER_TOUCH_ACCURACY LIFT_SPEED=<lift_speed> SAMPLE_RETRACT_DIST=1.0 SAMPLES=5
+```
+
+### CARTOGRAPHER\_TOUCH\_HOME
 
 Touch the bed to home Z axis
 
@@ -190,7 +262,13 @@ Touch the bed to home Z axis
     Constraints: minimum: 0
 ```
 
-## CARTOGRAPHER_AXIS_TWIST_COMPENSATION
+**Example:**
+
+```
+CARTOGRAPHER_TOUCH_HOME EXPERIMENTAL_RANDOM_RADIUS=<experimental_random_radius>
+```
+
+### CARTOGRAPHER\_AXIS\_TWIST\_COMPENSATION
 
 Scan and touch to calculate axis twist compensation values.
 
@@ -201,4 +279,10 @@ Scan and touch to calculate axis twist compensation values.
   START (float | None, default: None): Override start position
   END (float | None, default: None): Override end position
   LINE (float | None, default: None): Override line position
+```
+
+**Example:**
+
+```
+CARTOGRAPHER_AXIS_TWIST_COMPENSATION USE_TOUCH_BOUNDARIES=no AXIS=x SAMPLE_COUNT=5
 ```
