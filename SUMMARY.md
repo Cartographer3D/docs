@@ -28,7 +28,7 @@
   * [Coil Temperature Offset Calibration](cartographer-probe/features/coil-temperature-offset-calibration.md)
 * [Reference](cartographer-probe/reference/README.md)
   * [Configuration Reference](cartographer-probe/reference/configuration-reference.md)
-  * [Macros Overview](cartographer-probe/reference/macros-overview.md)
+  * [Macro Reference](cartographer-probe/reference/macros-overview.md)
 * [♻️ Firmware](cartographer-probe/firmware/README.md)
   * [Updating Firmware](cartographer-probe/firmware/updating-firmware.md)
   * [Switching Protocols](cartographer-probe/firmware/switching-protocols.md)
