@@ -25,7 +25,91 @@ else
 fi
 ```
 
-## Updating via USB
+## Firmware Automatic Update Script
+
+You will need to navigate to your `cartographer_firmware` folder, to do this
+
+```shellscript
+cd ~/cartographer_firmware     
+```
+
+Now you need to run the firmware update script&#x20;
+
+```bash
+./fw_update.sh
+```
+
+This will take you to the following menu, which you need to navigate through, you do this by pressing enter/return.&#x20;
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+The script will now try to detect what type of probe you have, be it a Cartographer V3 or V4. It does this a number of ways, by analysing your Klippy.log, Querying Moonraker and Querying our API. This is to ensure that you get the most reliable detection possible, as updating the wrong firmware to the wrong probe will require a DFU reset. \
+\
+If you are running your probe on CAN, you are most likely running it on the can0 network, some people run their probe on a different can network like `can1`, or `can2`. If you are unsure... please reach out in our Discord, but you are most likely running it on `can0`, so press enter. If you are running it on a different network, type that network name. i.e. `can2`. <br>
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+Now select the firmware version you want, the latest firmware version will be selected by default, but if you do want a different version select the number next to the firmware version.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+You should now have the option to select either the Lite or Full firmware, Full is selected by default (option 1) for lite, select option 2.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+Lite firmware is for lower power Pi's like found on the Creality K1 and K2, Qidis or a Pi like the Raspberry Pi 2.\
+\
+It will show you which firmware is being written, from which path, and which interface it is being written on.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+it now gives you that information 1 more time, and a warning about what happens if you have selected the wrong information. If you have, just press N and come ask for help on Discord. <br>
+
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+You will now be prompted to participate in our **anonymous usage report**.
+
+This is **completely optional**, and **no data will be uploaded unless you choose to submit it**.
+
+***
+
+#### **What data is collected (if you opt in)**
+
+* **Probe identifier** (USB Serial or CAN UUID)
+* **Probe version** (V3 / V4)
+* **Protocol** (USB / CAN)
+* **Firmware version** (e.g. 6.1.0)
+* **Firmware type** (Full / Lite)
+* **CAN baud rate** (if applicable)
+
+***
+
+#### **Why we collect this**
+
+To better understand real-world usage, including:
+
+* **USB vs CAN usage**
+* **Lite vs Full firmware adoption**
+* **Common CAN speeds** (500k / 1M)
+* **V3 vs V4 usage**
+
+This helps us **guide future improvements** and prioritise development.
+
+***
+
+#### **Privacy**
+
+* **We will never sell your data**
+* **All shared statistics are fully anonymised**
+* **All identifiers are removed before any analysis or reporting**
+
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
+You are now done, go re-calibrate and print some more printer mods ;)
+
+## Updating via USB - Manual Method
 
 ### Updating Cartographer via Katapult
 

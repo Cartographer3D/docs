@@ -20,7 +20,7 @@ The combined firmware is a pre-compiled version of the Cartographer Firmware wit
 
 This is available at `~/cartographer_firmware/firmware/probe_version/combined-firmware`&#x20;
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 **Katapult**
 
@@ -28,7 +28,7 @@ This is the Katapult bootloader, it is a bootloader tool that will allow you to 
 
 This is available at `~/cartographer_firmware/firmware/probe_version/katapult`&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Katapult Deployer**
 
@@ -36,7 +36,7 @@ The Katapult deployer is version of Katapult which can be deployed via Katapult 
 
 This is available at `~/cartographer_firmware/firmware/probe_version/katapult-deployer`&#x20;
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Cartographer Firmware**
 
@@ -46,7 +46,7 @@ You must also ensure you select the correct firmware for the hardware you have i
 
 This is available at `~/cartographer_firmware/firmware/probe_version/firmware`&#x20;
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Full vs Lite Firmwares
 
