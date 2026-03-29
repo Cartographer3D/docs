@@ -25,7 +25,7 @@ else
 fi
 ```
 
-## Firmware Automatic Update Script
+## Firmware Automatic Update Script (CAN or USB)
 
 You will need to navigate to your `cartographer_firmware` folder, to do this
 
@@ -397,7 +397,7 @@ Once compelte, it should exit out of DFU mode, and you should be able to find yo
 
 {% embed url="https://youtu.be/casMZXMRWNs" %}
 
-## Update via CAN
+## Update via CAN - Manual Method
 
 ### Updating Cartographer via Katapult on CAN
 
