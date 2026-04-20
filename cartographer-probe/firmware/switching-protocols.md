@@ -287,7 +287,7 @@ You will need to replace with your UUID found in step3.
 
 {% code overflow="wrap" %}
 ```bash
-~/cartographer_firmware/firmware/v2-v3/katapult-deployer
+cd ~/cartographer_firmware/firmware/v2-v3/katapult-deployer
 python3 ~/katapult/scripts/flash_can.py -i can0 -f katapult-deployer-usb.bin -u <myuuid>
 ```
 {% endcode %}
