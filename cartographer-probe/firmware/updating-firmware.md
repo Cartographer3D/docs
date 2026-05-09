@@ -199,7 +199,7 @@ Now your Cartographer is in Katapult Mode, you now need to navigate to the corre
 ```bash
 KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
 cd ~/cartographer_firmware/firmware/v2-v3/survey/5.0.0/
-~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f Survey_Cartographer_USB_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
+~/klippy-env/bin/python ~/katapult/scripts/flash_can.py -f Survey_Cartographer_USB_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
 ```
 {% endcode %}
 
@@ -212,13 +212,13 @@ Navigate to the folder where your firmware is located, for the example I will be
 Now, run the following command, replacing \<firmware> with the firmware you are flashing, and \<serial> with the serial ID and path.
 
 ```
-~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f <firmware> -d <serial>
+~/klippy-env/bin/python ~/katapult/scripts/flash_can.py -f <firmware> -d <serial>
 ```
 
 Again, an example of a full command
 
 ```
-~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f Cartographer_USB_8kib_offset.bin -d /dev/serial/by-id/usb-katapult_stm32f042x6_060012001643565537353020-if00
+~/klippy-env/bin/python ~/katapult/scripts/flash_can.py -f Cartographer_USB_8kib_offset.bin -d /dev/serial/by-id/usb-katapult_stm32f042x6_060012001643565537353020-if00
 ```
 
 If successful, you should have the following output.
@@ -237,7 +237,7 @@ Now your Cartographer is in Katapult Mode, you now need to navigate to the corre
 ```bash
 KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
 cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0
-~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f CartographerV4_6.0.0_USB_full_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
+~/klippy-env/bin/python ~/katapult/scripts/flash_can.py -f CartographerV4_6.0.0_USB_full_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
 ```
 {% endcode %}
 
@@ -249,7 +249,7 @@ Your probe should now have the latest Cartographer Full Firmware installed on it
 ```bash
 KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
 cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0
-~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f CartographerV4_6.0.0_USB_lite_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
+~/klippy-env/bin/python ~/katapult/scripts/flash_can.py -f CartographerV4_6.0.0_USB_lite_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
 ```
 {% endcode %}
 
@@ -262,13 +262,13 @@ Navigate to the folder where your firmware is located, for the example I will be
 Now, run the following command, replacing \<firmware> with the firmware you are flashing, and \<serial> with the serial ID and path.
 
 ```
-~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f <firmware> -d <serial>
+~/klippy-env/bin/python ~/katapult/scripts/flash_can.py -f <firmware> -d <serial>
 ```
 
 Again, an example of a full command
 
 ```
-~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f Cartographer_USB_8kib_offset.bin -d /dev/serial/by-id/usb-katapult_stm32f042x6_060012001643565537353020-if00
+~/klippy-env/bin/python ~/katapult/scripts/flash_can.py -f Cartographer_USB_8kib_offset.bin -d /dev/serial/by-id/usb-katapult_stm32f042x6_060012001643565537353020-if00
 ```
 
 If successful, you should have the following output.
