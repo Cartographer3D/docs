@@ -29,6 +29,15 @@ curl -s -L https://raw.githubusercontent.com/Cartographer3D/cartographer3d-plugi
 ```
 {% endcode %}
 
+## Download the Cartographer Firmware Repository
+
+You should download the Cartographer firmware repository to update your probe to the latest compatible firmware.&#x20;
+
+```bash
+cd ~
+git clone https://github.com/Cartographer3D/cartographer_firmware.git
+```
+
 ## Configure Moonraker Update Manager
 
 ```yaml
@@ -40,6 +49,12 @@ project_name: cartographer3d-plugin
 is_system_service: False
 managed_services: klipper
 info_tags: desc=Cartographer Plugin
+
+[update_manager Cartographer Firmware]
+type: git_repo
+path: ~/cartographer_firmware
+origin: https://github.com/Cartographer3D/cartographer_firmware.git
+
 ```
 
 ## Configure Klipper
@@ -129,6 +144,12 @@ If you order a CAN Probe it will have it's baud rate set at 1,000,000. Make sure
 ```
 
 Take note of either the Serial ID or the UUID.&#x20;
+
+## Update your probe
+
+Now your probe is in your configuration, it is advisable to update the probe to the latest firmware version available to you. \
+\
+Instructions on how to update your probe are available at [Updating Firmware](https://app.gitbook.com/o/S2LVgKK5MHcRWiT9Vksy/s/jpCp1KnR8izt0cnWQfZF/~/edit/~/changes/298/cartographer-probe/firmware/updating-firmware)
 
 ## Calibration
 
