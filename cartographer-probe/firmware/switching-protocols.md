@@ -25,6 +25,20 @@ else
 fi
 ```
 
+You should add both of these to your Moonraker config file to ensure that they are always up to date.&#x20;
+
+```yaml
+[update_manager Cartographer Firmware]
+type: git_repo
+path: ~/cartographer_firmware
+origin: https://github.com/Cartographer3D/cartographer_firmware.git
+
+[update_manager katapult]
+type: git_repo
+path: ~/katapult
+origin: https://github.com/Arksine/katapult.git
+```
+
 ## Switching Protocol
 
 ### Switching to CAN (1M) from USB
