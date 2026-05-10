@@ -32,10 +32,12 @@ You should add both of these to your Moonraker config file to ensure that they a
 type: git_repo
 path: ~/cartographer_firmware
 origin: https://github.com/Cartographer3D/cartographer_firmware.git
+is_system_service: False
 
 [update_manager katapult]
 type: git_repo
 path: ~/katapult
+is_system_service: False
 origin: https://github.com/Arksine/katapult.git
 ```
 
