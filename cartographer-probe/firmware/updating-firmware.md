@@ -337,6 +337,10 @@ To check,
 
 Download and Install STM32CubeProgrammer from [here](https://www.st.com/en/development-tools/stm32cubeprog.html), I warn you it requires you to sign up for an account.
 
+{% hint style="info" %}
+Firmware files are available [https://github.com/Cartographer3D/cartographer\_firmware](https://github.com/Cartographer3D/cartographer_firmware)
+{% endhint %}
+
 Version 2.14.0 is recommended due to a known bug in 2.16.0 which causes issues when flashing via STMCubeProgammer - this can be selected from the version 'drop down' on the site.
 
 Open the application, and on the RIGHT side, select the following options and press **Connect**.
