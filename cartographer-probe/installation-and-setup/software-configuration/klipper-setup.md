@@ -52,6 +52,7 @@ info_tags: desc=Cartographer Plugin
 
 [update_manager Cartographer Firmware]
 type: git_repo
+primary_branch: main
 path: ~/cartographer_firmware
 is_system_service: False
 origin: https://github.com/Cartographer3D/cartographer_firmware.git
