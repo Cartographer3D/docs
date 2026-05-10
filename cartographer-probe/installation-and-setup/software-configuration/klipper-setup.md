@@ -149,7 +149,7 @@ Take note of either the Serial ID or the UUID.&#x20;
 
 Now your probe is in your configuration, it is advisable to update the probe to the latest firmware version available to you. \
 \
-Instructions on how to update your probe are available at [Updating Firmware](https://app.gitbook.com/o/S2LVgKK5MHcRWiT9Vksy/s/jpCp1KnR8izt0cnWQfZF/~/edit/~/changes/298/cartographer-probe/firmware/updating-firmware)
+Instructions on how to update your probe are available [here](https://docs.cartographer3d.com/cartographer-probe/firmware/updating-firmware).
 
 ## Calibration
 
