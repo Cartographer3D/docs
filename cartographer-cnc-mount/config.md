@@ -8,6 +8,6 @@ On a StealthBurner, you need to set your X and Y offset as follows in your Carto
 
 ```yaml
 [cartographer]
-x_offset: 0
-y_offset: 21.1
+x_offset: 0 # = (your measured value)
+y_offset: 21.1 # = (your measured value)
 ```
