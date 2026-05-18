@@ -138,7 +138,9 @@ You can now run a Bed Mesh Calibration (I would advise doing either a `Z_TILT` o
 ```gcode
 BED_MESH_CALIBRATE
 ```
-
+{% hint style="info" %}
+When Cartographer is installed, `BED_MESH_CALIBRATE` defaults to `METHOD=scanner`, you do not need to add a method.  For compatibility reasons, `METHOD=scan` and `METHOD=rapid_scan` will not work with Cartographer, so just omit the method.
+{% endhint %}
 ***
 
 ### If you are <mark style="color:red;">NOT</mark> using TOUCH you should now [continue with this guide](first-print.md#scan-mode-first-print).
