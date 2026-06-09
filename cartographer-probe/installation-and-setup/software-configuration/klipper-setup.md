@@ -31,7 +31,7 @@ curl -s -L https://raw.githubusercontent.com/Cartographer3D/cartographer3d-plugi
 
 ## Download the Cartographer Firmware Repository
 
-You should download the Cartographer firmware repository to update your probe to the latest compatible firmware.&#x20;
+You should download the Cartographer firmware repository to update your probe to the latest compatible firmware.
 
 ```bash
 cd ~
@@ -55,6 +55,7 @@ type: git_repo
 path: ~/cartographer_firmware
 is_system_service: False
 origin: https://github.com/Cartographer3D/cartographer_firmware.git
+primary_branch: main
 
 ```
 
@@ -65,16 +66,16 @@ Below are the minimum, required, options listed. Except for the `temperature_sen
 You will need to adjust this config for your printer and your probe, this is done by modifying the sections labeled \`\<blank>\`
 
 {% hint style="warning" %}
-You MUST configure your homing of G28 to home in the middle of your bed, for example if you're using endstops you should add&#x20;
+You MUST configure your homing of G28 to home in the middle of your bed, for example if you're using endstops you should add
 
 ```
 [safe_z_home]
 home_xy_position: 150, 150 # This should be for the CENTRE OF YOUR BED.
 ```
 
-Documentation for [safe\_z\_home](https://www.klipper3d.org/Config_Reference.html#safe_z_home) here. \
+Documentation for [safe\_z\_home](https://www.klipper3d.org/Config_Reference.html#safe_z_home) here.\
 \
-If you're using sensorless, you may need to setup a `[homing_override]` details available [here](https://www.klipper3d.org/Config_Reference.html#homing_override)&#x20;
+If you're using sensorless, you may need to setup a `[homing_override]` details available [here](https://www.klipper3d.org/Config_Reference.html#homing_override)
 {% endhint %}
 
 ```yaml
@@ -126,9 +127,9 @@ probe_points:
 
 ## Finding the Serial or UUID
 
-Note, you need to replace the serial path  or UUID with your probes serial path or UUID, this can be found by running the following commands&#x20;
+Note, you need to replace the serial path or UUID with your probes serial path or UUID, this can be found by running the following commands
 
-For USB based probes&#x20;
+For USB based probes
 
 ```bash
 ls /dev/serial/by-id/
@@ -137,18 +138,18 @@ ls /dev/serial/by-id/
 For CAN based probes
 
 {% hint style="info" %}
-If you order a CAN Probe it will have it's baud rate set at 1,000,000. Make sure your system matches that.&#x20;
+If you order a CAN Probe it will have it's baud rate set at 1,000,000. Make sure your system matches that.
 {% endhint %}
 
 ```bash
 ~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
 ```
 
-Take note of either the Serial ID or the UUID.&#x20;
+Take note of either the Serial ID or the UUID.
 
 ## Update your probe
 
-Now your probe is in your configuration, it is advisable to update the probe to the latest firmware version available to you. \
+Now your probe is in your configuration, it is advisable to update the probe to the latest firmware version available to you.\
 \
 Instructions on how to update your probe are available [here](https://docs.cartographer3d.com/cartographer-probe/firmware/updating-firmware).
 
