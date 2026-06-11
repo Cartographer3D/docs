@@ -119,6 +119,12 @@ Calibrate temperature compensation for frequency drift
 CARTOGRAPHER_TEMPERATURE_CALIBRATE MIN_TEMP=40 MAX_TEMP=60 BED_TEMP=90 Z_SPEED=5
 ```
 
+## CARTOGRAPHER_SCAN_PROBE
+
+Probe the bed to get the height offset at the current position.
+
+*This macro accepts no parameters.*
+
 ## CARTOGRAPHER_SCAN_CALIBRATE
 
 Run the scan calibration

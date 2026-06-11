@@ -24,6 +24,8 @@ y_offset:
 #   Set to yes to enable debug output.
 #macro_prefix: None
 #   A prefix to register a second set of Cartographer macros using, alongside 'CARTOGRAPHER_'. E.g. 'CARTO' would result in 'CARTO_TOUCH_HOME'.
+#register_as_probe: True
+#   When true, Cartographer registers as the 'probe' printer object and 'probe:' pin chip, overriding PROBE/PROBE_ACCURACY/QUERY_PROBE/Z_OFFSET_APPLY_PROBE commands. When false, Cartographer registers its endstop under the 'cartographer_probe:' pin chip and does not claim the 'probe' object, allowing a separate [probe] section to coexist.
 ```
 
 ## Scan
