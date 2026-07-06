@@ -132,7 +132,7 @@ Note, you need to replace the serial path or UUID with your probes serial path o
 For USB based probes
 
 ```bash
-ls /dev/serial/by-id/
+ls /dev/serial/by-id/*
 ```
 
 For CAN based probes
