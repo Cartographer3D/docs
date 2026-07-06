@@ -15,13 +15,15 @@ _This macro accepts no parameters._
 Probe the bed multiple times to measure the accuracy of the probe.
 
 ```
-  LIFT_SPEED (float, required): Lift speed in mm/s
+  LIFT_SPEED (float, default: config 'general.lift_speed'): Lift speed in mm/s
     Constraints: minimum: 1
   SAMPLE_RETRACT_DIST (float, default: 1.0): Retract distance between samples
     Constraints: minimum: 1.0
   SAMPLES (int, default: 10): Number of probe samples
     Constraints: minimum: 3
 ```
+
+_Some defaults are inherited from your configuration. See General._
 
 **Example:**
 
@@ -51,25 +53,27 @@ Gather samples across the bed to calibrate the bed mesh.
   MESH_MAX (str | None, default: None): Maximum mesh coordinate (x,y)
   PROBE_COUNT (str | None, default: None): Number of probe points (x,y)
   ADAPTIVE (int, default: 0): Enable adaptive meshing (0 or 1)
-  ADAPTIVE_MARGIN (float, default: 0.0): Margin for adaptive mesh
+  ADAPTIVE_MARGIN (float, default: config 'bed_mesh.adaptive_margin'): Margin for adaptive mesh
     Constraints: minimum: 0
   PROFILE (str, default: 'default'): Mesh profile name
-  DIRECTION (MeshDirection, default: 'x'): Primary scan direction
+  DIRECTION (MeshDirection, default: config 'scan.mesh_direction'): Primary scan direction
     Allowed values: x, y
-  PATH (MeshPath, default: 'snake'): Scan path pattern
+  PATH (MeshPath, default: config 'scan.mesh_path'): Scan path pattern
     Allowed values: snake, alternating_snake, spiral, random
-  SPEED (float, default: 50.0): Scan speed
+  SPEED (float, default: config 'bed_mesh.speed'): Scan speed
     Constraints: minimum: 50
-  HEIGHT (float, default: 5.0): Scan height
+  HEIGHT (float, default: config 'scan.mesh_height'): Scan height
     Constraints: minimum: 0.5, maximum: 5
-  RUNS (int, default: 1): Number of scan passes
+  RUNS (int, default: config 'scan.mesh_runs'): Number of scan passes
     Constraints: minimum: 1
 ```
+
+_Some defaults are inherited from your configuration. See Bed Mesh, Scan._
 
 **Example:**
 
 ```
-BED_MESH_CALIBRATE METHOD=scan ADAPTIVE=0 ADAPTIVE_MARGIN=0.0 PROFILE=default DIRECTION=x PATH=snake SPEED=50.0 HEIGHT=5.0 RUNS=1
+BED_MESH_CALIBRATE METHOD=scan ADAPTIVE=0 ADAPTIVE_MARGIN=<adaptive_margin> PROFILE=default DIRECTION=<direction> PATH=<path> SPEED=<speed> HEIGHT=<height> RUNS=<runs>
 ```
 
 ### CARTOGRAPHER\_QUERY
@@ -239,13 +243,15 @@ _This macro accepts no parameters._
 Touch the bed multiple times to measure the accuracy of the probe.
 
 ```
-  LIFT_SPEED (float, required): Lift speed in mm/s
+  LIFT_SPEED (float, default: config 'general.lift_speed'): Lift speed in mm/s
     Constraints: minimum: 1
   SAMPLE_RETRACT_DIST (float, default: 1.0): Retract distance between samples
     Constraints: minimum: 1.0
   SAMPLES (int, default: 5): Number of probe samples
     Constraints: minimum: 3
 ```
+
+_Some defaults are inherited from your configuration. See General._
 
 **Example:**
 
@@ -258,9 +264,11 @@ CARTOGRAPHER_TOUCH_ACCURACY LIFT_SPEED=<lift_speed> SAMPLE_RETRACT_DIST=1.0 SAMP
 Touch the bed to home Z axis
 
 ```
-  EXPERIMENTAL_RANDOM_RADIUS (float, required): Random homing radius
+  EXPERIMENTAL_RANDOM_RADIUS (float, default: config 'touch.EXPERIMENTAL_home_random_radius'): Random homing radius
     Constraints: minimum: 0
 ```
+
+_Some defaults are inherited from your configuration. See Touch._
 
 **Example:**
 
