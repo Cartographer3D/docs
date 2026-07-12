@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-You must have the Cartographer Firmware repository, for future updates you will also need Katapult on your Pi, if you do not have these please connect via SSH and run the following command.&#x20;
+You must have the Cartographer Firmware repository, for future updates you will also need Katapult on your Pi, if you do not have these please connect via SSH and run the following command.
 
 ```bash
 cd ~
@@ -23,7 +23,7 @@ else
 fi
 ```
 
-You should add both of these to your Moonraker config file to ensure that they are always up to date.&#x20;
+You should add both of these to your Moonraker config file to ensure that they are always up to date.
 
 ```yaml
 [update_manager Cartographer Firmware]
@@ -68,7 +68,7 @@ To enter DFU Mode, it can be a bit fiddly but with V4 due to the use of holes ra
 
 Firstly using the supplied USB cable, plug this into the Cartographer (Molex Sherlock) connector.
 
-Then using your ferrous tweezers or similar, bridge the holes in box 1 (BT0 & 3V3) and then while still bridging those holes plug in your Cartographer V4 via the USB connector of the cable into the device you will be flashing from this can be either a separate Windows PC, Mac, or a Linux machine, or the device you run your 3D Printer off such as a Raspberry Pi. \
+Then using your ferrous tweezers or similar, bridge the holes in box 1 (BT0 & 3V3) and then while still bridging those holes plug in your Cartographer V4 via the USB connector of the cable into the device you will be flashing from this can be either a separate Windows PC, Mac, or a Linux machine, or the device you run your 3D Printer off such as a Raspberry Pi.\
 \
 This should then show the V4 in DFU mode.
 {% endtab %}
@@ -87,7 +87,7 @@ To check,
   * Search and open "Device Manager"
   * Scroll down to Universal Serial Bus Devices
   * You should see STM32 BOOTLOADER as an option
-  * &#x20;![Device Manager view of Cartographer in Bootloader mode.](https://docs.cartographer3d.com/~gitbook/image?url=https%3A%2F%2F3044346320-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FjpCp1KnR8izt0cnWQfZF%252Fuploads%252FlAqyGG4GHQ1siPPWLzpx%252Fimage.png%3Falt%3Dmedia%26token%3Dd24fa98a-010d-4c07-8f63-ed19242d41df\&width=300\&dpr=4\&quality=100\&sign=51e83bcb\&sv=2)
+  * ![Device Manager view of Cartographer in Bootloader mode.](https://docs.cartographer3d.com/~gitbook/image?url=https%3A%2F%2F3044346320-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FjpCp1KnR8izt0cnWQfZF%252Fuploads%252FlAqyGG4GHQ1siPPWLzpx%252Fimage.png%3Falt%3Dmedia%26token%3Dd24fa98a-010d-4c07-8f63-ed19242d41df\&width=300\&dpr=4\&quality=100\&sign=51e83bcb\&sv=2)
 
 #### Flashing via STM32CubeProgrammer (Windows & MacOS) <a href="#flashing-via-stm32cubeprogrammer-windows-and-macos" id="flashing-via-stm32cubeprogrammer-windows-and-macos"></a>
 
@@ -109,13 +109,13 @@ for V3 this is at `cartographer_firmware/firmware/v2-v3/combined-firmware`
 
 for V4 this is located at `cartographer_firmware/firmware/v4/combined-firmware/6.0.0`
 
-Select the firmware you want to use&#x20;
+Select the firmware you want to use
 
-i.e. `Katapult_plus_CartographerV4_6.0.0__CAN_1M.bin` if you wanted V4, Firmware 6.0.0 for CAN networks with a Baudrate of 1,000,000.&#x20;
+i.e. `Katapult_plus_CartographerV4_6.0.0__CAN_1M.bin` if you wanted V4, Firmware 6.0.0 for CAN networks with a Baudrate of 1,000,000.
 
 <figure><img src="https://docs.cartographer3d.com/~gitbook/image?url=https%3A%2F%2F3044346320-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FjpCp1KnR8izt0cnWQfZF%252Fuploads%252FDZn6JTnVsZ2PPPgG9gvj%252Fimage.png%3Falt%3Dmedia%26token%3D6d63fff9-ea16-4f8b-9a1f-a51905a3992f&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=7fbcbe29&#x26;sv=2" alt=""><figcaption><p>Firmwares Loaded</p></figcaption></figure>
 
-For the Complete (Katapult + Cartographer) Firmware, you need to keep it at the default address of `0x08000000`&#x20;
+For the Complete (Katapult + Cartographer) Firmware, you need to keep it at the default address of `0x08000000`
 
 On each of the firmware's press "Download", starting with Katapult, then with Cartographer. Now press Disconnect in the TOP RIGHT corner.
 
@@ -128,7 +128,7 @@ SSH into your linux host MCU, ensuring that your Cartographer is plugged in and 
 Navigate into the correct folder, so if you want to update your v2 or v3 run the following command.
 
 ```
-cd ~/cartographer_firmware/firmware/v2-v3/combined-firmware/5.0.0
+cd ~/cartographer_firmware/firmware/v2-v3/combined-firmware/6.1.0
 ```
 
 Once in the folder, simply check that your probe is still in DFU Mode by running `lsusb`, and if you still get a result stating it is in DFU Mode, run the following command.
@@ -143,15 +143,15 @@ NOTE - REPLACE the address (`0x08000000`) with what ever is listed in the [table
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_USB_5_0_0.bin -d 0483:df11
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV3_6.1.0_USB.bin -d 0483:df11
 ```
 {% endcode %}
 
-**Example to flash V3 USB  lite (k1) Firmware**
+**Example to flash V3 USB lite (k1) Firmware**
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_CrealityK1_USB_5_0_0.bin -d 0483:df11
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV3_6.1.0_USB_lite.bin -d 0483:df11
 ```
 {% endcode %}
 
@@ -159,7 +159,15 @@ sudo dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_CrealityK1
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_CAN_1M_5_0_0.bin -d 0483:df11
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV3_6.1.0_CAN_1M.bin -d 0483:df11
+```
+{% endcode %}
+
+**Example to flash V3 CAN 1m lite Firmware**
+
+{% code overflow="wrap" %}
+```bash
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV3_6.1.0_CAN_1M_lite.bin -d 0483:df11
 ```
 {% endcode %}
 {% endtab %}
@@ -168,7 +176,7 @@ sudo dfu-util -R -a 0 -s 0x08000000:leave -D Full_Survey_Cartographer_CAN_1M_5_0
 Navigate into the correct folder, so if you want to update your 4run the following command.
 
 ```
-cd ~/cartographer_firmware/firmware/v4/combined-firmware/6.0.0
+cd ~/cartographer_firmware/firmware/v4/combined-firmware/6.1.0
 ```
 
 Once in the folder, simply check that your probe is still in DFU Mode by running `lsusb`, and if you still get a result stating it is in DFU Mode, run the following command.
@@ -183,15 +191,15 @@ NOTE - REPLACE the address (`0x08000000`) with what ever is listed in the [table
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0__USB.bin -d 0483:df11
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.1.0_USB.bin -d 0483:df11
 ```
 {% endcode %}
 
-**Example to flash V4 USB  liteFirmware**
+**Example to flash V4 USB liteFirmware**
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0__USB_lite.bin -d 0483:df11
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.1.0_USB_lite.bin -d 0483:df11
 ```
 {% endcode %}
 
@@ -199,7 +207,7 @@ sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0_
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0__CAN_1M.bin -d 0483:df11
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.1.0_CAN_1M.bin -d 0483:df11
 ```
 {% endcode %}
 
@@ -207,10 +215,11 @@ sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0_
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.0.0__CAN_1M_lite.bin -d 0483:df11
+sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV4_6.1.0_CAN_1M_lite.bin -d 0483:df11
 ```
 {% endcode %}
 
-Once compelte, it should exit out of DFU mode, and you should be able to find your probe on  USB or CAN, which ever you have selected.
+Once compelte, it should exit out of DFU mode, and you should be able to find your probe on USB or CAN, which ever you have selected.
 {% endtab %}
 {% endtabs %}
+
