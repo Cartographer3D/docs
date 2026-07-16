@@ -1,10 +1,10 @@
 # Updating Firmware
 
-To update your probes firmware, the simplest method is to use Katapult, though you can also use DFU via USB.&#x20;
+To update your probes firmware, the simplest method is to use Katapult, though you can also use DFU via USB.
 
 ## Prerequisites
 
-You must have both the Cartographer Firmware repository, and Katapult on your Pi, if you do not have these please connect via SSH and run the following command.&#x20;
+You must have both the Cartographer Firmware repository, and Katapult on your Pi, if you do not have these please connect via SSH and run the following command.
 
 ```bash
 cd ~
@@ -25,7 +25,7 @@ else
 fi
 ```
 
-You should add both of these to your Moonraker config file to ensure that they are always up to date.&#x20;
+You should add both of these to your Moonraker config file to ensure that they are always up to date.
 
 ```yaml
 [update_manager Cartographer Firmware]
@@ -49,37 +49,37 @@ You will need to navigate to your `cartographer_firmware` folder, to do this
 cd ~/cartographer_firmware     
 ```
 
-Now you need to run the firmware update script&#x20;
+Now you need to run the firmware update script
 
 ```bash
 ./fw_update.sh
 ```
 
-This will take you to the following menu, which you need to navigate through, you do this by pressing enter/return.&#x20;
+This will take you to the following menu, which you need to navigate through, you do this by pressing enter/return.
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-The script will now try to detect what type of probe you have, be it a Cartographer V3 or V4. It does this a number of ways, by analysing your Klippy.log, Querying Moonraker and Querying our API. This is to ensure that you get the most reliable detection possible, as updating the wrong firmware to the wrong probe will require a DFU reset. \
+The script will now try to detect what type of probe you have, be it a Cartographer V3 or V4. It does this a number of ways, by analysing your Klippy.log, Querying Moonraker and Querying our API. This is to ensure that you get the most reliable detection possible, as updating the wrong firmware to the wrong probe will require a DFU reset.\
 \
-If you are running your probe on CAN, you are most likely running it on the can0 network, some people run their probe on a different can network like `can1`, or `can2`. If you are unsure... please reach out in our Discord, but you are most likely running it on `can0`, so press enter. If you are running it on a different network, type that network name. i.e. `can2`. <br>
+If you are running your probe on CAN, you are most likely running it on the can0 network, some people run their probe on a different can network like `can1`, or `can2`. If you are unsure... please reach out in our Discord, but you are most likely running it on `can0`, so press enter. If you are running it on a different network, type that network name. i.e. `can2`.<br>
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-Now select the firmware version you want, the latest firmware version will be selected by default, but if you do want a different version select the number next to the firmware version.&#x20;
+Now select the firmware version you want, the latest firmware version will be selected by default, but if you do want a different version select the number next to the firmware version.
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-You should now have the option to select either the Lite or Full firmware, Full is selected by default (option 1) for lite, select option 2.&#x20;
+You should now have the option to select either the Lite or Full firmware, Full is selected by default (option 1) for lite, select option 2.
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Lite firmware is for lower power Pi's like found on the Creality K1 and K2, Qidis or a Pi like the Raspberry Pi 2.\
 \
-It will show you which firmware is being written, from which path, and which interface it is being written on.&#x20;
+It will show you which firmware is being written, from which path, and which interface it is being written on.
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-it now gives you that information 1 more time, and a warning about what happens if you have selected the wrong information. If you have, just press N and come ask for help on Discord. <br>
+it now gives you that information 1 more time, and a warning about what happens if you have selected the wrong information. If you have, just press N and come ask for help on Discord.<br>
 
 <figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
@@ -129,13 +129,13 @@ You are now done, go re-calibrate and print some more printer mods ;)
 
 ### Updating Cartographer via Katapult
 
-You should know which version of the Cartographer Probe you have in order to be able to do this, please refer to the diagrams below to identify your version.&#x20;
+You should know which version of the Cartographer Probe you have in order to be able to do this, please refer to the diagrams below to identify your version.
 
 <figure><img src="../../.gitbook/assets/image (65).png" alt="Cartographer V3 - Standard, Low Profile and Right Angle"><figcaption><p>Cartographer V3 - Standard, Low Profile, RIght Angle</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption><p>Cartographer V4 - Standard / Low Profile*</p></figcaption></figure>
 
-\*Cartographer V4 has a different connector on it, but the PCB is the same design.&#x20;
+\*Cartographer V4 has a different connector on it, but the PCB is the same design.
 
 #### Step 1 - Enter Bootloader Mode
 
@@ -187,7 +187,7 @@ cd ~/klipper/scripts
 {% endtab %}
 {% endtabs %}
 
-Once your probe is in Bootloader mode, move onto the next step.&#x20;
+Once your probe is in Bootloader mode, move onto the next step.
 
 #### Step 2 - Flash Firmware
 
@@ -200,8 +200,8 @@ Now your Cartographer is in Katapult Mode, you now need to navigate to the corre
 {% code overflow="wrap" fullWidth="false" %}
 ```bash
 KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
-cd ~/cartographer_firmware/firmware/v2-v3/survey/5.0.0/
-~/klippy-env/bin/python ~/katapult/scripts/flash_can.py -f Survey_Cartographer_USB_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
+cd ~/cartographer_firmware/firmware/v2-v3/survey/6.1.0
+~/klippy-env/bin/python ~/katapult/scripts/flash_can.py -f CartographerV3_6.1.0_USB_full_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
 ```
 {% endcode %}
 
@@ -238,8 +238,8 @@ Now your Cartographer is in Katapult Mode, you now need to navigate to the corre
 {% code overflow="wrap" fullWidth="false" %}
 ```bash
 KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
-cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0
-~/klippy-env/bin/python ~/katapult/scripts/flash_can.py -f CartographerV4_6.0.0_USB_full_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
+cd ~/cartographer_firmware/firmware/v4/firmware/6.1.0
+~/klippy-env/bin/python ~/katapult/scripts/flash_can.py -f CartographerV4_6.1.0_USB_full_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
 ```
 {% endcode %}
 
@@ -250,8 +250,8 @@ Your probe should now have the latest Cartographer Full Firmware installed on it
 {% code overflow="wrap" fullWidth="false" %}
 ```bash
 KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
-cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0
-~/klippy-env/bin/python ~/katapult/scripts/flash_can.py -f CartographerV4_6.0.0_USB_lite_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
+cd ~/cartographer_firmware/firmware/v4/firmware/6.1.0
+~/klippy-env/bin/python ~/katapult/scripts/flash_can.py -f CartographerV4_6.1.0_USB_lite_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
 ```
 {% endcode %}
 
@@ -310,13 +310,11 @@ To enter DFU Mode, it can be a bit fiddly but with V4 due to the use of holes ra
 
 Firstly using the supplied USB cable, plug this into the Cartographer (Molex Sherlock) connector.
 
-Then using your ferrous tweezers or similar, bridge the holes in box 1 (BT0 & 3V3) and then while still bridging those holes plug in your Cartographer V4 via the USB connector of the cable into the device you will be flashing from this can be either a separate Windows PC, Mac, or a Linux machine, or the device you run your 3D Printer off such as a Raspberry Pi. \
+Then using your ferrous tweezers or similar, bridge the holes in box 1 (BT0 & 3V3) and then while still bridging those holes plug in your Cartographer V4 via the USB connector of the cable into the device you will be flashing from this can be either a separate Windows PC, Mac, or a Linux machine, or the device you run your 3D Printer off such as a Raspberry Pi.\
 \
 This should then show the V4 in DFU mode.
 {% endtab %}
 {% endtabs %}
-
-
 
 If you have done this correctly, your device should have entered DFU Mode.
 
@@ -331,7 +329,7 @@ To check,
   * Search and open "Device Manager"
   * Scroll down to Universal Serial Bus Devices
   * You should see STM32 BOOTLOADER as an option
-  * &#x20;![Device Manager view of Cartographer in Bootloader mode.](https://docs.cartographer3d.com/~gitbook/image?url=https%3A%2F%2F3044346320-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FjpCp1KnR8izt0cnWQfZF%252Fuploads%252FlAqyGG4GHQ1siPPWLzpx%252Fimage.png%3Falt%3Dmedia%26token%3Dd24fa98a-010d-4c07-8f63-ed19242d41df\&width=300\&dpr=4\&quality=100\&sign=51e83bcb\&sv=2)
+  * ![Device Manager view of Cartographer in Bootloader mode.](https://docs.cartographer3d.com/~gitbook/image?url=https%3A%2F%2F3044346320-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FjpCp1KnR8izt0cnWQfZF%252Fuploads%252FlAqyGG4GHQ1siPPWLzpx%252Fimage.png%3Falt%3Dmedia%26token%3Dd24fa98a-010d-4c07-8f63-ed19242d41df\&width=300\&dpr=4\&quality=100\&sign=51e83bcb\&sv=2)
 
 #### Flashing via STM32CubeProgrammer (Windows & MacOS) <a href="#flashing-via-stm32cubeprogrammer-windows-and-macos" id="flashing-via-stm32cubeprogrammer-windows-and-macos"></a>
 
@@ -368,7 +366,7 @@ SSH into your linux host MCU, ensuring that your Cartographer is plugged in and 
 Navigate into the correct folder, so if you want to update your v2 or v3 run the following command.
 
 ```
-cd ~/cartographer_firmware/firmware/v2-v3/survey/5.0.0
+cd ~/cartographer_firmware/firmware/v2-v3/survey/6.1.0
 ```
 
 Once in the folder, simply check that your probe is still in DFU Mode by running `lsusb`, and if you still get a result stating it is in DFU Mode, run the following command.
@@ -383,18 +381,18 @@ Example to install the latest stable V3 Firmware:
 
 {% code overflow="wrap" %}
 ```bash
-sudo dfu-util -R -a 0 -s 0x08002000:leave -D Survey_Cartographer_USB_8kib_offset.bin -d 0483:df11
+sudo dfu-util -R -a 0 -s 0x08002000:leave -D CartographerV3_6.1.0_USB_full_8kib_offset.bin -d 0483:df11
 ```
 {% endcode %}
 
-Once compelte, it should exit out of DFU mode, and you should be able to find your probe on  USB.
+Once compelte, it should exit out of DFU mode, and you should be able to find your probe on USB.
 {% endtab %}
 
 {% tab title="Cartographer V4" %}
 Navigate into the correct folder, so if you want to update your v4 run the following command.
 
 ```bash
-cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0
+cd ~/cartographer_firmware/firmware/v4/firmware/6.1.0
 ```
 
 Once in the folder, simply check that your probe is still in DFU Mode by running `lsusb`, and if you still get a result stating it is in DFU Mode, run the following command.
@@ -408,10 +406,10 @@ NOTE - REPLACE the address (`0x08000000`) with what ever is listed in the [table
 Example to install the latest stable V4 Firmware:
 
 ```bash
-sudo dfu-util -R -a 0 -s 0x08002000:leave -D CartographerV4_6.0.0_USB_full_8kib_offset.bin
+sudo dfu-util -R -a 0 -s 0x08002000:leave -D CartographerV4_6.1.0_USB_full_8kib_offset.bin
 ```
 
-Once compelte, it should exit out of DFU mode, and you should be able to find your probe on  USB.
+Once compelte, it should exit out of DFU mode, and you should be able to find your probe on USB.
 {% endtab %}
 {% endtabs %}
 
@@ -442,39 +440,39 @@ python3 ~/katapult/scripts/flash_can.py -i can0 -f <firmware.bin> -u <myuuid>
 ```
 
 {% hint style="danger" %}
-You will need to replace \<myuuid> with your UUID found in step3.&#x20;
+You will need to replace \<myuuid> with your UUID found in step3.
 {% endhint %}
 
 {% tabs %}
 {% tab title="Cartographer V2 CAN & V3" %}
-#### Update Cartographer V3 to firmware 5.0.0
+#### Update Cartographer V3 to firmware 6.1.0
 
 {% code overflow="wrap" %}
 ```bash
-cd ~/cartographer_firmware/firmware/v2-v3/survey/5.0.0/
-python3 ~/katapult/scripts/flash_can.py -i can0 -f Survey_Cartographer_CAN_1000000_8kib_offset.bin -u <myuuid>
+cd ~/cartographer_firmware/firmware/v2-v3/survey/6.1.0/
+python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV3_6.1.0_CAN_1M_full_8kib_offset.bin -u <myuuid>
 ```
 {% endcode %}
 {% endtab %}
 
 {% tab title="Cartographer V4" %}
-#### Update Cartographer V4 to firmware 6.0.0
+#### Update Cartographer V4 to firmware 6.1.0
 
 {% code overflow="wrap" %}
 ```bash
-cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0/
-python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV4_6.0.0_CAN_1M_full_8kib_offset.bin -u <myuuid>
+cd ~/cartographer_firmware/firmware/v4/firmware/6.1.0/
+python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV4_6.1.0_CAN_1M_full_8kib_offset.bin -u <myuuid>
 ```
 {% endcode %}
 
-#### Update Cartographer V4 to firmware 6.0.0 Lite
+#### Update Cartographer V4 to firmware 6.1.0 Lite
 
-See [here ](https://docs.cartographer3d.com/cartographer-probe/firmware#full-vs-lite-firmwares)for a description around the lite firmware&#x20;
+See [here ](https://docs.cartographer3d.com/cartographer-probe/firmware#full-vs-lite-firmwares)for a description around the lite firmware
 
 {% code overflow="wrap" %}
 ```bash
-cd ~/cartographer_firmware/firmware/v2-v3/survey/5.0.0/
-python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV4_6.0.0_CAN_1M_lite_8kib_offset.bin -u <myuuid>
+cd ~/cartographer_firmware/firmware/v4/firmware/6.1.0/
+python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV4_6.1.0_CAN_1M_lite_8kib_offset.bin -u <myuuid>
 ```
 {% endcode %}
 {% endtab %}
