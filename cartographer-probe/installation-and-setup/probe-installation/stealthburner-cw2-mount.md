@@ -1,7 +1,7 @@
 # Stealthburner CW2 Mount
 
 {% hint style="success" %}
-If you are using a Cartographer V4 in Standard format then this mount is compatible. [Standard format CW2 mount](https://www.printables.com/model/708311-voron-24-stealthburner-beacon-revh).
+If you are using a Cartographer V4.1 in Standard format then this mount is compatible. [Standard format CW2 mount](https://www.printables.com/model/708311-voron-24-stealthburner-beacon-revh).
 {% endhint %}
 
 {% hint style="warning" %}
