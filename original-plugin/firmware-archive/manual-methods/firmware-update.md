@@ -4,7 +4,40 @@ description: Guide to flashing your Cartographer probe with new or updated firmw
 
 # ⬆️ Firmware
 
-### Which Firmware Should I use? <a href="#which-firmware-should-i-use" id="which-firmware-should-i-use"></a>
+### Which Firmware Should I use & What Address Do I Flash To? <a href="#which-firmware-should-i-use" id="which-firmware-should-i-use"></a>
+
+#### Firmware Types & Flash Address
+
+Combined Firmware = Katapult + Software: flash at `0x08000000` \
+Katapult = Bootloader Only: flash at `0x08000000` \
+Software = Cartographer Software Only: flash at `0x08002000`
+
+#### Cartographer Software?
+
+**Cartographer V2 & V3:**\
+Cartographer = Scan Only\
+Survey\_Cartographer = Scan + Touch (Firmware 5.0.0 - 5.1.0)\
+CartographerV3 = Scan + Touch (Firmware 6.1.0+)\
+\
+**Cartographer V4:**\
+CartographerV4 = Scan + Touch (Firmware 5.1.0+)
+
+#### CAN Speeds
+
+If the firmware has a build available the CAN speed (Baudrate) will be in the firmware name, 250k, 500k, 1M.\
+\
+Examples:\
+`CartographerV3_6.1.0_CAN_250K_full_8kib_offset.bin`\
+`CartographerV4_6.1.0_CAN_500K_full_8kib_offset.bin`\
+`CartographerV4_6.1.0_CAN_1M_full_8kib_offset.bin`
+
+#### Download Links
+
+V2 & V3 - [Firmware](https://github.com/Cartographer3D/cartographer_firmware/tree/main/firmware/v2-v3)\
+\
+V4 - [Firmware](https://github.com/Cartographer3D/cartographer_firmware/tree/main/firmware/v4)
+
+## Firmware - Archive ⬇
 
 Selecting the correct firmware is essential for the operation of the probe, please check which probe you have, and which mode it is being used in and cross reference the table below.
 
@@ -44,8 +77,8 @@ Cartographer v3 by default will come pre-flashed for CAN. You can switch between
 
 | Firmware                                                                                                                                                                                                | Type                            | Address    | Baudrate | Note                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ---------- | -------- | -------------------------------------------------------------------------------------------------- |
-| [Full\_Survey\_Cartographer\_USB\_5\_1\_0.bin](https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v2-v3/combined-firmware/5.0.0/Full_Survey_Cartographer_USB_5_0_0.bin)        | Bootloader & Firmware Combined  | 0x08000000 | N/A      | This is the only firmware you need, you don't need to flash the bootloader or firmware seperately. |
-| [Full\_Survey\_Cartographer\_CAN\_1M\_5\_0\_0.bin](https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v2-v3/combined-firmware/5.0.0/Full_Survey_Cartographer_CAN_1M_5_0_0.bin) | Bootloader & Firmware Combined  | 0x08000000 | 1M       | This is the only firmware you need, you don't need to flash the bootloader or firmware seperately. |
+| [Full\_Survey\_Cartographer\_USB\_5\_1\_0.bin](https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v2-v3/combined-firmware/5.0.0/Full_Survey_Cartographer_USB_5_0_0.bin)        | Bootloader & Firmware Combined  | 0x08000000 | N/A      | This is the only firmware you need, you don't need to flash the bootloader or firmware separately. |
+| [Full\_Survey\_Cartographer\_CAN\_1M\_5\_0\_0.bin](https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v2-v3/combined-firmware/5.0.0/Full_Survey_Cartographer_CAN_1M_5_0_0.bin) | Bootloader & Firmware Combined  | 0x08000000 | 1M       | This is the only firmware you need, you don't need to flash the bootloader or firmware separately. |
 | [Katapult\_250k.](https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v2-v3/Katapult_250k.bin)                                                                                  | Bootloader (Katapult)           | 0x08000000 | 250K     |                                                                                                    |
 | [Katapult\_500k.bin](https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v2-v3/Katapult_500k.bin)                                                                               | Bootloader (Katapult)           | 0x08000000 | 500K     |                                                                                                    |
 | [Katapult\_1m.bin](https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v2-v3/Katapult_1m.bin)                                                                                   | <p>Bootloader<br>(Katapult)</p> | 0x08000000 | 1M       |                                                                                                    |
@@ -55,4 +88,3 @@ Cartographer v3 by default will come pre-flashed for CAN. You can switch between
 | [Survey\_Cartographer\_CAN\_1000000\_8kib\_offset.bin](https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v2-v3/survey/5.0.0/Survey_Cartographer_CAN_1000000_8kib_offset.bin)  | Firmware (Klipper)              | 0x08002000 | 1M       | 8KiB Offset required, so needs to be 0x08002000                                                    |
 | [Survey\_Cartographer\_USB\_8kib\_offset.bin](https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v2-v3/survey/5.0.0/Survey_Cartographer_USB_8kib_offset.bin)                   | Firmware (Klipper)              | 0x08002000 | N/A      | 8KiB Offset required, so needs to be 0x08002000                                                    |
 | [Survey\_Cartographer\_K1\_USB\_8kib\_offset.bin](https://github.com/Cartographer3D/cartographer-klipper/blob/master/firmware/v2-v3/survey/5.0.0/Survey_Cartographer_K1_USB_8kib_offset.bin)            | <p>Firmware<br>(Klipper)</p>    | 0x08002000 | N/A      | Creality K1 Printers ONLY                                                                          |
-
