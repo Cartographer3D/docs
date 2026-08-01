@@ -1,10 +1,10 @@
 # Switching Protocols
 
-To switch your probe from CAN to USB or USB to CAN, the simplest method is to use Katapult and flash the Katapult Deployer file, though you can also use [DFU](re-flashing.md) via USB.&#x20;
+To switch your probe from CAN to USB or USB to CAN, the simplest method is to use Katapult and flash the Katapult Deployer file, though you can also use [DFU](re-flashing.md) via USB.
 
 ## Prerequisites
 
-You must have both the Cartographer Firmware repository, and Katapult on your Pi, if you do not have these please connect via SSH and run the following command.&#x20;
+You must have both the Cartographer Firmware repository, and Katapult on your Pi, if you do not have these please connect via SSH and run the following command.
 
 ```bash
 cd ~
@@ -25,7 +25,7 @@ else
 fi
 ```
 
-You should add both of these to your Moonraker config file to ensure that they are always up to date.&#x20;
+You should add both of these to your Moonraker config file to ensure that they are always up to date.
 
 ```yaml
 [update_manager Cartographer Firmware]
@@ -45,13 +45,13 @@ is_system_service: False
 
 ### Switching to CAN (1M) from USB
 
-You should know which version of the Cartographer Probe you have in order to be able to do this, please refer to the diagrams below to identify your version.&#x20;
+You should know which version of the Cartographer Probe you have in order to be able to do this, please refer to the diagrams below to identify your version.
 
 <figure><img src="../../.gitbook/assets/image (65).png" alt="Cartographer V3 - Standard, Low Profile and Right Angle"><figcaption><p>Cartographer V3 - Standard, Low Profile, RIght Angle</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption><p>Cartographer V4 - Standard / Low Profile*</p></figcaption></figure>
 
-\*Cartographer V4 Low Profile has a different connector on it, but the PCB is the same design.&#x20;
+\*Cartographer V4 Low Profile has a different connector on it, but the PCB is the same design.
 
 #### Step 1 - Enter Bootloader Mode
 
@@ -103,7 +103,7 @@ cd ~/klipper/scripts
 {% endtab %}
 {% endtabs %}
 
-Once your probe is in Bootloader mode, move onto the next step.&#x20;
+Once your probe is in Bootloader mode, move onto the next step.
 
 #### Step 2 - Flash Firmware
 
@@ -111,7 +111,7 @@ Once your probe is in Bootloader mode, move onto the next step.&#x20;
 {% tab title="Cartographer V3" %}
 Now your Cartographer is in Katapult Mode, you now need to navigate to the correct katapult deployer file to flash it.
 
-**Automatic Katapult Deployer  CAN (1,000,000)**
+**Automatic Katapult Deployer CAN (1,000,000)**
 
 {% code overflow="wrap" fullWidth="false" %}
 ```bash
@@ -123,9 +123,9 @@ cd ~/cartographer_firmware/firmware/v2-v3/katapult-deployer/
 
 Your probe should now have the latest Cartographer Firmware installed on it. This page will be updated to include the command for the latest version available for this probe
 
-**Manual - Katapult Deployer  CAN (1,000,000)**
+**Manual - Katapult Deployer CAN (1,000,000)**
 
-Navigate to the folder where your katapult deployer is located&#x20;
+Navigate to the folder where your katapult deployer is located
 
 ```
 cd ~/cartographer_firmware/firmware/v2-v3/katapult-deployer/
@@ -155,7 +155,7 @@ If successful, you should have the following output.
 {% tab title="Cartographer V4" %}
 Now your Cartographer is in Katapult Mode, you now need to navigate to the correct katapult deployer file to flash it.
 
-**Automatic - Katapult Deployer  CAN (1,000,000)**
+**Automatic - Katapult Deployer CAN (1,000,000)**
 
 {% code overflow="wrap" fullWidth="false" %}
 ```bash
@@ -167,7 +167,7 @@ cd ~/cartographer_firmware/firmware/v4/katapult-deployer
 
 Your probe should now have the latest Cartographer Full Firmware installed on it. This page will be updated to include the command for the latest version available for this probe
 
-**Manual - Katapult Deployer  CAN (1,000,000)**
+**Manual - Katapult Deployer CAN (1,000,000)**
 
 Navigate to the folder where your katapult-deployer is located
 
@@ -203,23 +203,23 @@ You now need to plugin your Cartographer into your CAN network.
 DO NOT HOT PLUG ANYTHING IN YOUR PRINTER, ENSURE IT IS POWERED OFF.
 {% endhint %}
 
-You now need to flash your CAN firmware to the probe, so navigate to the directory the firmware is located&#x20;
+You now need to flash your CAN firmware to the probe, so navigate to the directory the firmware is located
 
 ```bash
-cd ~/cartographer_firmware/firmware/v2-v3/survey/5.0.0/
+cd ~/cartographer_firmware/firmware/v2-v3/survey/6.1.0/
 ```
 
-You will now need to check that your probe can be recognised by your CAN network, to do this we will do a CAN query. You should see a device which has Katapult listed next to it.  Note down the UUID it provides you.&#x20;
+You will now need to check that your probe can be recognised by your CAN network, to do this we will do a CAN query. You should see a device which has Katapult listed next to it. Note down the UUID it provides you.
 
 ```bash
 ~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0    
 ```
 
-Now, you will need to run the following command, replacing the UUID with what ever the UUID is for your probe.&#x20;
+Now, you will need to run the following command, replacing the UUID with what ever the UUID is for your probe.
 
 {% code overflow="wrap" %}
 ```bash
-python3 ~/katapult/scripts/flash_can.py -i can0 -f Survey_Cartographer_CAN_1000000_8kib_offset.bin -u UUID
+python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV3_6.1.0_CAN_1M_full_8kib_offset.bin -u UUID
 ```
 {% endcode %}
 
@@ -227,7 +227,7 @@ Example
 
 {% code overflow="wrap" %}
 ```bash
-python3 ~/katapult/scripts/flash_can.py -i can0 -f Survey_Cartographer_CAN_1000000_8kib_offset.bin -u 379702c36ad1
+python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV3_6.1.0_CAN_1M_full_8kib_offset.bin -u 379702c36ad1
 ```
 {% endcode %}
 
@@ -241,23 +241,23 @@ You now need to plugin your Cartographer into your CAN network.
 DO NOT HOT PLUG ANYTHING IN YOUR PRINTER, ENSURE IT IS POWERED OFF.
 {% endhint %}
 
-You now need to flash your CAN firmware to the probe, so navigate to the directory the firmware is located&#x20;
+You now need to flash your CAN firmware to the probe, so navigate to the directory the firmware is located
 
 ```bash
-cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0/
+cd ~/cartographer_firmware/firmware/v4/firmware/6.2.0/
 ```
 
-You will now need to check that your probe can be recognised by your CAN network, to do this we will do a CAN query. You should see a device which has Katapult listed next to it.  Note down the UUID it provides you.&#x20;
+You will now need to check that your probe can be recognised by your CAN network, to do this we will do a CAN query. You should see a device which has Katapult listed next to it. Note down the UUID it provides you.
 
 ```bash
 ~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0    
 ```
 
-Now, you will need to run the following command, replacing the UUID with what ever the UUID is for your probe.&#x20;
+Now, you will need to run the following command, replacing the UUID with what ever the UUID is for your probe.
 
 {% code overflow="wrap" %}
 ```bash
-python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV4_6.0.0_USB_full_8kib_offset.bin -u UUID
+python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV4_6.2.0_CAN_1M_full_8kib_offset.bin -u UUID
 ```
 {% endcode %}
 
@@ -265,7 +265,7 @@ Example
 
 {% code overflow="wrap" %}
 ```bash
-python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV4_6.0.0_USB_full_8kib_offset.bin -u 379702c36ad1
+python3 ~/katapult/scripts/flash_can.py -i can0 -f CartographerV4_6.2.0_CAN_1M_full_8kib_offset.bin -u 379702c36ad1
 ```
 {% endcode %}
 
@@ -275,7 +275,7 @@ Once complete, your probe will reboot into the Cartographer Firmware, and you ca
 
 ### Switching to USB from CAN
 
-To switch from CAN to USB, you will need to flash the Katapult Deployer Firmware to overwrite the existing bootloader and firmware to load it in USB mode.&#x20;
+To switch from CAN to USB, you will need to flash the Katapult Deployer Firmware to overwrite the existing bootloader and firmware to load it in USB mode.
 
 **Step 1 - Plug Cartographer in via CANBUS**
 
@@ -323,7 +323,7 @@ python3 ~/katapult/scripts/flash_can.py -i can0 -f katapult_deployer_v4_USB.bin 
 
 #### Step 5 - Switch to USB
 
-Power down your printer, and re-connect your probe via USB.&#x20;
+Power down your printer, and re-connect your probe via USB.
 
 #### Step 6 - Flash the Cartographer Firmware
 
@@ -376,8 +376,8 @@ Now your Cartographer is in Katapult Mode, you now need to navigate to the corre
 {% code overflow="wrap" %}
 ```bash
 KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
-cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0
-~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f CartographerV4_6.0.0_USB_full_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
+cd ~/cartographer_firmware/firmware/v4/firmware/6.2.0
+~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f CartographerV4_6.2.0_USB_full_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
 ```
 {% endcode %}
 
@@ -388,8 +388,8 @@ Your probe should now have the latest Cartographer Full Firmware installed on it
 {% code overflow="wrap" %}
 ```bash
 KATAPULT=$(ls /dev/serial/by-id/ 2>/dev/null | grep -i katapult | head -n 1)
-cd ~/cartographer_firmware/firmware/v4/firmware/6.0.0
-~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f CartographerV4_6.0.0_USB_lite_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
+cd ~/cartographer_firmware/firmware/v4/firmware/6.2.0
+~/klippy-env/bin/python ~/klipper/lib/canboot/flash_can.py -f CartographerV4_6.2.0_USB_lite_8kib_offset.bin -d /dev/serial/by-id/$KATAPULT
 ```
 {% endcode %}
 
