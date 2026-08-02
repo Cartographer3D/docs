@@ -56,13 +56,14 @@ Gather samples across the bed to calibrate the bed mesh.
   DIRECTION (MeshDirection, default: config 'scan.mesh_direction'): Primary scan direction
     Allowed values: x, y
   PATH (MeshPath, default: config 'scan.mesh_path'): Scan path pattern
-    Allowed values: snake, alternating_snake, spiral, random
+    Allowed values: snake, alternating_snake, spiral, random, hilbert
   SPEED (float, default: config 'bed_mesh.speed'): Scan speed
     Constraints: minimum: 50
   HEIGHT (float, default: config 'scan.mesh_height'): Scan height
     Constraints: minimum: 0.5, maximum: 5
   RUNS (int, default: config 'scan.mesh_runs'): Number of scan passes
     Constraints: minimum: 1
+  MAX_CORNER_RADIUS (str | None, default: None): Maximum corner radius (mm) for scan path arcs. Use AUTO for automatic radius, 0 to disable smoothing arcs, or a positive number to cap auto radius.
 ```
 
 **Example:**

@@ -45,7 +45,9 @@ y_offset:
 #   Allowed values: x, y
 #mesh_path: 'snake'
 #   The path to use when calibrating a scan mesh.
-#   Allowed values: snake, alternating_snake, spiral, random
+#   Allowed values: snake, alternating_snake, spiral, random, hilbert
+#mesh_max_corner_radius: None
+#   Maximum corner radius (mm) for scan mesh path arcs. Omit or set to 'auto' to derive the radius from point spacing and axis limits; 0 disables smoothing arcs; positive values cap the auto-computed radius.
 ```
 
 ## Touch
