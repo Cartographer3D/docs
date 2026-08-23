@@ -173,7 +173,7 @@ sudo dfu-util -R -a 0 -s 0x08000000:leave -D Katapult_plus_CartographerV3_6.1.0_
 {% endtab %}
 
 {% tab title="Cartographer V4" %}
-Navigate into the correct folder, so if you want to update your 4run the following command.
+Navigate into the correct folder, so if you want to update your Cartographer V4 run the following command.
 
 ```
 cd ~/cartographer_firmware/firmware/v4/combined-firmware/6.1.0
