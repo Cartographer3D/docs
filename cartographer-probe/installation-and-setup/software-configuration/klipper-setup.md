@@ -5,14 +5,14 @@ description: Quick overview of the steps needed to setup the Cartographer3D Klip
 # Klipper Setup
 
 {% hint style="danger" %}
-If you are updating to the NEW Cartographer plugin, then it is necessary to remove parts of your old config to avoid Klipper errors. **Therefore it is recommend to back-up your config to reference later.**
-{% endhint %}
-
+If you are updating to the NEW Cartographer plugin, then it is necessary to remove parts of your old config to avoid Klipper errors. **Therefore it is recommend to back-up your config to reference later.**\
+\
 It is necessary to remove all instances of \[scanner] from your printer.cfg, this INCLUDES any from the SAVE\_CONFIG section at the bottom of the printer.cfg. Once you have done this save the file and you will return to the file directory.
 
 Now open the moonraker.conf file, here you want to remove the old Cartographer Plugin update section, you added when you installed the old plugin.
 
 Once you save and restart you will get a Klipper error for Unkown Pin Probe, this is normal and you can proceed to installation of the Klipper plugin below.
+{% endhint %}
 
 ## Installation Klipper plugin
 
@@ -21,7 +21,7 @@ A script has been made to simplify the process of installing the plugin.
 The defaults assumes that klipper is in `~/klipper` and the klippy-env is in `~/klippy-env`.\
 This should be standard on [KIAUH](https://github.com/dw-0/kiauh) and [MainsailOS](https://docs-os.mainsail.xyz/).
 
-Run this command to install, customizing the paths if needed.
+Run this command via SSH to install, customizing the paths if needed.
 
 {% code overflow="wrap" %}
 ```sh
@@ -31,7 +31,9 @@ curl -s -L https://raw.githubusercontent.com/Cartographer3D/cartographer3d-plugi
 
 ## Download the Cartographer Firmware Repository
 
-You should download the Cartographer firmware repository to update your probe to the latest compatible firmware.
+You should download the Cartographer firmware repository to update your probe to the latest compatible firmware. \
+\
+Run this command via SSH to install.
 
 ```bash
 cd ~
@@ -39,6 +41,8 @@ git clone https://github.com/Cartographer3D/cartographer_firmware.git
 ```
 
 ## Configure Moonraker Update Manager
+
+Modify your moonraker.conf file, via the web interface with the following.
 
 ```yaml
 [update_manager cartographer_plugin]
