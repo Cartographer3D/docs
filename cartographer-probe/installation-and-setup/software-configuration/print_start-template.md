@@ -21,3 +21,7 @@ gcode:
 
   ("Do the rest - heat to print temperature and prime") ; Replace with your real macro
 ```
+
+### Need a Print Start macro?
+
+You can find an excellent print start macro wizard by jontek2 at [https://abetterprintstartmacro.com/](https://abetterprintstartmacro.com/)
