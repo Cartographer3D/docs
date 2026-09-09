@@ -24,4 +24,4 @@ gcode:
 
 ### Need a Print Start macro?
 
-You can find an excellent print start macro wizard by jontek2 at [https://abetterprintstartmacro.com/](https://abetterprintstartmacro.com/)
+You can find the excellent a better Print\_Start macro wizard by jontek2 at [https://abetterprintstartmacro.com/](https://abetterprintstartmacro.com/), it includes the option to use a Cartographer probe and will insert the `CARTOGRAPHER_TOUCH_HOME` where needed.
